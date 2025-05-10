@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, HelpCircle } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Link } from "react-router-dom";
 
 const plans = [
   {
@@ -32,29 +33,16 @@ const plans = [
     mostPopular: true
   },
   {
-    name: "Gold",
+    name: "Diamond",
     price: 19.99,
     ram: "8GB",
     cpu: "4 vCores",
     storage: "100GB NVMe SSD",
-    players: "Up to 100",
+    players: "Unlimited",
     ddos: "CreeperShield Premium",
     plugins: "Unlimited",
-    backups: "6-Hour Intervals",
-    features: ["One-Click Plugin Installer", "Custom Domain", "99.9% Uptime", "Priority Support", "Advanced Modpack Support", "Server Cloning"],
-    mostPopular: false
-  },
-  {
-    name: "Diamond",
-    price: 39.99,
-    ram: "16GB",
-    cpu: "8 vCores",
-    storage: "250GB NVMe SSD",
-    players: "Unlimited",
-    ddos: "CreeperShield Enterprise",
-    plugins: "Unlimited",
     backups: "Hourly",
-    features: ["One-Click Plugin Installer", "Custom Domain", "99.99% Uptime", "Dedicated Support", "Advanced Modpack Support", "Server Cloning", "Multi-Server Network"],
+    features: ["One-Click Plugin Installer", "Custom Domain", "99.9% Uptime", "Priority Support", "Advanced Modpack Support", "Server Cloning", "Multi-Server Network"],
     mostPopular: false
   }
 ];
@@ -113,7 +101,7 @@ const PricingSection = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
             <div key={index} className={`bg-navy-light rounded-xl overflow-hidden transition-all hover:transform hover:-translate-y-2 ${plan.mostPopular ? 'border-2 border-creeper relative' : 'border border-gray-800'}`}>
               {plan.mostPopular && (
@@ -131,7 +119,9 @@ const PricingSection = () => {
                     <div className="text-sm text-creeper mt-1">{getSavingText()}</div>
                   )}
                 </div>
-                <Button className="w-full minecraft-btn rounded-md">Get Started</Button>
+                <Button className="w-full minecraft-btn rounded-md" asChild>
+                  <Link to="https://store.creepercastle.cloud" target="_blank">Get Started</Link>
+                </Button>
               </div>
               
               <div className="border-t border-gray-800 p-6">
@@ -192,8 +182,10 @@ const PricingSection = () => {
         
         <div className="text-center mt-12">
           <p className="text-gray-400 mb-4">Need a custom solution? We've got you covered.</p>
-          <Button variant="outline" className="border-creeper text-creeper hover:bg-creeper/10 rounded-md">
-            Contact Us for Custom Plans
+          <Button variant="outline" className="border-creeper text-creeper hover:bg-creeper/10 rounded-md" asChild>
+            <Link to="https://discord.gg/creepercastle" target="_blank">
+              Contact Us for Custom Plans
+            </Link>
           </Button>
         </div>
       </div>

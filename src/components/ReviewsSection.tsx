@@ -1,8 +1,9 @@
 
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Star, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
@@ -12,7 +13,7 @@ const testimonials = [
     rating: 5,
     comment: "CreeperCastle has been a game-changer for my community. The server performance is incredible, and the control panel makes management so easy. CreeperShield kept us online during a massive DDoS attack that took down other servers in our network.",
     verified: true,
-    plan: "Gold Plan"
+    plan: "Iron Plan"
   },
   {
     name: "Sarah Williams",
@@ -30,44 +31,11 @@ const testimonials = [
     rating: 4,
     comment: "Managing our 100-player server network has never been easier. The multi-server management tools are intuitive, and the automatic backups have saved us more than once. Very impressed with the performance and uptime.",
     verified: true,
-    plan: "Iron Plan"
-  },
-  {
-    name: "Emma Rodriguez",
-    avatar: "ER",
-    role: "Education Server Admin",
-    rating: 5,
-    comment: "We use CreeperCastle for our educational Minecraft program, and the reliability has been outstanding. The control panel is so easy to use that even our non-technical staff can manage the server. Customer support is always helpful and prompt.",
-    verified: true,
-    plan: "Gold Plan"
-  },
-  {
-    name: "David Thompson",
-    avatar: "DT",
-    role: "YouTuber",
-    rating: 5,
-    comment: "After moving my server to CreeperCastle, the lag issues I was having completely disappeared. My viewers noticed the difference immediately. The one-click plugin installer and mod support make setting up for different video series a breeze.",
-    verified: true,
-    plan: "Diamond Plan"
-  },
-  {
-    name: "Olivia Parker",
-    avatar: "OP",
-    role: "Survival Server Owner",
-    rating: 4,
-    comment: "We've been hosting with CreeperCastle for over a year now, and our survival server has never been more stable. The pricing is fair, and the performance is consistent. Would definitely recommend to other community owners.",
-    verified: true,
-    plan: "Iron Plan"
+    plan: "Stone Plan"
   }
 ];
 
 const ReviewsSection = () => {
-  const [visibleCount, setVisibleCount] = useState(3);
-  
-  const showMore = () => {
-    setVisibleCount(testimonials.length);
-  };
-
   return (
     <section className="py-20 bg-navy" id="reviews">
       <div className="container mx-auto px-4">
@@ -88,8 +56,8 @@ const ReviewsSection = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.slice(0, visibleCount).map((testimonial, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-navy-light border-gray-800 hover:border-creeper/30 transition-all">
               <CardContent className="p-6">
                 <div className="flex items-start">
@@ -131,16 +99,38 @@ const ReviewsSection = () => {
           ))}
         </div>
         
-        {visibleCount < testimonials.length && (
-          <div className="text-center mt-12">
-            <button 
-              onClick={showMore} 
-              className="minecraft-btn rounded-md inline-block"
-            >
-              Show More Reviews
-            </button>
+        {/* Trustpilot Integration */}
+        <div className="bg-navy-light border border-gray-800 rounded-xl p-8 max-w-3xl mx-auto">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/trustpilot-logo.png" 
+                alt="Trustpilot" 
+                className="h-8 mr-3" 
+              />
+              <div>
+                <h3 className="font-bold text-lg">Trustpilot Reviews</h3>
+                <p className="text-gray-400 text-sm">Independent & verified reviews</p>
+              </div>
+            </div>
+            <div className="flex">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <Star key={star} className="h-5 w-5 fill-[#00b67a] text-[#00b67a]" />
+              ))}
+            </div>
           </div>
-        )}
+          
+          <p className="text-gray-300 mb-6">
+            "We're proud of our excellent rating on Trustpilot. Our customers consistently rate us highly for our reliability, performance, and customer support."
+          </p>
+          
+          <Button className="w-full bg-[#00b67a] hover:bg-[#00a26e] text-white rounded-md flex items-center justify-center gap-2" asChild>
+            <a href="https://www.trustpilot.com/review/creepercastle.cloud" target="_blank" rel="noopener noreferrer">
+              Read our Trustpilot reviews
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
   );

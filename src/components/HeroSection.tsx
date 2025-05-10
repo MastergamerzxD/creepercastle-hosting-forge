@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Server, Shield, Cpu } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -41,11 +42,11 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <Button className="minecraft-btn rounded-md text-lg py-6 px-8">
-                Get Started
+              <Button className="minecraft-btn rounded-md text-lg py-6 px-8" asChild>
+                <Link to="https://store.creepercastle.cloud" target="_blank">Store</Link>
               </Button>
-              <Button variant="outline" className="border-creeper text-creeper hover:bg-creeper/10 rounded-md text-lg py-6 px-8">
-                View Plans
+              <Button variant="outline" className="border-creeper text-creeper hover:bg-creeper/10 rounded-md text-lg py-6 px-8" asChild>
+                <Link to="https://discord.gg/creepercastle" target="_blank">Discord</Link>
               </Button>
             </motion.div>
             
@@ -92,9 +93,9 @@ const HeroSection = () => {
           >
             <div className="relative">
               <img 
-                src="/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" 
-                alt="CreeperCastle Server" 
-                className="w-3/4 mx-auto animate-float"
+                src="/lovable-uploads/creeper-server.png" 
+                alt="Creeper holding a server" 
+                className="w-4/5 mx-auto animate-float"
               />
               <div className="absolute inset-0 rounded-full blur-3xl bg-creeper/20 animate-pulse-slow" style={{transform: 'scale(0.8)'}}></div>
             </div>
