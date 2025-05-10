@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
@@ -18,6 +18,8 @@ import { Helmet } from "react-helmet-async";
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
+  const cursorDotRef = useRef<HTMLDivElement>(null);
+  const cursorOutlineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Update document title
@@ -32,6 +34,30 @@ const Index = () => {
     
     return () => {
       clearTimeout(timer);
+    };
+  }, []);
+
+  // Custom cursor implementation
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (cursorDotRef.current && cursorOutlineRef.current) {
+        cursorDotRef.current.style.top = `${e.clientY}px`;
+        cursorDotRef.current.style.left = `${e.clientX}px`;
+        
+        // Add a slight delay to the outline for a smoother effect
+        setTimeout(() => {
+          if (cursorOutlineRef.current) {
+            cursorOutlineRef.current.style.top = `${e.clientY}px`;
+            cursorOutlineRef.current.style.left = `${e.clientX}px`;
+          }
+        }, 50);
+      }
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+    
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
@@ -65,61 +91,6 @@ const Index = () => {
         
         {/* Favicon */}
         <link rel="icon" href="/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" type="image/png" />
-
-        {/* Add custom cursor styles */}
-        <style>
-          {`
-            body {
-              cursor: none;
-            }
-            a, button {
-              cursor: none;
-            }
-            .custom-cursor {
-              position: fixed;
-              pointer-events: none;
-              z-index: 9999;
-            }
-            .custom-cursor .cursor-dot {
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 8px;
-              height: 8px;
-              background-color: #50C878;
-              border-radius: 50%;
-              transform: translate(-50%, -50%);
-              z-index: 9999;
-            }
-            .custom-cursor .cursor-outline {
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 40px;
-              height: 40px;
-              background-color: rgba(80, 200, 120, 0.2);
-              border: 1px solid #50C878;
-              border-radius: 50%;
-              transform: translate(-50%, -50%);
-              transition: width 0.2s, height 0.2s;
-              z-index: 9998;
-            }
-            a:hover ~ .custom-cursor .cursor-outline,
-            button:hover ~ .custom-cursor .cursor-outline {
-              width: 60px;
-              height: 60px;
-              background-color: rgba(80, 200, 120, 0.1);
-            }
-            @media (max-width: 768px) {
-              * {
-                cursor: auto !important;
-              }
-              .custom-cursor {
-                display: none;
-              }
-            }
-          `}
-        </style>
       </Helmet>
       
       <motion.div
@@ -144,28 +115,11 @@ const Index = () => {
         <Footer />
       </motion.div>
 
-      {/* Custom cursor */}
+      {/* Custom cursor elements */}
       <div className="custom-cursor">
-        <div className="cursor-dot"></div>
-        <div className="cursor-outline"></div>
+        <div ref={cursorDotRef} className="cursor-dot"></div>
+        <div ref={cursorOutlineRef} className="cursor-outline"></div>
       </div>
-
-      {/* Custom cursor script */}
-      <script dangerouslySetInnerHTML={{
-        __html: `
-          document.addEventListener('mousemove', (e) => {
-            const dot = document.querySelector('.cursor-dot');
-            const outline = document.querySelector('.cursor-outline');
-            
-            if (dot && outline) {
-              dot.style.top = e.clientY + 'px';
-              dot.style.left = e.clientX + 'px';
-              outline.style.top = e.clientY + 'px';
-              outline.style.left = e.clientX + 'px';
-            }
-          });
-        `
-      }} />
     </>
   );
 };

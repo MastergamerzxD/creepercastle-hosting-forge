@@ -8,6 +8,7 @@ import { HelmetProvider } from "react-helmet-async";
 import DownloadWebsiteLink from "./components/DownloadWebsiteLink";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import "./components/CustomCursor.css"; // Import custom cursor styles
 
 const queryClient = new QueryClient();
 
