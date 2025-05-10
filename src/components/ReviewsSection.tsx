@@ -104,7 +104,7 @@ const ReviewsSection = () => {
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center">
               <img 
-                src="https://cdn.pixabay.com/photo/2022/01/30/13/33/review-6980523_1280.jpg" 
+                src="https://cdn.pixabay.com/photo/2021/06/15/12/28/website-6339121_1280.jpg" 
                 alt="Trustpilot" 
                 className="h-8 mr-3" 
               />

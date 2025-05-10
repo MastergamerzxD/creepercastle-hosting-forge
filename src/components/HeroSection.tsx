@@ -93,7 +93,7 @@ const HeroSection = () => {
           >
             <div className="relative">
               <img 
-                src="https://cdn.pixabay.com/photo/2014/11/13/15/23/minecraft-529462_1280.jpg" 
+                src="https://cdn.pixabay.com/photo/2013/10/13/17/43/minecraft-195442_1280.png" 
                 alt="Minecraft Server Hosting" 
                 className="w-4/5 mx-auto rounded-lg shadow-2xl animate-float"
               />

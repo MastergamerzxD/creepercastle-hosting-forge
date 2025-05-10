@@ -45,15 +45,21 @@ const LocationsSection = () => {
         <div className="relative">
           {/* India Map with Server Locations */}
           <div className="relative w-full h-[400px] mb-8 bg-navy-light rounded-xl overflow-hidden border border-gray-800">
-            <div className="absolute inset-0 opacity-70 bg-[url('https://cdn.pixabay.com/photo/2022/01/11/21/48/world-map-6931_1280.png')] bg-no-repeat bg-center bg-contain"></div>
+            <div className="absolute inset-0 opacity-70">
+              <img 
+                src="https://cdn.pixabay.com/photo/2021/06/18/07/12/india-6345517_1280.png" 
+                alt="India Map" 
+                className="object-contain w-full h-full opacity-50"
+              />
+            </div>
             
             {/* Delhi */}
-            <div className="absolute left-[40%] top-[30%] w-4 h-4 bg-creeper rounded-full animate-pulse shadow-lg shadow-creeper/50">
+            <div className="absolute left-[48%] top-[30%] w-4 h-4 bg-creeper rounded-full animate-pulse shadow-lg shadow-creeper/50">
               <div className="absolute w-6 h-6 bg-creeper/30 rounded-full -left-1 -top-1 animate-ping"></div>
             </div>
             
             {/* Mumbai */}
-            <div className="absolute left-[30%] top-[55%] w-4 h-4 bg-creeper rounded-full animate-pulse shadow-lg shadow-creeper/50">
+            <div className="absolute left-[44%] top-[55%] w-4 h-4 bg-creeper rounded-full animate-pulse shadow-lg shadow-creeper/50">
               <div className="absolute w-6 h-6 bg-creeper/30 rounded-full -left-1 -top-1 animate-ping"></div>
             </div>
             

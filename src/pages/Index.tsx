@@ -23,71 +23,6 @@ const Index = () => {
     // Update document title
     document.title = "CreeperCastle.cloud - Premium Minecraft Hosting in India";
     
-    // Initialize custom cursor
-    const cursor = document.createElement('div');
-    cursor.classList.add('custom-cursor');
-    cursor.innerHTML = `
-      <div class="cursor-dot"></div>
-      <div class="cursor-outline"></div>
-    `;
-    document.body.appendChild(cursor);
-
-    const moveCursor = (e: MouseEvent) => {
-      const dot = cursor.querySelector('.cursor-dot');
-      const outline = cursor.querySelector('.cursor-outline');
-      
-      if (dot && outline) {
-        dot.setAttribute('style', `top: ${e.clientY}px; left: ${e.clientX}px;`);
-        outline.setAttribute('style', `top: ${e.clientY}px; left: ${e.clientX}px;`);
-      }
-    };
-
-    document.addEventListener('mousemove', moveCursor);
-    
-    // Add custom cursor styles
-    const style = document.createElement('style');
-    style.textContent = `
-      body {
-        cursor: none;
-      }
-      a, button {
-        cursor: none;
-      }
-      .custom-cursor .cursor-dot {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 8px;
-        height: 8px;
-        background-color: #50C878;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        transform: translate(-50%, -50%);
-      }
-      .custom-cursor .cursor-outline {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 40px;
-        height: 40px;
-        background-color: rgba(80, 200, 120, 0.2);
-        border: 1px solid #50C878;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9998;
-        transform: translate(-50%, -50%);
-        transition: width 0.2s, height 0.2s;
-      }
-      a:hover ~ .custom-cursor .cursor-outline,
-      button:hover ~ .custom-cursor .cursor-outline {
-        width: 60px;
-        height: 60px;
-        background-color: rgba(80, 200, 120, 0.1);
-      }
-    `;
-    document.head.appendChild(style);
-    
     // Simulate loading time (minimum 1 second, maximum 2 seconds)
     const timer = setTimeout(() => {
       setLoading(false);
@@ -97,9 +32,6 @@ const Index = () => {
     
     return () => {
       clearTimeout(timer);
-      document.removeEventListener('mousemove', moveCursor);
-      document.body.removeChild(cursor);
-      document.head.removeChild(style);
     };
   }, []);
 
@@ -133,6 +65,61 @@ const Index = () => {
         
         {/* Favicon */}
         <link rel="icon" href="/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" type="image/png" />
+
+        {/* Add custom cursor styles */}
+        <style>
+          {`
+            body {
+              cursor: none;
+            }
+            a, button {
+              cursor: none;
+            }
+            .custom-cursor {
+              position: fixed;
+              pointer-events: none;
+              z-index: 9999;
+            }
+            .custom-cursor .cursor-dot {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 8px;
+              height: 8px;
+              background-color: #50C878;
+              border-radius: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 9999;
+            }
+            .custom-cursor .cursor-outline {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 40px;
+              height: 40px;
+              background-color: rgba(80, 200, 120, 0.2);
+              border: 1px solid #50C878;
+              border-radius: 50%;
+              transform: translate(-50%, -50%);
+              transition: width 0.2s, height 0.2s;
+              z-index: 9998;
+            }
+            a:hover ~ .custom-cursor .cursor-outline,
+            button:hover ~ .custom-cursor .cursor-outline {
+              width: 60px;
+              height: 60px;
+              background-color: rgba(80, 200, 120, 0.1);
+            }
+            @media (max-width: 768px) {
+              * {
+                cursor: auto !important;
+              }
+              .custom-cursor {
+                display: none;
+              }
+            }
+          `}
+        </style>
       </Helmet>
       
       <motion.div
@@ -156,6 +143,29 @@ const Index = () => {
         
         <Footer />
       </motion.div>
+
+      {/* Custom cursor */}
+      <div className="custom-cursor">
+        <div className="cursor-dot"></div>
+        <div className="cursor-outline"></div>
+      </div>
+
+      {/* Custom cursor script */}
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          document.addEventListener('mousemove', (e) => {
+            const dot = document.querySelector('.cursor-dot');
+            const outline = document.querySelector('.cursor-outline');
+            
+            if (dot && outline) {
+              dot.style.top = e.clientY + 'px';
+              dot.style.left = e.clientX + 'px';
+              outline.style.top = e.clientY + 'px';
+              outline.style.left = e.clientX + 'px';
+            }
+          });
+        `
+      }} />
     </>
   );
 };
