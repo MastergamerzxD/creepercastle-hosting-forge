@@ -45,13 +45,17 @@ const LocationsSection = () => {
         <div className="relative">
           {/* India Map with Server Locations */}
           <div className="relative w-full h-[400px] mb-8 bg-navy-light rounded-xl overflow-hidden border border-gray-800">
-            <div className="absolute inset-0 opacity-70 bg-[url('/lovable-uploads/india-map.png')] bg-no-repeat bg-center bg-contain"></div>
+            <div className="absolute inset-0 opacity-70 bg-[url('https://cdn.pixabay.com/photo/2022/01/11/21/48/world-map-6931_1280.png')] bg-no-repeat bg-center bg-contain"></div>
             
             {/* Delhi */}
-            <div className="server-dot left-[40%] top-[30%]"></div>
+            <div className="absolute left-[40%] top-[30%] w-4 h-4 bg-creeper rounded-full animate-pulse shadow-lg shadow-creeper/50">
+              <div className="absolute w-6 h-6 bg-creeper/30 rounded-full -left-1 -top-1 animate-ping"></div>
+            </div>
             
             {/* Mumbai */}
-            <div className="server-dot left-[30%] top-[55%]"></div>
+            <div className="absolute left-[30%] top-[55%] w-4 h-4 bg-creeper rounded-full animate-pulse shadow-lg shadow-creeper/50">
+              <div className="absolute w-6 h-6 bg-creeper/30 rounded-full -left-1 -top-1 animate-ping"></div>
+            </div>
             
             <div className="absolute bottom-4 left-4 bg-navy-dark/80 backdrop-blur-sm p-4 rounded-lg border border-gray-800">
               <h3 className="font-medium mb-2 flex items-center">

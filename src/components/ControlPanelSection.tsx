@@ -21,134 +21,42 @@ const ControlPanelSection = () => {
                 <TabsTrigger value="dashboard" className="data-[state=active]:bg-creeper data-[state=active]:text-navy-dark">
                   Dashboard
                 </TabsTrigger>
-                <TabsTrigger value="files" className="data-[state=active]:bg-creeper data-[state=active]:text-navy-dark">
-                  File Manager
+                <TabsTrigger value="plugins" className="data-[state=active]:bg-creeper data-[state=active]:text-navy-dark">
+                  Plugins
                 </TabsTrigger>
-                <TabsTrigger value="console" className="data-[state=active]:bg-creeper data-[state=active]:text-navy-dark">
-                  Console
+                <TabsTrigger value="subdomains" className="data-[state=active]:bg-creeper data-[state=active]:text-navy-dark">
+                  Subdomains
                 </TabsTrigger>
               </TabsList>
               
               <div className="border border-gray-800 rounded-xl overflow-hidden">
                 <TabsContent value="dashboard" className="m-0">
-                  <div className="bg-navy-light p-4">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="font-semibold">Server Dashboard</h3>
-                      <div className="flex items-center">
-                        <div className="w-2 h-2 rounded-full bg-green-500 mr-2"></div>
-                        <span className="text-sm text-green-500">Online</span>
-                      </div>
-                    </div>
-                    
+                  <div className="bg-navy-light">
                     <img 
-                      src="https://cdn.pixabay.com/photo/2022/01/11/21/48/world-map-6931_1280.png" 
-                      alt="Dashboard" 
-                      className="w-full aspect-video object-cover rounded-lg opacity-10 mb-4" 
+                      src="/lovable-uploads/63238f98-9166-4053-9fe5-5c96a6609f1a.png" 
+                      alt="CreeperCastle Dashboard" 
+                      className="w-full"
                     />
-                    
-                    <div className="grid grid-cols-2 gap-4 mt-4">
-                      <div className="bg-navy rounded p-4">
-                        <h4 className="text-sm text-gray-400 mb-1">CPU Usage</h4>
-                        <div className="flex items-end">
-                          <span className="text-2xl font-bold">32%</span>
-                          <span className="text-xs text-gray-500 ml-1 mb-1">/ 100%</span>
-                        </div>
-                        <div className="h-2 w-full bg-gray-800 rounded-full mt-2">
-                          <div className="h-full bg-creeper rounded-full" style={{ width: '32%' }}></div>
-                        </div>
-                      </div>
-                      
-                      <div className="bg-navy rounded p-4">
-                        <h4 className="text-sm text-gray-400 mb-1">Memory Usage</h4>
-                        <div className="flex items-end">
-                          <span className="text-2xl font-bold">2.4</span>
-                          <span className="text-xs text-gray-500 ml-1 mb-1">/ 8 GB</span>
-                        </div>
-                        <div className="h-2 w-full bg-gray-800 rounded-full mt-2">
-                          <div className="h-full bg-creeper rounded-full" style={{ width: '30%' }}></div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </TabsContent>
                 
-                <TabsContent value="files" className="m-0">
-                  <div className="bg-navy-light p-4">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="font-semibold">File Manager</h3>
-                      <div className="text-xs bg-navy px-2 py-1 rounded">
-                        /home/minecraft/server/
-                      </div>
-                    </div>
-                    
-                    <div className="bg-navy rounded border border-gray-800 mb-4">
-                      <div className="border-b border-gray-800 px-4 py-3 flex items-center">
-                        <FileText className="h-4 w-4 text-gray-400 mr-2" />
-                        <span>server.properties</span>
-                        <span className="ml-auto text-xs text-gray-500">8.2 KB</span>
-                      </div>
-                      <div className="border-b border-gray-800 px-4 py-3 flex items-center">
-                        <FileText className="h-4 w-4 text-gray-400 mr-2" />
-                        <span>server.jar</span>
-                        <span className="ml-auto text-xs text-gray-500">35.6 MB</span>
-                      </div>
-                      <div className="border-b border-gray-800 px-4 py-3 flex items-center">
-                        <FileText className="h-4 w-4 text-gray-400 mr-2" />
-                        <span>eula.txt</span>
-                        <span className="ml-auto text-xs text-gray-500">1 KB</span>
-                      </div>
-                      <div className="px-4 py-3 flex items-center">
-                        <FileText className="h-4 w-4 text-gray-400 mr-2" />
-                        <span>ops.json</span>
-                        <span className="ml-auto text-xs text-gray-500">0.5 KB</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex space-x-2">
-                      <Button size="sm" className="bg-navy hover:bg-navy-light text-white border border-gray-800">Upload</Button>
-                      <Button size="sm" className="bg-navy hover:bg-navy-light text-white border border-gray-800">Create File</Button>
-                      <Button size="sm" className="bg-navy hover:bg-navy-light text-white border border-gray-800">Create Folder</Button>
-                    </div>
+                <TabsContent value="plugins" className="m-0">
+                  <div className="bg-navy-light">
+                    <img 
+                      src="/lovable-uploads/e3a29c07-41fc-4248-8f38-ed4db0e30c41.png" 
+                      alt="CreeperCastle Plugins Manager" 
+                      className="w-full"
+                    />
                   </div>
                 </TabsContent>
                 
-                <TabsContent value="console" className="m-0">
-                  <div className="bg-navy-light p-4">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="font-semibold">Console</h3>
-                      <div className="flex space-x-2">
-                        <div className="text-xs bg-navy px-2 py-1 rounded flex items-center">
-                          <div className="w-2 h-2 rounded-full bg-green-500 mr-2"></div>
-                          <span>Connected</span>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-navy rounded border border-gray-800 h-60 overflow-hidden">
-                      <div className="p-4 text-xs font-mono text-gray-400 h-full overflow-y-auto">
-                        <p>[12:34:56] [Server thread/INFO]: Starting minecraft server version 1.19.2</p>
-                        <p>[12:34:56] [Server thread/INFO]: Loading properties</p>
-                        <p>[12:34:56] [Server thread/INFO]: Default game type: SURVIVAL</p>
-                        <p>[12:34:56] [Server thread/INFO]: Generating keypair</p>
-                        <p>[12:34:57] [Server thread/INFO]: Starting Minecraft server on *:25565</p>
-                        <p>[12:34:57] [Server thread/INFO]: Using epoll channel type</p>
-                        <p>[12:34:57] [Server thread/INFO]: Preparing level "world"</p>
-                        <p>[12:34:58] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld</p>
-                        <p>[12:35:02] [Server thread/INFO]: Done (5.123s)! For help, type "help"</p>
-                        <p>[12:35:05] [Server thread/INFO]: Player1 joined the game</p>
-                        <p>[12:35:15] [Server thread/INFO]: Player2 joined the game</p>
-                        <p className="text-green-400">[12:35:28] [Server thread/INFO]: CreeperShield: Protection active</p>
-                      </div>
-                    </div>
-                    
-                    <div className="mt-4 flex">
-                      <input 
-                        type="text" 
-                        className="flex-1 bg-navy p-2 rounded-l border border-gray-800 text-sm focus:outline-none focus:ring-1 focus:ring-creeper" 
-                        placeholder="Enter command..." 
-                      />
-                      <Button className="bg-creeper text-navy-dark rounded-l-none font-medium">Send</Button>
-                    </div>
+                <TabsContent value="subdomains" className="m-0">
+                  <div className="bg-navy-light">
+                    <img 
+                      src="/lovable-uploads/4fca9c12-4db7-435f-a6c5-3fe7e04cf205.png" 
+                      alt="CreeperCastle Subdomains Manager" 
+                      className="w-full"
+                    />
                   </div>
                 </TabsContent>
               </div>

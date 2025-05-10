@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const DiscordSection = () => {
   return (
     <section className="py-20 bg-discord-dark relative overflow-hidden" id="discord">
-      <div className="absolute inset-0 opacity-10 bg-[url('/lovable-uploads/discord-pattern.png')] bg-repeat"></div>
+      <div className="absolute inset-0 opacity-10 bg-[url('https://cdn.pixabay.com/photo/2017/03/09/20/53/discord-2130880_1280.png')] bg-repeat"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -18,7 +18,7 @@ const DiscordSection = () => {
           >
             <div className="relative">
               <img 
-                src="/lovable-uploads/discord-illustration.png" 
+                src="https://cdn.pixabay.com/photo/2021/08/16/08/55/discord-6549410_1280.jpg" 
                 alt="CreeperCastle Discord Server" 
                 className="w-full max-w-md mx-auto rounded-lg shadow-2xl border-2 border-discord-light/20"
               />

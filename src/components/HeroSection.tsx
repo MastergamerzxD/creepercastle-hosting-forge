@@ -93,9 +93,9 @@ const HeroSection = () => {
           >
             <div className="relative">
               <img 
-                src="/lovable-uploads/creeper-server.png" 
-                alt="Creeper holding a server" 
-                className="w-4/5 mx-auto animate-float"
+                src="https://cdn.pixabay.com/photo/2014/11/13/15/23/minecraft-529462_1280.jpg" 
+                alt="Minecraft Server Hosting" 
+                className="w-4/5 mx-auto rounded-lg shadow-2xl animate-float"
               />
               <div className="absolute inset-0 rounded-full blur-3xl bg-creeper/20 animate-pulse-slow" style={{transform: 'scale(0.8)'}}></div>
             </div>
