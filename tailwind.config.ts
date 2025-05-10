@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,16 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				creeper: {
+					DEFAULT: '#50C878', // Emerald green for Creeper theme
+					dark: '#2E8B57', // Darker green for accents
+					light: '#98FB98', // Light green for highlights
+				},
+				navy: {
+					DEFAULT: '#0A192F', // Deep navy blue for backgrounds
+					light: '#172A45', // Lighter navy for cards
+					dark: '#020C1B', // Darkest navy for contrasts
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +95,34 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' },
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				'glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 5px #50C878, 0 0 10px #50C878'
+					},
+					'50%': {
+						boxShadow: '0 0 20px #50C878, 0 0 30px #50C878'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 3s infinite ease-in-out',
+				'float': 'float 6s infinite ease-in-out',
+				'glow': 'glow 3s infinite ease-in-out'
+			},
+			backgroundImage: {
+				'creeper-pattern': "url('/creeper-pattern.png')",
+				'minecraft-gradient': 'linear-gradient(180deg, #0A192F 0%, #050e1c 100%)'
 			}
 		}
 	},
