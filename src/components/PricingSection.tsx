@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Check, HelpCircle } from "lucide-react";
-import { Tooltip, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Link } from "react-router-dom";
 
 const plans = [
