@@ -1,5 +1,5 @@
 
-import { Shield, Server, BarChart3, LineChart, Network, Clock, Lock, Fingerprint, MoveHorizontal, Layers, CloudOff, Cpu } from "lucide-react";
+import { Shield, Server, BarChart3, LineChart, Network, Clock, Lock, Fingerprint, MoveHorizontal, Layers, CloudOff, Cpu, Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
