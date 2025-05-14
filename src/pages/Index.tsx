@@ -1,5 +1,5 @@
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
@@ -13,13 +13,11 @@ import DiscordSection from "@/components/DiscordSection";
 import LoadingScreen from "@/components/LoadingScreen";
 
 // Import framer-motion for animations
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
-  const cursorDotRef = useRef<HTMLDivElement>(null);
-  const cursorOutlineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Update document title
@@ -34,30 +32,6 @@ const Index = () => {
     
     return () => {
       clearTimeout(timer);
-    };
-  }, []);
-
-  // Custom cursor implementation
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (cursorDotRef.current && cursorOutlineRef.current) {
-        cursorDotRef.current.style.top = `${e.clientY}px`;
-        cursorDotRef.current.style.left = `${e.clientX}px`;
-        
-        // Add a slight delay to the outline for a smoother effect
-        setTimeout(() => {
-          if (cursorOutlineRef.current) {
-            cursorOutlineRef.current.style.top = `${e.clientY}px`;
-            cursorOutlineRef.current.style.left = `${e.clientX}px`;
-          }
-        }, 50);
-      }
-    };
-
-    document.addEventListener("mousemove", handleMouseMove);
-    
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
@@ -93,33 +67,30 @@ const Index = () => {
         <link rel="icon" href="/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" type="image/png" />
       </Helmet>
       
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="flex flex-col min-h-screen bg-navy text-white"
-      >
-        <Navbar />
-        
-        <main className="flex-grow pt-16">
-          <HeroSection />
-          <PricingSection />
-          <LocationsSection />
-          <CreeperShieldSection />
-          <ControlPanelSection />
-          <DiscordSection />
-          <ReviewsSection />
-          <CtaSection />
-        </main>
-        
-        <Footer />
-      </motion.div>
-
-      {/* Custom cursor elements */}
-      <div className="custom-cursor">
-        <div ref={cursorDotRef} className="cursor-dot"></div>
-        <div ref={cursorOutlineRef} className="cursor-outline"></div>
-      </div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col min-h-screen bg-navy text-white"
+        >
+          <Navbar />
+          
+          <main className="flex-grow pt-16">
+            <HeroSection />
+            <PricingSection />
+            <LocationsSection />
+            <CreeperShieldSection />
+            <ControlPanelSection />
+            <DiscordSection />
+            <ReviewsSection />
+            <CtaSection />
+          </main>
+          
+          <Footer />
+        </motion.div>
+      </AnimatePresence>
     </>
   );
 };

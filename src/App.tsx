@@ -5,10 +5,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import DownloadWebsiteLink from "./components/DownloadWebsiteLink";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import "./components/CustomCursor.css"; // Import custom cursor styles
 
 const queryClient = new QueryClient();
 
@@ -19,9 +17,6 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <div className="fixed bottom-4 right-4 z-50">
-            <DownloadWebsiteLink />
-          </div>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/plans" element={<Index />} />
