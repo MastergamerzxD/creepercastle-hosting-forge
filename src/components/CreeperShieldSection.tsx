@@ -1,7 +1,8 @@
 
-import { Shield, Server, BarChart3, LineChart } from "lucide-react";
+import { Shield, Server, BarChart3, LineChart, Network, Clock, Lock, Fingerprint, MoveHorizontal, Layers, CloudOff, Cpu } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const CreeperShieldSection = () => {
   return (
@@ -18,160 +19,255 @@ const CreeperShieldSection = () => {
             <Shield className="h-6 w-6 text-creeper" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-creeper">CreeperShield</span> DDoS Protection
+            <span className="text-creeper">CreeperShield</span> Advanced DDoS Protection
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Our advanced DDoS protection system keeps your Minecraft server online, even during the most intense attacks.
+            Our enterprise-grade DDoS protection system keeps your Minecraft server online 24/7, even during the most intense attacks.
           </p>
         </div>
         
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <Card className="bg-navy-light border border-gray-800 hover:border-creeper/50 transition-all duration-300 hover:shadow-lg hover:shadow-creeper/10">
+            <CardContent className="p-6">
+              <div className="mb-4 p-3 bg-creeper/10 rounded-lg inline-block">
+                <Network className="h-6 w-6 text-creeper" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Multi-Vector Protection</h3>
+              <p className="text-gray-400">
+                CreeperShield defends against all types of DDoS attacks including SYN floods, UDP floods, NTP amplification, and more with adaptive mitigation techniques.
+              </p>
+            </CardContent>
+          </Card>
+          
+          <Card className="bg-navy-light border border-gray-800 hover:border-creeper/50 transition-all duration-300 hover:shadow-lg hover:shadow-creeper/10">
+            <CardContent className="p-6">
+              <div className="mb-4 p-3 bg-creeper/10 rounded-lg inline-block">
+                <Clock className="h-6 w-6 text-creeper" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Real-time Monitoring</h3>
+              <p className="text-gray-400">
+                24/7 traffic analysis with sub-second attack detection and automatic mitigation deployment, ensuring minimal disruption to legitimate players.
+              </p>
+            </CardContent>
+          </Card>
+          
+          <Card className="bg-navy-light border border-gray-800 hover:border-creeper/50 transition-all duration-300 hover:shadow-lg hover:shadow-creeper/10">
+            <CardContent className="p-6">
+              <div className="mb-4 p-3 bg-creeper/10 rounded-lg inline-block">
+                <Cpu className="h-6 w-6 text-creeper" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Intelligent Traffic Analysis</h3>
+              <p className="text-gray-400">
+                AI-powered anomaly detection identifies and filters malicious traffic patterns before they can impact your server performance.
+              </p>
+            </CardContent>
+          </Card>
+          
+          <Card className="bg-navy-light border border-gray-800 hover:border-creeper/50 transition-all duration-300 hover:shadow-lg hover:shadow-creeper/10">
+            <CardContent className="p-6">
+              <div className="mb-4 p-3 bg-creeper/10 rounded-lg inline-block">
+                <Fingerprint className="h-6 w-6 text-creeper" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Bot Protection</h3>
+              <p className="text-gray-400">
+                Advanced bot detection algorithms prevent automated attacks while ensuring legitimate players maintain seamless access to your server.
+              </p>
+            </CardContent>
+          </Card>
+          
+          <Card className="bg-navy-light border border-gray-800 hover:border-creeper/50 transition-all duration-300 hover:shadow-lg hover:shadow-creeper/10">
+            <CardContent className="p-6">
+              <div className="mb-4 p-3 bg-creeper/10 rounded-lg inline-block">
+                <MoveHorizontal className="h-6 w-6 text-creeper" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Load Balancing</h3>
+              <p className="text-gray-400">
+                Intelligent traffic distribution across multiple nodes ensures optimal performance even during high-traffic periods or partial network disruptions.
+              </p>
+            </CardContent>
+          </Card>
+          
+          <Card className="bg-navy-light border border-gray-800 hover:border-creeper/50 transition-all duration-300 hover:shadow-lg hover:shadow-creeper/10">
+            <CardContent className="p-6">
+              <div className="mb-4 p-3 bg-creeper/10 rounded-lg inline-block">
+                <CloudOff className="h-6 w-6 text-creeper" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Volumetric Attack Protection</h3>
+              <p className="text-gray-400">
+                Our network can absorb and filter up to 1.2 Tbps of attack traffic, ensuring your server stays online even during massive volumetric attacks.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="space-y-6">
-              <div className="flex">
-                <div className="mr-4 p-3 bg-creeper/10 rounded-lg">
-                  <Shield className="h-6 w-6 text-creeper" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Enterprise-grade Protection</h3>
-                  <p className="text-gray-400">
-                    CreeperShield provides up to 1.2 Tbps of DDoS mitigation capacity, stopping even the largest attacks from reaching your server.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex">
-                <div className="mr-4 p-3 bg-creeper/10 rounded-lg">
-                  <LineChart className="h-6 w-6 text-creeper" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Real-time Traffic Analysis</h3>
-                  <p className="text-gray-400">
-                    Our system continuously monitors network traffic, identifying and filtering malicious packets before they impact your game server.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex">
-                <div className="mr-4 p-3 bg-creeper/10 rounded-lg">
-                  <Server className="h-6 w-6 text-creeper" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Multi-layered Protection</h3>
-                  <p className="text-gray-400">
-                    From network layer to application layer, CreeperShield provides comprehensive protection against all types of DDoS attacks.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex">
-                <div className="mr-4 p-3 bg-creeper/10 rounded-lg">
-                  <BarChart3 className="h-6 w-6 text-creeper" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Detailed Attack Analytics</h3>
-                  <p className="text-gray-400">
-                    Access comprehensive attack statistics and reports to understand attack patterns and improve your server's security posture.
-                  </p>
-                </div>
-              </div>
+          <div className="space-y-6">
+            <div className="bg-navy-light border border-gray-800 rounded-xl p-6">
+              <h3 className="text-xl font-semibold mb-4 flex items-center">
+                <Shield className="h-5 w-5 text-creeper mr-2" /> CreeperShield Highlights
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex">
+                  <div className="mr-3 text-creeper">•</div>
+                  <div>
+                    <span className="font-medium text-creeper">Enterprise-grade Infrastructure:</span>
+                    <p className="text-gray-400 mt-1">Distributed across 7 global scrubbing centers with 1.2 Tbps total mitigation capacity.</p>
+                  </div>
+                </li>
+                <li className="flex">
+                  <div className="mr-3 text-creeper">•</div>
+                  <div>
+                    <span className="font-medium text-creeper">Adaptive Protection:</span>
+                    <p className="text-gray-400 mt-1">Protection rules automatically adjust based on attack patterns and server load.</p>
+                  </div>
+                </li>
+                <li className="flex">
+                  <div className="mr-3 text-creeper">•</div>
+                  <div>
+                    <span className="font-medium text-creeper">Protocol-specific Defense:</span>
+                    <p className="text-gray-400 mt-1">Custom protections for Minecraft-specific attack vectors and exploits.</p>
+                  </div>
+                </li>
+                <li className="flex">
+                  <div className="mr-3 text-creeper">•</div>
+                  <div>
+                    <span className="font-medium text-creeper">Zero-day Mitigation:</span>
+                    <p className="text-gray-400 mt-1">Protection against newly discovered vulnerabilities through behavior-based detection.</p>
+                  </div>
+                </li>
+              </ul>
             </div>
             
-            <div className="mt-8">
-              <Button className="minecraft-btn rounded-md">Learn More About CreeperShield</Button>
+            <div className="bg-navy-light border border-gray-800 rounded-xl p-6">
+              <h3 className="text-xl font-semibold mb-4 flex items-center">
+                <Layers className="h-5 w-5 text-creeper mr-2" /> Protection Tiers
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border border-gray-800 rounded-lg p-4">
+                  <div className="font-semibold text-lg mb-2">Basic Protection</div>
+                  <ul className="text-gray-400 space-y-2">
+                    <li className="flex items-center">
+                      <Check className="h-4 w-4 text-creeper mr-2 flex-shrink-0" />
+                      <span>Layer 3/4 Protection</span>
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="h-4 w-4 text-creeper mr-2 flex-shrink-0" />
+                      <span>Protocol Validation</span>
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="h-4 w-4 text-creeper mr-2 flex-shrink-0" />
+                      <span>100 Gbps Capacity</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="border border-creeper/30 rounded-lg p-4 bg-creeper/5">
+                  <div className="font-semibold text-lg mb-2 text-creeper">Premium Protection</div>
+                  <ul className="text-gray-400 space-y-2">
+                    <li className="flex items-center">
+                      <Check className="h-4 w-4 text-creeper mr-2 flex-shrink-0" />
+                      <span>All Basic Features</span>
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="h-4 w-4 text-creeper mr-2 flex-shrink-0" />
+                      <span>Layer 7 Protection</span>
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="h-4 w-4 text-creeper mr-2 flex-shrink-0" />
+                      <span>AI-powered Mitigation</span>
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="h-4 w-4 text-creeper mr-2 flex-shrink-0" />
+                      <span>1.2 Tbps Capacity</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
           
-          <div className="relative">
-            <div className="relative bg-navy-light rounded-xl border border-gray-800 overflow-hidden p-6">
-              {/* Protection Status Dashboard Mockup */}
-              <div className="mb-6">
-                <h3 className="text-xl font-semibold mb-4">CreeperShield Status</h3>
-                <div className="flex items-center mb-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-                  <span className="text-green-500 font-medium">Protection Active</span>
-                  <span className="ml-auto text-sm text-gray-400">Last attack: 2 hours ago</span>
-                </div>
-                <div className="h-2 w-full bg-navy rounded-full overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-green-500 to-creeper w-[90%]"></div>
-                </div>
-                <div className="flex justify-between text-xs mt-1">
-                  <span className="text-gray-400">Protection Level</span>
-                  <span className="text-creeper">90%</span>
-                </div>
-              </div>
-              
-              {/* Attack Statistics */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <Card className="bg-navy border-gray-800">
-                  <CardContent className="p-4">
-                    <h4 className="text-sm text-gray-400 mb-1">Attacks Blocked (24h)</h4>
-                    <p className="text-2xl font-bold">1,247</p>
-                    <div className="text-xs text-green-500 mt-1">+12% from yesterday</div>
-                  </CardContent>
-                </Card>
-                <Card className="bg-navy border-gray-800">
-                  <CardContent className="p-4">
-                    <h4 className="text-sm text-gray-400 mb-1">Largest Attack</h4>
-                    <p className="text-2xl font-bold">76.5 Gbps</p>
-                    <div className="text-xs text-gray-400 mt-1">SYN Flood</div>
-                  </CardContent>
-                </Card>
-              </div>
-              
-              {/* Attack Graph */}
-              <div className="bg-navy p-4 rounded-lg border border-gray-800 mb-6">
-                <h4 className="text-sm font-medium mb-4">Attack Traffic (Last 24 Hours)</h4>
-                <div className="h-40 relative">
-                  <div className="absolute bottom-0 left-0 right-0 h-40 overflow-hidden">
-                    {/* Fake graph */}
-                    <svg className="w-full h-full" viewBox="0 0 300 100" preserveAspectRatio="none">
-                      <path 
-                        d="M0,100 L0,80 C20,75 40,90 60,80 C80,70 100,20 120,30 C140,40 160,90 180,70 C200,50 220,40 240,50 C260,60 280,30 300,20 L300,100 Z" 
-                        fill="rgba(80, 200, 120, 0.2)"
-                      />
-                      <path 
-                        d="M0,80 C20,75 40,90 60,80 C80,70 100,20 120,30 C140,40 160,90 180,70 C200,50 220,40 240,50 C260,60 280,30 300,20" 
-                        fill="none" 
-                        stroke="#50C878" 
-                        strokeWidth="2"
-                      />
-                    </svg>
+          <div className="space-y-6">
+            <div className="bg-navy-light border border-gray-800 rounded-xl p-6">
+              <h3 className="text-xl font-semibold mb-4 flex items-center">
+                <Lock className="h-5 w-5 text-creeper mr-2" /> Why Choose CreeperShield?
+              </h3>
+              <div className="space-y-4">
+                <p className="text-gray-300">
+                  Unlike standard DDoS protection, CreeperShield is specifically designed for Minecraft servers, with deep protocol understanding and gaming-optimized mitigation strategies.
+                </p>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="flex items-center bg-navy-dark rounded-md p-3">
+                    <div className="w-2 h-2 bg-creeper rounded-full mr-3"></div>
+                    <span>Game-optimized filtering</span>
+                  </div>
+                  <div className="flex items-center bg-navy-dark rounded-md p-3">
+                    <div className="w-2 h-2 bg-creeper rounded-full mr-3"></div>
+                    <span>Low latency mitigation</span>
+                  </div>
+                  <div className="flex items-center bg-navy-dark rounded-md p-3">
+                    <div className="w-2 h-2 bg-creeper rounded-full mr-3"></div>
+                    <span>99.9% uptime guarantee</span>
+                  </div>
+                  <div className="flex items-center bg-navy-dark rounded-md p-3">
+                    <div className="w-2 h-2 bg-creeper rounded-full mr-3"></div>
+                    <span>24/7 security team</span>
                   </div>
                 </div>
-                <div className="flex justify-between text-xs text-gray-500 mt-2">
-                  <span>00:00</span>
-                  <span>06:00</span>
-                  <span>12:00</span>
-                  <span>18:00</span>
-                  <span>23:59</span>
-                </div>
-              </div>
-              
-              {/* Protection Features */}
-              <div className="grid grid-cols-2 gap-3">
-                <div className="flex items-center bg-navy-dark rounded-md p-2">
-                  <div className="w-2 h-2 bg-creeper rounded-full mr-2"></div>
-                  <span className="text-xs">TCP/UDP Protection</span>
-                </div>
-                <div className="flex items-center bg-navy-dark rounded-md p-2">
-                  <div className="w-2 h-2 bg-creeper rounded-full mr-2"></div>
-                  <span className="text-xs">Layer 7 Filtering</span>
-                </div>
-                <div className="flex items-center bg-navy-dark rounded-md p-2">
-                  <div className="w-2 h-2 bg-creeper rounded-full mr-2"></div>
-                  <span className="text-xs">Bot Protection</span>
-                </div>
-                <div className="flex items-center bg-navy-dark rounded-md p-2">
-                  <div className="w-2 h-2 bg-creeper rounded-full mr-2"></div>
-                  <span className="text-xs">Smart Traffic Analysis</span>
+                <div className="mt-4">
+                  <Button className="minecraft-btn rounded-md w-full" asChild>
+                    <Link to="https://store.creepercastle.cloud" target="_blank">
+                      Upgrade Your Protection
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </div>
             
-            {/* Glow effect */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-creeper/20 to-creeper/5 rounded-xl blur opacity-30"></div>
+            <div className="bg-navy-light border border-gray-800 rounded-xl p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-xl font-semibold flex items-center">
+                  <BarChart3 className="h-5 w-5 text-creeper mr-2" /> Protection Statistics
+                </h3>
+                <span className="text-xs text-gray-400">Last 30 days</span>
+              </div>
+              <div className="grid grid-cols-2 gap-4 mb-5">
+                <div className="bg-navy p-3 rounded-lg border border-gray-800">
+                  <div className="text-xs text-gray-400 mb-1">Total Attacks Blocked</div>
+                  <div className="text-2xl font-bold">29,847</div>
+                  <div className="text-xs text-creeper mt-1">+18% vs. previous period</div>
+                </div>
+                <div className="bg-navy p-3 rounded-lg border border-gray-800">
+                  <div className="text-xs text-gray-400 mb-1">Largest Attack</div>
+                  <div className="text-2xl font-bold">216 Gbps</div>
+                  <div className="text-xs text-gray-400 mt-1">SYN Flood Attack</div>
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-3">
+                <div className="bg-navy p-3 rounded-lg border border-gray-800">
+                  <div className="text-xs text-gray-400 mb-1">Layer 3/4</div>
+                  <div className="text-lg font-bold">78%</div>
+                </div>
+                <div className="bg-navy p-3 rounded-lg border border-gray-800">
+                  <div className="text-xs text-gray-400 mb-1">Layer 7</div>
+                  <div className="text-lg font-bold">19%</div>
+                </div>
+                <div className="bg-navy p-3 rounded-lg border border-gray-800">
+                  <div className="text-xs text-gray-400 mb-1">Other</div>
+                  <div className="text-lg font-bold">3%</div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+        
+        <div className="text-center mt-16">
+          <p className="text-xl text-gray-400 mb-8">
+            CreeperShield is included in all our hosting plans, with enhanced protection available for large networks.
+          </p>
+          <Button className="minecraft-btn rounded-md" asChild>
+            <Link to="/contact" target="_blank">
+              Contact Us for Custom Protection Solutions
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
