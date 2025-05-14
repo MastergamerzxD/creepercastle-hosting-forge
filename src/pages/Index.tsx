@@ -132,21 +132,49 @@ const Index = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col min-h-screen bg-navy text-white relative"
         >
-          {/* Background grid pattern */}
+          {/* Enhanced animated background with particles */}
           <div className="fixed inset-0 z-0 pointer-events-none">
-            <div 
-              className="absolute inset-0 opacity-[0.03] bg-[url('/creeper-pattern.png')]" 
-              style={{ backgroundSize: '100px 100px' }}
-            ></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-navy-dark via-navy to-navy-light opacity-80"></div>
+            {Array.from({ length: 15 }).map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute bg-creeper/20 rounded-full"
+                initial={{
+                  width: Math.random() * 6 + 2,
+                  height: Math.random() * 6 + 2,
+                  x: Math.random() * 100 + "%",
+                  y: Math.random() * 100 + "%",
+                  opacity: Math.random() * 0.5,
+                }}
+                animate={{
+                  y: ["-10%", "110%"],
+                  opacity: [0, 0.6, 0],
+                }}
+                transition={{
+                  duration: Math.random() * 15 + 20,
+                  repeat: Infinity,
+                  ease: "linear",
+                  delay: Math.random() * 10,
+                }}
+              />
+            ))}
           </div>
           
           <Navbar />
           
           <main className="flex-grow pt-16 relative z-10">
-            <HeroSection />
-            <PricingSection />
-            <LocationsSection />
-            <CreeperShieldSection />
+            <section id="home">
+              <HeroSection />
+            </section>
+            <section id="pricing">
+              <PricingSection />
+            </section>
+            <section id="locations">
+              <LocationsSection />
+            </section>
+            <section id="features">
+              <CreeperShieldSection />
+            </section>
             <ControlPanelSection />
             <DiscordSection />
             <ReviewsSection />

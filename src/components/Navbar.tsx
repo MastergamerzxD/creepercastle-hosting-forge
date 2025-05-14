@@ -1,11 +1,18 @@
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Store, ExternalLink } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  
+  const handleNavigation = (path: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsOpen(false);
+    navigate(path);
+  };
 
   return (
     <nav className="py-4 border-b border-creeper/20 bg-navy-dark/80 backdrop-blur-md fixed top-0 w-full z-50">
@@ -24,9 +31,9 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <Link to="/" className="text-white hover:text-creeper transition-colors">Home</Link>
-          <Link to="/plans" className="text-white hover:text-creeper transition-colors">Plans</Link>
-          <Link to="/locations" className="text-white hover:text-creeper transition-colors">Locations</Link>
-          <Link to="/features" className="text-white hover:text-creeper transition-colors">Features</Link>
+          <a href="#pricing" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#pricing', e)}>Plans</a>
+          <a href="#locations" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#locations', e)}>Locations</a>
+          <a href="#features" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#features', e)}>Features</a>
           <Link to="/contact" className="text-white hover:text-creeper transition-colors">Contact</Link>
           
           <Button className="bg-discord hover:bg-discord-dark text-white rounded-md" asChild>
@@ -62,9 +69,9 @@ const Navbar = () => {
         <div className="md:hidden bg-navy-dark/95 backdrop-blur-md absolute top-16 left-0 w-full border-b border-creeper/20">
           <div className="container mx-auto px-4 py-4 space-y-4 flex flex-col">
             <Link to="/" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Home</Link>
-            <Link to="/plans" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Plans</Link>
-            <Link to="/locations" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Locations</Link>
-            <Link to="/features" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Features</Link>
+            <a href="#pricing" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#pricing', e)}>Plans</a>
+            <a href="#locations" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#locations', e)}>Locations</a>
+            <a href="#features" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#features', e)}>Features</a>
             <Link to="/contact" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
             
             <div className="flex flex-col space-y-2 pt-2 border-t border-gray-800">

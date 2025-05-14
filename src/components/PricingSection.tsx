@@ -1,8 +1,7 @@
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, HelpCircle } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Tooltip, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Link } from "react-router-dom";
 
 const plans = [
@@ -12,10 +11,8 @@ const plans = [
     ram: "2GB",
     cpu: "1 vCore",
     storage: "25GB NVMe SSD",
-    players: "Up to 20",
     ddos: "Basic Protection",
     plugins: "Unlimited",
-    backups: "Daily",
     features: ["One-Click Plugin Installer", "99.9% Uptime", "24/7 Support"],
     mostPopular: false
   },
@@ -25,10 +22,8 @@ const plans = [
     ram: "4GB",
     cpu: "2 vCores",
     storage: "50GB NVMe SSD",
-    players: "Up to 50",
     ddos: "CreeperShield Basic",
     plugins: "Unlimited",
-    backups: "Twice Daily",
     features: ["One-Click Plugin Installer", "Custom Domain", "99.9% Uptime", "24/7 Support", "Modpack Support"],
     mostPopular: true
   },
@@ -38,36 +33,14 @@ const plans = [
     ram: "8GB",
     cpu: "4 vCores",
     storage: "100GB NVMe SSD",
-    players: "Unlimited",
     ddos: "CreeperShield Premium",
     plugins: "Unlimited",
-    backups: "Hourly",
     features: ["One-Click Plugin Installer", "Custom Domain", "99.9% Uptime", "Priority Support", "Advanced Modpack Support", "Server Cloning", "Multi-Server Network"],
     mostPopular: false
   }
 ];
 
 const PricingSection = () => {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'quarterly' | 'yearly'>('monthly');
-  
-  const getDiscountedPrice = (basePrice: number) => {
-    if (billingCycle === 'quarterly') return (basePrice * 3 * 0.9).toFixed(2);
-    if (billingCycle === 'yearly') return (basePrice * 12 * 0.8).toFixed(2);
-    return basePrice.toFixed(2);
-  };
-  
-  const getBillingText = () => {
-    if (billingCycle === 'quarterly') return '/quarter';
-    if (billingCycle === 'yearly') return '/year';
-    return '/month';
-  };
-  
-  const getSavingText = () => {
-    if (billingCycle === 'quarterly') return 'Save 10%';
-    if (billingCycle === 'yearly') return 'Save 20%';
-    return '';
-  };
-
   return (
     <section className="py-20 bg-navy-dark" id="pricing">
       <div className="container mx-auto px-4">
@@ -76,29 +49,6 @@ const PricingSection = () => {
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Choose the perfect plan for your Minecraft server needs. All plans include our CreeperShield DDoS protection.
           </p>
-          
-          <div className="mt-8 inline-flex items-center p-1 bg-navy-light rounded-lg">
-            <button
-              className={`px-4 py-2 rounded-md transition-all ${billingCycle === 'monthly' ? 'bg-creeper text-navy-dark' : 'text-gray-400 hover:text-white'}`}
-              onClick={() => setBillingCycle('monthly')}
-            >
-              Monthly
-            </button>
-            <button
-              className={`px-4 py-2 rounded-md transition-all ${billingCycle === 'quarterly' ? 'bg-creeper text-navy-dark' : 'text-gray-400 hover:text-white'}`}
-              onClick={() => setBillingCycle('quarterly')}
-            >
-              Quarterly
-              {billingCycle === 'quarterly' && <span className="ml-2 text-xs bg-green-900 text-white px-2 py-0.5 rounded-full">Save 10%</span>}
-            </button>
-            <button
-              className={`px-4 py-2 rounded-md transition-all ${billingCycle === 'yearly' ? 'bg-creeper text-navy-dark' : 'text-gray-400 hover:text-white'}`}
-              onClick={() => setBillingCycle('yearly')}
-            >
-              Yearly
-              {billingCycle === 'yearly' && <span className="ml-2 text-xs bg-green-900 text-white px-2 py-0.5 rounded-full">Save 20%</span>}
-            </button>
-          </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -113,11 +63,8 @@ const PricingSection = () => {
               <div className="p-6">
                 <h3 className="font-bold text-2xl mb-2">{plan.name}</h3>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold">${getDiscountedPrice(plan.price)}</span>
-                  <span className="text-gray-400">{getBillingText()}</span>
-                  {getSavingText() && billingCycle !== 'monthly' && (
-                    <div className="text-sm text-creeper mt-1">{getSavingText()}</div>
-                  )}
+                  <span className="text-4xl font-bold">${plan.price}</span>
+                  <span className="text-gray-400">/month</span>
                 </div>
                 <Button className="w-full minecraft-btn rounded-md" asChild>
                   <Link to="https://store.creepercastle.cloud" target="_blank">Get Started</Link>
@@ -153,14 +100,6 @@ const PricingSection = () => {
                       </TooltipProvider>
                     </div>
                     <span className="ml-auto text-creeper">{plan.ddos}</span>
-                  </li>
-                  <li className="flex items-center">
-                    <span className="font-medium mr-2">Players:</span>
-                    <span className="ml-auto text-creeper">{plan.players}</span>
-                  </li>
-                  <li className="flex items-center">
-                    <span className="font-medium mr-2">Backups:</span>
-                    <span className="ml-auto text-creeper">{plan.backups}</span>
                   </li>
                 </ul>
               </div>

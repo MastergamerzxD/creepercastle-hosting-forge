@@ -48,11 +48,6 @@
   
   body {
     @apply bg-navy text-foreground;
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2350C878' stroke-width='2'><path d='M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z'/></svg>") 0 0, auto;
-  }
-  
-  a, button, [role="button"], input[type="submit"], input[type="button"] {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2350C878' stroke-width='2'><path d='M14 16L21 19M8.5 19H5C3.89543 19 3 18.1046 3 17V7C3 5.89543 3.89543 5 5 5H19C20.1046 5 21 5.89543 21 7V11M12 19L14 12L11 14L9 12L12 19Z'/></svg>") 0 0, pointer;
   }
   
   .minecraft-btn {
@@ -240,3 +235,46 @@
   }
 }
 
+/* Enhanced button hover effects */
+.minecraft-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.minecraft-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.minecraft-btn:hover::after {
+  transform: translateX(100%);
+}
+
+/* Section transition effects */
+section {
+  position: relative;
+  z-index: 1;
+}
+
+section::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(80, 200, 120, 0.3), transparent);
+}
+
+/* Enhanced focus styles */
+button:focus, a:focus, input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(80, 200, 120, 0.5);
+}
