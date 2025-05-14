@@ -48,6 +48,11 @@
   
   body {
     @apply bg-navy text-foreground;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2350C878' stroke-width='2'><path d='M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z'/></svg>") 0 0, auto;
+  }
+  
+  a, button, [role="button"], input[type="submit"], input[type="button"] {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2350C878' stroke-width='2'><path d='M14 16L21 19M8.5 19H5C3.89543 19 3 18.1046 3 17V7C3 5.89543 3.89543 5 5 5H19C20.1046 5 21 5.89543 21 7V11M12 19L14 12L11 14L9 12L12 19Z'/></svg>") 0 0, pointer;
   }
   
   .minecraft-btn {
@@ -113,6 +118,27 @@
   }
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  }
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -133,6 +159,14 @@
 
 .animate-glow {
   animation: glow 3s ease-in-out infinite;
+}
+
+.animate-rotate {
+  animation: rotate 10s linear infinite;
+}
+
+.animate-morph {
+  animation: morph 8s ease-in-out infinite;
 }
 
 .animation-delay-500 {
@@ -168,3 +202,41 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #3BA664;
 }
+
+/* Minecraft-style pixel border animation */
+@keyframes pixelBorder {
+  0% {
+    box-shadow: 0 0 0 2px rgba(80, 200, 120, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(80, 200, 120, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(80, 200, 120, 0.3);
+  }
+}
+
+.pixel-animate {
+  animation: pixelBorder 3s infinite;
+}
+
+/* Background grid animation */
+.bg-grid {
+  background-image: linear-gradient(rgba(80, 200, 120, 0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(80, 200, 120, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-grid-animate {
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+

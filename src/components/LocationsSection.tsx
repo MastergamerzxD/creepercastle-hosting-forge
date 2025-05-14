@@ -51,8 +51,38 @@ const LocationsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-navy" id="locations">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-navy relative" id="locations">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden z-0">
+        <motion.div 
+          className="absolute w-1/2 h-1/2 bg-creeper/5 rounded-full blur-[100px] top-0 right-0"
+          animate={{ 
+            scale: [1, 1.2, 1],
+            x: [0, 50, 0],
+            y: [0, -30, 0]
+          }}
+          transition={{ 
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div 
+          className="absolute w-1/3 h-1/3 bg-creeper/5 rounded-full blur-[80px] bottom-20 left-1/4"
+          animate={{ 
+            scale: [1.2, 1, 1.2],
+            x: [0, -30, 0],
+            y: [0, 40, 0]
+          }}
+          transition={{ 
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -60,6 +90,13 @@ const LocationsSection = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
+          <motion.div className="inline-block mb-2">
+            <motion.div 
+              className="w-20 h-1 bg-creeper mx-auto"
+              animate={{ width: ["0%", "100%", "0%"] }}
+              transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
+            />
+          </motion.div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our <span className="text-creeper">Server Locations</span></h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Our strategically placed datacenters in India provide the lowest latency for your gaming experience.
@@ -100,6 +137,11 @@ const LocationsSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
+              <motion.div 
+                className="absolute w-10 h-10 bg-creeper/20 rounded-full -left-3 -top-3"
+                animate={{ scale: [1, 1.5, 1], opacity: [0.7, 0, 0.7] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
               <div className="absolute w-6 h-6 bg-creeper/30 rounded-full -left-1 -top-1 animate-ping"></div>
             </motion.div>
             
@@ -111,11 +153,31 @@ const LocationsSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 1 }}
             >
+              <motion.div 
+                className="absolute w-10 h-10 bg-creeper/20 rounded-full -left-3 -top-3"
+                animate={{ scale: [1, 1.5, 1], opacity: [0.7, 0, 0.7] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+              />
               <div className="absolute w-6 h-6 bg-creeper/30 rounded-full -left-1 -top-1 animate-ping"></div>
             </motion.div>
             
+            {/* Connection line between servers */}
             <motion.div 
-              className="absolute bottom-4 left-4 bg-navy-dark/80 backdrop-blur-sm p-4 rounded-lg border border-gray-800"
+              className="absolute left-[46%] top-[30%] w-0.5 h-[25%] bg-gradient-to-b from-creeper via-creeper/50 to-creeper"
+              initial={{ height: 0, opacity: 0 }}
+              whileInView={{ height: "25%", opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 1.2 }}
+            >
+              <motion.div 
+                className="absolute w-1 h-3 bg-creeper rounded-full top-1/2 -left-[1.5px]"
+                animate={{ y: [0, 100], opacity: [1, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
+              />
+            </motion.div>
+            
+            <motion.div 
+              className="absolute bottom-4 left-4 bg-navy-dark/80 backdrop-blur-sm p-4 rounded-lg border border-gray-800 pixel-animate"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -126,18 +188,30 @@ const LocationsSection = () => {
                 India Network
               </h3>
               <ul className="text-sm space-y-1">
-                <li className="flex items-center">
-                  <div className="w-2 h-2 rounded-full bg-creeper mr-2"></div>
+                <motion.li 
+                  className="flex items-center"
+                  whileHover={{ x: 3 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <div className="w-2 h-2 rounded-full bg-creeper mr-2 animate-pulse-slow"></div>
                   <span>Delhi - Tier 4 Datacenter</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 rounded-full bg-creeper mr-2"></div>
+                </motion.li>
+                <motion.li 
+                  className="flex items-center"
+                  whileHover={{ x: 3 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <div className="w-2 h-2 rounded-full bg-creeper mr-2 animate-pulse-slow animation-delay-500"></div>
                   <span>Mumbai - Tier 4 Datacenter</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 rounded-full bg-creeper mr-2"></div>
+                </motion.li>
+                <motion.li 
+                  className="flex items-center"
+                  whileHover={{ x: 3 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <div className="w-2 h-2 rounded-full bg-creeper mr-2 animate-pulse-slow animation-delay-1000"></div>
                   <span>CreeperShield Protection</span>
-                </li>
+                </motion.li>
               </ul>
             </motion.div>
           </motion.div>
@@ -153,7 +227,7 @@ const LocationsSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {locations.map((location, index) => (
                 <motion.div key={index} variants={itemVariants} transition={{ duration: 0.5 }}>
-                  <Card className="bg-navy-light border-gray-800 hover:border-creeper/50 transition-all duration-300 hover:shadow-lg hover:shadow-creeper/20">
+                  <Card className="bg-navy-light border-gray-800 hover:border-creeper/50 transition-all duration-300 hover:shadow-lg hover:shadow-creeper/20 pixel-animate">
                     <CardContent className="p-6">
                       <div className="flex items-center mb-4">
                         <MapPin className="h-5 w-5 text-creeper mr-2" />
@@ -162,9 +236,15 @@ const LocationsSection = () => {
                       <div className="space-y-3">
                         <div className="flex items-center text-sm">
                           <span className="text-gray-400">Current Ping: </span>
-                          <span className="ml-auto text-creeper font-medium">
+                          <motion.span 
+                            className="ml-auto text-creeper font-medium"
+                            key={pings[location.city]}
+                            initial={{ opacity: 0, y: -5 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.2 }}
+                          >
                             {pings[location.city] !== null ? `${pings[location.city]}ms` : 'Calculating...'}
-                          </span>
+                          </motion.span>
                         </div>
                         <div className="pt-3">
                           <div className="h-2 w-full bg-navy rounded overflow-hidden">

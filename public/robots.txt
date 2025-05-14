@@ -2,7 +2,28 @@
 User-agent: *
 Allow: /
 
+# Main sitemap
 Sitemap: https://creepercastle.cloud/sitemap.xml
 
+# Disallow admin and private directories
 Disallow: /admin/
 Disallow: /private/
+Disallow: /wp-admin/
+Disallow: /wp-login/
+Disallow: /backend/
+Disallow: /internal/
+
+# Clean URLs
+Disallow: /*?
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Allow Googlebot to access more
+User-agent: Googlebot
+Allow: /*.js$
+Allow: /*.css$
+
+# For images
+User-agent: Googlebot-Image
+Allow: /*
