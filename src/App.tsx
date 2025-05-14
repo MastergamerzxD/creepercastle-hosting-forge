@@ -53,6 +53,8 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/contact" element={<ContactPage />} />
+              {/* Redirecting /plans to home page as a temporary solution */}
+              <Route path="/plans" element={<Index />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
