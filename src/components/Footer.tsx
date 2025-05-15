@@ -20,16 +20,16 @@ const Footer = () => {
               Premium Minecraft hosting with unbeatable performance, protection and support.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">
+              <a href="https://facebook.com/creepercastle" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">
                 <Facebook size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">
+              <a href="https://twitter.com/creepercastle" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">
                 <Twitter size={20} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">
+              <a href="https://instagram.com/creepercastle" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">
                 <Instagram size={20} />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">
+              <a href="https://github.com/creepercastle" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">
                 <Github size={20} />
               </a>
             </div>
@@ -38,10 +38,10 @@ const Footer = () => {
           <div>
             <h3 className="font-bold mb-4 text-lg">Hosting</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-400 hover:text-creeper">Minecraft Plans</Link></li>
-              <li><Link to="/" className="text-gray-400 hover:text-creeper">Modded Minecraft</Link></li>
-              <li><Link to="/" className="text-gray-400 hover:text-creeper">BungeeCord</Link></li>
-              <li><Link to="/" className="text-gray-400 hover:text-creeper">Enterprise Solutions</Link></li>
+              <li><a href="https://billing.creepercastle.in/index.php?rp=/store/minecraft-performance-servers" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">Minecraft Plans</a></li>
+              <li><a href="https://billing.creepercastle.in/index.php?rp=/store/vps-hosting" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">VPS Hosting</a></li>
+              <li><a href="https://billing.creepercastle.in/index.php?rp=/store/creepershield" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">CreeperShield</a></li>
+              <li><a href="https://discord.gg/creepercastle" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">Enterprise Solutions</a></li>
             </ul>
           </div>
           
@@ -51,16 +51,16 @@ const Footer = () => {
               <li><Link to="/contact" className="text-gray-400 hover:text-creeper">About Us</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-creeper">Server Locations</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-creeper">Contact Us</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-creeper">Careers</Link></li>
+              <li><a href="https://discord.gg/creepercastle" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">Join Our Team</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-bold mb-4 text-lg">Support</h3>
             <ul className="space-y-2">
-              <li><Link to="/contact" className="text-gray-400 hover:text-creeper">Knowledge Base</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-creeper">Support Center</Link></li>
-              <li><Link to="/" className="text-gray-400 hover:text-creeper">Server Status</Link></li>
+              <li><a href="https://discord.gg/creepercastle" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">Knowledge Base</a></li>
+              <li><a href="https://discord.gg/creepercastle" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">Support Center</a></li>
+              <li><a href="https://status.creepercastle.in" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-creeper">Server Status</a></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-creeper">FAQ</Link></li>
             </ul>
           </div>
@@ -71,8 +71,8 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} CreeperCastle.cloud. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <Link to="/contact" className="text-gray-400 text-sm hover:text-creeper">Terms of Service</Link>
-            <Link to="/contact" className="text-gray-400 text-sm hover:text-creeper">Privacy Policy</Link>
+            <a href="https://billing.creepercastle.in/index.php?rp=/store/tos" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm hover:text-creeper">Terms of Service</a>
+            <a href="https://billing.creepercastle.in/index.php?rp=/store/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm hover:text-creeper">Privacy Policy</a>
             <Link to="/contact" className="text-gray-400 text-sm hover:text-creeper">Legal</Link>
           </div>
         </div>

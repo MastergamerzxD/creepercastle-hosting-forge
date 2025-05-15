@@ -2,41 +2,46 @@
 import { Button } from "@/components/ui/button";
 import { Check, HelpCircle } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { Link } from "react-router-dom";
 
 const plans = [
   {
-    name: "Stone",
-    price: 4.99,
-    ram: "2GB",
-    cpu: "1 vCore",
-    storage: "25GB NVMe SSD",
-    ddos: "Basic Protection",
+    name: "VPS",
+    price: 3300,
+    ram: "Starting from 32GB",
+    cpu: "Starting from 10 vCores",
+    storage: "300GB NVMe SSD",
+    location: "India, Delhi",
+    ddos: "CreeperShield Protection",
     plugins: "Unlimited",
-    features: ["One-Click Plugin Installer", "99.9% Uptime", "24/7 Support"],
-    mostPopular: false
+    features: [],
+    mostPopular: false,
+    link: "https://billing.creepercastle.in/index.php?rp=/store/vps-hosting"
   },
   {
-    name: "Iron",
-    price: 9.99,
-    ram: "4GB",
-    cpu: "2 vCores",
-    storage: "50GB NVMe SSD",
-    ddos: "CreeperShield Basic",
+    name: "Minecraft Performance Servers",
+    price: 299,
+    ram: "Starting from 2GB",
+    cpu: "Starting from 1 vCore",
+    storage: "30GB NVMe SSD",
+    location: "India, Delhi",
+    ddos: "DDoS Protection powered by CreeperShield",
     plugins: "Unlimited",
     features: ["One-Click Plugin Installer", "Custom Domain", "99.9% Uptime", "24/7 Support", "Modpack Support"],
-    mostPopular: true
+    mostPopular: true,
+    link: "https://billing.creepercastle.in/index.php?rp=/store/minecraft-performance-servers"
   },
   {
-    name: "Diamond",
-    price: 19.99,
-    ram: "8GB",
-    cpu: "4 vCores",
-    storage: "100GB NVMe SSD",
-    ddos: "CreeperShield Premium",
+    name: "CreeperShield",
+    price: 84,
+    ram: "Bandwidth starting from 1 Tbps",
+    cpu: "Special features like IP Filteration",
+    storage: "Less than 1.1ms resolving time",
+    location: "For more info scroll down",
+    ddos: "Advanced Protection",
     plugins: "Unlimited",
-    features: ["One-Click Plugin Installer", "Custom Domain", "99.9% Uptime", "Priority Support", "Advanced Modpack Support", "Server Cloning", "Multi-Server Network"],
-    mostPopular: false
+    features: ["Layer 3 & 4 Protection", "Layer 7 Protection", "Real-time Traffic Analysis", "Zero Downtime Protection", "Automatic Filtering", "GRE Tunnels Support", "24/7 Security Team"],
+    mostPopular: false,
+    link: "https://billing.creepercastle.in/index.php?rp=/store/creepershield"
   }
 ];
 
@@ -63,27 +68,31 @@ const PricingSection = () => {
               <div className="p-6">
                 <h3 className="font-bold text-2xl mb-2">{plan.name}</h3>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold">${plan.price}</span>
+                  <span className="text-4xl font-bold">₹{plan.price}</span>
                   <span className="text-gray-400">/month</span>
                 </div>
                 <Button className="w-full minecraft-btn rounded-md" asChild>
-                  <Link to="https://store.creepercastle.cloud" target="_blank">Get Started</Link>
+                  <a href={plan.link} target="_blank" rel="noopener noreferrer">Get Started</a>
                 </Button>
               </div>
               
               <div className="border-t border-gray-800 p-6">
                 <ul className="space-y-4">
                   <li className="flex items-center">
-                    <span className="font-medium mr-2">RAM:</span>
+                    <span className="font-medium mr-2">{plan.name === "CreeperShield" ? "Bandwidth:" : "RAM:"}</span>
                     <span className="ml-auto text-creeper">{plan.ram}</span>
                   </li>
                   <li className="flex items-center">
-                    <span className="font-medium mr-2">CPU:</span>
+                    <span className="font-medium mr-2">{plan.name === "CreeperShield" ? "Features:" : "CPU:"}</span>
                     <span className="ml-auto text-creeper">{plan.cpu}</span>
                   </li>
                   <li className="flex items-center">
-                    <span className="font-medium mr-2">Storage:</span>
+                    <span className="font-medium mr-2">{plan.name === "CreeperShield" ? "Response Time:" : "Storage:"}</span>
                     <span className="ml-auto text-creeper">{plan.storage}</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="font-medium mr-2">Location:</span>
+                    <span className="ml-auto text-creeper">{plan.location}</span>
                   </li>
                   <li className="flex items-center">
                     <div className="flex items-center font-medium mr-2">
@@ -104,17 +113,19 @@ const PricingSection = () => {
                 </ul>
               </div>
               
-              <div className="border-t border-gray-800 p-6">
-                <h4 className="font-medium mb-3">Features:</h4>
-                <ul className="space-y-2">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start">
-                      <Check className="h-5 w-5 text-creeper mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {(plan.features.length > 0) && (
+                <div className="border-t border-gray-800 p-6">
+                  <h4 className="font-medium mb-3">Features:</h4>
+                  <ul className="space-y-2">
+                    {plan.features.map((feature, i) => (
+                      <li key={i} className="flex items-start">
+                        <Check className="h-5 w-5 text-creeper mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -122,9 +133,9 @@ const PricingSection = () => {
         <div className="text-center mt-12">
           <p className="text-gray-400 mb-4">Need a custom solution? We've got you covered.</p>
           <Button variant="outline" className="border-creeper text-creeper hover:bg-creeper/10 rounded-md" asChild>
-            <Link to="https://discord.gg/creepercastle" target="_blank">
+            <a href="https://discord.gg/creepercastle" target="_blank" rel="noopener noreferrer">
               Contact Us for Custom Plans
-            </Link>
+            </a>
           </Button>
         </div>
       </div>
