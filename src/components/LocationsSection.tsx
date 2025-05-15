@@ -126,7 +126,7 @@ const LocationsSection = () => {
             
             {/* Delhi */}
             <motion.div 
-              className="absolute left-[48%] top-[30%] w-4 h-4 bg-creeper rounded-full animate-pulse-slow shadow-lg shadow-creeper/50"
+              className="absolute left-[48%] top-[30%] w-4 h-4 bg-creeper rounded-full animate-pulse-slow shadow-lg shadow-creeper/50 group"
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
@@ -138,11 +138,14 @@ const LocationsSection = () => {
                 transition={{ duration: 2, repeat: Infinity }}
               />
               <div className="absolute w-6 h-6 bg-creeper/30 rounded-full -left-1 -top-1 animate-ping"></div>
+              <div className="hidden group-hover:block absolute -top-10 left-1/2 -translate-x-1/2 bg-navy-dark px-3 py-1.5 rounded-md border border-creeper/30 whitespace-nowrap font-medium">
+                Delhi
+              </div>
             </motion.div>
             
             {/* Mumbai */}
             <motion.div 
-              className="absolute left-[44%] top-[55%] w-4 h-4 bg-creeper rounded-full animate-pulse-slow shadow-lg shadow-creeper/50"
+              className="absolute left-[44%] top-[55%] w-4 h-4 bg-creeper rounded-full animate-pulse-slow shadow-lg shadow-creeper/50 group"
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
@@ -154,38 +157,9 @@ const LocationsSection = () => {
                 transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
               />
               <div className="absolute w-6 h-6 bg-creeper/30 rounded-full -left-1 -top-1 animate-ping"></div>
-            </motion.div>
-
-            {/* Bangalore */}
-            <motion.div 
-              className="absolute left-[43%] top-[75%] w-4 h-4 bg-creeper rounded-full animate-pulse-slow shadow-lg shadow-creeper/50"
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 1.2 }}
-            >
-              <motion.div 
-                className="absolute w-10 h-10 bg-creeper/20 rounded-full -left-3 -top-3"
-                animate={{ scale: [1, 1.5, 1], opacity: [0.7, 0, 0.7] }}
-                transition={{ duration: 2, repeat: Infinity, delay: 0.7 }}
-              />
-              <div className="absolute w-6 h-6 bg-creeper/30 rounded-full -left-1 -top-1 animate-ping"></div>
-            </motion.div>
-
-            {/* Chennai */}
-            <motion.div 
-              className="absolute left-[48%] top-[70%] w-4 h-4 bg-creeper rounded-full animate-pulse-slow shadow-lg shadow-creeper/50"
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 1.4 }}
-            >
-              <motion.div 
-                className="absolute w-10 h-10 bg-creeper/20 rounded-full -left-3 -top-3"
-                animate={{ scale: [1, 1.5, 1], opacity: [0.7, 0, 0.7] }}
-                transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
-              />
-              <div className="absolute w-6 h-6 bg-creeper/30 rounded-full -left-1 -top-1 animate-ping"></div>
+              <div className="hidden group-hover:block absolute -top-10 left-1/2 -translate-x-1/2 bg-navy-dark px-3 py-1.5 rounded-md border border-creeper/30 whitespace-nowrap font-medium">
+                Mumbai
+              </div>
             </motion.div>
             
             {/* Connection lines between servers */}
@@ -230,22 +204,6 @@ const LocationsSection = () => {
                 >
                   <div className="w-2 h-2 rounded-full bg-creeper mr-2 animate-pulse-slow animation-delay-500"></div>
                   <span>Mumbai - Tier 4 Datacenter</span>
-                </motion.li>
-                <motion.li 
-                  className="flex items-center"
-                  whileHover={{ x: 3 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                >
-                  <div className="w-2 h-2 rounded-full bg-creeper mr-2 animate-pulse-slow animation-delay-750"></div>
-                  <span>Bangalore - Tier 4 Datacenter</span>
-                </motion.li>
-                <motion.li 
-                  className="flex items-center"
-                  whileHover={{ x: 3 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                >
-                  <div className="w-2 h-2 rounded-full bg-creeper mr-2 animate-pulse-slow animation-delay-750"></div>
-                  <span>Chennai - Tier 4 Datacenter</span>
                 </motion.li>
                 <motion.li 
                   className="flex items-center"

@@ -23,7 +23,7 @@ const Index = () => {
     // Update document title
     document.title = "CreeperCastle.cloud - Premium Minecraft Hosting in India";
     
-    // Simulate loading time (minimum 1 second, maximum 2 seconds)
+    // Simulate loading time (minimum 1 second, maximum 1.5 seconds)
     const timer = setTimeout(() => {
       setLoading(false);
       // Scroll to top after loading
@@ -32,6 +32,34 @@ const Index = () => {
     
     return () => {
       clearTimeout(timer);
+    };
+  }, []);
+
+  // Handle hash navigation for smooth scrolling
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          setTimeout(() => {
+            window.scrollTo({
+              top: element.getBoundingClientRect().top + window.scrollY - 80,
+              behavior: 'smooth'
+            });
+          }, 100);
+        }
+      }
+    };
+
+    // Initial check for hash on page load
+    handleHashChange();
+    
+    // Add event listener for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
     };
   }, []);
 
@@ -61,7 +89,7 @@ const Index = () => {
       "addressCountry": "India"
     },
     "sameAs": [
-      "https://discord.gg/creepercastle",
+      "https://discord.gg/RuQ9neH56S",
       "https://twitter.com/creepercastle",
       "https://instagram.com/creepercastle"
     ]

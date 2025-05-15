@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
+  // Rotating text variants for the animated headline
+  const textVariants = ["Minecraft", "Gaming", "Adventure", "Creation"];
+  
   return (
     <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       {/* Animated background elements */}
@@ -45,18 +48,33 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Unleash Your <motion.span 
-                className="text-creeper"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ 
-                  duration: 0.4,
-                  delay: 0.4,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  repeatDelay: 5
-                }}
-              >Minecraft</motion.span> Server's True Potential
+              Unleash Your{" "}
+              <motion.div 
+                className="inline-block"
+                initial={{ opacity: 1 }}
+              >
+                {textVariants.map((text, index) => (
+                  <motion.span 
+                    key={text}
+                    className="text-creeper inline-block"
+                    initial={{ opacity: 0, y: 20, display: "none" }}
+                    animate={{ 
+                      opacity: [0, 1, 1, 0], 
+                      y: [20, 0, 0, -20],
+                      display: ["none", "inline-block", "inline-block", "none"]
+                    }}
+                    transition={{ 
+                      duration: 2,
+                      delay: index * 2,
+                      repeat: Infinity,
+                      repeatDelay: textVariants.length * 2 - 2
+                    }}
+                  >
+                    {text}
+                  </motion.span>
+                ))}
+              </motion.div>
+              {" "}Server's True Potential
             </motion.h1>
             
             <motion.p 
@@ -76,18 +94,18 @@ const HeroSection = () => {
             >
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button className="minecraft-btn rounded-md text-lg py-6 px-8 relative overflow-hidden group pixel-animate" asChild>
-                  <Link to="https://store.creepercastle.cloud" target="_blank">
+                  <a href="https://billing.creepercastle.in/" target="_blank" rel="noopener noreferrer">
                     <span className="relative z-10">Store</span>
                     <span className="absolute inset-0 bg-creeper-light opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
-                  </Link>
+                  </a>
                 </Button>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button variant="outline" className="border-creeper text-creeper hover:bg-creeper/10 rounded-md text-lg py-6 px-8 relative overflow-hidden group" asChild>
-                  <Link to="https://discord.gg/creepercastle" target="_blank">
+                  <a href="https://discord.gg/RuQ9neH56S" target="_blank" rel="noopener noreferrer">
                     <span className="relative z-10">Discord</span>
                     <span className="absolute inset-0 bg-creeper/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                  </Link>
+                  </a>
                 </Button>
               </motion.div>
             </motion.div>
