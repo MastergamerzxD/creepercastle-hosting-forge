@@ -81,8 +81,8 @@ const Index = () => {
     "@type": "Organization",
     "name": "CreeperCastle.cloud",
     "url": "https://creepercastle.cloud/",
-    "logo": "https://creepercastle.cloud/logo.png",
-    "description": "Premium Minecraft server hosting services in India with best-in-class hardware, DDoS protection, and instant setup.",
+    "logo": "/lovable-uploads/447061ac-3f17-4790-944a-dcb679915f54.png",
+    "description": "Best Minecraft server hosting services in India with high-performance hardware, DDoS protection, and instant setup.",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "India"
@@ -115,15 +115,15 @@ const Index = () => {
     <>
       <Helmet>
         <title>CreeperCastle.cloud - Best Minecraft Server Hosting in India</title>
-        <meta name="description" content="CreeperCastle.cloud offers premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India." />
+        <meta name="description" content="CreeperCastle.cloud offers the best premium Minecraft hosting in India with instant setup, high performance NVMe storage, and unmatched DDoS protection." />
         <meta name="keywords" content="minecraft hosting india, minecraft server hosting, minecraft india, ddos protection, minecraft mods, game server, minecraft multiplayer, best minecraft hosting india, budget minecraft server, modded minecraft hosting, minecraft plugins" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/" />
-        <meta property="og:title" content="CreeperCastle.cloud - Best Minecraft Server Hosting in India" />
+        <meta property="og:title" content="CreeperCastle.cloud - Best Premium Minecraft Server Hosting in India" />
         <meta property="og:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India." />
-        <meta property="og:image" content="/lovable-uploads/481818b0-b26e-434c-9235-e8f4607af6bf.png" />
+        <meta property="og:image" content="/lovable-uploads/447061ac-3f17-4790-944a-dcb679915f54.png" />
         <meta property="og:image:alt" content="CreeperCastle.cloud Logo" />
         <meta property="og:site_name" content="CreeperCastle.cloud" />
         <meta property="og:locale" content="en_US" />
@@ -133,7 +133,7 @@ const Index = () => {
         <meta property="twitter:url" content="https://creepercastle.cloud/" />
         <meta property="twitter:title" content="CreeperCastle.cloud - Best Minecraft Server Hosting in India" />
         <meta property="twitter:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India." />
-        <meta property="twitter:image" content="/lovable-uploads/481818b0-b26e-434c-9235-e8f4607af6bf.png" />
+        <meta property="twitter:image" content="/lovable-uploads/447061ac-3f17-4790-944a-dcb679915f54.png" />
         
         {/* Additional Meta Tags */}
         <meta name="robots" content="index, follow" />
@@ -144,14 +144,14 @@ const Index = () => {
         <meta name="apple-mobile-web-app-title" content="CreeperCastle.cloud" />
         <meta name="application-name" content="CreeperCastle.cloud" />
         <meta name="msapplication-TileColor" content="#50C878" />
-        <meta name="msapplication-TileImage" content="/lovable-uploads/481818b0-b26e-434c-9235-e8f4607af6bf.png" />
+        <meta name="msapplication-TileImage" content="/lovable-uploads/447061ac-3f17-4790-944a-dcb679915f54.png" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://creepercastle.cloud/" />
         
         {/* Favicon */}
-        <link rel="icon" href="/lovable-uploads/481818b0-b26e-434c-9235-e8f4607af6bf.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/lovable-uploads/481818b0-b26e-434c-9235-e8f4607af6bf.png" />
+        <link rel="icon" href="/lovable-uploads/447061ac-3f17-4790-944a-dcb679915f54.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/lovable-uploads/447061ac-3f17-4790-944a-dcb679915f54.png" />
         
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">

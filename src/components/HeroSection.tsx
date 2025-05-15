@@ -5,13 +5,18 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
-  // Rotating text variants for the animated headline
+  // Rotating text variants for the animated headline with improved styling
   const textVariants = ["Minecraft", "Gaming", "Adventure", "Creation"];
   
   return (
     <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden z-0 bg-grid bg-grid-animate">
+      {/* Animated background elements with improved styling */}
+      <div className="absolute inset-0 overflow-hidden z-0 bg-grid bg-grid-animate" 
+           style={{ 
+             backgroundImage: `url('/creeper-pattern.png')`, 
+             backgroundSize: '200px 200px',
+             backgroundOpacity: '0.05'
+           }}>
         <motion.div 
           className="absolute top-20 left-10 w-4 h-4 bg-creeper rounded-sm opacity-20"
           animate={{ y: [0, -10, 0], rotate: [0, 180, 360] }}
@@ -50,13 +55,18 @@ const HeroSection = () => {
             >
               Unleash Your{" "}
               <motion.div 
-                className="inline-block"
+                className="inline-block relative"
                 initial={{ opacity: 1 }}
+                style={{ minWidth: '200px', display: 'inline-block' }}
               >
                 {textVariants.map((text, index) => (
                   <motion.span 
                     key={text}
-                    className="text-creeper inline-block"
+                    className="text-creeper inline-block font-extrabold absolute left-0"
+                    style={{ 
+                      textShadow: '0 0 10px rgba(80, 200, 120, 0.5)',
+                      fontWeight: 800
+                    }}
                     initial={{ opacity: 0, y: 20, display: "none" }}
                     animate={{ 
                       opacity: [0, 1, 1, 0], 

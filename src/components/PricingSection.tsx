@@ -30,7 +30,7 @@ const plans = [
     features: ["One-Click Plugin Installer", "Custom Domain", "99.9% Uptime", "24/7 Support", "Modpack Support"],
     mostPopular: true,
     link: "https://billing.creepercastle.in/index.php?rp=/store/minecraft-performance-servers",
-    icon: <img src="/public/creeper-pattern.png" alt="Minecraft Block" className="h-10 w-10 mb-2" />
+    icon: <img src="/creeper-pattern.png" alt="Minecraft Block" className="h-10 w-10 mb-2" />
   },
   {
     name: "CreeperShield",
