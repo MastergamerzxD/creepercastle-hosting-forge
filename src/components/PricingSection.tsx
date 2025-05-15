@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Check, HelpCircle } from "lucide-react";
+import { Check, HelpCircle, Server, Shield } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const plans = [
@@ -15,7 +15,8 @@ const plans = [
     plugins: "Unlimited",
     features: [],
     mostPopular: false,
-    link: "https://billing.creepercastle.in/index.php?rp=/store/vps-hosting"
+    link: "https://billing.creepercastle.in/index.php?rp=/store/vps-hosting",
+    icon: <Server className="h-10 w-10 text-creeper mb-2" />
   },
   {
     name: "Minecraft Performance Servers",
@@ -28,7 +29,8 @@ const plans = [
     plugins: "Unlimited",
     features: ["One-Click Plugin Installer", "Custom Domain", "99.9% Uptime", "24/7 Support", "Modpack Support"],
     mostPopular: true,
-    link: "https://billing.creepercastle.in/index.php?rp=/store/minecraft-performance-servers"
+    link: "https://billing.creepercastle.in/index.php?rp=/store/minecraft-performance-servers",
+    icon: <img src="/public/creeper-pattern.png" alt="Minecraft Block" className="h-10 w-10 mb-2" />
   },
   {
     name: "CreeperShield",
@@ -39,9 +41,10 @@ const plans = [
     location: "For more info scroll down",
     ddos: "Advanced Protection",
     plugins: "Unlimited",
-    features: ["Layer 3 & 4 Protection", "Layer 7 Protection", "Real-time Traffic Analysis", "Zero Downtime Protection", "Automatic Filtering", "GRE Tunnels Support", "24/7 Security Team"],
+    features: ["Layer 3 & 4 Protection", "Minecraft Server Protection", "Zero Downtime Protection", "Automatic Filtering", "24/7 Security Team"],
     mostPopular: false,
-    link: "https://billing.creepercastle.in/index.php?rp=/store/creepershield"
+    link: "https://billing.creepercastle.in/index.php?rp=/store/creepershield",
+    icon: <Shield className="h-10 w-10 text-creeper mb-2" />
   }
 ];
 
@@ -65,7 +68,8 @@ const PricingSection = () => {
                 </div>
               )}
               
-              <div className="p-6">
+              <div className="p-6 text-center">
+                {plan.icon}
                 <h3 className="font-bold text-2xl mb-2">{plan.name}</h3>
                 <div className="mb-4">
                   <span className="text-4xl font-bold">₹{plan.price}</span>

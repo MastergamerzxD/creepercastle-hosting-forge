@@ -195,7 +195,7 @@ const ReviewsSection = () => {
           
           <motion.div whileHover={{ scale: 1.03 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
             <Button className="w-full bg-[#00b67a] hover:bg-[#00a26e] text-white rounded-md flex items-center justify-center gap-2 relative overflow-hidden group" asChild>
-              <a href="https://www.trustpilot.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://nz.trustpilot.com/review/creepercastle.cloud" target="_blank" rel="noopener noreferrer">
                 <span className="relative z-10">Read our Trustpilot reviews</span>
                 <ExternalLink className="h-4 w-4 relative z-10" />
                 <span className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-white transition-opacity duration-300"></span>

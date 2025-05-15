@@ -1,6 +1,5 @@
 
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Github } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,8 +7,8 @@ const Footer = () => {
       {/* Add some theme-matching elements to the footer */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 w-full h-1 bg-gradient-to-r from-transparent via-creeper/30 to-transparent"></div>
-        <div className="absolute bottom-40 right-10 w-64 h-64 bg-creeper/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-20 left-10 w-32 h-32 bg-creeper/5 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-40 right-10 w-64 h-64 bg-creeper/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-creeper/10 rounded-full blur-2xl"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -26,20 +25,6 @@ const Footer = () => {
             <p className="text-gray-300 mb-4">
               Premium Minecraft hosting with unbeatable performance, protection and support.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://facebook.com/creepercastle" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-creeper transition-colors duration-300">
-                <Facebook size={20} />
-              </a>
-              <a href="https://twitter.com/creepercastle" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-creeper transition-colors duration-300">
-                <Twitter size={20} />
-              </a>
-              <a href="https://instagram.com/creepercastle" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-creeper transition-colors duration-300">
-                <Instagram size={20} />
-              </a>
-              <a href="https://github.com/creepercastle" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-creeper transition-colors duration-300">
-                <Github size={20} />
-              </a>
-            </div>
           </div>
           
           <div>
@@ -73,7 +58,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-700/50 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-creeper/20 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} CreeperCastle.cloud. All rights reserved.
           </p>
