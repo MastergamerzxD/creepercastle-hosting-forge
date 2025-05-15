@@ -19,7 +19,7 @@ const plans = [
   },
   {
     name: "Minecraft Performance Servers",
-    price: 299,
+    price: 99,
     ram: "Starting from 2GB",
     cpu: "Starting from 1 vCore",
     storage: "30GB NVMe SSD",
@@ -133,7 +133,7 @@ const PricingSection = () => {
         <div className="text-center mt-12">
           <p className="text-gray-400 mb-4">Need a custom solution? We've got you covered.</p>
           <Button variant="outline" className="border-creeper text-creeper hover:bg-creeper/10 rounded-md" asChild>
-            <a href="https://discord.gg/creepercastle" target="_blank" rel="noopener noreferrer">
+            <a href="https://discord.gg/RuQ9neH56S" target="_blank" rel="noopener noreferrer">
               Contact Us for Custom Plans
             </a>
           </Button>

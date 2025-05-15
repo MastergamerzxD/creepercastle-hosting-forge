@@ -9,8 +9,6 @@ const locations = [
   { city: "Mumbai", country: "India", ping: null }
 ];
 
-const mapImage = "https://upload.wikimedia.org/wikipedia/commons/b/bc/India-map-en.svg";
-
 const LocationsSection = () => {
   const [pings, setPings] = useState<{ [key: string]: number | null }>({
     Delhi: null,
@@ -120,12 +118,9 @@ const LocationsSection = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <img 
-                src={mapImage} 
+                src="/lovable-uploads/bbf2f332-d50e-4f8c-8b64-111e940e56e1.png" 
                 alt="India Map" 
                 className="object-contain w-full h-full opacity-50"
-                onError={(e) => {
-                  e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/India_location_map.svg/1280px-India_location_map.svg.png";
-                }}
               />
             </motion.div>
             
@@ -160,8 +155,40 @@ const LocationsSection = () => {
               />
               <div className="absolute w-6 h-6 bg-creeper/30 rounded-full -left-1 -top-1 animate-ping"></div>
             </motion.div>
+
+            {/* Bangalore */}
+            <motion.div 
+              className="absolute left-[43%] top-[75%] w-4 h-4 bg-creeper rounded-full animate-pulse-slow shadow-lg shadow-creeper/50"
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 1.2 }}
+            >
+              <motion.div 
+                className="absolute w-10 h-10 bg-creeper/20 rounded-full -left-3 -top-3"
+                animate={{ scale: [1, 1.5, 1], opacity: [0.7, 0, 0.7] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0.7 }}
+              />
+              <div className="absolute w-6 h-6 bg-creeper/30 rounded-full -left-1 -top-1 animate-ping"></div>
+            </motion.div>
+
+            {/* Chennai */}
+            <motion.div 
+              className="absolute left-[48%] top-[70%] w-4 h-4 bg-creeper rounded-full animate-pulse-slow shadow-lg shadow-creeper/50"
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 1.4 }}
+            >
+              <motion.div 
+                className="absolute w-10 h-10 bg-creeper/20 rounded-full -left-3 -top-3"
+                animate={{ scale: [1, 1.5, 1], opacity: [0.7, 0, 0.7] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
+              />
+              <div className="absolute w-6 h-6 bg-creeper/30 rounded-full -left-1 -top-1 animate-ping"></div>
+            </motion.div>
             
-            {/* Connection line between servers */}
+            {/* Connection lines between servers */}
             <motion.div 
               className="absolute left-[46%] top-[30%] w-0.5 h-[25%] bg-gradient-to-b from-creeper via-creeper/50 to-creeper"
               initial={{ height: 0, opacity: 0 }}
@@ -203,6 +230,22 @@ const LocationsSection = () => {
                 >
                   <div className="w-2 h-2 rounded-full bg-creeper mr-2 animate-pulse-slow animation-delay-500"></div>
                   <span>Mumbai - Tier 4 Datacenter</span>
+                </motion.li>
+                <motion.li 
+                  className="flex items-center"
+                  whileHover={{ x: 3 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <div className="w-2 h-2 rounded-full bg-creeper mr-2 animate-pulse-slow animation-delay-750"></div>
+                  <span>Bangalore - Tier 4 Datacenter</span>
+                </motion.li>
+                <motion.li 
+                  className="flex items-center"
+                  whileHover={{ x: 3 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <div className="w-2 h-2 rounded-full bg-creeper mr-2 animate-pulse-slow animation-delay-750"></div>
+                  <span>Chennai - Tier 4 Datacenter</span>
                 </motion.li>
                 <motion.li 
                   className="flex items-center"

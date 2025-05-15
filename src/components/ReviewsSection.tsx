@@ -7,27 +7,27 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Alex Johnson",
-    avatar: "AJ",
-    role: "Server Owner",
+    name: "Glume Gamer",
+    avatar: "GG",
+    role: "Partner",
     rating: 5,
     comment: "CreeperCastle has been a game-changer for my community. The server performance is incredible, and the control panel makes management so easy. CreeperShield kept us online during a massive DDoS attack that took down other servers in our network.",
     verified: true,
     plan: "Iron Plan"
   },
   {
-    name: "Sarah Williams",
-    avatar: "SW",
-    role: "Modpack Creator",
+    name: "Living Legend",
+    avatar: "LL",
+    role: "Partner",
     rating: 5,
     comment: "I've tried many hosting providers, but CreeperCastle is by far the best for modded Minecraft. My 250-mod pack runs flawlessly, and the support team helped me optimize it even further. The NVMe storage makes a huge difference!",
     verified: true,
     plan: "Diamond Plan"
   },
   {
-    name: "Michael Chen",
-    avatar: "MC",
-    role: "Community Manager",
+    name: "Yaswath",
+    avatar: "YS",
+    role: "Customer",
     rating: 4,
     comment: "Managing our 100-player server network has never been easier. The multi-server management tools are intuitive, and the automatic backups have saved us more than once. Very impressed with the performance and uptime.",
     verified: true,
@@ -89,7 +89,7 @@ const ReviewsSection = () => {
               ))}
             </div>
             <span className="ml-2 font-medium">4.9 out of 5</span>
-            <span className="text-gray-400 ml-2">(256 reviews)</span>
+            <span className="text-gray-400 ml-2">(100+ reviews, including Discord reviews)</span>
           </motion.div>
         </motion.div>
         

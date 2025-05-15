@@ -1,8 +1,12 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import GetStartedModal from "./GetStartedModal";
 
 const CtaSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -52,6 +56,8 @@ const CtaSection = () => {
         ></motion.div>
       </div>
       
+      <GetStartedModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           className="max-w-3xl mx-auto text-center"
@@ -88,7 +94,10 @@ const CtaSection = () => {
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <Button className="minecraft-btn rounded-md text-lg py-6 px-8 relative overflow-hidden group">
+              <Button 
+                className="minecraft-btn rounded-md text-lg py-6 px-8 relative overflow-hidden group"
+                onClick={() => setIsModalOpen(true)}
+              >
                 <span className="relative z-10">Get Started Now</span>
                 <span className="absolute inset-0 bg-creeper-light opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
               </Button>
@@ -121,12 +130,12 @@ const CtaSection = () => {
                 className="text-2xl font-bold"
                 whileHover={{ scale: 1.1, color: "#50C878" }}
                 transition={{ type: "spring", stiffness: 300 }}
-              >1000+</motion.div>
+              >300+</motion.div>
               <motion.div 
                 className="text-2xl font-bold"
                 whileHover={{ scale: 1.1, color: "#50C878" }}
                 transition={{ type: "spring", stiffness: 300 }}
-              >25+</motion.div>
+              >4+</motion.div>
               <motion.div 
                 className="text-2xl font-bold"
                 whileHover={{ scale: 1.1, color: "#50C878" }}
