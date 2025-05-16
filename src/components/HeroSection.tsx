@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Server, Shield, Cpu } from "lucide-react";
 import { motion } from "framer-motion";
@@ -17,6 +16,7 @@ const HeroSection = () => {
              backgroundSize: '200px 200px',
              opacity: 0.05
            }}>
+        {/* Keep animated floating elements */}
         <motion.div 
           className="absolute top-20 left-10 w-4 h-4 bg-creeper rounded-sm opacity-20"
           animate={{ y: [0, -10, 0], rotate: [0, 180, 360] }}
@@ -55,17 +55,16 @@ const HeroSection = () => {
             >
               Unleash Your{" "}
               <motion.div 
-                className="inline-block relative"
+                className="inline-block relative min-w-[210px]" // Fixed width to prevent overlap
+                style={{ display: 'inline-block' }}
                 initial={{ opacity: 1 }}
-                style={{ minWidth: '200px', display: 'inline-block' }}
               >
                 {textVariants.map((text, index) => (
                   <motion.span 
                     key={text}
-                    className="text-creeper inline-block font-extrabold absolute left-0"
+                    className="text-creeper inline-block absolute left-0 font-extrabold"
                     style={{ 
-                      textShadow: '0 0 10px rgba(80, 200, 120, 0.5)',
-                      fontWeight: 800
+                      textShadow: '0 0 10px rgba(80, 200, 120, 0.5)'
                     }}
                     initial={{ opacity: 0, y: 20, display: "none" }}
                     animate={{ 
@@ -84,7 +83,8 @@ const HeroSection = () => {
                   </motion.span>
                 ))}
               </motion.div>
-              {" "}Server's True Potential
+              <br className="hidden sm:inline-block" />
+              <span className="inline-block">Server's True Potential</span>
             </motion.h1>
             
             <motion.p 
@@ -96,6 +96,7 @@ const HeroSection = () => {
               Premium hosting with instant setup, high performance hardware, and unmatched DDoS protection. Your Minecraft adventure starts here.
             </motion.p>
             
+            {/* Keep existing code (buttons and features section) */}
             <motion.div 
               className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
               initial={{ opacity: 0, y: 20 }}
