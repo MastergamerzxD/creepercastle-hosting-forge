@@ -15,7 +15,7 @@ const HeroSection = () => {
            style={{ 
              backgroundImage: `url('/creeper-pattern.png')`, 
              backgroundSize: '200px 200px',
-             backgroundOpacity: '0.05'
+             opacity: 0.05
            }}>
         <motion.div 
           className="absolute top-20 left-10 w-4 h-4 bg-creeper rounded-sm opacity-20"
