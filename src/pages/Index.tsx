@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -80,8 +81,8 @@ const Index = () => {
     "@type": "Organization",
     "name": "CreeperCastle.cloud",
     "url": "https://creepercastle.cloud/",
-    "logo": "/lovable-uploads/447061ac-3f17-4790-944a-dcb679915f54.png",
-    "description": "Best Minecraft server hosting services in India with high-performance hardware, DDoS protection, and instant setup.",
+    "logo": "https://creepercastle.cloud/logo.png",
+    "description": "Premium Minecraft server hosting services in India with best-in-class hardware, DDoS protection, and instant setup.",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "India"
@@ -105,7 +106,7 @@ const Index = () => {
       "priceCurrency": "INR"
     }
   };
-  
+
   if (loading) {
     return <LoadingScreen />;
   }
@@ -114,15 +115,15 @@ const Index = () => {
     <>
       <Helmet>
         <title>CreeperCastle.cloud - Best Minecraft Server Hosting in India</title>
-        <meta name="description" content="CreeperCastle.cloud offers the best premium Minecraft hosting in India with instant setup, high performance NVMe storage, and unmatched DDoS protection." />
+        <meta name="description" content="CreeperCastle.cloud offers premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India." />
         <meta name="keywords" content="minecraft hosting india, minecraft server hosting, minecraft india, ddos protection, minecraft mods, game server, minecraft multiplayer, best minecraft hosting india, budget minecraft server, modded minecraft hosting, minecraft plugins" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/" />
-        <meta property="og:title" content="CreeperCastle.cloud - Best Premium Minecraft Server Hosting in India" />
+        <meta property="og:title" content="CreeperCastle.cloud - Best Minecraft Server Hosting in India" />
         <meta property="og:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India." />
-        <meta property="og:image" content="/lovable-uploads/447061ac-3f17-4790-944a-dcb679915f54.png" />
+        <meta property="og:image" content="/lovable-uploads/481818b0-b26e-434c-9235-e8f4607af6bf.png" />
         <meta property="og:image:alt" content="CreeperCastle.cloud Logo" />
         <meta property="og:site_name" content="CreeperCastle.cloud" />
         <meta property="og:locale" content="en_US" />
@@ -132,7 +133,7 @@ const Index = () => {
         <meta property="twitter:url" content="https://creepercastle.cloud/" />
         <meta property="twitter:title" content="CreeperCastle.cloud - Best Minecraft Server Hosting in India" />
         <meta property="twitter:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India." />
-        <meta property="twitter:image" content="/lovable-uploads/447061ac-3f17-4790-944a-dcb679915f54.png" />
+        <meta property="twitter:image" content="/lovable-uploads/481818b0-b26e-434c-9235-e8f4607af6bf.png" />
         
         {/* Additional Meta Tags */}
         <meta name="robots" content="index, follow" />
@@ -143,14 +144,14 @@ const Index = () => {
         <meta name="apple-mobile-web-app-title" content="CreeperCastle.cloud" />
         <meta name="application-name" content="CreeperCastle.cloud" />
         <meta name="msapplication-TileColor" content="#50C878" />
-        <meta name="msapplication-TileImage" content="/lovable-uploads/447061ac-3f17-4790-944a-dcb679915f54.png" />
+        <meta name="msapplication-TileImage" content="/lovable-uploads/481818b0-b26e-434c-9235-e8f4607af6bf.png" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://creepercastle.cloud/" />
         
         {/* Favicon */}
-        <link rel="icon" href="/lovable-uploads/447061ac-3f17-4790-944a-dcb679915f54.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/lovable-uploads/447061ac-3f17-4790-944a-dcb679915f54.png" />
+        <link rel="icon" href="/lovable-uploads/481818b0-b26e-434c-9235-e8f4607af6bf.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/lovable-uploads/481818b0-b26e-434c-9235-e8f4607af6bf.png" />
         
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
@@ -172,80 +173,28 @@ const Index = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col min-h-screen bg-navy text-white relative"
         >
-          {/* Enhanced animated background with particles and mesh gradients */}
+          {/* Enhanced animated background with particles */}
           <div className="fixed inset-0 z-0 pointer-events-none">
-            {/* Improved gradient background */}
-            <div className="absolute inset-0 bg-gradient-radial from-navy-dark via-navy to-navy-light opacity-90"></div>
-            
-            {/* Subtle mesh gradient effect with minecraft-themed pattern */}
-            <div className="absolute inset-0 opacity-10" 
-                 style={{
-                   backgroundImage: `url('/lovable-uploads/bbf2f332-d50e-4f8c-8b64-111e940e56e1.png')`,
-                   backgroundSize: 'cover',
-                   backgroundBlendMode: 'overlay',
-                   filter: 'brightness(0.8) contrast(1.2)',
-                 }}>
-            </div>
-            
-            {/* Enhanced floating particles with better visual effects */}
-            {Array.from({ length: 20 }).map((_, i) => (
+            <div className="absolute inset-0 bg-gradient-to-b from-navy-dark via-navy to-navy-light opacity-80"></div>
+            {Array.from({ length: 15 }).map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute bg-creeper/30 rounded-full blur-sm"
-                style={{
-                  boxShadow: '0 0 8px 2px rgba(80, 200, 120, 0.2)',
-                }}
+                className="absolute bg-creeper/20 rounded-full"
                 initial={{
-                  width: Math.random() * 8 + 3,
-                  height: Math.random() * 8 + 3,
+                  width: Math.random() * 6 + 2,
+                  height: Math.random() * 6 + 2,
                   x: Math.random() * 100 + "%",
                   y: Math.random() * 100 + "%",
-                  opacity: Math.random() * 0.4,
+                  opacity: Math.random() * 0.5,
                 }}
                 animate={{
                   y: ["-10%", "110%"],
-                  opacity: [0, 0.7, 0],
-                  scale: [1, Math.random() * 0.4 + 1, 1],
+                  opacity: [0, 0.6, 0],
                 }}
                 transition={{
                   duration: Math.random() * 15 + 20,
                   repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: Math.random() * 10,
-                }}
-              />
-            ))}
-            
-            {/* Add some larger, slower moving background elements */}
-            {Array.from({ length: 4 }).map((_, i) => (
-              <motion.div
-                key={`large-${i}`}
-                className="absolute bg-creeper/10 rounded-full blur-xl"
-                style={{
-                  width: `${Math.random() * 20 + 30}%`,
-                  height: `${Math.random() * 20 + 30}%`,
-                }}
-                initial={{
-                  x: Math.random() * 100 + "%",
-                  y: Math.random() * 100 + "%",
-                  opacity: 0.1,
-                }}
-                animate={{
-                  x: [
-                    `${Math.random() * 20}%`, 
-                    `${Math.random() * 20 + 60}%`, 
-                    `${Math.random() * 20}%`
-                  ],
-                  y: [
-                    `${Math.random() * 20}%`, 
-                    `${Math.random() * 20 + 60}%`, 
-                    `${Math.random() * 20}%`
-                  ],
-                }}
-                transition={{
-                  duration: 40,
-                  repeat: Infinity,
-                  ease: "easeInOut",
+                  ease: "linear",
                   delay: Math.random() * 10,
                 }}
               />

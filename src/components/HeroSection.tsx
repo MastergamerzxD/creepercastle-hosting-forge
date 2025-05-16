@@ -5,19 +5,13 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
-  // Rotating text variants for the animated headline with improved styling
+  // Rotating text variants for the animated headline
   const textVariants = ["Minecraft", "Gaming", "Adventure", "Creation"];
   
   return (
     <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
-      {/* Animated background elements with improved styling */}
-      <div className="absolute inset-0 overflow-hidden z-0 bg-grid bg-grid-animate" 
-           style={{ 
-             backgroundImage: `url('/lovable-uploads/bbf2f332-d50e-4f8c-8b64-111e940e56e1.png')`, 
-             backgroundSize: '300px 300px',
-             opacity: 0.05
-           }}>
-        {/* Keep animated floating elements */}
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden z-0 bg-grid bg-grid-animate">
         <motion.div 
           className="absolute top-20 left-10 w-4 h-4 bg-creeper rounded-sm opacity-20"
           animate={{ y: [0, -10, 0], rotate: [0, 180, 360] }}
@@ -56,17 +50,13 @@ const HeroSection = () => {
             >
               Unleash Your{" "}
               <motion.div 
-                className="inline-block relative min-w-[210px] min-h-[60px]" 
-                style={{ display: 'inline-block' }}
+                className="inline-block"
                 initial={{ opacity: 1 }}
               >
                 {textVariants.map((text, index) => (
                   <motion.span 
                     key={text}
-                    className="text-creeper inline-block absolute left-0 font-extrabold"
-                    style={{ 
-                      textShadow: '0 0 10px rgba(80, 200, 120, 0.5)'
-                    }}
+                    className="text-creeper inline-block"
                     initial={{ opacity: 0, y: 20, display: "none" }}
                     animate={{ 
                       opacity: [0, 1, 1, 0], 
@@ -84,8 +74,7 @@ const HeroSection = () => {
                   </motion.span>
                 ))}
               </motion.div>
-              <br className="block" />
-              <span className="inline-block">Server's True Potential</span>
+              {" "}Server's True Potential
             </motion.h1>
             
             <motion.p 
@@ -97,7 +86,6 @@ const HeroSection = () => {
               Premium hosting with instant setup, high performance hardware, and unmatched DDoS protection. Your Minecraft adventure starts here.
             </motion.p>
             
-            {/* Keep existing code (buttons and features section) */}
             <motion.div 
               className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
               initial={{ opacity: 0, y: 20 }}
