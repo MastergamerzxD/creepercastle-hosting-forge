@@ -5,33 +5,41 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
-  // Rotating text variants for the animated headline
-  const textVariants = ["Minecraft", "Gaming", "Adventure", "Creation"];
+  // Enhanced rotating text variants with Minecraft hosting related keywords
+  const textVariants = ["Minecraft", "SMP", "Modded", "Bedrock", "Java", "Survival", "Creative"];
   
   return (
     <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden z-0 bg-grid bg-grid-animate">
-        <motion.div 
-          className="absolute top-20 left-10 w-4 h-4 bg-creeper rounded-sm opacity-20"
-          animate={{ y: [0, -10, 0], rotate: [0, 180, 360] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        ></motion.div>
-        <motion.div 
-          className="absolute top-40 right-20 w-6 h-6 bg-creeper rounded-sm opacity-20"
-          animate={{ y: [0, -15, 0], rotate: [0, -180, -360] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        ></motion.div>
-        <motion.div 
-          className="absolute bottom-20 left-1/4 w-5 h-5 bg-creeper rounded-sm opacity-20"
-          animate={{ y: [0, -12, 0], scale: [1, 1.2, 1] }}
-          transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        ></motion.div>
-        <motion.div 
-          className="absolute top-1/3 right-1/4 w-3 h-3 bg-creeper rounded-sm opacity-20"
-          animate={{ y: [0, -8, 0], scale: [1, 0.8, 1] }}
-          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-        ></motion.div>
+      {/* Animated background elements with creeper pattern */}
+      <div className="absolute inset-0 overflow-hidden z-0">
+        <div className="absolute inset-0 bg-grid bg-grid-animate opacity-30"></div>
+        
+        {/* Floating creeper faces in background */}
+        {Array(6).fill(0).map((_, i) => (
+          <motion.div 
+            key={i}
+            className="absolute opacity-10"
+            initial={{ 
+              x: Math.random() * 100 + "%", 
+              y: Math.random() * 100 + "%",
+              rotate: Math.random() * 360,
+              scale: 0.5 + Math.random() * 0.5
+            }}
+            animate={{ 
+              y: ["-10%", "110%"],
+              rotate: [0, 360],
+              opacity: [0.05, 0.1, 0.05]
+            }}
+            transition={{ 
+              duration: 15 + Math.random() * 20,
+              repeat: Infinity,
+              ease: "linear",
+              delay: Math.random() * 5
+            }}
+          >
+            <div className="w-16 h-16 bg-creeper/20 rounded-sm" />
+          </motion.div>
+        ))}
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -49,19 +57,16 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               Unleash Your{" "}
-              <motion.div 
-                className="inline-block"
-                initial={{ opacity: 1 }}
-              >
+              <span className="relative inline-block">
+                <span className="invisible">Placeholder</span>
                 {textVariants.map((text, index) => (
                   <motion.span 
                     key={text}
-                    className="text-creeper inline-block"
-                    initial={{ opacity: 0, y: 20, display: "none" }}
+                    className="text-creeper absolute top-0 left-0"
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ 
                       opacity: [0, 1, 1, 0], 
                       y: [20, 0, 0, -20],
-                      display: ["none", "inline-block", "inline-block", "none"]
                     }}
                     transition={{ 
                       duration: 2,
@@ -73,7 +78,7 @@ const HeroSection = () => {
                     {text}
                   </motion.span>
                 ))}
-              </motion.div>
+              </span>
               {" "}Server's True Potential
             </motion.h1>
             
@@ -177,7 +182,7 @@ const HeroSection = () => {
                 }}
               ></motion.div>
               <motion.img 
-                src="/lovable-uploads/0d52cde4-a7fe-4658-8306-ac6d898a330a.png" 
+                src="/lovable-uploads/570fb7e4-e36a-4bb5-a9ef-be9e7ae57b15.png" 
                 alt="CreeperCastle.cloud Logo" 
                 className="w-4/5 mx-auto rounded-lg"
                 animate={{ y: [-10, 10, -10], rotate: [0, 5, 0, -5, 0] }}
