@@ -177,12 +177,13 @@ const Index = () => {
             {/* Improved gradient background */}
             <div className="absolute inset-0 bg-gradient-radial from-navy-dark via-navy to-navy-light opacity-90"></div>
             
-            {/* Subtle mesh gradient effect */}
+            {/* Subtle mesh gradient effect with minecraft-themed pattern */}
             <div className="absolute inset-0 opacity-10" 
                  style={{
-                   backgroundImage: `url('/lovable-uploads/e3a29c07-41fc-4248-8f38-ed4db0e30c41.png')`,
+                   backgroundImage: `url('/lovable-uploads/bbf2f332-d50e-4f8c-8b64-111e940e56e1.png')`,
                    backgroundSize: 'cover',
                    backgroundBlendMode: 'overlay',
+                   filter: 'brightness(0.8) contrast(1.2)',
                  }}>
             </div>
             

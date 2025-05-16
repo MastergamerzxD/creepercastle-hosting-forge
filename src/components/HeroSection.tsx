@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Server, Shield, Cpu } from "lucide-react";
 import { motion } from "framer-motion";
@@ -12,8 +13,8 @@ const HeroSection = () => {
       {/* Animated background elements with improved styling */}
       <div className="absolute inset-0 overflow-hidden z-0 bg-grid bg-grid-animate" 
            style={{ 
-             backgroundImage: `url('/creeper-pattern.png')`, 
-             backgroundSize: '200px 200px',
+             backgroundImage: `url('/lovable-uploads/bbf2f332-d50e-4f8c-8b64-111e940e56e1.png')`, 
+             backgroundSize: '300px 300px',
              opacity: 0.05
            }}>
         {/* Keep animated floating elements */}
@@ -55,7 +56,7 @@ const HeroSection = () => {
             >
               Unleash Your{" "}
               <motion.div 
-                className="inline-block relative min-w-[210px]" // Fixed width to prevent overlap
+                className="inline-block relative min-w-[210px] min-h-[60px]" 
                 style={{ display: 'inline-block' }}
                 initial={{ opacity: 1 }}
               >
@@ -83,7 +84,7 @@ const HeroSection = () => {
                   </motion.span>
                 ))}
               </motion.div>
-              <br className="hidden sm:inline-block" />
+              <br className="block" />
               <span className="inline-block">Server's True Potential</span>
             </motion.h1>
             
