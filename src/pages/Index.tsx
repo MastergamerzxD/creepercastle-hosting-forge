@@ -123,8 +123,8 @@ const Index = () => {
         <meta property="og:url" content="https://creepercastle.cloud/" />
         <meta property="og:title" content="CreeperCastle.cloud - Best Minecraft Server Hosting in India" />
         <meta property="og:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India." />
-        <meta property="og:image" content="/lovable-uploads/570fb7e4-e36a-4bb5-a9ef-be9e7ae57b15.png" />
-        <meta property="og:image:alt" content="CreeperCastle.cloud Logo" />
+        <meta property="og:image" content="/lovable-uploads/aecdd243-6cbd-4e56-82a8-b494c26108cc.png" />
+        <meta property="og:image:alt" content="CreeperCastle.cloud - Underwater Minecraft Adventure" />
         <meta property="og:site_name" content="CreeperCastle.cloud" />
         <meta property="og:locale" content="en_US" />
         
@@ -133,7 +133,7 @@ const Index = () => {
         <meta property="twitter:url" content="https://creepercastle.cloud/" />
         <meta property="twitter:title" content="CreeperCastle.cloud - Best Minecraft Server Hosting in India" />
         <meta property="twitter:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India." />
-        <meta property="twitter:image" content="/lovable-uploads/570fb7e4-e36a-4bb5-a9ef-be9e7ae57b15.png" />
+        <meta property="twitter:image" content="/lovable-uploads/aecdd243-6cbd-4e56-82a8-b494c26108cc.png" />
         
         {/* Additional Meta Tags */}
         <meta name="robots" content="index, follow" />
@@ -173,15 +173,19 @@ const Index = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col min-h-screen bg-navy text-white relative"
         >
-          {/* Enhanced animated background with particles */}
+          {/* Enhanced background with underwater Minecraft scene */}
           <div className="fixed inset-0 z-0 pointer-events-none">
-            <div className="absolute inset-0 bg-gradient-to-b from-navy-dark via-navy to-navy-light opacity-90"></div>
+            {/* Background image overlay with underwater Minecraft scene */}
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" 
+              style={{ backgroundImage: 'url("/lovable-uploads/aecdd243-6cbd-4e56-82a8-b494c26108cc.png")' }}
+            ></div>
             
-            {/* Add subtle creeper pattern overlay */}
-            <div className="absolute inset-0 bg-[url('/lovable-uploads/570fb7e4-e36a-4bb5-a9ef-be9e7ae57b15.png')] bg-repeat opacity-5" style={{ backgroundSize: '200px 200px' }}></div>
+            {/* Gradient overlay for better text visibility */}
+            <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/90 via-navy/80 to-navy-light/70"></div>
             
             {/* Animated particles */}
-            {Array.from({ length: 15 }).map((_, i) => (
+            {Array.from({ length: 10 }).map((_, i) => (
               <motion.div
                 key={i}
                 className="absolute bg-creeper/20 rounded-full"

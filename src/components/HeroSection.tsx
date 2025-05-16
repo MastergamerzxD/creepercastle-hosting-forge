@@ -5,16 +5,25 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
-  // Enhanced rotating text variants with Minecraft hosting related keywords
-  const textVariants = ["Minecraft", "SMP", "Modded", "Bedrock", "Java", "Survival", "Creative"];
+  // Enhanced rotating text variants with more attractive Minecraft hosting related keywords
+  const textVariants = [
+    "Minecraft", 
+    "SMP", 
+    "Modded", 
+    "Bedrock", 
+    "Java", 
+    "Survival", 
+    "Creative", 
+    "Adventure", 
+    "Skyblock",
+    "PvP"
+  ];
   
   return (
     <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
-      {/* Animated background elements with creeper pattern */}
+      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden z-0">
-        <div className="absolute inset-0 bg-grid bg-grid-animate opacity-30"></div>
-        
-        {/* Floating creeper faces in background */}
+        {/* Floating elements in background */}
         {Array(6).fill(0).map((_, i) => (
           <motion.div 
             key={i}
@@ -57,8 +66,8 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               Unleash Your{" "}
-              <span className="relative inline-block">
-                <span className="invisible">Placeholder</span>
+              <span className="relative inline-block w-[180px]">
+                <span className="invisible">Minecraft</span>
                 {textVariants.map((text, index) => (
                   <motion.span 
                     key={text}
