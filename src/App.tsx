@@ -10,7 +10,9 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ContactPage from "./pages/Contact";
 import Plans from "./pages/Plans";
-import PricingPage from "./pages/Pricing";
+import MinecraftPlans from "./pages/plans/MinecraftPlans";
+import CreeperShieldPlans from "./pages/plans/CreeperShieldPlans";
+import VpsPlans from "./pages/plans/VpsPlans";
 import Locations from "./pages/Locations";
 import { useEffect } from "react";
 
@@ -57,7 +59,9 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/plans" element={<Plans />} />
-              <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/plans/minecraft" element={<MinecraftPlans />} />
+              <Route path="/plans/creepershield" element={<CreeperShieldPlans />} />
+              <Route path="/plans/vps" element={<VpsPlans />} />
               <Route path="/locations" element={<Locations />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
