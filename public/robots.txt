@@ -5,6 +5,17 @@ Allow: /
 # Main sitemap
 Sitemap: https://creepercastle.cloud/sitemap.xml
 
+# Allow access to all important pages
+Allow: /minecraft-hosting
+Allow: /creepershield
+Allow: /vps-plans
+Allow: /locations
+Allow: /features
+Allow: /contact
+Allow: /discord
+Allow: /faq
+Allow: /reviews
+
 # Disallow admin and private directories
 Disallow: /admin/
 Disallow: /private/
