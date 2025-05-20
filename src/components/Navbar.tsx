@@ -3,15 +3,6 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Store, ExternalLink } from "lucide-react";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,66 +31,9 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <Link to="/" className="text-white hover:text-creeper transition-colors">Home</Link>
-          
-          {/* Plans Dropdown */}
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent text-white hover:text-creeper hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent px-0">Plans</NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-navy-dark/95 border border-creeper/20">
-                  <ul className="grid w-[400px] gap-3 p-4">
-                    <li className="row-span-3">
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to="/plans/minecraft"
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-navy-light p-6 no-underline outline-none focus:shadow-md hover:bg-navy-light/70"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          <div className="mb-2 mt-4 text-lg font-medium text-white">
-                            Minecraft Hosting
-                          </div>
-                          <p className="text-sm text-gray-400">
-                            High-performance Minecraft server hosting with instant setup.
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to="/plans/creepershield"
-                          className="block select-none space-y-1 rounded-md p-3 text-white hover:bg-navy-light/70"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          <div className="text-sm font-medium">CreeperShield</div>
-                          <p className="text-xs text-gray-400">
-                            Advanced DDoS protection specifically designed for Minecraft servers.
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to="/plans/vps"
-                          className="block select-none space-y-1 rounded-md p-3 text-white hover:bg-navy-light/70"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          <div className="text-sm font-medium">VPS Plans</div>
-                          <p className="text-xs text-gray-400">
-                            Powerful VPS solutions for advanced users and large servers.
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-          
-          <Link to="/locations" className="text-white hover:text-creeper transition-colors">Locations</Link>
-          <a href="/#features" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#features', e)}>Features</a>
+          <a href="#pricing" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#pricing', e)}>Plans</a>
+          <a href="#locations" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#locations', e)}>Locations</a>
+          <a href="#features" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#features', e)}>Features</a>
           <Link to="/contact" className="text-white hover:text-creeper transition-colors">Contact</Link>
           
           <Button className="bg-discord hover:bg-discord-dark text-white rounded-md" asChild>
@@ -135,23 +69,9 @@ const Navbar = () => {
         <div className="md:hidden bg-navy-dark/95 backdrop-blur-md absolute top-16 left-0 w-full border-b border-creeper/20">
           <div className="container mx-auto px-4 py-4 space-y-4 flex flex-col">
             <Link to="/" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Home</Link>
-            
-            {/* Mobile Plan Links */}
-            <div className="pl-4 border-l-2 border-creeper/30">
-              <p className="text-white mb-2">Plans:</p>
-              <Link to="/plans/minecraft" className="block text-white hover:text-creeper transition-colors py-1" onClick={() => setIsOpen(false)}>
-                Minecraft Hosting
-              </Link>
-              <Link to="/plans/creepershield" className="block text-white hover:text-creeper transition-colors py-1" onClick={() => setIsOpen(false)}>
-                CreeperShield
-              </Link>
-              <Link to="/plans/vps" className="block text-white hover:text-creeper transition-colors py-1" onClick={() => setIsOpen(false)}>
-                VPS Plans
-              </Link>
-            </div>
-            
-            <Link to="/locations" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Locations</Link>
-            <a href="/#features" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#features', e)}>Features</a>
+            <a href="#pricing" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#pricing', e)}>Plans</a>
+            <a href="#locations" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#locations', e)}>Locations</a>
+            <a href="#features" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#features', e)}>Features</a>
             <Link to="/contact" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
             
             <div className="flex flex-col space-y-2 pt-2 border-t border-gray-800">
