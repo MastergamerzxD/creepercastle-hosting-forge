@@ -8,8 +8,11 @@ import { HelmetProvider } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import { useEffect } from "react";
 import ContactPage from "./pages/Contact";
+import Plans from "./pages/Plans";
+import PricingPage from "./pages/Pricing";
+import Locations from "./pages/Locations";
+import { useEffect } from "react";
 
 // Scroll to hash component
 const ScrollToHash = () => {
@@ -53,8 +56,9 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/contact" element={<ContactPage />} />
-              {/* Redirecting /plans to home page as a temporary solution */}
-              <Route path="/plans" element={<Index />} />
+              <Route path="/plans" element={<Plans />} />
+              <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/locations" element={<Locations />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
