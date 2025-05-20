@@ -58,7 +58,7 @@ const Plans = () => {
                 className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4, staggerChildren: 0.1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <motion.div 
                   className="flex flex-col items-center text-center p-8 bg-navy-light rounded-xl border border-gray-800 hover:border-creeper cursor-pointer transition-all hover:-translate-y-2"

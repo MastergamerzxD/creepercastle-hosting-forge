@@ -38,6 +38,25 @@ const creepershieldPlans = [
       "Real-time Attack Analysis"
     ],
     highlighted: true
+  },
+  {
+    name: "Ultimate Shield",
+    price: 250,
+    bandwidth: "3 Tbps",
+    features: [
+      "Layer 3, 4 & 7 Protection",
+      "Advanced IP Filtration",
+      "<0.8ms resolving time",
+      "Minecraft Server Protection",
+      "Zero Downtime Protection",
+      "Automatic Filtering",
+      "Custom Filtering Rules",
+      "24/7 Dedicated Security Team",
+      "Real-time Attack Analysis",
+      "Priority Support",
+      "Custom Security Configuration"
+    ],
+    highlighted: false
   }
 ];
 
@@ -88,7 +107,7 @@ const CreeperShieldPlans = () => {
               </div>
               
               <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+                className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}

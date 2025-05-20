@@ -10,7 +10,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const minecraftPlans = [
   {
-    name: "Budget",
+    name: "2GB Minecraft Performance Plan",
     price: 99,
     ram: "2GB",
     cpu: "1 vCore",
@@ -25,11 +25,33 @@ const minecraftPlans = [
       "One-Click Plugin Installer",
       "Custom Domain",
       "99.9% Uptime",
+      "SFTP Access",
     ],
     highlighted: false,
   },
   {
-    name: "Standard",
+    name: "3GB Minecraft Performance Plan",
+    price: 149,
+    ram: "3GB",
+    cpu: "1 vCore",
+    storage: "45GB NVMe SSD",
+    players: "20 Players",
+    ddosProtection: "Basic Protection",
+    features: [
+      "Instant Setup",
+      "All Minecraft Versions",
+      "24/7 Support",
+      "Automatic Backups",
+      "One-Click Plugin Installer",
+      "Custom Domain",
+      "99.9% Uptime",
+      "Free Subdomain",
+      "SFTP Access",
+    ],
+    highlighted: false,
+  },
+  {
+    name: "5GB Minecraft Performance Plan",
     price: 249,
     ram: "5GB",
     cpu: "2 vCores",
@@ -46,11 +68,35 @@ const minecraftPlans = [
       "99.9% Uptime",
       "Full Modpack Support",
       "Free Subdomain",
+      "SFTP Access",
     ],
     highlighted: true,
   },
   {
-    name: "Premium",
+    name: "8GB Minecraft Performance Plan",
+    price: 399,
+    ram: "8GB",
+    cpu: "3 vCores",
+    storage: "120GB NVMe SSD",
+    players: "50 Players",
+    ddosProtection: "Advanced Protection",
+    features: [
+      "Instant Setup",
+      "All Minecraft Versions",
+      "24/7 Priority Support",
+      "3x Daily Backups",
+      "One-Click Plugin Installer",
+      "Custom Domain",
+      "99.9% Uptime",
+      "Full Modpack Support",
+      "Free Subdomain",
+      "Dedicated Resources",
+      "SFTP Access",
+    ],
+    highlighted: false,
+  },
+  {
+    name: "10GB Minecraft Performance Plan",
     price: 499,
     ram: "10GB",
     cpu: "4 vCores",
@@ -69,6 +115,30 @@ const minecraftPlans = [
       "Free Subdomain",
       "Dedicated Resources",
       "SFTP Access",
+    ],
+    highlighted: false,
+  },
+  {
+    name: "16GB Minecraft Performance Plan",
+    price: 799,
+    ram: "16GB",
+    cpu: "6 vCores",
+    storage: "240GB NVMe SSD",
+    players: "Unlimited Players",
+    ddosProtection: "Premium Protection",
+    features: [
+      "Instant Setup",
+      "All Minecraft Versions",
+      "24/7 Priority Support",
+      "4x Daily Backups",
+      "One-Click Plugin Installer",
+      "Custom Domain",
+      "99.99% Uptime",
+      "Full Modpack Support",
+      "Free Subdomain",
+      "Dedicated Resources",
+      "SFTP Access",
+      "Premium Support",
     ],
     highlighted: false,
   },
@@ -121,7 +191,7 @@ const MinecraftPlans = () => {
               </div>
               
               <motion.div 
-                className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -146,9 +216,11 @@ const MinecraftPlans = () => {
                         <span className="text-gray-400 ml-1">/month</span>
                       </div>
                       <CardDescription className="text-gray-400 mt-2">
-                        {plan.name === "Budget" ? "Perfect for small friend groups" : 
-                         plan.name === "Standard" ? "Ideal for growing communities" : 
-                         "For established servers"}
+                        {plan.ram === "2GB" ? "Perfect for small friend groups" : 
+                         plan.ram === "5GB" ? "Ideal for growing communities" : 
+                         plan.ram === "10GB" ? "For established servers" :
+                         plan.ram === "16GB" ? "For large networks" :
+                         "For your Minecraft community"}
                       </CardDescription>
                     </CardHeader>
                     <CardContent>

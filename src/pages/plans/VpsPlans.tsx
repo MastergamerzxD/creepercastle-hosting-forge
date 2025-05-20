@@ -10,7 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const vpsPlans = [
   {
-    name: "Basic VPS",
+    name: "VPS - 32GB",
     price: 3300,
     specs: {
       ram: "32GB",
@@ -29,7 +29,7 @@ const vpsPlans = [
     ]
   },
   {
-    name: "Advanced VPS",
+    name: "VPS - 48GB",
     price: 4800,
     specs: {
       ram: "48GB",
@@ -51,7 +51,7 @@ const vpsPlans = [
     highlighted: true
   },
   {
-    name: "Enterprise VPS",
+    name: "VPS - 64GB",
     price: 6800,
     specs: {
       ram: "64GB",
@@ -78,7 +78,7 @@ const vpsPlans = [
 // These plans are shown in the High-Performance tab
 const highPerfVpsPlans = [
   {
-    name: "Performance VPS",
+    name: "VPS - 96GB",
     price: 8400,
     specs: {
       ram: "96GB",
@@ -102,7 +102,7 @@ const highPerfVpsPlans = [
     ]
   },
   {
-    name: "Ultimate VPS",
+    name: "VPS - 128GB",
     price: 12500,
     specs: {
       ram: "128GB",
@@ -127,6 +127,34 @@ const highPerfVpsPlans = [
       "Hardware Redundancy"
     ],
     highlighted: true
+  },
+  {
+    name: "VPS - 256GB",
+    price: 24000,
+    specs: {
+      ram: "256GB",
+      cpu: "32 vCores",
+      storage: "2TB NVMe SSD",
+      bandwidth: "Unmetered",
+      protection: "Enterprise DDoS Protection"
+    },
+    features: [
+      "Root Access",
+      "Full SSH Access",
+      "Choose Your OS",
+      "Dedicated Resources",
+      "100% Uptime SLA",
+      "24/7 Premium Support",
+      "4x Daily Backups",
+      "Advanced Firewall",
+      "Resource Monitoring",
+      "Performance Optimization",
+      "Dedicated Support Team",
+      "Custom Setup Assistance",
+      "Hardware Redundancy",
+      "Priority Resource Allocation",
+      "Enterprise Support"
+    ]
   }
 ];
 
@@ -269,7 +297,7 @@ const VpsPlans = () => {
                 
                 <TabsContent value="high-performance">
                   <motion.div 
-                    className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
