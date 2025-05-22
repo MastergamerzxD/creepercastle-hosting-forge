@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, HelpCircle, Server, Infinity, Discord } from "lucide-react";
+import { Check, HelpCircle, Server, Infinity, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -398,7 +398,7 @@ const MinecraftPlans = () => {
                               rel="noopener noreferrer"
                               className="flex items-center justify-center gap-2"
                             >
-                              <Discord className="h-5 w-5" /> Join Our Discord
+                              <MessageCircle className="h-5 w-5" /> Join Our Discord
                             </a>
                           )}
                         </Button>
