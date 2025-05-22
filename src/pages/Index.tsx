@@ -62,7 +62,7 @@ const Index = () => {
     };
   }, []);
 
-  // Enhanced JSON-LD structured data for better SEO
+  // JSON-LD structured data for better SEO
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -89,93 +89,22 @@ const Index = () => {
     },
     "sameAs": [
       "https://discord.gg/RuQ9neH56S"
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Minecraft Hosting Solutions",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Minecraft Server Hosting"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "CreeperShield DDoS Protection"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "VPS Hosting"
-          }
-        }
-      ]
-    }
+    ]
   };
   
   const offerStructuredData = {
     "@context": "https://schema.org",
-    "@type": "AggregateOffer",
+    "@type": "Offer",
     "itemOffered": {
       "@type": "Service",
       "name": "Minecraft Server Hosting",
       "description": "Premium Minecraft server hosting with DDoS protection and high performance hardware"
     },
-    "lowPrice": "99",
-    "highPrice": "499",
-    "priceCurrency": "INR",
-    "offerCount": "12",
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "Budget Minecraft Hosting",
-        "price": "99",
-        "priceCurrency": "INR"
-      },
-      {
-        "@type": "Offer",
-        "name": "Premium Minecraft Hosting",
-        "price": "299",
-        "priceCurrency": "INR"
-      }
-    ]
-  };
-  
-  const faqStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What makes CreeperCastle the best Minecraft hosting in India?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "CreeperCastle offers India-optimized servers with the lowest latency, high-performance NVMe SSDs, advanced DDoS protection, and 24/7 customer support for both Java and Bedrock editions."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you support both Java and Bedrock Minecraft servers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we provide hosting services for both Minecraft Java Edition and Minecraft Bedrock Edition, with easy one-click installers for both versions."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What kind of DDoS protection do you offer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our CreeperShield protection provides enterprise-grade DDoS mitigation with up to 1.2 Tbps of protection capacity, keeping your Minecraft server safe from attacks 24/7."
-        }
-      }
-    ]
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": "99",
+      "priceCurrency": "INR"
+    }
   };
 
   if (loading) {
@@ -185,15 +114,15 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>CreeperCastle.cloud - #1 Minecraft Server Hosting in India | Low Latency Gaming</title>
-        <meta name="description" content="CreeperCastle.cloud offers premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India. Lowest ping for Indian players." />
-        <meta name="keywords" content="minecraft hosting india, minecraft server hosting, minecraft smp hosting, bedrock servers, java servers, minecraft india, ddos protection, minecraft mods, game server, minecraft multiplayer, best minecraft hosting india, budget minecraft server, modded minecraft hosting, minecraft plugins, india ping, mumbai servers" />
+        <title>CreeperCastle.cloud - Best Minecraft Server Hosting in India</title>
+        <meta name="description" content="CreeperCastle.cloud offers premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India." />
+        <meta name="keywords" content="minecraft hosting india, minecraft server hosting, minecraft smp hosting, bedrock servers, java servers, minecraft india, ddos protection, minecraft mods, game server, minecraft multiplayer, best minecraft hosting india, budget minecraft server, modded minecraft hosting, minecraft plugins" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/" />
-        <meta property="og:title" content="CreeperCastle.cloud - #1 Minecraft Server Hosting in India" />
-        <meta property="og:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India. Lowest latency for Indian gamers!" />
+        <meta property="og:title" content="CreeperCastle.cloud - Best Minecraft Server Hosting in India" />
+        <meta property="og:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India." />
         <meta property="og:image" content="/lovable-uploads/aecdd243-6cbd-4e56-82a8-b494c26108cc.png" />
         <meta property="og:image:alt" content="CreeperCastle.cloud - Underwater Minecraft Adventure" />
         <meta property="og:site_name" content="CreeperCastle.cloud" />
@@ -202,12 +131,12 @@ const Index = () => {
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://creepercastle.cloud/" />
-        <meta property="twitter:title" content="CreeperCastle.cloud - #1 Minecraft Server Hosting in India" />
-        <meta property="twitter:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India. Lowest ping for Indian players!" />
+        <meta property="twitter:title" content="CreeperCastle.cloud - Best Minecraft Server Hosting in India" />
+        <meta property="twitter:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India." />
         <meta property="twitter:image" content="/lovable-uploads/aecdd243-6cbd-4e56-82a8-b494c26108cc.png" />
         
         {/* Additional Meta Tags */}
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
         <meta name="theme-color" content="#50C878" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -216,10 +145,6 @@ const Index = () => {
         <meta name="application-name" content="CreeperCastle.cloud" />
         <meta name="msapplication-TileColor" content="#50C878" />
         <meta name="msapplication-TileImage" content="/lovable-uploads/570fb7e4-e36a-4bb5-a9ef-be9e7ae57b15.png" />
-        <meta name="geo.region" content="IN" />
-        <meta name="geo.placename" content="India" />
-        <meta name="distribution" content="global" />
-        <meta name="rating" content="general" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://creepercastle.cloud/" />
@@ -237,9 +162,6 @@ const Index = () => {
         </script>
         <script type="application/ld+json">
           {JSON.stringify(offerStructuredData)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(faqStructuredData)}
         </script>
       </Helmet>
       
