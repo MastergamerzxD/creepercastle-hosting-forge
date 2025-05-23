@@ -81,11 +81,17 @@ const Index = () => {
     "@type": "Organization",
     "name": "CreeperCastle.cloud",
     "url": "https://creepercastle.cloud/",
-    "logo": "/lovable-uploads/570fb7e4-e36a-4bb5-a9ef-be9e7ae57b15.png",
+    "logo": "/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png",
     "description": "Premium Minecraft server hosting services in India with best-in-class hardware, DDoS protection, and instant setup.",
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "India"
+      "addressCountry": "India",
+      "addressRegion": "Mumbai, Delhi"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "support@creepercastle.in"
     },
     "sameAs": [
       "https://discord.gg/RuQ9neH56S"
@@ -94,17 +100,56 @@ const Index = () => {
   
   const offerStructuredData = {
     "@context": "https://schema.org",
-    "@type": "Offer",
+    "@type": "AggregateOffer",
     "itemOffered": {
       "@type": "Service",
       "name": "Minecraft Server Hosting",
       "description": "Premium Minecraft server hosting with DDoS protection and high performance hardware"
     },
-    "priceSpecification": {
-      "@type": "PriceSpecification",
-      "price": "99",
-      "priceCurrency": "INR"
-    }
+    "lowPrice": "99",
+    "highPrice": "672",
+    "priceCurrency": "INR",
+    "offerCount": "6"
+  };
+
+  // FAQ structured data
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How quickly can I get my Minecraft server set up?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our servers are set up instantly! After completing your purchase, you'll have immediate access to your Minecraft server control panel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where are your server locations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We have high-performance servers in Mumbai and Delhi, India, providing low-latency connections for Indian players."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What payment methods do you accept?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We accept credit/debit cards, UPI, and various other local payment methods for your convenience."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer DDoS protection?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! All our plans include basic DDoS protection, and we offer advanced protection through our CreeperShield service."
+        }
+      }
+    ]
   };
 
   if (loading) {
@@ -115,25 +160,25 @@ const Index = () => {
     <>
       <Helmet>
         <title>CreeperCastle.cloud - Best Minecraft Server Hosting in India</title>
-        <meta name="description" content="CreeperCastle.cloud offers premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India." />
-        <meta name="keywords" content="minecraft hosting india, minecraft server hosting, minecraft smp hosting, bedrock servers, java servers, minecraft india, ddos protection, minecraft mods, game server, minecraft multiplayer, best minecraft hosting india, budget minecraft server, modded minecraft hosting, minecraft plugins" />
+        <meta name="description" content="CreeperCastle.cloud offers premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India. Starting at just ₹99/month." />
+        <meta name="keywords" content="minecraft hosting india, minecraft server hosting, minecraft smp hosting, bedrock servers, java servers, minecraft india, ddos protection, minecraft mods, game server, minecraft multiplayer, best minecraft hosting india, budget minecraft server, modded minecraft hosting, minecraft plugins, cheap minecraft hosting, affordable minecraft server india" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/" />
         <meta property="og:title" content="CreeperCastle.cloud - Best Minecraft Server Hosting in India" />
-        <meta property="og:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India." />
-        <meta property="og:image" content="/lovable-uploads/aecdd243-6cbd-4e56-82a8-b494c26108cc.png" />
-        <meta property="og:image:alt" content="CreeperCastle.cloud - Underwater Minecraft Adventure" />
+        <meta property="og:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India. Starting at just ₹99/month." />
+        <meta property="og:image" content="/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta property="og:image:alt" content="CreeperCastle.cloud - Minecraft Server Hosting" />
         <meta property="og:site_name" content="CreeperCastle.cloud" />
-        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale" content="en_IN" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://creepercastle.cloud/" />
         <meta property="twitter:title" content="CreeperCastle.cloud - Best Minecraft Server Hosting in India" />
-        <meta property="twitter:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India." />
-        <meta property="twitter:image" content="/lovable-uploads/aecdd243-6cbd-4e56-82a8-b494c26108cc.png" />
+        <meta property="twitter:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India. Starting at just ₹99/month." />
+        <meta property="twitter:image" content="/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
         
         {/* Additional Meta Tags */}
         <meta name="robots" content="index, follow" />
@@ -162,6 +207,9 @@ const Index = () => {
         </script>
         <script type="application/ld+json">
           {JSON.stringify(offerStructuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqStructuredData)}
         </script>
       </Helmet>
       

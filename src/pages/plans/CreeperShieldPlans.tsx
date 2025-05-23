@@ -61,14 +61,128 @@ const creepershieldPlans = [
 ];
 
 const CreeperShieldPlans = () => {
+  // JSON-LD structured data for better SEO
+  const shieldStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Product",
+          "name": "Basic Shield",
+          "description": "Layer 3 & 4 Protection with 1 Tbps bandwidth",
+          "offers": {
+            "@type": "Offer",
+            "price": "84",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Product",
+          "name": "Advanced Shield",
+          "description": "Layer 3, 4 & 7 Protection with 2 Tbps bandwidth",
+          "offers": {
+            "@type": "Offer",
+            "price": "167",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Product",
+          "name": "Ultimate Shield",
+          "description": "Layer 3, 4 & 7 Protection with 3 Tbps bandwidth",
+          "offers": {
+            "@type": "Offer",
+            "price": "250",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      }
+    ]
+  };
+
+  // FAQ structured data
+  const shieldFaqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need CreeperShield if I already host with CreeperCastle?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All CreeperCastle Minecraft hosting plans include basic DDoS protection. CreeperShield offers enhanced protection with higher bandwidth capacity and advanced features. It's recommended for servers that are frequently targeted or have a large player base."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use CreeperShield with servers hosted elsewhere?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! CreeperShield is available as a standalone service and can be used with Minecraft servers hosted on any provider. Our team will help you set up and configure the protection for your specific setup."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does CreeperShield affect my server performance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CreeperShield is designed to have minimal impact on your server's performance. The protection layer adds less than 1.1ms of latency (or under 1ms with Advanced Shield), which is imperceptible to players while providing robust protection against attacks."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
-        <title>CreeperShield DDoS Protection | CreeperCastle.cloud</title>
+        <title>CreeperShield DDoS Protection for Minecraft Servers | CreeperCastle.cloud</title>
         <meta 
           name="description" 
-          content="Advanced DDoS protection specifically designed for Minecraft servers. Keep your server online even during attacks with our CreeperShield protection."
+          content="Advanced DDoS protection for Minecraft servers with up to 3 Tbps mitigation capacity. Keep your server online even during large-scale attacks with CreeperShield."
         />
+        <meta
+          name="keywords"
+          content="minecraft ddos protection, minecraft anti ddos, server protection, ddos mitigation, game server security, minecraft server shield, anti-attack protection, minecraft hosting security, server layer protection"
+        />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://creepercastle.cloud/plans/creepershield" />
+        <meta property="og:title" content="CreeperShield DDoS Protection for Minecraft Servers | CreeperCastle.cloud" />
+        <meta property="og:description" content="Advanced DDoS protection with up to 3 Tbps mitigation capacity. Keep your Minecraft server online even during large-scale attacks." />
+        <meta property="og:image" content="/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta property="og:image:alt" content="CreeperShield DDoS Protection" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="CreeperShield DDoS Protection for Minecraft Servers" />
+        <meta name="twitter:description" content="Advanced DDoS protection with up to 3 Tbps mitigation capacity. Keep your server online even during large-scale attacks." />
+        <meta name="twitter:image" content="/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://creepercastle.cloud/plans/creepershield" />
+        
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(shieldStructuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(shieldFaqStructuredData)}
+        </script>
       </Helmet>
       
       <div className="flex flex-col min-h-screen bg-navy text-white">

@@ -10,14 +10,95 @@ import { Server, Shield, Cloud } from "lucide-react";
 const Plans = () => {
   const navigate = useNavigate();
   
+  // JSON-LD structured data for better SEO
+  const plansStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Service",
+          "name": "Minecraft Hosting",
+          "description": "High-performance Minecraft servers with instant setup, one-click plugin installation, and 24/7 expert support.",
+          "url": "https://creepercastle.cloud/plans/minecraft",
+          "provider": {
+            "@type": "Organization",
+            "name": "CreeperCastle.cloud"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "99",
+            "priceCurrency": "INR"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Service",
+          "name": "CreeperShield DDoS Protection",
+          "description": "Advanced DDoS protection specifically designed for Minecraft servers.",
+          "url": "https://creepercastle.cloud/plans/creepershield",
+          "provider": {
+            "@type": "Organization",
+            "name": "CreeperCastle.cloud"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Service",
+          "name": "VPS Hosting",
+          "description": "High-performance VPS solutions with dedicated resources, complete control, and enterprise-grade hardware.",
+          "url": "https://creepercastle.cloud/plans/vps",
+          "provider": {
+            "@type": "Organization",
+            "name": "CreeperCastle.cloud"
+          }
+        }
+      }
+    ]
+  };
+  
   return (
     <>
       <Helmet>
-        <title>Hosting Plans | CreeperCastle.cloud</title>
+        <title>Minecraft & VPS Hosting Plans | CreeperCastle.cloud</title>
         <meta 
           name="description" 
-          content="Explore our range of hosting solutions - from Minecraft server hosting to VPS plans and DDoS protection services."
+          content="Affordable Minecraft server hosting plans starting at ₹99/month. Choose from Minecraft hosting, VPS plans, or DDoS protection services optimized for Indian gamers."
         />
+        <meta
+          name="keywords"
+          content="minecraft hosting plans, minecraft server pricing, cheap minecraft hosting india, vps hosting india, ddos protection, minecraft server costs, budget minecraft server, creeper castle pricing"
+        />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://creepercastle.cloud/plans" />
+        <meta property="og:title" content="Minecraft & VPS Hosting Plans | CreeperCastle.cloud" />
+        <meta property="og:description" content="Affordable Minecraft server hosting plans starting at ₹99/month. Choose from Minecraft hosting, VPS plans, or DDoS protection services." />
+        <meta property="og:image" content="/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta property="og:image:alt" content="CreeperCastle Hosting Plans" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Minecraft & VPS Hosting Plans | CreeperCastle.cloud" />
+        <meta name="twitter:description" content="Affordable Minecraft server hosting plans starting at ₹99/month. Low-latency servers optimized for Indian gamers." />
+        <meta name="twitter:image" content="/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://creepercastle.cloud/plans" />
+        
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(plansStructuredData)}
+        </script>
       </Helmet>
       
       <div className="flex flex-col min-h-screen bg-navy text-white">

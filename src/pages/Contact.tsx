@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -47,11 +46,96 @@ const ContactPage = () => {
     }, 1500);
   };
   
+  // JSON-LD structured data for better SEO
+  const contactStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact CreeperCastle.cloud",
+    "description": "Get in touch with the CreeperCastle.cloud support team",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CreeperCastle.cloud",
+      "logo": "/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png"
+    },
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "CreeperCastle.cloud",
+      "email": "support@creepercastle.in",
+      "sameAs": [
+        "https://discord.gg/RuQ9neH56S"
+      ]
+    }
+  };
+  
+  // FAQ structured data
+  const contactFaqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How quickly can I get my Minecraft server set up?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our servers are set up instantly! After completing your purchase, you'll have immediate access to your Minecraft server control panel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I upgrade my plan later?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! You can easily upgrade your plan at any time through our customer portal. All your data will be seamlessly transferred to your new plan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What payment methods do you accept?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We accept credit/debit cards, UPI, and various other local payment methods for your convenience."
+        }
+      }
+    ]
+  };
+  
   return (
     <>
       <Helmet>
-        <title>Contact Us | CreeperCastle.cloud</title>
-        <meta name="description" content="Get in touch with the CreeperCastle.cloud team for questions about our Minecraft hosting services or custom solutions." />
+        <title>Contact Us | CreeperCastle.cloud - Minecraft Server Hosting</title>
+        <meta 
+          name="description" 
+          content="Get help with your Minecraft server hosting. Contact our 24/7 support team via email, Discord, or our contact form. We're here to help!"
+        />
+        <meta
+          name="keywords"
+          content="minecraft hosting support, contact creeper castle, minecraft server help, minecraft hosting assistance, technical support, discord support, minecraft server troubleshooting"
+        />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://creepercastle.cloud/contact" />
+        <meta property="og:title" content="Contact Us | CreeperCastle.cloud - Minecraft Server Hosting" />
+        <meta property="og:description" content="Get help with your Minecraft server hosting. Contact our 24/7 support team via email, Discord, or our contact form." />
+        <meta property="og:image" content="/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta property="og:image:alt" content="CreeperCastle Support" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Us | CreeperCastle.cloud - Minecraft Server Hosting" />
+        <meta name="twitter:description" content="Get help with your Minecraft server hosting. Contact our 24/7 support team via email, Discord, or our contact form." />
+        <meta name="twitter:image" content="/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://creepercastle.cloud/contact" />
+        
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(contactStructuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(contactFaqStructuredData)}
+        </script>
       </Helmet>
       
       <div className="flex flex-col min-h-screen bg-navy text-white">
