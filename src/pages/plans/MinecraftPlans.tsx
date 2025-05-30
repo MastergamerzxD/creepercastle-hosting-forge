@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -83,7 +82,7 @@ const minecraftPlans = [
   },
   {
     name: "End Storm Plan",
-    price: 672,
+    price: 582,
     ram: "8GB",
     cpu: "250% CPU",
     storage: "80GB SSD",
@@ -109,7 +108,7 @@ const minecraftPlans = [
   },
   {
     name: "Wither Storm Plan",
-    price: 582,
+    price: 672,
     ram: "10GB",
     cpu: "300% CPU",
     storage: "100GB SSD",
@@ -194,6 +193,98 @@ const minecraftPlans = [
 ];
 
 const MinecraftPlans = () => {
+  // Enhanced JSON-LD structured data for better SEO
+  const minecraftHostingStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Minecraft Server Hosting",
+    "description": "High-performance Minecraft server hosting in India with NVMe SSD storage, DDoS protection, instant setup, and 24/7 support. Perfect for Java & Bedrock editions.",
+    "provider": {
+      "@type": "Organization",
+      "name": "CreeperCastle.cloud",
+      "url": "https://creepercastle.cloud",
+      "logo": "https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png",
+      "sameAs": [
+        "https://discord.gg/RuQ9neH56S"
+      ]
+    },
+    "serviceType": "Game Server Hosting",
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
+    "offers": minecraftPlans.filter(plan => plan.price).map((plan, index) => ({
+      "@type": "Offer",
+      "name": plan.name,
+      "description": `${plan.ram} RAM, ${plan.cpu}, ${plan.storage} storage Minecraft hosting plan with ${plan.ddosProtection}`,
+      "price": plan.price.toString(),
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2024-01-01",
+      "priceValidUntil": "2025-12-31",
+      "itemOffered": {
+        "@type": "Service",
+        "name": plan.name,
+        "description": `Minecraft server hosting with ${plan.ram} RAM and ${plan.storage} storage`
+      }
+    })),
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Minecraft Hosting Plans",
+      "itemListElement": minecraftPlans.filter(plan => plan.price).map((plan, index) => ({
+        "@type": "Offer",
+        "position": index + 1,
+        "itemOffered": {
+          "@type": "Service",
+          "name": plan.name,
+          "description": `${plan.ram} RAM Minecraft hosting plan`
+        },
+        "price": plan.price.toString(),
+        "priceCurrency": "INR"
+      }))
+    }
+  };
+
+  // FAQ structured data for rich snippets
+  const minecraftFaqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What Minecraft versions are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We support all Minecraft versions including Java Edition, Bedrock Edition, and all modded versions. Our one-click installer makes it easy to switch between versions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide DDoS protection for Minecraft servers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all our Minecraft hosting plans include CreeperShield DDoS protection to keep your server online even during attacks. Advanced protection is available for higher-tier plans."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I install plugins and mods on my Minecraft server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! Our control panel includes a one-click plugin installer for popular plugins, and you have full access to install custom plugins and mods via SFTP."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What locations are available for Minecraft hosting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer Minecraft server hosting in Mumbai and Delhi, India, providing low latency for players across the Indian subcontinent."
+        }
+      }
+    ]
+  };
+
   // Animation variants for smoother animations
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -227,11 +318,49 @@ const MinecraftPlans = () => {
   return (
     <>
       <Helmet>
-        <title>Minecraft Server Hosting Plans | CreeperCastle.cloud</title>
+        <title>Best Minecraft Server Hosting India 2024 | Low Latency, DDoS Protection | CreeperCastle</title>
         <meta 
           name="description" 
-          content="High-performance Minecraft server hosting plans with NVMe SSD storage, DDoS protection, and 24/7 support. Perfect for any size community."
+          content="Premium Minecraft server hosting in India starting at ₹99/month. NVMe SSD storage, instant setup, DDoS protection, 24/7 support. Perfect for Java & Bedrock servers with low ping in Mumbai & Delhi."
         />
+        <meta
+          name="keywords"
+          content="minecraft server hosting india, minecraft hosting mumbai delhi, cheap minecraft server india, minecraft bedrock hosting, minecraft java hosting, low ping minecraft server, minecraft server rental india, minecraft hosting with ddos protection, creeper castle minecraft, minecraft server provider india"
+        />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://creepercastle.cloud/plans/minecraft" />
+        <meta property="og:title" content="Best Minecraft Server Hosting India 2024 | Low Latency & DDoS Protection" />
+        <meta property="og:description" content="Premium Minecraft hosting starting at ₹99/month. NVMe SSD, instant setup, DDoS protection, 24/7 support. Low ping servers in Mumbai & Delhi." />
+        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png" />
+        <meta property="og:image:alt" content="CreeperCastle Minecraft Server Hosting Plans" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Best Minecraft Server Hosting India 2024 🎮" />
+        <meta name="twitter:description" content="Premium Minecraft hosting starting at ₹99/month. NVMe SSD, instant setup, DDoS protection, 24/7 support. Low ping servers in Mumbai & Delhi." />
+        <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png" />
+        
+        {/* Additional SEO tags */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="author" content="CreeperCastle.cloud" />
+        <meta name="publisher" content="CreeperCastle.cloud" />
+        <meta name="application-name" content="CreeperCastle" />
+        <meta name="theme-color" content="#50C878" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://creepercastle.cloud/plans/minecraft" />
+        
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(minecraftHostingStructuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(minecraftFaqStructuredData)}
+        </script>
       </Helmet>
       
       <div className="flex flex-col min-h-screen bg-navy text-white">
