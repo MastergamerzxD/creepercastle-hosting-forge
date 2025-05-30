@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -45,7 +44,7 @@ const Discord = () => {
     {
       icon: Users,
       title: "Active Community",
-      description: "Connect with 5000+ Minecraft server owners, developers, and gaming enthusiasts from India and worldwide."
+      description: "Connect with 3000+ Minecraft server owners, developers, and gaming enthusiasts from India and worldwide."
     },
     {
       icon: MessageCircle,
@@ -75,7 +74,7 @@ const Discord = () => {
         <title>Join CreeperCastle Discord Community | 24/7 Minecraft Server Support & Community</title>
         <meta 
           name="description" 
-          content="Join 5000+ Minecraft server owners in India's largest gaming community. Get 24/7 support, server management tips, exclusive updates, and connect with fellow gamers on Discord."
+          content="Join 3000+ Minecraft server owners in India's largest gaming community. Get 24/7 support, server management tips, exclusive updates, and connect with fellow gamers on Discord."
         />
         <meta
           name="keywords"
@@ -86,7 +85,7 @@ const Discord = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/discord" />
         <meta property="og:title" content="Join CreeperCastle Discord - India's Largest Minecraft Community 🎮" />
-        <meta property="og:description" content="Connect with 5000+ Minecraft server owners, get 24/7 support, and learn from gaming experts in our active Discord community." />
+        <meta property="og:description" content="Connect with 3000+ Minecraft server owners, get 24/7 support, and learn from gaming experts in our active Discord community." />
         <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png" />
         <meta property="og:image:alt" content="CreeperCastle Discord Community" />
         <meta property="og:image:width" content="1200" />
@@ -95,7 +94,7 @@ const Discord = () => {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="CreeperCastle Discord Community 🎮" />
-        <meta name="twitter:description" content="Join India's largest Minecraft hosting community on Discord. 24/7 support, server tips, and 5000+ active members!" />
+        <meta name="twitter:description" content="Join India's largest Minecraft hosting community on Discord. 24/7 support, server tips, and 3000+ active members!" />
         <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png" />
         
         {/* Additional SEO tags */}
@@ -145,7 +144,7 @@ const Discord = () => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
                   Connect with India's largest Minecraft hosting community. Get instant support, 
-                  share experiences, and level up your server management skills with 5000+ active members.
+                  share experiences, and level up your server management skills with 3000+ active members.
                 </motion.p>
                 
                 <motion.div
@@ -173,7 +172,7 @@ const Discord = () => {
               >
                 <Card className="bg-navy-light border-gray-800 text-center">
                   <CardContent className="pt-6">
-                    <div className="text-4xl font-bold text-creeper mb-2">5000+</div>
+                    <div className="text-4xl font-bold text-creeper mb-2">3000+</div>
                     <div className="text-gray-300">Active Members</div>
                   </CardContent>
                 </Card>

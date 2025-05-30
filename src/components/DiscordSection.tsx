@@ -92,7 +92,7 @@ const DiscordSection = () => {
               </Button>
               
               <p className="text-gray-500 mt-4">
-                Already over 5,000 members and growing!
+                Already over 3,000 members and growing!
               </p>
             </div>
           </motion.div>
