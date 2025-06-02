@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -262,6 +263,9 @@ const Index = () => {
           <main className="flex-grow pt-16 relative z-10">
             <section id="home">
               <HeroSection />
+            </section>
+            <section id="pricing">
+              <PricingSection />
             </section>
             <section id="locations">
               <LocationsSection />
