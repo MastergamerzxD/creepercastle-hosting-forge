@@ -265,9 +265,6 @@ const Index = () => {
             <section id="home">
               <HeroSection />
             </section>
-            <section id="pricing">
-              <PricingSection />
-            </section>
             
             {/* Services Cards Section */}
             <section className="py-20 bg-navy">
