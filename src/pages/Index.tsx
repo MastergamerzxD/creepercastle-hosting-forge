@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,6 +9,9 @@ import ReviewsSection from "@/components/ReviewsSection";
 import CtaSection from "@/components/CtaSection";
 import DiscordSection from "@/components/DiscordSection";
 import LoadingScreen from "@/components/LoadingScreen";
+import Server from "@/components/Server";
+import Shield from "@/components/Shield";
+import Button from "@/components/Button";
 
 // Import framer-motion for animations
 import { motion, AnimatePresence } from "framer-motion";
@@ -267,6 +269,129 @@ const Index = () => {
             <section id="pricing">
               <PricingSection />
             </section>
+            
+            {/* Services Cards Section */}
+            <section className="py-20 bg-navy">
+              <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {/* VPS Card */}
+                  <div className="bg-navy-light rounded-xl p-6 border border-gray-800 hover:border-creeper/50 transition-all hover:transform hover:-translate-y-2">
+                    <div className="text-center mb-6">
+                      <div className="w-16 h-16 bg-creeper/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <Server className="h-8 w-8 text-creeper" />
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">VPS Hosting</h3>
+                      <p className="text-gray-400 text-sm">High-performance virtual private servers</p>
+                    </div>
+                    
+                    <div className="space-y-3 mb-6">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-400">Starting RAM:</span>
+                        <span className="text-creeper">32GB</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-400">Starting CPU:</span>
+                        <span className="text-creeper">10 vCores</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-400">Storage:</span>
+                        <span className="text-creeper">300GB NVMe</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-400">Location:</span>
+                        <span className="text-creeper">Delhi, India</span>
+                      </div>
+                    </div>
+                    
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-creeper mb-2">₹3,300/mo</div>
+                      <Button className="w-full minecraft-btn" asChild>
+                        <a href="/plans/vps">View Plans</a>
+                      </Button>
+                    </div>
+                  </div>
+
+                  {/* Minecraft Card */}
+                  <div className="bg-navy-light rounded-xl p-6 border-2 border-creeper relative hover:transform hover:-translate-y-2 transition-all">
+                    <div className="absolute top-0 right-0 bg-creeper text-navy-dark font-medium text-sm px-3 py-1 rounded-bl-lg">
+                      Most Popular
+                    </div>
+                    
+                    <div className="text-center mb-6">
+                      <div className="w-16 h-16 bg-creeper/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <Server className="h-8 w-8 text-creeper" />
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">Minecraft Hosting</h3>
+                      <p className="text-gray-400 text-sm">Optimized servers for the best Minecraft experience</p>
+                    </div>
+                    
+                    <div className="space-y-3 mb-6">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-400">Starting RAM:</span>
+                        <span className="text-creeper">2GB</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-400">Starting CPU:</span>
+                        <span className="text-creeper">1 vCore</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-400">Storage:</span>
+                        <span className="text-creeper">30GB NVMe</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-400">Location:</span>
+                        <span className="text-creeper">Delhi, India</span>
+                      </div>
+                    </div>
+                    
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-creeper mb-2">₹99/mo</div>
+                      <Button className="w-full minecraft-btn" asChild>
+                        <a href="/plans/minecraft">View Plans</a>
+                      </Button>
+                    </div>
+                  </div>
+
+                  {/* CreeperShield Card */}
+                  <div className="bg-navy-light rounded-xl p-6 border border-gray-800 hover:border-creeper/50 transition-all hover:transform hover:-translate-y-2">
+                    <div className="text-center mb-6">
+                      <div className="w-16 h-16 bg-creeper/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <Shield className="h-8 w-8 text-creeper" />
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">CreeperShield</h3>
+                      <p className="text-gray-400 text-sm">Advanced DDoS protection for your servers</p>
+                    </div>
+                    
+                    <div className="space-y-3 mb-6">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-400">Bandwidth:</span>
+                        <span className="text-creeper">1 Tbps+</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-400">Response Time:</span>
+                        <span className="text-creeper">&lt;1.1ms</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-400">Protection:</span>
+                        <span className="text-creeper">Layer 3 & 4</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-400">Uptime:</span>
+                        <span className="text-creeper">99.9%</span>
+                      </div>
+                    </div>
+                    
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-creeper mb-2">₹84/mo</div>
+                      <Button className="w-full minecraft-btn" asChild>
+                        <a href="/plans/creepershield">View Plans</a>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
             <section id="locations">
               <LocationsSection />
             </section>
