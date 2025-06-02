@@ -1,9 +1,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { MapPin, Wifi, Shield, Zap, Clock, Server } from "lucide-react";
+import { MapPin, Wifi } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 const LocationsSection = () => {
   const containerVariants = {
@@ -35,33 +33,6 @@ const LocationsSection = () => {
       ping: "< 8ms",
       features: ["High-Speed Network", "DDoS Protection", "Premium Hardware"],
       icon: MapPin
-    }
-  ];
-
-  const services = [
-    {
-      title: "Minecraft Performance Servers",
-      description: "High-performance Minecraft hosting with instant setup and premium features",
-      icon: Server,
-      color: "text-creeper",
-      bgColor: "bg-creeper/10",
-      route: "/plans/minecraft"
-    },
-    {
-      title: "CreeperShield",
-      description: "Advanced DDoS protection and security solutions for your servers",
-      icon: Shield,
-      color: "text-blue-400",
-      bgColor: "bg-blue-400/10",
-      route: "/plans/creepershield"
-    },
-    {
-      title: "VPS",
-      description: "Powerful virtual private servers for advanced server management",
-      icon: Zap,
-      color: "text-purple-400",
-      bgColor: "bg-purple-400/10",
-      route: "/plans/vps"
     }
   ];
 
@@ -123,60 +94,6 @@ const LocationsSection = () => {
                       </div>
                     ))}
                   </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Services Section */}
-        <motion.div 
-          className="text-center mb-12"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <motion.h3 
-            className="text-2xl md:text-3xl font-bold mb-4"
-            variants={itemVariants}
-          >
-            Choose Your <span className="text-creeper">Service</span>
-          </motion.h3>
-          <motion.p 
-            className="text-lg text-gray-300 max-w-2xl mx-auto"
-            variants={itemVariants}
-          >
-            Premium hosting solutions designed for every gaming need
-          </motion.p>
-        </motion.div>
-
-        <motion.div 
-          className="grid md:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          {services.map((service, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card className="bg-navy-light border-gray-700 hover:border-creeper/50 transition-all duration-300 group h-full">
-                <CardContent className="p-8 text-center h-full flex flex-col">
-                  <div className={`w-16 h-16 ${service.bgColor} rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}>
-                    <service.icon className={`h-8 w-8 ${service.color}`} />
-                  </div>
-                  
-                  <h4 className="text-xl font-bold text-white mb-4">{service.title}</h4>
-                  <p className="text-gray-300 mb-6 flex-1">{service.description}</p>
-                  
-                  <Button 
-                    className="minecraft-btn w-full group-hover:scale-105 transition-transform"
-                    asChild
-                  >
-                    <Link to={service.route}>
-                      Explore Plans
-                    </Link>
-                  </Button>
                 </CardContent>
               </Card>
             </motion.div>
