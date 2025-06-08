@@ -1,130 +1,99 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Mail, Send, MessageSquare } from "lucide-react";
-import { useToast } from "@/components/ui/use-toast";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Mail, MessageCircle, Clock, MapPin, Phone } from "lucide-react";
+import { motion } from "framer-motion";
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  
-  const [submitting, setSubmitting] = useState(false);
-  const { toast } = useToast();
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitting(false);
-      toast({
-        title: "Message Sent!",
-        description: "We've received your message and will get back to you soon.",
-        variant: "default",
-      });
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    }, 1500);
-  };
-  
-  // JSON-LD structured data for better SEO
   const contactStructuredData = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact CreeperCastle.cloud",
-    "description": "Get in touch with the CreeperCastle.cloud support team",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CreeperCastle.cloud",
-      "logo": "/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png"
-    },
+    "description": "Get in touch with CreeperCastle's 24/7 support team for Minecraft hosting assistance",
+    "url": "https://creepercastle.cloud/contact",
     "mainEntity": {
       "@type": "Organization",
       "name": "CreeperCastle.cloud",
-      "email": "support@creepercastle.in",
-      "sameAs": [
-        "https://discord.gg/RuQ9neH56S"
-      ]
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "support@creepercastle.in",
+          "availableLanguage": ["English", "Hindi"],
+          "areaServed": "IN",
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "India",
+        "addressRegion": "Mumbai, Delhi"
+      }
     }
   };
-  
-  // FAQ structured data
-  const contactFaqStructuredData = {
+
+  const breadcrumbStructuredData = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@type": "BreadcrumbList",
+    "itemListElement": [
       {
-        "@type": "Question",
-        "name": "How quickly can I get my Minecraft server set up?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our servers are set up instantly! After completing your purchase, you'll have immediate access to your Minecraft server control panel."
-        }
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://creepercastle.cloud/"
       },
       {
-        "@type": "Question",
-        "name": "Can I upgrade my plan later?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely! You can easily upgrade your plan at any time through our customer portal. All your data will be seamlessly transferred to your new plan."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What payment methods do you accept?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We accept credit/debit cards, UPI, and various other local payment methods for your convenience."
-        }
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact Us",
+        "item": "https://creepercastle.cloud/contact"
       }
     ]
   };
-  
+
   return (
     <>
       <Helmet>
-        <title>Contact Us | CreeperCastle.cloud - Minecraft Server Hosting</title>
+        <title>Contact Us - 24/7 Expert Support | CreeperCastle.cloud Minecraft Hosting</title>
         <meta 
           name="description" 
-          content="Get help with your Minecraft server hosting. Contact our 24/7 support team via email, Discord, or our contact form. We're here to help!"
+          content="Get 24/7 expert support for your Minecraft server hosting needs. Contact CreeperCastle team via Discord, email, or live chat. Fast response times guaranteed."
         />
         <meta
           name="keywords"
-          content="minecraft hosting support, contact creeper castle, minecraft server help, minecraft hosting assistance, technical support, discord support, minecraft server troubleshooting"
+          content="minecraft hosting support, 24/7 gaming support india, minecraft server help, technical support gaming, contact creepercastle, minecraft hosting customer service, discord support minecraft, live chat gaming support"
         />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/contact" />
-        <meta property="og:title" content="Contact Us | CreeperCastle.cloud - Minecraft Server Hosting" />
-        <meta property="og:description" content="Get help with your Minecraft server hosting. Contact our 24/7 support team via email, Discord, or our contact form." />
-        <meta property="og:image" content="/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
-        <meta property="og:image:alt" content="CreeperCastle Support" />
+        <meta property="og:title" content="Contact CreeperCastle - 24/7 Expert Minecraft Hosting Support" />
+        <meta property="og:description" content="Get 24/7 expert support for your Minecraft server hosting needs. Contact our team via Discord, email, or live chat." />
+        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta property="og:image:alt" content="Contact CreeperCastle Support Team" />
+        <meta property="og:site_name" content="CreeperCastle.cloud" />
+        <meta property="og:locale" content="en_IN" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Us | CreeperCastle.cloud - Minecraft Server Hosting" />
-        <meta name="twitter:description" content="Get help with your Minecraft server hosting. Contact our 24/7 support team via email, Discord, or our contact form." />
-        <meta name="twitter:image" content="/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta name="twitter:title" content="Contact CreeperCastle - 24/7 Minecraft Support 🎮" />
+        <meta name="twitter:description" content="Need help with your Minecraft server? Our expert team is available 24/7 via Discord, email, and live chat." />
+        <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        
+        {/* Additional SEO tags */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="author" content="CreeperCastle.cloud" />
+        <meta name="geo.region" content="IN" />
+        <meta name="geo.placename" content="Mumbai, Delhi" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://creepercastle.cloud/contact" />
@@ -134,257 +103,160 @@ const ContactPage = () => {
           {JSON.stringify(contactStructuredData)}
         </script>
         <script type="application/ld+json">
-          {JSON.stringify(contactFaqStructuredData)}
+          {JSON.stringify(breadcrumbStructuredData)}
         </script>
       </Helmet>
       
       <div className="flex flex-col min-h-screen bg-navy text-white">
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" 
+            style={{ backgroundImage: 'url("/lovable-uploads/4fca9c12-4db7-435f-a6c5-3fe7e04cf205.png")' }}
+          ></div>
+          
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/90 via-navy/80 to-navy-light/70"></div>
+        </div>
+        
         <Navbar />
         
-        <main className="flex-grow pt-20">
-          {/* Hero Section */}
-          <section className="py-16 md:py-24 bg-navy-dark relative overflow-hidden">
-            <div className="container mx-auto px-4 relative z-10">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="max-w-4xl mx-auto text-center"
-              >
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Get In <span className="text-creeper">Touch</span>
-                </h1>
-                <p className="text-xl text-gray-300 mb-8">
-                  Have questions about our Minecraft hosting services? We're here to help!
-                </p>
-              </motion.div>
-            </div>
-            
-            {/* Animated background elements */}
-            <motion.div 
-              className="absolute top-20 right-40 w-6 h-6 bg-creeper/20 rounded-md"
-              animate={{ y: [0, -15, 0], rotate: [0, 180, 360] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            ></motion.div>
-            <motion.div 
-              className="absolute bottom-10 left-20 w-4 h-4 bg-creeper/20 rounded-md"
-              animate={{ y: [0, -10, 0], rotate: [0, -180, -360] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            ></motion.div>
-          </section>
-          
-          {/* Contact Options Section */}
-          <section className="py-16">
+        <main className="flex-grow pt-24 relative z-10">
+          <section className="py-12">
             <div className="container mx-auto px-4">
-              <div className="max-w-3xl mx-auto">
-                <motion.div 
-                  className="bg-navy-light p-8 rounded-xl mb-8"
+              <div className="text-center mb-16">
+                <motion.h1 
+                  className="text-4xl md:text-5xl font-bold mb-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  Get in <span className="text-creeper">Touch</span>
+                </motion.h1>
+                <motion.p 
+                  className="text-xl text-gray-300 max-w-3xl mx-auto"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  <h3 className="text-2xl font-bold mb-4 text-center">Contact Us</h3>
-                  <p className="text-gray-300 mb-6 text-center">
-                    You can reach our support team through email or join our Discord community for real-time assistance.
-                  </p>
-                  
-                  <div className="flex flex-col md:flex-row justify-center gap-6 mt-8">
-                    <motion.div 
-                      className="bg-navy-dark p-6 rounded-xl flex-1 flex flex-col items-center text-center"
-                      whileHover={{ y: -5, boxShadow: "0 10px 25px rgba(80, 200, 120, 0.1)" }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <div className="bg-creeper/10 p-4 rounded-full mb-4">
-                        <Mail className="h-8 w-8 text-creeper" />
-                      </div>
-                      <h4 className="font-bold text-lg mb-2">Email Support</h4>
-                      <p className="text-gray-400 mb-4">Reach out via email for any inquiries</p>
-                      <a href="mailto:support@creepercastle.in" className="text-creeper font-semibold hover:underline">
-                        support@creepercastle.in
-                      </a>
-                    </motion.div>
-                    
-                    <motion.div 
-                      className="bg-navy-dark p-6 rounded-xl flex-1 flex flex-col items-center text-center"
-                      whileHover={{ y: -5, boxShadow: "0 10px 25px rgba(80, 200, 120, 0.1)" }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <div className="bg-creeper/10 p-4 rounded-full mb-4">
-                        <MessageSquare className="h-8 w-8 text-creeper" />
-                      </div>
-                      <h4 className="font-bold text-lg mb-2">Discord Community</h4>
-                      <p className="text-gray-400 mb-4">Join our Discord for real-time support</p>
-                      <Button className="minecraft-btn rounded-md" asChild>
-                        <a href="https://discord.gg/RuQ9neH56S" target="_blank" rel="noopener noreferrer">
-                          Join Discord
-                        </a>
-                      </Button>
-                    </motion.div>
-                  </div>
-                </motion.div>
-                
-                <motion.div
-                  className="bg-navy-light p-8 rounded-xl"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                >
-                  <h3 className="text-2xl font-bold mb-6">Send Us A Message</h3>
-                  
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label htmlFor="name" className="block text-sm font-medium mb-2">
-                          Your Name
-                        </label>
-                        <Input
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          required
-                          className="w-full bg-navy-dark border-gray-800 focus:border-creeper focus:ring-creeper"
-                          placeholder="John Doe"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="email" className="block text-sm font-medium mb-2">
-                          Your Email
-                        </label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                          className="w-full bg-navy-dark border-gray-800 focus:border-creeper focus:ring-creeper"
-                          placeholder="john@example.com"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                        Subject
-                      </label>
-                      <Input
-                        id="subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
-                        className="w-full bg-navy-dark border-gray-800 focus:border-creeper focus:ring-creeper"
-                        placeholder="How can we help you?"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium mb-2">
-                        Your Message
-                      </label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        className="w-full bg-navy-dark border-gray-800 focus:border-creeper focus:ring-creeper min-h-[150px]"
-                        placeholder="Write your message here..."
-                      />
-                    </div>
-                    
-                    <Button 
-                      type="submit"
-                      className="minecraft-btn rounded-md w-full md:w-auto"
-                      disabled={submitting}
-                    >
-                      {submitting ? (
-                        <span className="flex items-center">
-                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-navy-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                          </svg>
-                          Sending...
-                        </span>
-                      ) : (
-                        <span className="flex items-center">
-                          <Send className="mr-2 h-5 w-5" />
-                          Send Message
-                        </span>
-                      )}
-                    </Button>
-                  </form>
-                </motion.div>
+                  Need help with your Minecraft server? Our expert support team is available 24/7 to assist you.
+                </motion.p>
               </div>
-            </div>
-          </section>
-          
-          {/* FAQ Section */}
-          <section className="py-16 bg-navy-dark">
-            <div className="container mx-auto px-4">
-              <motion.div 
-                className="text-center mb-12"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Frequently Asked <span className="text-creeper">Questions</span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                  Have questions? We've got answers! If you can't find what you're looking for, feel free to contact us.
-                </p>
-              </motion.div>
-              
-              <div className="max-w-3xl mx-auto">
-                {[
-                  {
-                    question: "How quickly can I get my Minecraft server set up?",
-                    answer: "Our servers are set up instantly! After completing your purchase, you'll have immediate access to your Minecraft server control panel."
-                  },
-                  {
-                    question: "Can I upgrade my plan later?",
-                    answer: "Absolutely! You can easily upgrade your plan at any time through our customer portal. All your data will be seamlessly transferred to your new plan."
-                  },
-                  {
-                    question: "What payment methods do you accept?",
-                    answer: "We accept credit/debit cards, UPI, and various other local payment methods for your convenience."
-                  }
-                ].map((faq, index) => (
-                  <motion.div
-                    key={index}
-                    className="bg-navy-light rounded-xl mb-4 overflow-hidden"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-                  >
-                    <details className="group">
-                      <summary className="flex justify-between items-center p-6 cursor-pointer">
-                        <h3 className="font-semibold text-lg">{faq.question}</h3>
-                        <span className="ml-6 shrink-0 transition duration-300 group-open:rotate-180">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-6 w-6 text-creeper"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              d="M19 9l-7 7-7-7"
-                            />
-                          </svg>
-                        </span>
-                      </summary>
-                      <div className="px-6 pb-6 text-gray-300">
-                        {faq.answer}
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {/* Discord Support */}
+                <Card className="bg-navy-light border-gray-800 hover:border-creeper transition-colors">
+                  <CardHeader className="text-center">
+                    <div className="mx-auto mb-4 p-3 bg-creeper/20 rounded-full w-fit">
+                      <MessageCircle className="h-8 w-8 text-creeper" />
+                    </div>
+                    <CardTitle className="text-xl">Discord Support</CardTitle>
+                    <CardDescription className="text-gray-400">
+                      Join our community for instant support
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-gray-300 mb-4">
+                      Get instant help from our community and support team on Discord.
+                    </p>
+                    <Button className="minecraft-btn w-full" asChild>
+                      <a href="https://discord.gg/RuQ9neH56S" target="_blank" rel="noopener noreferrer">
+                        Join Discord
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Email Support */}
+                <Card className="bg-navy-light border-gray-800 hover:border-creeper transition-colors">
+                  <CardHeader className="text-center">
+                    <div className="mx-auto mb-4 p-3 bg-creeper/20 rounded-full w-fit">
+                      <Mail className="h-8 w-8 text-creeper" />
+                    </div>
+                    <CardTitle className="text-xl">Email Support</CardTitle>
+                    <CardDescription className="text-gray-400">
+                      Send us detailed queries
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-gray-300 mb-4">
+                      For detailed technical issues or business inquiries.
+                    </p>
+                    <Button className="minecraft-btn w-full" asChild>
+                      <a href="mailto:support@creepercastle.in">
+                        Send Email
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Response Times */}
+                <Card className="bg-navy-light border-gray-800 hover:border-creeper transition-colors">
+                  <CardHeader className="text-center">
+                    <div className="mx-auto mb-4 p-3 bg-creeper/20 rounded-full w-fit">
+                      <Clock className="h-8 w-8 text-creeper" />
+                    </div>
+                    <CardTitle className="text-xl">Response Times</CardTitle>
+                    <CardDescription className="text-gray-400">
+                      Fast and reliable support
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Discord:</span>
+                        <span className="text-creeper">< 5 minutes</span>
                       </div>
-                    </details>
-                  </motion.div>
-                ))}
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Email:</span>
+                        <span className="text-creeper">< 2 hours</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Availability:</span>
+                        <span className="text-creeper">24/7</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Additional Contact Information */}
+              <div className="mt-16 max-w-4xl mx-auto">
+                <Card className="bg-navy-light border-gray-800">
+                  <CardHeader>
+                    <CardTitle className="text-2xl text-center mb-6">
+                      Additional <span className="text-creeper">Information</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div className="space-y-4">
+                        <div className="flex items-start space-x-3">
+                          <MapPin className="h-5 w-5 text-creeper mt-1" />
+                          <div>
+                            <h3 className="font-semibold">Server Locations</h3>
+                            <p className="text-gray-400 text-sm">Mumbai & Delhi, India</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <Phone className="h-5 w-5 text-creeper mt-1" />
+                          <div>
+                            <h3 className="font-semibold">Business Hours</h3>
+                            <p className="text-gray-400 text-sm">24/7 Support Available</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="space-y-4">
+                        <div>
+                          <h3 className="font-semibold mb-2">Languages Supported</h3>
+                          <p className="text-gray-400 text-sm">English, Hindi</p>
+                        </div>
+                        <div>
+                          <h3 className="font-semibold mb-2">Best Support Channel</h3>
+                          <p className="text-gray-400 text-sm">Discord for fastest response times</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </section>

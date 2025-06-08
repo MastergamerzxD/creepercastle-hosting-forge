@@ -1,8 +1,8 @@
+
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
-import PricingSection from "@/components/PricingSection";
 import LocationsSection from "@/components/LocationsSection";
 import CreeperShieldSection from "@/components/CreeperShieldSection";
 import ReviewsSection from "@/components/ReviewsSection";
@@ -15,6 +15,7 @@ import { Server, Shield } from "lucide-react";
 // Import framer-motion for animations
 import { motion, AnimatePresence } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
@@ -160,16 +161,16 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>CreeperCastle.cloud - Best Minecraft Server Hosting in India</title>
-        <meta name="description" content="CreeperCastle.cloud offers premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India. Starting at just ₹99/month." />
-        <meta name="keywords" content="minecraft hosting india, minecraft server hosting, minecraft smp hosting, bedrock servers, java servers, minecraft india, ddos protection, minecraft mods, game server, minecraft multiplayer, best minecraft hosting india, budget minecraft server, modded minecraft hosting, minecraft plugins, cheap minecraft hosting, affordable minecraft server india" />
+        <title>CreeperCastle.cloud - Best Minecraft Server Hosting in India | Premium Gaming Servers</title>
+        <meta name="description" content="India's #1 Minecraft server hosting provider with instant setup, NVMe storage, DDoS protection & 24/7 support. Starting at ₹99/month. Mumbai & Delhi servers." />
+        <meta name="keywords" content="minecraft hosting india, minecraft server hosting, minecraft smp hosting, bedrock servers, java servers, minecraft india, ddos protection, minecraft mods, game server, minecraft multiplayer, best minecraft hosting india, budget minecraft server, modded minecraft hosting, minecraft plugins, cheap minecraft hosting, affordable minecraft server india, mumbai minecraft hosting, delhi minecraft hosting" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/" />
         <meta property="og:title" content="CreeperCastle.cloud - Best Minecraft Server Hosting in India" />
         <meta property="og:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India. Starting at just ₹99/month." />
-        <meta property="og:image" content="/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
         <meta property="og:image:alt" content="CreeperCastle.cloud - Minecraft Server Hosting" />
         <meta property="og:site_name" content="CreeperCastle.cloud" />
         <meta property="og:locale" content="en_IN" />
@@ -179,10 +180,10 @@ const Index = () => {
         <meta property="twitter:url" content="https://creepercastle.cloud/" />
         <meta property="twitter:title" content="CreeperCastle.cloud - Best Minecraft Server Hosting in India" />
         <meta property="twitter:description" content="Premium Minecraft hosting with instant setup, high performance NVMe storage, and unmatched DDoS protection in India. Starting at just ₹99/month." />
-        <meta property="twitter:image" content="/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta property="twitter:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
         
         {/* Additional Meta Tags */}
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
         <meta name="theme-color" content="#50C878" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -191,6 +192,12 @@ const Index = () => {
         <meta name="application-name" content="CreeperCastle.cloud" />
         <meta name="msapplication-TileColor" content="#50C878" />
         <meta name="msapplication-TileImage" content="/lovable-uploads/570fb7e4-e36a-4bb5-a9ef-be9e7ae57b15.png" />
+        <meta name="author" content="CreeperCastle.cloud" />
+        <meta name="publisher" content="CreeperCastle.cloud" />
+        <meta name="geo.region" content="IN" />
+        <meta name="geo.placename" content="Mumbai, Delhi" />
+        <meta name="geo.position" content="19.0760;72.8777" />
+        <meta name="ICBM" content="19.0760, 72.8777" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://creepercastle.cloud/" />
@@ -302,7 +309,7 @@ const Index = () => {
                     <div className="text-center">
                       <div className="text-2xl font-bold text-creeper mb-2">₹3,300/mo</div>
                       <Button className="w-full minecraft-btn" asChild>
-                        <a href="/plans/vps">View Plans</a>
+                        <Link to="/plans/vps">View Plans</Link>
                       </Button>
                     </div>
                   </div>
@@ -343,7 +350,7 @@ const Index = () => {
                     <div className="text-center">
                       <div className="text-2xl font-bold text-creeper mb-2">₹99/mo</div>
                       <Button className="w-full minecraft-btn" asChild>
-                        <a href="/plans/minecraft">View Plans</a>
+                        <Link to="/plans/minecraft">View Plans</Link>
                       </Button>
                     </div>
                   </div>
@@ -380,7 +387,7 @@ const Index = () => {
                     <div className="text-center">
                       <div className="text-2xl font-bold text-creeper mb-2">₹84/mo</div>
                       <Button className="w-full minecraft-btn" asChild>
-                        <a href="/plans/creepershield">View Plans</a>
+                        <Link to="/plans/creepershield">View Plans</Link>
                       </Button>
                     </div>
                   </div>

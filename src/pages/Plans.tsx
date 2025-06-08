@@ -14,14 +14,17 @@ const Plans = () => {
   const plansStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
+    "name": "CreeperCastle Hosting Plans",
+    "description": "Complete range of Minecraft and VPS hosting solutions with DDoS protection",
+    "url": "https://creepercastle.cloud/plans",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
         "item": {
           "@type": "Service",
-          "name": "Minecraft Hosting",
-          "description": "High-performance Minecraft servers with instant setup, one-click plugin installation, and 24/7 expert support.",
+          "name": "Minecraft Server Hosting",
+          "description": "High-performance Minecraft servers with instant setup, one-click plugin installation, and 24/7 expert support. Perfect for Java and Bedrock editions.",
           "url": "https://creepercastle.cloud/plans/minecraft",
           "provider": {
             "@type": "Organization",
@@ -30,7 +33,8 @@ const Plans = () => {
           "offers": {
             "@type": "Offer",
             "price": "99",
-            "priceCurrency": "INR"
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
           }
         }
       },
@@ -40,11 +44,17 @@ const Plans = () => {
         "item": {
           "@type": "Service",
           "name": "CreeperShield DDoS Protection",
-          "description": "Advanced DDoS protection specifically designed for Minecraft servers.",
+          "description": "Advanced multi-layer DDoS protection specifically designed for gaming servers with up to 3 Tbps mitigation capacity.",
           "url": "https://creepercastle.cloud/plans/creepershield",
           "provider": {
             "@type": "Organization",
             "name": "CreeperCastle.cloud"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "84",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
           }
         }
       },
@@ -53,14 +63,39 @@ const Plans = () => {
         "position": 3,
         "item": {
           "@type": "Service",
-          "name": "VPS Hosting",
-          "description": "High-performance VPS solutions with dedicated resources, complete control, and enterprise-grade hardware.",
+          "name": "VPS Hosting Solutions",
+          "description": "Enterprise-grade VPS solutions with dedicated resources, complete root access, and premium hardware in India.",
           "url": "https://creepercastle.cloud/plans/vps",
           "provider": {
             "@type": "Organization",
             "name": "CreeperCastle.cloud"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "3300",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
           }
         }
+      }
+    ]
+  };
+
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://creepercastle.cloud/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Hosting Plans",
+        "item": "https://creepercastle.cloud/plans"
       }
     ]
   };
@@ -68,29 +103,39 @@ const Plans = () => {
   return (
     <>
       <Helmet>
-        <title>Minecraft & VPS Hosting Plans | CreeperCastle.cloud</title>
+        <title>Hosting Plans & Pricing | Minecraft VPS & DDoS Protection | CreeperCastle.cloud</title>
         <meta 
           name="description" 
-          content="Affordable Minecraft server hosting plans starting at ₹99/month. Choose from Minecraft hosting, VPS plans, or DDoS protection services optimized for Indian gamers."
+          content="Compare all CreeperCastle hosting plans: Minecraft servers from ₹99/mo, VPS hosting from ₹3,300/mo, and DDoS protection from ₹84/mo. Choose the perfect plan for your needs."
         />
         <meta
           name="keywords"
-          content="minecraft hosting plans, minecraft server pricing, cheap minecraft hosting india, vps hosting india, ddos protection, minecraft server costs, budget minecraft server, creeper castle pricing"
+          content="minecraft hosting plans india, minecraft server pricing, vps hosting plans india, ddos protection pricing, cheap minecraft hosting, budget vps hosting, gaming server plans, minecraft server costs, india hosting comparison, creeper castle pricing, affordable game hosting, minecraft bedrock hosting plans, java server hosting plans"
         />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/plans" />
-        <meta property="og:title" content="Minecraft & VPS Hosting Plans | CreeperCastle.cloud" />
-        <meta property="og:description" content="Affordable Minecraft server hosting plans starting at ₹99/month. Choose from Minecraft hosting, VPS plans, or DDoS protection services." />
-        <meta property="og:image" content="/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
-        <meta property="og:image:alt" content="CreeperCastle Hosting Plans" />
+        <meta property="og:title" content="Hosting Plans & Pricing | Minecraft VPS & DDoS Protection" />
+        <meta property="og:description" content="Compare all CreeperCastle hosting plans: Minecraft servers from ₹99/mo, VPS hosting from ₹3,300/mo, and DDoS protection from ₹84/mo." />
+        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta property="og:image:alt" content="CreeperCastle Hosting Plans Comparison" />
+        <meta property="og:site_name" content="CreeperCastle.cloud" />
+        <meta property="og:locale" content="en_IN" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Minecraft & VPS Hosting Plans | CreeperCastle.cloud" />
-        <meta name="twitter:description" content="Affordable Minecraft server hosting plans starting at ₹99/month. Low-latency servers optimized for Indian gamers." />
-        <meta name="twitter:image" content="/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta name="twitter:title" content="Hosting Plans & Pricing | CreeperCastle.cloud 🎮" />
+        <meta name="twitter:description" content="Compare Minecraft hosting, VPS plans, and DDoS protection. Starting from ₹84/month with premium Indian servers." />
+        <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        
+        {/* Additional SEO tags */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="author" content="CreeperCastle.cloud" />
+        <meta name="publisher" content="CreeperCastle.cloud" />
+        <meta name="theme-color" content="#50C878" />
+        <meta name="geo.region" content="IN" />
+        <meta name="geo.placename" content="Mumbai, Delhi" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://creepercastle.cloud/plans" />
@@ -98,6 +143,9 @@ const Plans = () => {
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(plansStructuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
         </script>
       </Helmet>
       
@@ -131,7 +179,7 @@ const Plans = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  Choose the perfect hosting solution for your needs.
+                  Choose the perfect hosting solution for your gaming needs. From Minecraft servers to enterprise VPS hosting.
                 </motion.p>
               </div>
               

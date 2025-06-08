@@ -3,106 +3,80 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, MessageCircle, Headphones, Shield, Heart, Star } from "lucide-react";
+import { MessageCircle, Users, Headphones, Gift } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Discord = () => {
-  // Enhanced JSON-LD structured data for better SEO
   const discordStructuredData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "OnlineGroup",
     "name": "CreeperCastle Discord Community",
-    "description": "Join the largest Minecraft hosting community in India. Get 24/7 support, server management tips, and connect with fellow gamers.",
+    "description": "Join 3000+ Minecraft enthusiasts in India's largest gaming community",
     "url": "https://creepercastle.cloud/discord",
-    "sameAs": [
-      "https://discord.gg/RuQ9neH56S"
-    ],
-    "parentOrganization": {
-      "@type": "Organization",
-      "name": "CreeperCastle.cloud",
-      "url": "https://creepercastle.cloud"
-    },
+    "sameAs": "https://discord.gg/RuQ9neH56S",
     "memberOf": {
       "@type": "Organization",
-      "name": "Discord",
-      "url": "https://discord.com"
+      "name": "CreeperCastle.cloud"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer support",
-      "availableLanguage": ["English", "Hindi"],
-      "hoursAvailable": "24/7"
+    "hasMember": {
+      "@type": "QuantitativeValue",
+      "value": "3000",
+      "unitText": "members"
     }
   };
 
-  const communityFeatures = [
-    {
-      icon: Headphones,
-      title: "24/7 Support",
-      description: "Get instant help from our expert support team and community moderators anytime, anywhere."
-    },
-    {
-      icon: Users,
-      title: "Active Community",
-      description: "Connect with 3000+ Minecraft server owners, developers, and gaming enthusiasts from India and worldwide."
-    },
-    {
-      icon: MessageCircle,
-      title: "Server Management Tips",
-      description: "Learn advanced server management, plugin configurations, and optimization techniques from experienced admins."
-    },
-    {
-      icon: Shield,
-      title: "Security Discussions",
-      description: "Stay updated on the latest security practices, DDoS protection strategies, and server safety measures."
-    },
-    {
-      icon: Heart,
-      title: "Friendly Environment",
-      description: "Join a welcoming community that supports both beginners and experienced server administrators."
-    },
-    {
-      icon: Star,
-      title: "Exclusive Updates",
-      description: "Be the first to know about new features, special offers, and beta testing opportunities."
-    }
-  ];
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://creepercastle.cloud/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Discord Community",
+        "item": "https://creepercastle.cloud/discord"
+      }
+    ]
+  };
 
   return (
     <>
       <Helmet>
-        <title>Join CreeperCastle Discord Community | 24/7 Minecraft Server Support & Community</title>
+        <title>Join Discord Community - 3000+ Minecraft Players | CreeperCastle Gaming Community</title>
         <meta 
           name="description" 
-          content="Join 3000+ Minecraft server owners in India's largest gaming community. Get 24/7 support, server management tips, exclusive updates, and connect with fellow gamers on Discord."
+          content="Join India's largest Minecraft Discord community with 3000+ members. Get instant support, find gaming partners, participate in events, and connect with fellow Minecraft enthusiasts."
         />
         <meta
           name="keywords"
-          content="creepercastle discord, minecraft community india, minecraft server support, gaming discord server, minecraft hosting community, server admin help, minecraft discord india, gaming support community"
+          content="minecraft discord india, gaming community discord, minecraft players india, discord server minecraft, indian gaming community, minecraft friends discord, gaming discord india, minecraft multiplayer discord, creeper castle discord"
         />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/discord" />
-        <meta property="og:title" content="Join CreeperCastle Discord - India's Largest Minecraft Community 🎮" />
-        <meta property="og:description" content="Connect with 3000+ Minecraft server owners, get 24/7 support, and learn from gaming experts in our active Discord community." />
-        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png" />
+        <meta property="og:title" content="Join CreeperCastle Discord - India's Largest Minecraft Community" />
+        <meta property="og:description" content="Connect with 3000+ Minecraft players, get instant support, join events, and be part of India's most active gaming community." />
+        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
         <meta property="og:image:alt" content="CreeperCastle Discord Community" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="CreeperCastle.cloud" />
+        <meta property="og:locale" content="en_IN" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="CreeperCastle Discord Community 🎮" />
-        <meta name="twitter:description" content="Join India's largest Minecraft hosting community on Discord. 24/7 support, server tips, and 3000+ active members!" />
-        <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png" />
+        <meta name="twitter:title" content="Join CreeperCastle Discord Community 🎮" />
+        <meta name="twitter:description" content="India's largest Minecraft Discord with 3000+ active members. Join events, get support, and make gaming friends!" />
+        <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
         
         {/* Additional SEO tags */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="author" content="CreeperCastle.cloud" />
-        <meta name="publisher" content="CreeperCastle.cloud" />
-        <meta name="application-name" content="CreeperCastle Discord" />
-        <meta name="theme-color" content="#5865F2" />
+        <meta name="geo.region" content="IN" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://creepercastle.cloud/discord" />
@@ -110,6 +84,9 @@ const Discord = () => {
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(discordStructuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
         </script>
       </Helmet>
       
@@ -135,183 +112,156 @@ const Discord = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                 >
-                  Join Our <span className="text-discord">Discord</span> Community
+                  Join Our <span className="text-creeper">Discord</span>
                 </motion.h1>
                 <motion.p 
-                  className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
+                  className="text-xl text-gray-300 max-w-3xl mx-auto"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  Connect with India's largest Minecraft hosting community. Get instant support, 
-                  share experiences, and level up your server management skills with 3000+ active members.
+                  Connect with 3000+ Minecraft enthusiasts in India's most active gaming community.
                 </motion.p>
-                
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                >
-                  <Button className="bg-discord hover:bg-discord-dark text-white text-lg py-6 px-8 rounded-lg" asChild>
-                    <a href="https://discord.gg/RuQ9neH56S" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
-                      </svg>
-                      Join Discord Server
-                    </a>
-                  </Button>
-                </motion.div>
               </div>
-              
-              {/* Community Stats */}
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
-                <Card className="bg-navy-light border-gray-800 text-center">
-                  <CardContent className="pt-6">
-                    <div className="text-4xl font-bold text-creeper mb-2">3000+</div>
-                    <div className="text-gray-300">Active Members</div>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-navy-light border-gray-800 text-center">
-                  <CardContent className="pt-6">
-                    <div className="text-4xl font-bold text-creeper mb-2">24/7</div>
-                    <div className="text-gray-300">Support Available</div>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-navy-light border-gray-800 text-center">
-                  <CardContent className="pt-6">
-                    <div className="text-4xl font-bold text-creeper mb-2">500+</div>
-                    <div className="text-gray-300">Daily Messages</div>
-                  </CardContent>
-                </Card>
-              </motion.div>
 
-              {/* Community Features */}
-              <motion.div 
-                className="mb-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-              >
-                <h2 className="text-3xl font-bold mb-8 text-center">
-                  Why Join Our <span className="text-creeper">Community</span>?
-                </h2>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {communityFeatures.map((feature, index) => (
-                    <Card key={index} className="bg-navy-light border-gray-800 hover:border-creeper transition-colors">
-                      <CardHeader>
-                        <div className="flex items-center gap-3">
-                          <feature.icon className="h-8 w-8 text-creeper" />
-                          <CardTitle className="text-xl">{feature.title}</CardTitle>
+              {/* Main Discord Card */}
+              <div className="max-w-4xl mx-auto mb-12">
+                <Card className="bg-navy-light border-2 border-creeper">
+                  <CardHeader className="text-center">
+                    <div className="mx-auto mb-6 p-4 bg-creeper/20 rounded-full w-fit">
+                      <MessageCircle className="h-12 w-12 text-creeper" />
+                    </div>
+                    <CardTitle className="text-3xl mb-4">
+                      India's Largest <span className="text-creeper">Minecraft Community</span>
+                    </CardTitle>
+                    <CardDescription className="text-lg text-gray-300">
+                      Join thousands of players, get instant support, and be part of something amazing!
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                      <div>
+                        <div className="text-3xl font-bold text-creeper mb-2">3000+</div>
+                        <div className="text-gray-400">Active Members</div>
+                      </div>
+                      <div>
+                        <div className="text-3xl font-bold text-creeper mb-2">24/7</div>
+                        <div className="text-gray-400">Online Support</div>
+                      </div>
+                      <div>
+                        <div className="text-3xl font-bold text-creeper mb-2">Daily</div>
+                        <div className="text-gray-400">Events & Giveaways</div>
+                      </div>
+                    </div>
+                    <Button size="lg" className="minecraft-btn text-lg px-8 py-6" asChild>
+                      <a href="https://discord.gg/RuQ9neH56S" target="_blank" rel="noopener noreferrer">
+                        Join Discord Community
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Features Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <Card className="bg-navy-light border-gray-800 hover:border-creeper transition-colors">
+                  <CardHeader className="text-center">
+                    <div className="mx-auto mb-4 p-3 bg-creeper/20 rounded-full w-fit">
+                      <Headphones className="h-6 w-6 text-creeper" />
+                    </div>
+                    <CardTitle className="text-lg">Instant Support</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-gray-400 text-sm">
+                      Get help from our expert team and community members within minutes.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-navy-light border-gray-800 hover:border-creeper transition-colors">
+                  <CardHeader className="text-center">
+                    <div className="mx-auto mb-4 p-3 bg-creeper/20 rounded-full w-fit">
+                      <Users className="h-6 w-6 text-creeper" />
+                    </div>
+                    <CardTitle className="text-lg">Find Gaming Partners</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-gray-400 text-sm">
+                      Connect with players near you and form lasting gaming friendships.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-navy-light border-gray-800 hover:border-creeper transition-colors">
+                  <CardHeader className="text-center">
+                    <div className="mx-auto mb-4 p-3 bg-creeper/20 rounded-full w-fit">
+                      <Gift className="h-6 w-6 text-creeper" />
+                    </div>
+                    <CardTitle className="text-lg">Events & Giveaways</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-gray-400 text-sm">
+                      Participate in regular events and win amazing prizes including free hosting.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-navy-light border-gray-800 hover:border-creeper transition-colors">
+                  <CardHeader className="text-center">
+                    <div className="mx-auto mb-4 p-3 bg-creeper/20 rounded-full w-fit">
+                      <MessageCircle className="h-6 w-6 text-creeper" />
+                    </div>
+                    <CardTitle className="text-lg">Active Community</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-gray-400 text-sm">
+                      Join discussions, share builds, and stay updated with the latest Minecraft news.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Why Join Section */}
+              <div className="mt-16 max-w-4xl mx-auto">
+                <Card className="bg-navy-light border-gray-800">
+                  <CardHeader>
+                    <CardTitle className="text-2xl text-center mb-6">
+                      Why Join Our <span className="text-creeper">Community</span>?
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-creeper rounded-full mt-2"></div>
+                        <div>
+                          <h3 className="font-semibold">Fastest Support Response Times</h3>
+                          <p className="text-gray-400 text-sm">Get help with server issues, setup, or questions typically within 5 minutes.</p>
                         </div>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-gray-300">{feature.description}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* Discord Channels Overview */}
-              <div className="mb-16">
-                <h2 className="text-3xl font-bold mb-8 text-center">
-                  Our <span className="text-creeper">Discord Channels</span>
-                </h2>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <Card className="bg-navy-light border-gray-800">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <MessageCircle className="h-6 w-6 text-creeper" />
-                        Support Channels
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-2 text-gray-300">
-                        <li>• #general-support - Get help with any hosting issues</li>
-                        <li>• #technical-help - Advanced server management assistance</li>
-                        <li>• #billing-support - Account and payment related queries</li>
-                        <li>• #server-setup - Help with initial server configuration</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="bg-navy-light border-gray-800">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <Users className="h-6 w-6 text-creeper" />
-                        Community Channels
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-2 text-gray-300">
-                        <li>• #general-chat - Casual conversations with community</li>
-                        <li>• #server-showcase - Show off your amazing servers</li>
-                        <li>• #plugin-recommendations - Discover new plugins</li>
-                        <li>• #announcements - Important updates and news</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-
-              {/* Community Guidelines */}
-              <div className="bg-navy-light p-8 rounded-lg border border-gray-800 mb-16">
-                <h2 className="text-2xl font-bold mb-6 text-center">
-                  Community <span className="text-creeper">Guidelines</span>
-                </h2>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-4 text-creeper">✅ Do's</h3>
-                    <ul className="space-y-2 text-gray-300">
-                      <li>• Be respectful and kind to all members</li>
-                      <li>• Use appropriate channels for discussions</li>
-                      <li>• Help others when you can</li>
-                      <li>• Search before asking questions</li>
-                      <li>• Share your server experiences</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold mb-4 text-red-400">❌ Don'ts</h3>
-                    <ul className="space-y-2 text-gray-300">
-                      <li>• No spam or excessive self-promotion</li>
-                      <li>• No offensive or inappropriate content</li>
-                      <li>• No sharing of pirated content</li>
-                      <li>• No harassment or toxic behavior</li>
-                      <li>• No off-topic discussions in support channels</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {/* Call to Action */}
-              <div className="text-center">
-                <h2 className="text-3xl font-bold mb-6">
-                  Ready to <span className="text-creeper">Join</span> the Community?
-                </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Whether you're a beginner or an experienced server admin, our community welcomes everyone. 
-                  Join us today and become part of India's most active Minecraft hosting community!
-                </p>
-                
-                <Button className="bg-discord hover:bg-discord-dark text-white text-lg py-6 px-8 rounded-lg" asChild>
-                  <a href="https://discord.gg/RuQ9neH56S" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
-                    </svg>
-                    Join Our Discord Now
-                  </a>
-                </Button>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-creeper rounded-full mt-2"></div>
+                        <div>
+                          <h3 className="font-semibold">Exclusive Member Benefits</h3>
+                          <p className="text-gray-400 text-sm">Access to member-only channels, early feature previews, and special discounts.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-creeper rounded-full mt-2"></div>
+                        <div>
+                          <h3 className="font-semibold">Regular Events & Tournaments</h3>
+                          <p className="text-gray-400 text-sm">Participate in building competitions, PvP tournaments, and community challenges.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-creeper rounded-full mt-2"></div>
+                        <div>
+                          <h3 className="font-semibold">Learn from Experts</h3>
+                          <p className="text-gray-400 text-sm">Get tips on server management, plugin development, and advanced Minecraft techniques.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </section>
