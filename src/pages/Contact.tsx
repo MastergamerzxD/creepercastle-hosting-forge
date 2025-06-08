@@ -1,3 +1,4 @@
+
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -203,11 +204,11 @@ const ContactPage = () => {
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
                         <span className="text-gray-400">Discord:</span>
-                        <span className="text-creeper">< 5 minutes</span>
+                        <span className="text-creeper">&lt; 5 minutes</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-400">Email:</span>
-                        <span className="text-creeper">< 2 hours</span>
+                        <span className="text-creeper">&lt; 2 hours</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-400">Availability:</span>
