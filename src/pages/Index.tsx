@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,7 +9,7 @@ import CtaSection from "@/components/CtaSection";
 import DiscordSection from "@/components/DiscordSection";
 import LoadingScreen from "@/components/LoadingScreen";
 import { Button } from "@/components/ui/button";
-import { Server, Shield } from "lucide-react";
+import { Server, Shield, Settings } from "lucide-react";
 
 // Import framer-motion for animations
 import { motion, AnimatePresence } from "framer-motion";
