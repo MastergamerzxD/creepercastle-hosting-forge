@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -16,16 +15,20 @@ import {
   Zap,
   Lock,
   Eye,
-  Upload
+  Upload,
+  Maximize2
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const CreeperPanel = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   const panelStructuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "CreeperPanel - Pterodactyl Game Panel",
-    "description": "Advanced Pterodactyl-based game server management panel with enhanced features for Minecraft hosting",
+    "name": "CreeperPanel - Advanced Pterodactyl Game Server Management Panel",
+    "description": "Professional Pterodactyl-based game server management panel with enhanced features, real-time monitoring, and intuitive controls for Minecraft hosting in India",
     "url": "https://creepercastle.cloud/creeperpanel",
     "applicationCategory": "GameApplication",
     "operatingSystem": "Web-based",
@@ -40,14 +43,14 @@ const CreeperPanel = () => {
       "name": "CreeperCastle.cloud"
     },
     "featureList": [
-      "Real-time server monitoring",
-      "File management system",
-      "User permission controls",
-      "Automated backups",
+      "Real-time server monitoring and analytics",
+      "Advanced file management system",
+      "Granular user permission controls",
+      "Automated backup solutions",
       "Resource usage tracking",
-      "Console access",
-      "Plugin management",
-      "Database management"
+      "Console access with command history",
+      "Plugin and modpack management",
+      "Database management with phpMyAdmin"
     ]
   };
 
@@ -64,7 +67,7 @@ const CreeperPanel = () => {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "CreeperPanel",
+        "name": "CreeperPanel - Game Server Management",
         "item": "https://creepercastle.cloud/creeperpanel"
       }
     ]
@@ -136,85 +139,85 @@ const CreeperPanel = () => {
   const galleryImages = [
     {
       src: "/lovable-uploads/1aa7c40e-4b4e-4f71-aece-422bbb83c44d.png",
-      title: "Main Dashboard",
-      description: "Clean and intuitive dashboard showing all your servers at a glance with real-time status indicators."
+      title: "Main Dashboard Overview",
+      description: "Clean and intuitive dashboard showing all your servers at a glance with real-time status indicators and performance metrics."
     },
     {
       src: "/lovable-uploads/5227a018-136b-44df-97e1-2299f341dc9a.png",
       title: "Server Software Selection",
-      description: "Easy installation of popular Minecraft server software including Vanilla, Paper, Fabric, and more."
+      description: "Easy installation of popular Minecraft server software including Vanilla, Paper, Fabric, Forge, and more with one-click setup."
     },
     {
       src: "/lovable-uploads/2438992b-d6f7-4d94-a322-4177eea49af9.png",
-      title: "Modpack Browser",
-      description: "Integrated modpack browser with one-click installation from CurseForge and other popular platforms."
+      title: "Modpack Browser & Installation",
+      description: "Integrated modpack browser with one-click installation from CurseForge, Modrinth, and other popular modpack platforms."
     },
     {
       src: "/lovable-uploads/615da461-6dbe-465d-9c80-a4112fed531a.png",
-      title: "Network Monitoring",
-      description: "Real-time network traffic monitoring with detailed bandwidth usage graphs and analytics."
+      title: "Network Traffic Monitoring",
+      description: "Real-time network traffic monitoring with detailed bandwidth usage graphs, analytics, and performance insights."
     },
     {
       src: "/lovable-uploads/0bd82873-59a0-4bfd-8373-94d6cbd284e5.png",
-      title: "Player Management",
-      description: "Advanced player management system with operator controls, whitelist, and ban management."
+      title: "Advanced Player Management",
+      description: "Comprehensive player management system with operator controls, whitelist management, and ban administration tools."
     },
     {
       src: "/lovable-uploads/736b328a-74c2-44d6-b343-c91a2100b2ac.png",
-      title: "SFTP File Transfer",
-      description: "Built-in SFTP client for secure file transfers with saved connection profiles."
+      title: "Secure SFTP File Transfer",
+      description: "Built-in SFTP client for secure file transfers with saved connection profiles and drag-and-drop functionality."
     },
     {
       src: "/lovable-uploads/75b0eb97-90c3-4f01-b2f6-e0e9a6976091.png",
-      title: "File Recovery System",
-      description: "Comprehensive backup and file recovery system with scheduled backups and easy restoration."
+      title: "Backup & Recovery System",
+      description: "Comprehensive backup and file recovery system with automated scheduled backups and easy one-click restoration."
     },
     {
       src: "/lovable-uploads/111200d7-6a70-4095-8413-a02d0509e4ee.png",
-      title: "Plugin Management",
-      description: "Browse, install, and manage plugins directly from the panel with version control."
+      title: "Plugin Management Hub",
+      description: "Browse, install, and manage plugins directly from the panel with automatic updates and version control."
     },
     {
       src: "/lovable-uploads/c6d5c634-dfe2-45d2-b4f9-c261d99d7558.png",
-      title: "Subdomain Management",
-      description: "Create and manage custom subdomains for your servers with DNS integration."
+      title: "Custom Subdomain Management",
+      description: "Create and manage custom subdomains for your servers with integrated DNS management and SSL certificates."
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>CreeperPanel - Advanced Pterodactyl Game Server Management | CreeperCastle.cloud</title>
+        <title>CreeperPanel - Advanced Pterodactyl Game Server Management Panel | India's Best Minecraft Hosting Control Panel</title>
         <meta 
           name="description" 
-          content="Experience CreeperPanel - our enhanced Pterodactyl-based game server management system with advanced security, real-time monitoring, and intuitive controls for Minecraft hosting."
+          content="Experience CreeperPanel - India's most advanced Pterodactyl-based game server management system. Features real-time monitoring, automated backups, advanced security, and intuitive controls for professional Minecraft server hosting."
         />
         <meta
           name="keywords"
-          content="pterodactyl panel, game server management, minecraft panel, server control panel, creeperpanel, pterodactyl hosting india, game server dashboard, minecraft server management, server administration panel"
+          content="pterodactyl panel india, advanced game server management, minecraft control panel, server administration dashboard, creeperpanel features, pterodactyl hosting india, professional minecraft panel, server monitoring dashboard, game server control system"
         />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/creeperpanel" />
-        <meta property="og:title" content="CreeperPanel - Advanced Pterodactyl Game Server Management" />
-        <meta property="og:description" content="Experience our enhanced Pterodactyl-based game server management system with advanced features for Minecraft hosting." />
-        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/570fb7e4-e36a-4bb5-a9ef-be9e7ae57b15.png" />
-        <meta property="og:image:alt" content="CreeperPanel Dashboard Interface" />
+        <meta property="og:title" content="CreeperPanel - Advanced Game Server Management Panel | CreeperCastle India" />
+        <meta property="og:description" content="Discover India's most advanced Pterodactyl-based game server management system with real-time monitoring, automated backups, and professional-grade features." />
+        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/1aa7c40e-4b4e-4f71-aece-422bbb83c44d.png" />
+        <meta property="og:image:alt" content="CreeperPanel Advanced Dashboard Interface" />
         <meta property="og:site_name" content="CreeperCastle.cloud" />
         <meta property="og:locale" content="en_IN" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="CreeperPanel - Advanced Game Server Management 🎮" />
-        <meta name="twitter:description" content="Manage your Minecraft servers with our enhanced Pterodactyl panel featuring advanced security and real-time monitoring." />
-        <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/570fb7e4-e36a-4bb5-a9ef-be9e7ae57b15.png" />
+        <meta name="twitter:title" content="CreeperPanel - Professional Game Server Management 🎮🚀" />
+        <meta name="twitter:description" content="Experience India's most advanced Pterodactyl panel with real-time monitoring, automated backups, and professional-grade server management features." />
+        <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/1aa7c40e-4b4e-4f71-aece-422bbb83c44d.png" />
         
         {/* Additional SEO tags */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="author" content="CreeperCastle.cloud" />
+        <meta name="author" content="CreeperCastle.cloud - India's Premier Minecraft Hosting" />
         <meta name="geo.region" content="IN" />
-        <meta name="geo.placename" content="Mumbai, Delhi" />
+        <meta name="geo.placename" content="Mumbai, Delhi NCR, India" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://creepercastle.cloud/creeperpanel" />
@@ -275,7 +278,7 @@ const CreeperPanel = () => {
             </div>
           </section>
 
-          {/* Interface Gallery */}
+          {/* Enhanced Interface Gallery */}
           <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
@@ -283,11 +286,11 @@ const CreeperPanel = () => {
                   Interface <span className="text-creeper">Gallery</span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Explore the intuitive and powerful interface of CreeperPanel
+                  Explore the intuitive and powerful interface of CreeperPanel - click any image to view in full size
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {galleryImages.map((image, index) => (
                   <motion.div
                     key={index}
@@ -295,20 +298,25 @@ const CreeperPanel = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                   >
-                    <Card className="bg-navy-light border-gray-800 hover:border-creeper transition-all duration-300 hover:shadow-lg hover:shadow-creeper/20 overflow-hidden group">
-                      <div className="relative overflow-hidden">
+                    <Card className="bg-navy-light border-gray-800 hover:border-creeper transition-all duration-300 hover:shadow-lg hover:shadow-creeper/20 overflow-hidden group cursor-pointer">
+                      <div 
+                        className="relative overflow-hidden h-64"
+                        onClick={() => setSelectedImage(image.src)}
+                      >
                         <img 
                           src={image.src} 
                           alt={image.title}
-                          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <Maximize2 className="h-8 w-8 text-creeper" />
+                        </div>
                       </div>
-                      <CardHeader>
+                      <CardHeader className="pb-2">
                         <CardTitle className="text-lg text-creeper">{image.title}</CardTitle>
                       </CardHeader>
-                      <CardContent>
-                        <CardDescription className="text-gray-400">
+                      <CardContent className="pt-0">
+                        <CardDescription className="text-gray-400 text-sm">
                           {image.description}
                         </CardDescription>
                       </CardContent>
@@ -318,6 +326,28 @@ const CreeperPanel = () => {
               </div>
             </div>
           </section>
+
+          {/* Image Modal Overlay */}
+          {selectedImage && (
+            <div 
+              className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+              onClick={() => setSelectedImage(null)}
+            >
+              <div className="relative max-w-6xl max-h-full">
+                <img 
+                  src={selectedImage} 
+                  alt="Gallery Image"
+                  className="max-w-full max-h-full object-contain rounded-lg"
+                />
+                <button
+                  onClick={() => setSelectedImage(null)}
+                  className="absolute top-4 right-4 bg-navy-dark/80 hover:bg-navy-dark text-white p-2 rounded-full transition-colors"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+          )}
 
           {/* Features Grid */}
           <section className="py-16">
