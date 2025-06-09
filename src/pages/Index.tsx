@@ -394,6 +394,52 @@ const Index = () => {
                 </div>
               </div>
             </section>
+
+            {/* CreeperPanel Section */}
+            <section className="py-16 bg-navy-light">
+              <div className="container mx-auto px-4">
+                <div className="max-w-4xl mx-auto text-center">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                      Manage with <span className="text-creeper">CreeperPanel</span>
+                    </h2>
+                    <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                      Experience our enhanced Pterodactyl-based game server management system with 
+                      advanced security, real-time monitoring, and intuitive controls designed 
+                      specifically for seamless Minecraft server administration.
+                    </p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                      <div className="bg-navy rounded-lg p-6 border border-gray-800">
+                        <Shield className="h-8 w-8 text-creeper mx-auto mb-3" />
+                        <h3 className="font-semibold mb-2">Advanced Security</h3>
+                        <p className="text-sm text-gray-400">Multi-layer protection with SSL encryption</p>
+                      </div>
+                      
+                      <div className="bg-navy rounded-lg p-6 border border-gray-800">
+                        <Server className="h-8 w-8 text-creeper mx-auto mb-3" />
+                        <h3 className="font-semibold mb-2">Real-time Monitoring</h3>
+                        <p className="text-sm text-gray-400">Live server stats and performance metrics</p>
+                      </div>
+                      
+                      <div className="bg-navy rounded-lg p-6 border border-gray-800">
+                        <Settings className="h-8 w-8 text-creeper mx-auto mb-3" />
+                        <h3 className="font-semibold mb-2">Easy Management</h3>
+                        <p className="text-sm text-gray-400">Intuitive interface for all your needs</p>
+                      </div>
+                    </div>
+                    
+                    <Button className="minecraft-btn text-lg px-8 py-3" asChild>
+                      <Link to="/creeperpanel">Explore CreeperPanel</Link>
+                    </Button>
+                  </motion.div>
+                </div>
+              </div>
+            </section>
             
             <section id="locations">
               <LocationsSection />
