@@ -15,6 +15,7 @@ import CreeperShieldPlans from "./pages/plans/CreeperShieldPlans";
 import VpsPlans from "./pages/plans/VpsPlans";
 import Locations from "./pages/Locations";
 import Discord from "./pages/Discord";
+import CreeperPanel from "./pages/CreeperPanel";
 import { useEffect } from "react";
 
 // Scroll to hash component
@@ -65,6 +66,7 @@ const App = () => (
               <Route path="/plans/vps" element={<VpsPlans />} />
               <Route path="/locations" element={<Locations />} />
               <Route path="/discord" element={<Discord />} />
+              <Route path="/creeperpanel" element={<CreeperPanel />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
