@@ -1,3 +1,4 @@
+
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -202,8 +203,8 @@ const CreeperPanel = () => {
         <meta property="og:url" content="https://creepercastle.cloud/creeperpanel" />
         <meta property="og:title" content="CreeperPanel - Advanced Game Server Management Panel | CreeperCastle India" />
         <meta property="og:description" content="Discover India's most advanced Pterodactyl-based game server management system with real-time monitoring, automated backups, and professional-grade features." />
-        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/1aa7c40e-4b4e-4f71-aece-422bbb83c44d.png" />
-        <meta property="og:image:alt" content="CreeperPanel Advanced Dashboard Interface" />
+        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/5ec47ff0-f939-4968-8b39-ad88e0f3b7d6.png" />
+        <meta property="og:image:alt" content="CreeperCastle Logo - Advanced Game Server Management Panel" />
         <meta property="og:site_name" content="CreeperCastle.cloud" />
         <meta property="og:locale" content="en_IN" />
         
@@ -211,7 +212,7 @@ const CreeperPanel = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="CreeperPanel - Professional Game Server Management 🎮🚀" />
         <meta name="twitter:description" content="Experience India's most advanced Pterodactyl panel with real-time monitoring, automated backups, and professional-grade server management features." />
-        <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/1aa7c40e-4b4e-4f71-aece-422bbb83c44d.png" />
+        <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/5ec47ff0-f939-4968-8b39-ad88e0f3b7d6.png" />
         
         {/* Additional SEO tags */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -221,6 +222,10 @@ const CreeperPanel = () => {
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://creepercastle.cloud/creeperpanel" />
+        
+        {/* Favicon */}
+        <link rel="icon" href="/lovable-uploads/5ec47ff0-f939-4968-8b39-ad88e0f3b7d6.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/lovable-uploads/5ec47ff0-f939-4968-8b39-ad88e0f3b7d6.png" />
         
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
