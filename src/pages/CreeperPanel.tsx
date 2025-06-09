@@ -133,6 +133,54 @@ const CreeperPanel = () => {
     }
   ];
 
+  const galleryImages = [
+    {
+      src: "/lovable-uploads/1aa7c40e-4b4e-4f71-aece-422bbb83c44d.png",
+      title: "Main Dashboard",
+      description: "Clean and intuitive dashboard showing all your servers at a glance with real-time status indicators."
+    },
+    {
+      src: "/lovable-uploads/5227a018-136b-44df-97e1-2299f341dc9a.png",
+      title: "Server Software Selection",
+      description: "Easy installation of popular Minecraft server software including Vanilla, Paper, Fabric, and more."
+    },
+    {
+      src: "/lovable-uploads/2438992b-d6f7-4d94-a322-4177eea49af9.png",
+      title: "Modpack Browser",
+      description: "Integrated modpack browser with one-click installation from CurseForge and other popular platforms."
+    },
+    {
+      src: "/lovable-uploads/615da461-6dbe-465d-9c80-a4112fed531a.png",
+      title: "Network Monitoring",
+      description: "Real-time network traffic monitoring with detailed bandwidth usage graphs and analytics."
+    },
+    {
+      src: "/lovable-uploads/0bd82873-59a0-4bfd-8373-94d6cbd284e5.png",
+      title: "Player Management",
+      description: "Advanced player management system with operator controls, whitelist, and ban management."
+    },
+    {
+      src: "/lovable-uploads/736b328a-74c2-44d6-b343-c91a2100b2ac.png",
+      title: "SFTP File Transfer",
+      description: "Built-in SFTP client for secure file transfers with saved connection profiles."
+    },
+    {
+      src: "/lovable-uploads/75b0eb97-90c3-4f01-b2f6-e0e9a6976091.png",
+      title: "File Recovery System",
+      description: "Comprehensive backup and file recovery system with scheduled backups and easy restoration."
+    },
+    {
+      src: "/lovable-uploads/111200d7-6a70-4095-8413-a02d0509e4ee.png",
+      title: "Plugin Management",
+      description: "Browse, install, and manage plugins directly from the panel with version control."
+    },
+    {
+      src: "/lovable-uploads/c6d5c634-dfe2-45d2-b4f9-c261d99d7558.png",
+      title: "Subdomain Management",
+      description: "Create and manage custom subdomains for your servers with DNS integration."
+    }
+  ];
+
   return (
     <>
       <Helmet>
@@ -224,6 +272,50 @@ const CreeperPanel = () => {
                   </a>
                 </Button>
               </motion.div>
+            </div>
+          </section>
+
+          {/* Interface Gallery */}
+          <section className="py-16">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  Interface <span className="text-creeper">Gallery</span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Explore the intuitive and powerful interface of CreeperPanel
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {galleryImages.map((image, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                  >
+                    <Card className="bg-navy-light border-gray-800 hover:border-creeper transition-all duration-300 hover:shadow-lg hover:shadow-creeper/20 overflow-hidden group">
+                      <div className="relative overflow-hidden">
+                        <img 
+                          src={image.src} 
+                          alt={image.title}
+                          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                      <CardHeader>
+                        <CardTitle className="text-lg text-creeper">{image.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription className="text-gray-400">
+                          {image.description}
+                        </CardDescription>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </section>
 
