@@ -1,30 +1,25 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-  
-  <!-- Homepage - Highest Priority -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://creepercastle.cloud/</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2025-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
+      <image:loc>https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png</image:loc>
       <image:title>CreeperCastle - Best Minecraft Server Hosting in India</image:title>
       <image:caption>Premium Minecraft Server Hosting in India with CreeperShield DDoS Protection</image:caption>
     </image:image>
   </url>
   
-  <!-- Main Service Pages - High Priority -->
   <url>
     <loc>https://creepercastle.cloud/plans/minecraft</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2025-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
     <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
+      <image:loc>https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png</image:loc>
       <image:title>Minecraft Server Hosting Plans - Starting ₹99/month</image:title>
       <image:caption>Premium Minecraft Server Hosting Plans with Instant Setup and NVMe Storage</image:caption>
     </image:image>
@@ -32,11 +27,11 @@
   
   <url>
     <loc>https://creepercastle.cloud/plans/creepershield</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2025-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
     <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
+      <image:loc>https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png</image:loc>
       <image:title>CreeperShield DDoS Protection - Ultimate Server Security</image:title>
       <image:caption>Advanced DDoS Protection and Security Solutions for Minecraft Servers</image:caption>
     </image:image>
@@ -44,62 +39,49 @@
   
   <url>
     <loc>https://creepercastle.cloud/plans/vps</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2025-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
     <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
+      <image:loc>https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png</image:loc>
       <image:title>VPS Hosting Plans - High Performance Virtual Servers</image:title>
       <image:caption>Enterprise-grade VPS Hosting Solutions with Full Root Access in India</image:caption>
     </image:image>
   </url>
   
-  <!-- Important Secondary Pages -->
   <url>
     <loc>https://creepercastle.cloud/locations</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2025-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
     <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
+      <image:loc>https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png</image:loc>
       <image:title>Server Locations - Delhi NCR (Noida) & Mumbai</image:title>
       <image:caption>Strategic server locations across India for ultra-low latency gaming</image:caption>
     </image:image>
   </url>
   
   <url>
-    <loc>https://creepercastle.cloud/creeperpanel</loc>
-    <lastmod>2025-07-12</lastmod>
+    <loc>https://creepercastle.cloud/contact</loc>
+    <lastmod>2025-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.7</priority>
     <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/5ec47ff0-f939-4968-8b39-ad88e0f3b7d6.png</image:loc>
-      <image:title>CreeperPanel - Advanced Server Control Panel</image:title>
-      <image:caption>Powerful and intuitive control panel for managing your Minecraft servers</image:caption>
+      <image:loc>https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png</image:loc>
+      <image:title>Contact CreeperCastle - 24/7 Expert Support</image:title>
+      <image:caption>Get in Touch with India's Leading Minecraft Hosting Support Team</image:caption>
     </image:image>
   </url>
   
   <url>
     <loc>https://creepercastle.cloud/discord</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2025-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
+      <image:loc>https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png</image:loc>
       <image:title>Join CreeperCastle Discord - 3000+ Gaming Community</image:title>
       <image:caption>Connect with India's largest Minecraft hosting community on Discord</image:caption>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://creepercastle.cloud/contact</loc>
-    <lastmod>2025-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
-      <image:title>Contact CreeperCastle - 24/7 Expert Support</image:title>
-      <image:caption>Get in Touch with India's Leading Minecraft Hosting Support Team</image:caption>
     </image:image>
   </url>
 </urlset>
