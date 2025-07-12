@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader } from "@/components/ui/card";
 import { MessageCircle, Users, Headphones, Gift } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -112,15 +112,23 @@ const Discord = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                 >
-                  Join Our <span className="text-creeper">Discord</span>
+                  Join India's Largest <span className="text-creeper">Minecraft Discord</span>
                 </motion.h1>
+                <motion.h2 
+                  className="text-2xl md:text-3xl text-gray-300 mb-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                >
+                  3000+ Active Players • Daily Events • Instant Support
+                </motion.h2>
                 <motion.p 
                   className="text-xl text-gray-300 max-w-3xl mx-auto"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  Connect with 3000+ Minecraft enthusiasts in India's most active gaming community.
+                  Connect with thousands of Minecraft enthusiasts, participate in daily events, get instant technical support, and find your perfect gaming squad.
                 </motion.p>
               </div>
 
@@ -225,9 +233,9 @@ const Discord = () => {
               <div className="mt-16 max-w-4xl mx-auto">
                 <Card className="bg-navy-light border-gray-800">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-center mb-6">
-                      Why Join Our <span className="text-creeper">Community</span>?
-                    </CardTitle>
+                    <h3 className="text-2xl text-center mb-6">
+                      Why Join Our <span className="text-creeper">Gaming Community</span>?
+                    </h3>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">

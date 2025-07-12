@@ -130,15 +130,23 @@ const ContactPage = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                 >
-                  Get in <span className="text-creeper">Touch</span>
+                  Get Expert <span className="text-creeper">Support</span> 24/7
                 </motion.h1>
+                <motion.h2 
+                  className="text-2xl md:text-3xl text-gray-300 mb-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                >
+                  India's Fastest Minecraft Hosting Support Team
+                </motion.h2>
                 <motion.p 
                   className="text-xl text-gray-300 max-w-3xl mx-auto"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  Need help with your Minecraft server? Our expert support team is available 24/7 to assist you.
+                  Need help with your Minecraft server? Our expert support team is available 24/7 via Discord, email, and live chat with response times under 5 minutes.
                 </motion.p>
               </div>
 
@@ -224,7 +232,7 @@ const ContactPage = () => {
                 <Card className="bg-navy-light border-gray-800">
                   <CardHeader>
                     <CardTitle className="text-2xl text-center mb-6">
-                      Additional <span className="text-creeper">Information</span>
+                      Why Choose Our <span className="text-creeper">Support Team</span>?
                     </CardTitle>
                   </CardHeader>
                   <CardContent>

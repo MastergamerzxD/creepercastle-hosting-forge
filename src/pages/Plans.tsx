@@ -171,15 +171,23 @@ const Plans = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                 >
-                  Our <span className="text-creeper">Hosting Solutions</span>
+                  Choose Your Perfect <span className="text-creeper">Hosting Plan</span>
                 </motion.h1>
+                <motion.h2 
+                  className="text-2xl md:text-3xl text-gray-300 mb-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                >
+                  Premium Gaming Solutions Starting at ₹84/Month
+                </motion.h2>
                 <motion.p 
                   className="text-xl text-gray-300 max-w-3xl mx-auto"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  Choose the perfect hosting solution for your gaming needs. From Minecraft servers to enterprise VPS hosting.
+                  From budget-friendly Minecraft servers to enterprise VPS hosting - find the ideal solution for your gaming community in India.
                 </motion.p>
               </div>
               
@@ -245,9 +253,12 @@ const Plans = () => {
               </motion.div>
               
               <div className="mt-16 text-center">
-                <h2 className="text-2xl md:text-3xl font-bold mb-6">
-                  Need a <span className="text-creeper">Custom Solution</span>?
-                </h2>
+                <h3 className="text-2xl md:text-3xl font-bold mb-6">
+                  Need a <span className="text-creeper">Custom Enterprise Solution</span>?
+                </h3>
+                <h4 className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                  Talk to Our Experts for Tailored Hosting Solutions
+                </h4>
                 <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                   Contact our team for a custom hosting solution tailored to your specific needs.
                 </p>

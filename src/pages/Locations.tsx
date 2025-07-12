@@ -138,15 +138,23 @@ const Locations = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                 >
-                  Server <span className="text-creeper">Locations</span>
+                  Premium Indian <span className="text-creeper">Server Locations</span>
                 </motion.h1>
+                <motion.h2 
+                  className="text-2xl md:text-3xl text-gray-300 mb-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                >
+                  Mumbai & Delhi NCR Data Centers | 3-15ms Latency
+                </motion.h2>
                 <motion.p 
                   className="text-xl text-gray-300 max-w-3xl mx-auto"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  Strategic server locations across India for ultra-low latency gaming experience.
+                  Strategic server locations across India delivering ultra-low latency gaming experience with enterprise-grade Tier 3 data centers and 99.9% uptime guarantee.
                 </motion.p>
               </div>
 
@@ -277,10 +285,10 @@ const Locations = () => {
                 <Card className="bg-navy-light border-gray-800">
                   <CardHeader>
                     <CardTitle className="text-2xl text-center">
-                      Network <span className="text-creeper">Infrastructure</span>
+                      Enterprise-Grade <span className="text-creeper">Infrastructure</span>
                     </CardTitle>
                     <CardDescription className="text-center text-gray-400">
-                      Enterprise-grade hardware and connectivity at all locations
+                      Tier 3 data centers with redundant power, cooling, and connectivity
                     </CardDescription>
                   </CardHeader>
                   <CardContent>

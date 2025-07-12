@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -260,14 +259,21 @@ const CreeperPanel = () => {
               >
                 <span className="text-creeper">Creeper</span>Panel
               </motion.h1>
+              <motion.h2 
+                className="text-2xl md:text-3xl text-gray-300 mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
+                India's Most Advanced Pterodactyl Panel
+              </motion.h2>
               <motion.p 
                 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Advanced Pterodactyl-based game server management system with enhanced features, 
-                security, and intuitive controls designed specifically for Minecraft hosting excellence.
+                Professional game server management system with enhanced security, real-time monitoring, automated backups, and intuitive controls designed specifically for Minecraft hosting excellence.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -287,12 +293,12 @@ const CreeperPanel = () => {
           <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Interface <span className="text-creeper">Gallery</span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                <h3 className="text-3xl md:text-4xl font-bold mb-6">
+                  Professional Interface <span className="text-creeper">Gallery</span>
+                </h3>
+                <h4 className="text-xl text-gray-300 max-w-3xl mx-auto">
                   Explore the intuitive and powerful interface of CreeperPanel - click any image to view in full size
-                </p>
+                </h4>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
