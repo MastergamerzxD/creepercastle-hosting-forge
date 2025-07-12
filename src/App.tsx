@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import GoogleVerification from "./components/GoogleVerification";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import Discord from "./pages/Discord";
@@ -20,6 +21,7 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <HelmetProvider>
+      <GoogleVerification />
       <TooltipProvider>
         <Toaster />
         <Sonner />
