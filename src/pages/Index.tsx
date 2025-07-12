@@ -10,6 +10,7 @@ import DiscordSection from "@/components/DiscordSection";
 import LoadingScreen from "@/components/LoadingScreen";
 import { Button } from "@/components/ui/button";
 import { Server, Shield, Settings } from "lucide-react";
+import StructuredData from "@/components/StructuredData";
 
 // Import framer-motion for animations
 import { motion, AnimatePresence } from "framer-motion";
@@ -219,6 +220,9 @@ const Index = () => {
           {JSON.stringify(faqStructuredData)}
         </script>
       </Helmet>
+
+      <StructuredData type="website" />
+      <StructuredData type="organization" />
       
       <AnimatePresence mode="wait">
         <motion.div
