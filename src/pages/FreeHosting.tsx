@@ -11,11 +11,11 @@ const FreeHosting = () => {
   return (
     <>
       <Helmet>
-        <title>Free Minecraft Server Hosting - CreeperCastle.cloud</title>
+        <title>🎉 Free Hosting by CreeperCastle is live! Deploy your server in seconds! 🚀</title>
         <meta name="description" content="Get your FREE Minecraft server with 2GB RAM and 200% CPU power! Start your gaming journey today with CreeperCastle's free hosting plan." />
         <meta name="keywords" content="free minecraft hosting, free minecraft server, free hosting india, minecraft server free, 2gb ram minecraft server, free minecraft hosting india" />
         
-        <meta property="og:title" content="Free Minecraft Server Hosting - CreeperCastle.cloud" />
+        <meta property="og:title" content="🎉 Free Hosting by CreeperCastle is live! Deploy your server in seconds! 🚀" />
         <meta property="og:description" content="Get your FREE Minecraft server with 2GB RAM and 200% CPU power! Start your gaming journey today." />
         <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
         <meta property="og:url" content="https://creepercastle.cloud/free-hosting" />
