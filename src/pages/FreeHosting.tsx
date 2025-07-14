@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Server, Zap, Gift, Clock, Users, Shield } from "lucide-react";
+import { Server, Zap, Gift, Clock, Users, Shield, Check, X, Crown, Headphones } from "lucide-react";
 import { motion } from "framer-motion";
 
 const FreeHosting = () => {
@@ -153,8 +153,108 @@ const FreeHosting = () => {
             </div>
           </section>
 
-          {/* Benefits Section */}
+          {/* Comparison Section */}
           <section className="py-16">
+            <div className="container mx-auto px-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="max-w-6xl mx-auto"
+              >
+                <h2 className="text-4xl font-bold text-center mb-12">
+                  Free vs <span className="text-creeper">Premium</span> Hosting
+                </h2>
+                
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {/* Free Servers Card */}
+                  <Card className="bg-navy-light border-gray-700 relative">
+                    <CardHeader className="text-center pb-6">
+                      <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <Gift className="h-8 w-8 text-blue-400" />
+                      </div>
+                      <CardTitle className="text-2xl text-blue-400">Free Servers</CardTitle>
+                      <CardDescription className="text-lg">Perfect for getting started</CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <X className="h-5 w-5 text-red-400 flex-shrink-0" />
+                        <span className="text-gray-300">Not 24/7 availability</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <X className="h-5 w-5 text-red-400 flex-shrink-0" />
+                        <span className="text-gray-300">Limited performance compared to premium</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <Check className="h-5 w-5 text-creeper flex-shrink-0" />
+                        <span className="text-gray-300">Always free of cost</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <X className="h-5 w-5 text-red-400 flex-shrink-0" />
+                        <span className="text-gray-300">No dedicated support</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <X className="h-5 w-5 text-red-400 flex-shrink-0" />
+                        <span className="text-gray-300">No premium game panel</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Premium Servers Card */}
+                  <Card className="bg-gradient-to-br from-creeper/10 to-creeper/5 border-creeper/50 relative">
+                    <div className="absolute top-4 right-4">
+                      <Crown className="h-6 w-6 text-creeper" />
+                    </div>
+                    <CardHeader className="text-center pb-6">
+                      <div className="w-16 h-16 bg-creeper/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <Server className="h-8 w-8 text-creeper" />
+                      </div>
+                      <CardTitle className="text-2xl text-creeper">Premium Servers</CardTitle>
+                      <CardDescription className="text-lg">Professional hosting experience</CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <Check className="h-5 w-5 text-creeper flex-shrink-0" />
+                        <span className="text-gray-300">24/7 uptime guarantee</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <Check className="h-5 w-5 text-creeper flex-shrink-0" />
+                        <span className="text-gray-300">High performance hardware</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <Check className="h-5 w-5 text-creeper flex-shrink-0" />
+                        <span className="text-gray-300">Value for money pricing</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <Check className="h-5 w-5 text-creeper flex-shrink-0" />
+                        <span className="text-gray-300">24/7 dedicated support</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <Check className="h-5 w-5 text-creeper flex-shrink-0" />
+                        <span className="text-gray-300">Advanced DDoS protection</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <Check className="h-5 w-5 text-creeper flex-shrink-0" />
+                        <span className="text-gray-300">Premium CreeperPanel game panel</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <div className="text-center mt-8">
+                  <p className="text-gray-400 mb-6">
+                    Ready to upgrade? Check out our premium plans for the ultimate Minecraft hosting experience.
+                  </p>
+                  <Button variant="outline" className="border-creeper text-creeper hover:bg-creeper/10" asChild>
+                    <a href="/plans/minecraft">View Premium Plans</a>
+                  </Button>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* Benefits Section */}
+          <section className="py-16 bg-navy-light">
             <div className="container mx-auto px-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -220,7 +320,7 @@ const FreeHosting = () => {
           </section>
 
           {/* Final CTA Section */}
-          <section className="py-20 bg-navy-light text-center">
+          <section className="py-20 bg-navy text-center">
             <div className="container mx-auto px-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
