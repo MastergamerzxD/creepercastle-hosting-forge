@@ -3,13 +3,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://creepercastle.cloud/</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
       <image:title>CreeperCastle - Best Minecraft Server Hosting in India</image:title>
       <image:caption>Premium Minecraft Server Hosting in India with CreeperShield DDoS Protection</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://creepercastle.cloud/free-hosting</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
+      <image:title>Free Minecraft Server Hosting - 2GB RAM & 200% CPU</image:title>
+      <image:caption>Get your FREE Minecraft server with 2GB RAM and 200% CPU power at CreeperCastle</image:caption>
     </image:image>
   </url>
   

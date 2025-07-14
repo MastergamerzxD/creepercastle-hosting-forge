@@ -31,6 +31,7 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <Link to="/" className="text-white hover:text-creeper transition-colors">Home</Link>
+          <Link to="/free-hosting" className="text-creeper font-semibold hover:text-creeper/80 transition-colors">Free Hosting</Link>
           <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors">Minecraft Hosting</Link>
           <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-colors">CreeperShield</Link>
           <Link to="/plans/vps" className="text-white hover:text-creeper transition-colors">VPS Plans</Link>
@@ -64,6 +65,7 @@ const Navbar = () => {
         <div className="md:hidden bg-navy-dark/95 backdrop-blur-md absolute top-16 left-0 w-full border-b border-creeper/20">
           <div className="container mx-auto px-4 py-4 space-y-4 flex flex-col">
             <Link to="/" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Home</Link>
+            <Link to="/free-hosting" className="text-creeper font-semibold hover:text-creeper/80 transition-colors" onClick={() => setIsOpen(false)}>Free Hosting</Link>
             <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Minecraft Hosting</Link>
             <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>CreeperShield</Link>
             <Link to="/plans/vps" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>VPS Plans</Link>
