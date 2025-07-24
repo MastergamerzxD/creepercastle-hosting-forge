@@ -2,16 +2,15 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Gift, X, Sparkles } from "lucide-react";
+import { Shield, X, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
 
-const FreeHostingPromotion = () => {
+const CreeperShieldPromotion = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Check if user has already seen the promotion today
-    const hasSeenToday = localStorage.getItem('freeHostingPromoSeenToday');
+    const hasSeenToday = localStorage.getItem('creeperShieldPromoSeenToday');
     const today = new Date().toDateString();
     
     if (hasSeenToday !== today) {
@@ -27,12 +26,12 @@ const FreeHostingPromotion = () => {
   const handleClose = () => {
     setIsVisible(false);
     // Mark as seen for today
-    localStorage.setItem('freeHostingPromoSeenToday', new Date().toDateString());
+    localStorage.setItem('creeperShieldPromoSeenToday', new Date().toDateString());
   };
 
-  const handleGetFreeServer = () => {
+  const handleGetCreeperShield = () => {
     handleClose();
-    // Let React Router handle the navigation
+    window.open('https://billing.creepercastle.in/index.php?rp=/store/creepershield', '_blank');
   };
 
   return (
@@ -91,39 +90,40 @@ const FreeHostingPromotion = () => {
                   transition={{ duration: 1, repeat: Infinity, repeatDelay: 2 }}
                   className="w-16 h-16 bg-creeper/20 rounded-xl flex items-center justify-center mx-auto mb-4"
                 >
-                  <Gift className="h-8 w-8 text-creeper" />
+                  <Shield className="h-8 w-8 text-creeper" />
                 </motion.div>
                 
                 <CardTitle className="text-2xl font-bold text-white">
-                  🎉 <span className="text-creeper">FREE HOSTING</span> IS LIVE!
+                  🛡️ <span className="text-creeper">CREEPERSHIELD RESTOCKED</span> & 20% OFF!
                 </CardTitle>
                 
                 <CardDescription className="text-gray-300 text-base">
-                  Get your FREE Minecraft server with 2GB RAM and 200% CPU power!
+                  Get premium DDoS protection with 20% off store-wide! Limited time offer.
                 </CardDescription>
               </CardHeader>
 
               <CardContent className="text-center space-y-4">
                 <div className="bg-navy-light rounded-lg p-4 space-y-2">
-                  <p className="text-sm text-gray-400">✨ What you get:</p>
+                  <p className="text-sm text-gray-400">🎯 What's included:</p>
                   <ul className="text-sm text-gray-300 space-y-1">
-                    <li>• 2GB RAM Memory</li>
-                    <li>• 200% CPU Power</li>
-                    <li>• Instant Setup</li>
-                    <li>• No Credit Card Required</li>
+                    <li>• Advanced DDoS Protection</li>
+                    <li>• 99.9% Uptime Guarantee</li>
+                    <li>• Global Network Coverage</li>
+                    <li>• 24/7 Premium Support</li>
                   </ul>
+                  <div className="bg-creeper/20 rounded-lg p-3 mt-3">
+                    <p className="text-xs text-gray-400">Use coupon code:</p>
+                    <p className="text-lg font-bold text-creeper">CREEPER20</p>
+                  </div>
                 </div>
 
                 <div className="space-y-3">
                   <Button 
                     className="minecraft-btn w-full text-lg py-3 font-bold shadow-lg hover:shadow-creeper/50 transition-all duration-300 transform hover:scale-105"
-                    asChild
-                    onClick={handleGetFreeServer}
+                    onClick={handleGetCreeperShield}
                   >
-                    <Link to="/free-hosting" className="flex items-center justify-center gap-2">
-                      <Gift className="h-5 w-5" />
-                      Get Your Free Server Now!
-                    </Link>
+                    <Shield className="h-5 w-5" />
+                    Get CreeperShield Now!
                   </Button>
                   
                   <button
@@ -142,4 +142,4 @@ const FreeHostingPromotion = () => {
   );
 };
 
-export default FreeHostingPromotion;
+export default CreeperShieldPromotion;

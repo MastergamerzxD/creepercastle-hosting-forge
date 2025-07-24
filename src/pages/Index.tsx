@@ -9,7 +9,7 @@ import ReviewsSection from "@/components/ReviewsSection";
 import CtaSection from "@/components/CtaSection";
 import DiscordSection from "@/components/DiscordSection";
 import LoadingScreen from "@/components/LoadingScreen";
-import FreeHostingPromotion from "@/components/FreeHostingPromotion";
+import CreeperShieldPromotion from "@/components/FreeHostingPromotion";
 import { Button } from "@/components/ui/button";
 import { Server, Shield, Settings } from "lucide-react";
 import StructuredData from "@/components/StructuredData";
@@ -226,8 +226,8 @@ const Index = () => {
       <StructuredData type="website" />
       <StructuredData type="organization" />
       
-      {/* Free Hosting Promotion Popup */}
-      <FreeHostingPromotion />
+      {/* CreeperShield Promotion Popup */}
+      <CreeperShieldPromotion />
       
       <AnimatePresence mode="wait">
         <motion.div
