@@ -47,7 +47,7 @@ const StructuredData = ({ type = 'website', data }: StructuredDataProps) => {
             "position": 3,
             "name": "VPS Hosting",
             "description": "High-performance virtual private servers",
-            "url": `${baseUrl}/plans/vps`
+            "url": `${baseUrl}/plans/other`
           },
           {
             "@type": "SiteNavigationElement",

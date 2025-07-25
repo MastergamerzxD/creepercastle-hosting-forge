@@ -13,7 +13,7 @@ import Locations from "./pages/Locations";
 import FreeHosting from "./pages/FreeHosting";
 import MinecraftPlans from "./pages/plans/MinecraftPlans";
 import CreeperShieldPlans from "./pages/plans/CreeperShieldPlans";
-import VpsPlans from "./pages/plans/VpsPlans";
+import OtherHosting from "./pages/OtherHosting";
 import CreeperPanel from "./pages/CreeperPanel";
 import NotFound from "./pages/NotFound";
 
@@ -35,7 +35,7 @@ const App = () => (
             <Route path="/locations" element={<Locations />} />
             <Route path="/plans/minecraft" element={<MinecraftPlans />} />
             <Route path="/plans/creepershield" element={<CreeperShieldPlans />} />
-            <Route path="/plans/vps" element={<VpsPlans />} />
+            <Route path="/plans/other" element={<OtherHosting />} />
             <Route path="/creeperpanel" element={<CreeperPanel />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

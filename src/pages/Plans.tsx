@@ -65,7 +65,7 @@ const Plans = () => {
           "@type": "Service",
           "name": "VPS Hosting Solutions",
           "description": "Enterprise-grade VPS solutions with dedicated resources, complete root access, and premium hardware in India.",
-          "url": "https://creepercastle.cloud/plans/vps",
+          "url": "https://creepercastle.cloud/plans/other",
           "provider": {
             "@type": "Organization",
             "name": "CreeperCastle.cloud"
@@ -235,7 +235,7 @@ const Plans = () => {
                 
                 <motion.div 
                   className="flex flex-col items-center text-center p-8 bg-navy-light rounded-xl border border-gray-800 hover:border-creeper cursor-pointer transition-all hover:-translate-y-2"
-                  onClick={() => navigate("/plans/vps")}
+                  onClick={() => navigate("/plans/other")}
                   whileHover={{ scale: 1.02 }}
                 >
                   <Cloud className="h-20 w-20 text-creeper mb-6" />
@@ -245,8 +245,8 @@ const Plans = () => {
                     complete control, and enterprise-grade hardware.
                   </p>
                   <div className="mt-auto">
-                    <Button className="minecraft-btn" onClick={() => navigate("/plans/vps")}>
-                      View VPS Plans
+                    <Button className="minecraft-btn" onClick={() => navigate("/plans/other")}>
+                      View Other Hosting
                     </Button>
                   </div>
                 </motion.div>

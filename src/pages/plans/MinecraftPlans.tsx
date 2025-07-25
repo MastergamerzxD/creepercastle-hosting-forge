@@ -547,7 +547,7 @@ const MinecraftPlans = () => {
                 </p>
                 <div className="flex flex-col md:flex-row gap-4 justify-center">
                   <Button className="minecraft-btn" asChild>
-                    <a href="/plans/vps">Explore VPS Plans</a>
+                    <a href="/plans/other">Explore Other Hosting</a>
                   </Button>
                   <Button variant="outline" className="border-creeper text-creeper hover:bg-creeper/10" asChild>
                     <a href="https://discord.gg/RuQ9neH56S" target="_blank" rel="noopener noreferrer">

@@ -42,7 +42,7 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
       icon: Cpu,
       title: "VPS Hosting",
       description: "Powerful virtual private servers for advanced server management",
-      route: "/plans/vps",
+      route: "/plans/other",
       color: "text-purple-400",
       bgColor: "bg-purple-400/10",
       borderColor: "border-purple-400/20"
