@@ -3,9 +3,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, Server, Bot } from "lucide-react";
+import { Check, Server, Bot, ChevronDown, ChevronUp } from "lucide-react";
 import { motion } from "framer-motion";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useState } from "react";
 
 const vpsPlans = [
   {
@@ -74,88 +74,6 @@ const vpsPlans = [
   }
 ];
 
-const highPerfVpsPlans = [
-  {
-    name: "VPS - 96GB",
-    price: 8400,
-    specs: {
-      ram: "96GB",
-      cpu: "20 vCores",
-      storage: "800GB NVMe SSD",
-      bandwidth: "Unmetered",
-      protection: "Premium DDoS Protection"
-    },
-    features: [
-      "Root Access",
-      "Full SSH Access",
-      "Choose Your OS",
-      "Dedicated Resources",
-      "99.99% Uptime SLA",
-      "24/7 Premium Support",
-      "2x Daily Backups",
-      "Advanced Firewall",
-      "Resource Monitoring",
-      "Performance Optimization",
-      "Dedicated Support Team"
-    ]
-  },
-  {
-    name: "VPS - 128GB",
-    price: 12500,
-    specs: {
-      ram: "128GB",
-      cpu: "24 vCores",
-      storage: "1TB NVMe SSD",
-      bandwidth: "Unmetered",
-      protection: "Enterprise DDoS Protection"
-    },
-    features: [
-      "Root Access",
-      "Full SSH Access",
-      "Choose Your OS",
-      "Dedicated Resources",
-      "99.99% Uptime SLA",
-      "24/7 Premium Support",
-      "3x Daily Backups",
-      "Advanced Firewall",
-      "Resource Monitoring",
-      "Performance Optimization",
-      "Dedicated Support Team",
-      "Custom Setup Assistance",
-      "Hardware Redundancy"
-    ],
-    highlighted: true
-  },
-  {
-    name: "VPS - 256GB",
-    price: 24000,
-    specs: {
-      ram: "256GB",
-      cpu: "32 vCores",
-      storage: "2TB NVMe SSD",
-      bandwidth: "Unmetered",
-      protection: "Enterprise DDoS Protection"
-    },
-    features: [
-      "Root Access",
-      "Full SSH Access",
-      "Choose Your OS",
-      "Dedicated Resources",
-      "100% Uptime SLA",
-      "24/7 Premium Support",
-      "4x Daily Backups",
-      "Advanced Firewall",
-      "Resource Monitoring",
-      "Performance Optimization",
-      "Dedicated Support Team",
-      "Custom Setup Assistance",
-      "Hardware Redundancy",
-      "Priority Resource Allocation",
-      "Enterprise Support"
-    ]
-  }
-];
-
 const discordBotPlans = [
   {
     name: "Coder",
@@ -203,6 +121,12 @@ const discordBotPlans = [
 ];
 
 const OtherHosting = () => {
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+
+  const toggleSection = (section: string) => {
+    setExpandedSection(expandedSection === section ? null : section);
+  };
+
   return (
     <>
       <Helmet>
@@ -247,198 +171,204 @@ const OtherHosting = () => {
                 </motion.p>
               </div>
               
-              <Tabs defaultValue="vps" className="w-full max-w-6xl mx-auto">
-                <TabsList className="grid grid-cols-2 mb-8 bg-navy-light border border-gray-800">
-                  <TabsTrigger value="vps" className="text-lg py-3">VPS Plans</TabsTrigger>
-                  <TabsTrigger value="discord-bot" className="text-lg py-3">Discord Bot Hosting</TabsTrigger>
-                </TabsList>
-                
-                <TabsContent value="vps">
-                  <Tabs defaultValue="standard" className="w-full">
-                    <TabsList className="grid grid-cols-2 mb-8 bg-navy-light border border-gray-800">
-                      <TabsTrigger value="standard" className="text-lg py-3">Standard VPS</TabsTrigger>
-                      <TabsTrigger value="high-performance" className="text-lg py-3">High-Performance</TabsTrigger>
-                    </TabsList>
-                    
-                    <TabsContent value="standard">
-                      <motion.div 
-                        className="grid grid-cols-1 md:grid-cols-3 gap-8"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
+              {/* Catalog Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+                {/* VPS Hosting Catalog */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  <Card className="bg-navy-light border border-gray-800 hover:border-creeper transition-all duration-300">
+                    <CardHeader className="text-center">
+                      <div className="mx-auto mb-4">
+                        <Server className="h-16 w-16 text-creeper" />
+                      </div>
+                      <CardTitle className="text-2xl">VPS Hosting</CardTitle>
+                      <CardDescription className="text-gray-400">
+                        High-performance virtual private servers with dedicated resources and full root access
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-center mb-4">
+                        <p className="text-sm text-gray-400 mb-2">Starting from</p>
+                        <p className="text-3xl font-bold text-creeper">₹3,300<span className="text-lg text-gray-400">/month</span></p>
+                      </div>
+                      <ul className="space-y-2 mb-6">
+                        <li className="flex items-center text-sm">
+                          <Check className="h-4 w-4 text-creeper mr-2" />
+                          Full Root Access
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <Check className="h-4 w-4 text-creeper mr-2" />
+                          Dedicated Resources
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <Check className="h-4 w-4 text-creeper mr-2" />
+                          CreeperShield Protection
+                        </li>
+                      </ul>
+                      <Button 
+                        className="w-full minecraft-btn" 
+                        onClick={() => toggleSection('vps')}
                       >
-                        {vpsPlans.map((plan, index) => (
-                          <Card 
-                            key={index} 
-                            className={`bg-navy-light ${plan.highlighted ? 'border-2 border-creeper relative' : 'border border-gray-800'} hover:transform hover:-translate-y-2 transition-all duration-300`}
-                          >
-                            {plan.highlighted && (
-                              <div className="absolute top-0 right-0 bg-creeper text-navy-dark font-medium text-sm px-4 py-1 rounded-bl-lg">
-                                Most Popular
-                              </div>
-                            )}
-                            <CardHeader className="text-center">
-                              <div className="mx-auto mb-4">
-                                <Server className="h-12 w-12 text-creeper" />
-                              </div>
-                              <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                              <div className="flex items-baseline justify-center mt-2">
-                                <span className="text-4xl font-bold">₹{plan.price}</span>
-                                <span className="text-gray-400 ml-1">/month</span>
-                              </div>
-                              <CardDescription className="text-gray-400 mt-2">
-                                Full root access with dedicated resources
-                              </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                              <div className="space-y-4">
-                                <div className="border-t border-gray-700 pt-4">
-                                  <ul className="space-y-2">
-                                    <li className="flex justify-between">
-                                      <span className="text-gray-400">RAM</span>
-                                      <span className="font-medium text-creeper">{plan.specs.ram}</span>
-                                    </li>
-                                    <li className="flex justify-between">
-                                      <span className="text-gray-400">CPU</span>
-                                      <span className="font-medium text-creeper">{plan.specs.cpu}</span>
-                                    </li>
-                                    <li className="flex justify-between">
-                                      <span className="text-gray-400">Storage</span>
-                                      <span className="font-medium text-creeper">{plan.specs.storage}</span>
-                                    </li>
-                                    <li className="flex justify-between">
-                                      <span className="text-gray-400">Bandwidth</span>
-                                      <span className="font-medium text-creeper">{plan.specs.bandwidth}</span>
-                                    </li>
-                                    <li className="flex justify-between">
-                                      <span className="text-gray-400">DDoS Protection</span>
-                                      <span className="font-medium text-creeper">{plan.specs.protection}</span>
-                                    </li>
-                                  </ul>
-                                </div>
-                                
-                                <div className="border-t border-gray-700 pt-4">
-                                  <h4 className="font-medium mb-2">Features:</h4>
-                                  <ul className="space-y-1">
-                                    {plan.features.map((feature, i) => (
-                                      <li key={i} className="flex items-start">
-                                        <Check className="h-5 w-5 text-creeper mr-2 mt-0.5 flex-shrink-0" />
-                                        <span className="text-sm text-gray-300">{feature}</span>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                                
-                                <Button className="w-full minecraft-btn" asChild>
-                                  <a 
-                                    href="https://billing.creepercastle.in/index.php?rp=/store/vps-hosting" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                  >
-                                    Buy Now
-                                  </a>
-                                </Button>
-                              </div>
-                            </CardContent>
-                          </Card>
-                        ))}
-                      </motion.div>
-                    </TabsContent>
-                    
-                    <TabsContent value="high-performance">
-                      <motion.div 
-                        className="grid grid-cols-1 md:grid-cols-3 gap-8"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
+                        View More {expandedSection === 'vps' ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+
+                {/* Discord Bot Hosting Catalog */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                  <Card className="bg-navy-light border border-gray-800 hover:border-creeper transition-all duration-300">
+                    <CardHeader className="text-center">
+                      <div className="mx-auto mb-4">
+                        <Bot className="h-16 w-16 text-creeper" />
+                      </div>
+                      <CardTitle className="text-2xl">Discord Bot Hosting</CardTitle>
+                      <CardDescription className="text-gray-400">
+                        Reliable hosting for your Discord bots with 24/7 uptime and easy deployment
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-center mb-4">
+                        <p className="text-sm text-gray-400 mb-2">Starting from</p>
+                        <p className="text-3xl font-bold text-creeper">₹299<span className="text-lg text-gray-400">/month</span></p>
+                      </div>
+                      <ul className="space-y-2 mb-6">
+                        <li className="flex items-center text-sm">
+                          <Check className="h-4 w-4 text-creeper mr-2" />
+                          24/7 Bot Hosting
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <Check className="h-4 w-4 text-creeper mr-2" />
+                          Node.js & Python Support
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <Check className="h-4 w-4 text-creeper mr-2" />
+                          Instant Setup
+                        </li>
+                      </ul>
+                      <Button 
+                        className="w-full minecraft-btn" 
+                        onClick={() => toggleSection('discord')}
                       >
-                        {highPerfVpsPlans.map((plan, index) => (
-                          <Card 
-                            key={index} 
-                            className={`bg-navy-light ${plan.highlighted ? 'border-2 border-creeper relative' : 'border border-gray-800'} hover:transform hover:-translate-y-2 transition-all duration-300`}
-                          >
-                            {plan.highlighted && (
-                              <div className="absolute top-0 right-0 bg-creeper text-navy-dark font-medium text-sm px-4 py-1 rounded-bl-lg">
-                                Most Powerful
-                              </div>
-                            )}
-                            <CardHeader className="text-center">
-                              <div className="mx-auto mb-4">
-                                <Server className="h-12 w-12 text-creeper" />
-                              </div>
-                              <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                              <div className="flex items-baseline justify-center mt-2">
-                                <span className="text-4xl font-bold">₹{plan.price}</span>
-                                <span className="text-gray-400 ml-1">/month</span>
-                              </div>
-                              <CardDescription className="text-gray-400 mt-2">
-                                Enterprise-grade performance
-                              </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                              <div className="space-y-4">
-                                <div className="border-t border-gray-700 pt-4">
-                                  <ul className="space-y-2">
-                                    <li className="flex justify-between">
-                                      <span className="text-gray-400">RAM</span>
-                                      <span className="font-medium text-creeper">{plan.specs.ram}</span>
-                                    </li>
-                                    <li className="flex justify-between">
-                                      <span className="text-gray-400">CPU</span>
-                                      <span className="font-medium text-creeper">{plan.specs.cpu}</span>
-                                    </li>
-                                    <li className="flex justify-between">
-                                      <span className="text-gray-400">Storage</span>
-                                      <span className="font-medium text-creeper">{plan.specs.storage}</span>
-                                    </li>
-                                    <li className="flex justify-between">
-                                      <span className="text-gray-400">Bandwidth</span>
-                                      <span className="font-medium text-creeper">{plan.specs.bandwidth}</span>
-                                    </li>
-                                    <li className="flex justify-between">
-                                      <span className="text-gray-400">DDoS Protection</span>
-                                      <span className="font-medium text-creeper">{plan.specs.protection}</span>
-                                    </li>
-                                  </ul>
-                                </div>
-                                
-                                <div className="border-t border-gray-700 pt-4">
-                                  <h4 className="font-medium mb-2">Features:</h4>
-                                  <ul className="space-y-1">
-                                    {plan.features.map((feature, i) => (
-                                      <li key={i} className="flex items-start">
-                                        <Check className="h-5 w-5 text-creeper mr-2 mt-0.5 flex-shrink-0" />
-                                        <span className="text-sm text-gray-300">{feature}</span>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                                
-                                <Button className="w-full minecraft-btn" asChild>
-                                  <a 
-                                    href="https://billing.creepercastle.in/index.php?rp=/store/vps-hosting" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                  >
-                                    Buy Now
-                                  </a>
-                                </Button>
-                              </div>
-                            </CardContent>
-                          </Card>
-                        ))}
-                      </motion.div>
-                    </TabsContent>
-                  </Tabs>
-                </TabsContent>
-                
-                <TabsContent value="discord-bot">
-                  <motion.div 
-                    className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                  >
+                        View More {expandedSection === 'discord' ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </div>
+
+              {/* Expanded VPS Plans */}
+              {expandedSection === 'vps' && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="mb-12"
+                >
+                  <h2 className="text-3xl font-bold mb-8 text-center">
+                    VPS <span className="text-creeper">Hosting Plans</span>
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {vpsPlans.map((plan, index) => (
+                      <Card 
+                        key={index} 
+                        className={`bg-navy-light ${plan.highlighted ? 'border-2 border-creeper relative' : 'border border-gray-800'} hover:transform hover:-translate-y-2 transition-all duration-300`}
+                      >
+                        {plan.highlighted && (
+                          <div className="absolute top-0 right-0 bg-creeper text-navy-dark font-medium text-sm px-4 py-1 rounded-bl-lg">
+                            Most Popular
+                          </div>
+                        )}
+                        <CardHeader className="text-center">
+                          <div className="mx-auto mb-4">
+                            <Server className="h-12 w-12 text-creeper" />
+                          </div>
+                          <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                          <div className="flex items-baseline justify-center mt-2">
+                            <span className="text-4xl font-bold">₹{plan.price}</span>
+                            <span className="text-gray-400 ml-1">/month</span>
+                          </div>
+                          <CardDescription className="text-gray-400 mt-2">
+                            Full root access with dedicated resources
+                          </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <div className="space-y-4">
+                            <div className="border-t border-gray-700 pt-4">
+                              <ul className="space-y-2">
+                                <li className="flex justify-between">
+                                  <span className="text-gray-400">RAM</span>
+                                  <span className="font-medium text-creeper">{plan.specs.ram}</span>
+                                </li>
+                                <li className="flex justify-between">
+                                  <span className="text-gray-400">CPU</span>
+                                  <span className="font-medium text-creeper">{plan.specs.cpu}</span>
+                                </li>
+                                <li className="flex justify-between">
+                                  <span className="text-gray-400">Storage</span>
+                                  <span className="font-medium text-creeper">{plan.specs.storage}</span>
+                                </li>
+                                <li className="flex justify-between">
+                                  <span className="text-gray-400">Bandwidth</span>
+                                  <span className="font-medium text-creeper">{plan.specs.bandwidth}</span>
+                                </li>
+                                <li className="flex justify-between">
+                                  <span className="text-gray-400">DDoS Protection</span>
+                                  <span className="font-medium text-creeper">{plan.specs.protection}</span>
+                                </li>
+                              </ul>
+                            </div>
+                            
+                            <div className="border-t border-gray-700 pt-4">
+                              <h4 className="font-medium mb-2">Features:</h4>
+                              <ul className="space-y-1">
+                                {plan.features.map((feature, i) => (
+                                  <li key={i} className="flex items-start">
+                                    <Check className="h-5 w-5 text-creeper mr-2 mt-0.5 flex-shrink-0" />
+                                    <span className="text-sm text-gray-300">{feature}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                            
+                            <Button className="w-full minecraft-btn" asChild>
+                              <a 
+                                href="https://billing.creepercastle.in/index.php?rp=/store/vps-hosting" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                              >
+                                Buy Now
+                              </a>
+                            </Button>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Expanded Discord Bot Plans */}
+              {expandedSection === 'discord' && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="mb-12"
+                >
+                  <h2 className="text-3xl font-bold mb-8 text-center">
+                    Discord Bot <span className="text-creeper">Hosting Plans</span>
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     {discordBotPlans.map((plan, index) => (
                       <Card 
                         key={index} 
@@ -518,9 +448,9 @@ const OtherHosting = () => {
                         </CardContent>
                       </Card>
                     ))}
-                  </motion.div>
-                </TabsContent>
-              </Tabs>
+                  </div>
+                </motion.div>
+              )}
             </div>
           </section>
         </main>
