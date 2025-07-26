@@ -292,17 +292,17 @@ const Index = () => {
                         <Settings className="h-8 w-8 text-creeper" />
                       </div>
                       <h3 className="text-xl font-bold mb-2">Other Hosting</h3>
-                      <p className="text-gray-400 text-sm">VPS hosting and Discord bot solutions</p>
+                      <p className="text-gray-400 text-sm">VPS Hosting & Discord Bot Hosting</p>
                     </div>
                     
                     <div className="space-y-3 mb-6">
                       <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">VPS Starting:</span>
-                        <span className="text-creeper">Custom Plans</span>
+                        <span className="text-gray-400">VPS Hosting:</span>
+                        <span className="text-creeper">From ₹299</span>
                       </div>
                       <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Discord Bots:</span>
-                        <span className="text-creeper">₹22/mo</span>
+                        <span className="text-gray-400">Discord Hosting:</span>
+                        <span className="text-creeper">From ₹22</span>
                       </div>
                       <div className="flex justify-between text-sm">
                         <span className="text-gray-400">Features:</span>
