@@ -285,37 +285,37 @@ const Index = () => {
             <section className="py-20 bg-navy">
               <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {/* VPS Card */}
+                  {/* Other Hosting Card */}
                   <div className="bg-navy-light rounded-xl p-6 border border-gray-800 hover:border-creeper/50 transition-all hover:transform hover:-translate-y-2">
                     <div className="text-center mb-6">
                       <div className="w-16 h-16 bg-creeper/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <Server className="h-8 w-8 text-creeper" />
+                        <Settings className="h-8 w-8 text-creeper" />
                       </div>
-                      <h3 className="text-xl font-bold mb-2">VPS Hosting</h3>
-                      <p className="text-gray-400 text-sm">High-performance virtual private servers</p>
+                      <h3 className="text-xl font-bold mb-2">Other Hosting</h3>
+                      <p className="text-gray-400 text-sm">VPS hosting and Discord bot solutions</p>
                     </div>
                     
                     <div className="space-y-3 mb-6">
                       <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Starting RAM:</span>
-                        <span className="text-creeper">32GB</span>
+                        <span className="text-gray-400">VPS Starting:</span>
+                        <span className="text-creeper">Custom Plans</span>
                       </div>
                       <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Starting CPU:</span>
-                        <span className="text-creeper">10 vCores</span>
+                        <span className="text-gray-400">Discord Bots:</span>
+                        <span className="text-creeper">₹22/mo</span>
                       </div>
                       <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Storage:</span>
-                        <span className="text-creeper">300GB NVMe</span>
+                        <span className="text-gray-400">Features:</span>
+                        <span className="text-creeper">Full Control</span>
                       </div>
                       <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Location:</span>
-                        <span className="text-creeper">Delhi, India</span>
+                        <span className="text-gray-400">Support:</span>
+                        <span className="text-creeper">24/7 Expert</span>
                       </div>
                     </div>
                     
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-creeper mb-2">₹3,300/mo</div>
+                      <div className="text-2xl font-bold text-creeper mb-2">Starting ₹22/mo</div>
                       <Button className="w-full minecraft-btn" asChild>
                         <Link to="/plans/other">View Plans</Link>
                       </Button>

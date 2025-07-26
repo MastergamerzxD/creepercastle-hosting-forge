@@ -151,7 +151,7 @@ const OtherHosting = () => {
                     </CardHeader>
                     <CardContent>
                       <div className="text-center mb-4">
-                        <p className="text-sm text-gray-400 mb-2">Pricing</p>
+                        <p className="text-sm text-gray-400 mb-2">Starting from just ₹299</p>
                         <p className="text-3xl font-bold text-creeper">Custom<span className="text-lg text-gray-400"> pricing</span></p>
                       </div>
                       <ul className="space-y-2 mb-6">
@@ -253,6 +253,9 @@ const OtherHosting = () => {
                           </div>
                           <CardTitle className="text-2xl">{plan.name}</CardTitle>
                           <div className="flex items-baseline justify-center mt-2">
+                            <span className="text-2xl text-gray-400">Starting from ₹299</span>
+                          </div>
+                          <div className="flex items-baseline justify-center mt-1">
                             <span className="text-3xl font-bold text-creeper">Custom Pricing</span>
                           </div>
                           <CardDescription className="text-gray-400 mt-2">
