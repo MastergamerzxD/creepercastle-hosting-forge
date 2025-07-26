@@ -74,10 +74,10 @@ const vpsPlans = [
   }
 ];
 
-const discordBotPlans = [
-  {
-    name: "Coder",
-    price: 299,
+  const discordBotPlans = [
+    {
+      name: "Coder",
+      price: 22,
     specs: {
       ram: "512MB",
       cpu: "100%",
@@ -95,9 +95,9 @@ const discordBotPlans = [
       "Community Support"
     ]
   },
-  {
-    name: "Developer",
-    price: 499,
+    {
+      name: "Developer",
+      price: 49,
     specs: {
       ram: "1GB",
       cpu: "200%",
@@ -237,7 +237,7 @@ const OtherHosting = () => {
                     <CardContent>
                       <div className="text-center mb-4">
                         <p className="text-sm text-gray-400 mb-2">Starting from</p>
-                        <p className="text-3xl font-bold text-creeper">₹299<span className="text-lg text-gray-400">/month</span></p>
+                        <p className="text-3xl font-bold text-creeper">₹22<span className="text-lg text-gray-400">/month</span></p>
                       </div>
                       <ul className="space-y-2 mb-6">
                         <li className="flex items-center text-sm">

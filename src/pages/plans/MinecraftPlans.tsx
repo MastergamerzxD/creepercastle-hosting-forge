@@ -82,7 +82,7 @@ const minecraftPlans = [
   },
   {
     name: "End Storm Plan",
-    price: 582,
+    price: 499,
     ram: "8GB",
     cpu: "250% CPU",
     storage: "80GB SSD",
@@ -108,7 +108,7 @@ const minecraftPlans = [
   },
   {
     name: "Wither Storm Plan",
-    price: 672,
+    price: 582,
     ram: "10GB",
     cpu: "300% CPU",
     storage: "100GB SSD",
