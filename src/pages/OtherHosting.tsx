@@ -9,68 +9,28 @@ import { useState } from "react";
 
 const vpsPlans = [
   {
-    name: "VPS - 32GB",
-    price: 3300,
+    name: "Custom VPS Plan",
+    price: "Custom",
     specs: {
-      ram: "32GB",
-      cpu: "10 vCores",
-      storage: "300GB NVMe SSD",
+      ram: "Tailored to your needs",
+      cpu: "As per requirements",
+      storage: "Custom allocation",
       bandwidth: "Unmetered",
       protection: "CreeperShield Protection"
     },
     features: [
-      "Root Access",
-      "Full SSH Access",
-      "Choose Your OS",
-      "Dedicated Resources",
-      "99.9% Uptime SLA",
-      "24/7 Support"
-    ]
-  },
-  {
-    name: "VPS - 48GB",
-    price: 4800,
-    specs: {
-      ram: "48GB",
-      cpu: "12 vCores",
-      storage: "400GB NVMe SSD",
-      bandwidth: "Unmetered",
-      protection: "CreeperShield Protection"
-    },
-    features: [
+      "Custom Hardware Configuration",
+      "Tailored Resource Allocation",
       "Root Access",
       "Full SSH Access",
       "Choose Your OS",
       "Dedicated Resources",
       "99.9% Uptime SLA",
       "24/7 Priority Support",
-      "Automatic Backups",
-      "Managed Firewall"
+      "Custom Setup Assistance"
     ],
-    highlighted: true
-  },
-  {
-    name: "VPS - 64GB",
-    price: 6800,
-    specs: {
-      ram: "64GB",
-      cpu: "16 vCores",
-      storage: "500GB NVMe SSD",
-      bandwidth: "Unmetered",
-      protection: "Premium DDoS Protection"
-    },
-    features: [
-      "Root Access",
-      "Full SSH Access",
-      "Choose Your OS",
-      "Dedicated Resources",
-      "99.9% Uptime SLA",
-      "24/7 Priority Support",
-      "Daily Backups",
-      "Managed Firewall",
-      "Resource Monitoring",
-      "Performance Optimization"
-    ]
+    highlighted: true,
+    isCustom: true
   }
 ];
 
@@ -191,21 +151,21 @@ const OtherHosting = () => {
                     </CardHeader>
                     <CardContent>
                       <div className="text-center mb-4">
-                        <p className="text-sm text-gray-400 mb-2">Starting from</p>
-                        <p className="text-3xl font-bold text-creeper">₹3,300<span className="text-lg text-gray-400">/month</span></p>
+                        <p className="text-sm text-gray-400 mb-2">Pricing</p>
+                        <p className="text-3xl font-bold text-creeper">Custom<span className="text-lg text-gray-400"> pricing</span></p>
                       </div>
                       <ul className="space-y-2 mb-6">
                         <li className="flex items-center text-sm">
                           <Check className="h-4 w-4 text-creeper mr-2" />
-                          Full Root Access
+                          Custom Hardware Configuration
                         </li>
                         <li className="flex items-center text-sm">
                           <Check className="h-4 w-4 text-creeper mr-2" />
-                          Dedicated Resources
+                          Tailored Resource Allocation
                         </li>
                         <li className="flex items-center text-sm">
                           <Check className="h-4 w-4 text-creeper mr-2" />
-                          CreeperShield Protection
+                          Open a ticket on Discord for custom quote
                         </li>
                       </ul>
                       <Button 
@@ -274,9 +234,9 @@ const OtherHosting = () => {
                   className="mb-12"
                 >
                   <h2 className="text-3xl font-bold mb-8 text-center">
-                    VPS <span className="text-creeper">Hosting Plans</span>
+                    Custom VPS <span className="text-creeper">Hosting</span>
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 max-w-md mx-auto">
                     {vpsPlans.map((plan, index) => (
                       <Card 
                         key={index} 
@@ -293,11 +253,10 @@ const OtherHosting = () => {
                           </div>
                           <CardTitle className="text-2xl">{plan.name}</CardTitle>
                           <div className="flex items-baseline justify-center mt-2">
-                            <span className="text-4xl font-bold">₹{plan.price}</span>
-                            <span className="text-gray-400 ml-1">/month</span>
+                            <span className="text-3xl font-bold text-creeper">Custom Pricing</span>
                           </div>
                           <CardDescription className="text-gray-400 mt-2">
-                            Full root access with dedicated resources
+                            Get a personalized VPS solution tailored to your specific needs
                           </CardDescription>
                         </CardHeader>
                         <CardContent>
@@ -339,13 +298,19 @@ const OtherHosting = () => {
                               </ul>
                             </div>
                             
+                            <div className="text-center mt-6 mb-4">
+                              <p className="text-sm text-gray-400 mb-2">
+                                Ready to get started? Open a ticket on our Discord server for a custom quote!
+                              </p>
+                            </div>
+                            
                             <Button className="w-full minecraft-btn" asChild>
                               <a 
-                                href="https://billing.creepercastle.in/index.php?rp=/store/vps-hosting" 
+                                href="https://discord.gg/creepercastle" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                               >
-                                Buy Now
+                                Get Custom Quote on Discord
                               </a>
                             </Button>
                           </div>
