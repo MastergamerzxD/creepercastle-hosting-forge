@@ -12,19 +12,38 @@ Disallow: /wp-admin/
 Disallow: /wp-login/
 Disallow: /backend/
 Disallow: /internal/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /node_modules/
 
-# Clean URLs
-Disallow: /*?
-Disallow: /*.php$
-Disallow: /*.js$
-Disallow: /*.css$
+# Clean URLs - Allow important files for SEO
+Disallow: /*?*
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
 
-# Allow Googlebot to access more
+# Allow Googlebot full access to assets
 User-agent: Googlebot
 Allow: /*.js$
 Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
 
-# For images
+# Allow Googlebot Images full access
 User-agent: Googlebot-Image
 Allow: /*
 
@@ -32,8 +51,15 @@ Allow: /*
 User-agent: Bingbot
 Allow: /*.js$
 Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
 
-# Rate limiting for aggressive bots
+# Rate limiting for aggressive crawlers
 User-agent: AhrefsBot
 Crawl-delay: 10
 
@@ -41,6 +67,9 @@ User-agent: SemrushBot
 Crawl-delay: 10
 
 User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
 Crawl-delay: 10
 
 # Allow additional search engines
@@ -52,3 +81,22 @@ Allow: /
 
 User-agent: DuckDuckBot
 Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block known bad bots
+User-agent: SiteBot
+Disallow: /
+
+User-agent: 008
+Disallow: /
+
+User-agent: voltron
+Disallow: /
+
+User-agent: Pinterestbot
+Disallow: /
+
+# Host information
+Host: creepercastle.cloud

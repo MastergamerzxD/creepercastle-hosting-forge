@@ -90,11 +90,39 @@ const OtherHosting = () => {
   return (
     <>
       <Helmet>
-        <title>Other Hosting Plans | VPS & Discord Bot Hosting | CreeperCastle.cloud</title>
+        <title>VPS & Discord Bot Hosting Plans | Custom Solutions & 24/7 Support | CreeperCastle.cloud</title>
         <meta 
           name="description" 
-          content="Choose from our VPS hosting plans or Discord bot hosting solutions. High-performance servers with dedicated resources and 24/7 support."
+          content="Choose from our custom VPS hosting plans or Discord bot hosting solutions. Custom VPS configurations starting from ₹299 and Discord bot hosting from ₹22/month with 24/7 support."
         />
+        <meta
+          name="keywords"
+          content="vps hosting india, discord bot hosting, custom vps plans, virtual private server india, discord hosting plans, bot hosting service, vps hosting mumbai delhi, custom server solutions"
+        />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://creepercastle.cloud/plans/other" />
+        <meta property="og:title" content="VPS & Discord Bot Hosting | Custom Solutions | CreeperCastle" />
+        <meta property="og:description" content="Custom VPS hosting and Discord bot hosting solutions. Professional hosting starting from ₹22/month with dedicated support." />
+        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta property="og:image:alt" content="VPS and Discord Bot Hosting Plans" />
+        <meta property="og:site_name" content="CreeperCastle.cloud" />
+        <meta property="og:locale" content="en_IN" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="VPS & Discord Bot Hosting 🤖 | Custom Solutions" />
+        <meta name="twitter:description" content="Custom VPS hosting and Discord bot hosting solutions starting from ₹22/month. Professional support included." />
+        <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        
+        {/* Additional SEO tags */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="author" content="CreeperCastle.cloud" />
+        <meta name="geo.region" content="IN" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://creepercastle.cloud/plans/other" />
       </Helmet>
       
       <div className="flex flex-col min-h-screen bg-navy text-white">

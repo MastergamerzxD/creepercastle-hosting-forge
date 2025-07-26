@@ -8,19 +8,96 @@ import { Server, Zap, Gift, Clock, Users, Shield, Check, X, Crown, Headphones } 
 import { motion } from "framer-motion";
 
 const FreeHosting = () => {
+  const freeHostingStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Free Minecraft Server Hosting",
+    "description": "Free Minecraft server hosting with 2GB RAM and 200% CPU power. No credit card required, instant setup.",
+    "provider": {
+      "@type": "Organization",
+      "name": "CreeperCastle.cloud",
+      "url": "https://creepercastle.cloud",
+      "logo": "https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png"
+    },
+    "serviceType": "Game Server Hosting",
+    "category": "Free Hosting",
+    "offers": {
+      "@type": "Offer",
+      "name": "Free Minecraft Hosting Plan",
+      "description": "Free Minecraft server with 2GB RAM and 200% CPU power",
+      "price": "0",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": "0",
+        "priceCurrency": "INR",
+        "valueAddedTaxIncluded": true
+      }
+    }
+  };
+
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://creepercastle.cloud/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Free Hosting",
+        "item": "https://creepercastle.cloud/free-hosting"
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
-        <title>Free MineCraft Hosting by CreeperCastle is now Live !</title>
-        <meta name="description" content="Get your FREE Minecraft server with 2GB RAM and 200% CPU power! Start your gaming journey today with CreeperCastle's free hosting plan." />
-        <meta name="keywords" content="free minecraft hosting, free minecraft server, free hosting india, minecraft server free, 2gb ram minecraft server, free minecraft hosting india" />
+        <title>Free Minecraft Server Hosting 2024 | 2GB RAM + 200% CPU | No Credit Card Required</title>
+        <meta 
+          name="description" 
+          content="Get your FREE Minecraft server with 2GB RAM and 200% CPU power! No credit card required, no hidden fees. Start your gaming journey today with CreeperCastle's free hosting plan in India."
+        />
+        <meta
+          name="keywords"
+          content="free minecraft hosting, free minecraft server, free hosting india, minecraft server free, 2gb ram minecraft server, free minecraft hosting india, no credit card minecraft hosting, free gaming server, free server hosting, minecraft hosting trial"
+        />
         
-        <meta property="og:title" content="Free MineCraft Hosting by CreeperCastle is now Live !" />
-        <meta property="og:description" content="Get your FREE Minecraft server with 2GB RAM and 200% CPU power! Start your gaming journey today." />
-        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/free-hosting" />
+        <meta property="og:title" content="Free Minecraft Server Hosting 2024 | 2GB RAM + 200% CPU" />
+        <meta property="og:description" content="Get your FREE Minecraft server with 2GB RAM and 200% CPU power! No credit card required, no hidden fees. Start your gaming journey today." />
+        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta property="og:image:alt" content="Free Minecraft Server Hosting by CreeperCastle" />
+        <meta property="og:site_name" content="CreeperCastle.cloud" />
+        <meta property="og:locale" content="en_IN" />
         
-        <link rel="canonical" href="https://creepercastle.cloud/free-hosting" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Free Minecraft Server Hosting 🎮 | 2GB RAM + 200% CPU" />
+        <meta name="twitter:description" content="Get your FREE Minecraft server with 2GB RAM and 200% CPU power! No credit card required, no hidden fees." />
+        <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        
+        {/* Additional SEO tags */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="author" content="CreeperCastle.cloud" />
+        <meta name="geo.region" content="IN" />
+        <meta name="geo.placename" content="Mumbai, Delhi" />
+        
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(freeHostingStructuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
+        </script>
       </Helmet>
 
       <div className="flex flex-col min-h-screen bg-navy text-white">
