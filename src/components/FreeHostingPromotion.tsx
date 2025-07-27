@@ -106,8 +106,9 @@ const FreeHostingPromotion = () => {
                 <div className="bg-navy-light rounded-lg p-4 space-y-2">
                   <p className="text-sm text-gray-400">🎯 What's included:</p>
                   <ul className="text-sm text-gray-300 space-y-1">
-                    <li>• 1GB RAM Minecraft Server</li>
-                    <li>• 10GB NVMe Storage</li>
+                    <li>• 2GB RAM Minecraft Server</li>
+                    <li>• 200% CPU Performance</li>
+                    <li>• 5GB NVMe Storage</li>
                     <li>• Basic DDoS Protection</li>
                     <li>• 24/7 Community Support</li>
                   </ul>
