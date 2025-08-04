@@ -37,7 +37,7 @@ const Navbar = () => {
           <Link to="/plans/other" className="text-white hover:text-creeper transition-colors">Other Hosting</Link>
           <Link to="/creeperpanel" className="text-white hover:text-creeper transition-colors">CreeperPanel</Link>
           <Link to="/locations" className="text-white hover:text-creeper transition-colors">Locations</Link>
-          <a href="/#features" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#features', e)}>Features</a>
+          <a href="/about" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/about', e)}>About</a>
           <Link to="/contact" className="text-white hover:text-creeper transition-colors">Contact</Link>
           <Link to="/discord" className="text-white hover:text-creeper transition-colors">Discord</Link>
           
@@ -71,7 +71,7 @@ const Navbar = () => {
             <Link to="/plans/other" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Other Hosting</Link>
             <Link to="/creeperpanel" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>CreeperPanel</Link>
             <Link to="/locations" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Locations</Link>
-            <a href="/#features" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/#features', e)}>Features</a>
+            <a href="/about" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/about', e)}>About</a>
             <Link to="/contact" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
             <Link to="/discord" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Discord</Link>
             
