@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Heart, Zap, Shield } from "lucide-react";
@@ -49,6 +51,7 @@ const About = () => {
 
   return (
     <>
+      <Navbar />
       <Helmet>
         <title>About Us - Meet the CreeperCastle Founders | Our Story</title>
         <meta 
@@ -255,6 +258,7 @@ const About = () => {
           </div>
         </section>
       </div>
+      <Footer />
     </>
   );
 };
