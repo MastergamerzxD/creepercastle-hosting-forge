@@ -15,21 +15,29 @@ const PlanCalculator = () => {
   const [price, setPrice] = useState<string>("");
 
   const calculateRecommendation = (playerCount: number, pluginCount: number) => {
+    // If no inputs provided
+    if (playerCount === 0 && pluginCount === 0) {
+      setRecommendation("");
+      setPrice("");
+      return;
+    }
+
+    // Primary logic based on player count and plugins
     if (playerCount <= 5 && pluginCount <= 5) {
       setRecommendation("Redstone Power");
       setPrice("₹99");
     } else if (playerCount >= 5 && playerCount <= 15 && pluginCount >= 5 && pluginCount <= 10) {
       setRecommendation("Diamond Core");
-      setPrice("₹199");
+      setPrice("₹249");
     } else if (playerCount >= 15 && playerCount <= 30 && pluginCount >= 10 && pluginCount <= 20) {
       setRecommendation("Nether Storm");
-      setPrice("₹299");
+      setPrice("₹372");
     } else if (playerCount >= 30 && playerCount <= 50 && pluginCount >= 20 && pluginCount <= 40) {
       setRecommendation("End Storm");
-      setPrice("₹399");
+      setPrice("₹499");
     } else if (playerCount >= 50 && playerCount <= 80 && pluginCount >= 40 && pluginCount <= 60) {
       setRecommendation("Wither Storm");
-      setPrice("₹499");
+      setPrice("₹582");
     } else if (playerCount >= 80 && playerCount <= 150 && pluginCount >= 60 && pluginCount <= 100) {
       setRecommendation("Dragon Buff");
       setPrice("₹672");
@@ -37,8 +45,39 @@ const PlanCalculator = () => {
       setRecommendation("Custom Plan");
       setPrice("Contact Us");
     } else {
-      setRecommendation("");
-      setPrice("");
+      // Fallback logic for edge cases
+      let recommendedPlan = "";
+      let recommendedPrice = "";
+      
+      // Base recommendation on highest factor (players vs plugins)
+      const maxPlayers = Math.max(playerCount, 0);
+      const maxPlugins = Math.max(pluginCount, 0);
+      
+      if (maxPlayers <= 10 && maxPlugins <= 8) {
+        recommendedPlan = "Redstone Power";
+        recommendedPrice = "₹99";
+      } else if (maxPlayers <= 25 && maxPlugins <= 15) {
+        recommendedPlan = "Diamond Core";
+        recommendedPrice = "₹249";
+      } else if (maxPlayers <= 40 && maxPlugins <= 25) {
+        recommendedPlan = "Nether Storm";
+        recommendedPrice = "₹372";
+      } else if (maxPlayers <= 65 && maxPlugins <= 45) {
+        recommendedPlan = "End Storm";
+        recommendedPrice = "₹499";
+      } else if (maxPlayers <= 100 && maxPlugins <= 70) {
+        recommendedPlan = "Wither Storm";
+        recommendedPrice = "₹582";
+      } else if (maxPlayers <= 200 && maxPlugins <= 120) {
+        recommendedPlan = "Dragon Buff";
+        recommendedPrice = "₹672";
+      } else {
+        recommendedPlan = "Custom Plan";
+        recommendedPrice = "Contact Us";
+      }
+      
+      setRecommendation(recommendedPlan);
+      setPrice(recommendedPrice);
     }
   };
 

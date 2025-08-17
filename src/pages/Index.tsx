@@ -283,6 +283,37 @@ const Index = () => {
               <HeroSection />
             </section>
             
+            {/* Minecraft Console and Plan Calculator */}
+            <section className="py-16 bg-navy-light">
+              <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                  <div>
+                    <motion.h2 
+                      className="text-3xl md:text-4xl font-bold mb-8 text-center lg:text-left"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      Server Console <span className="text-creeper">Live</span>
+                    </motion.h2>
+                    <MinecraftConsole />
+                  </div>
+                  
+                  <div>
+                    <motion.h2 
+                      className="text-3xl md:text-4xl font-bold mb-8 text-center lg:text-left"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.2 }}
+                    >
+                      Plan <span className="text-creeper">Calculator</span>
+                    </motion.h2>
+                    <PlanCalculator />
+                  </div>
+                </div>
+              </div>
+            </section>
+            
             {/* Services Cards Section */}
             <section className="py-20 bg-navy">
               <div className="container mx-auto px-4">
