@@ -34,6 +34,7 @@ const Navbar = () => {
           <Link to="/free-hosting" className="text-creeper font-semibold hover:text-creeper/80 transition-colors">Free Hosting</Link>
           <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors">Minecraft Hosting</Link>
           <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-colors">CreeperShield</Link>
+          <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-colors">CreeperShield Anycasted</Link>
           <Link to="/plans/other" className="text-white hover:text-creeper transition-colors">Other Hosting</Link>
           <Link to="/creeperpanel" className="text-white hover:text-creeper transition-colors">CreeperPanel</Link>
           <Link to="/locations" className="text-white hover:text-creeper transition-colors">Locations</Link>
@@ -68,6 +69,7 @@ const Navbar = () => {
             <Link to="/free-hosting" className="text-creeper font-semibold hover:text-creeper/80 transition-colors" onClick={() => setIsOpen(false)}>Free Hosting</Link>
             <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Minecraft Hosting</Link>
             <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>CreeperShield</Link>
+            <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>CreeperShield Anycasted</Link>
             <Link to="/plans/other" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Other Hosting</Link>
             <Link to="/creeperpanel" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>CreeperPanel</Link>
             <Link to="/locations" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Locations</Link>
