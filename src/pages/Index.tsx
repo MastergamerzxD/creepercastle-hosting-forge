@@ -9,7 +9,7 @@ import ReviewsSection from "@/components/ReviewsSection";
 import CtaSection from "@/components/CtaSection";
 import DiscordSection from "@/components/DiscordSection";
 import LoadingScreen from "@/components/LoadingScreen";
-import FreeHostingPromotion from "@/components/FreeHostingPromotion";
+
 import MinecraftConsole from "@/components/MinecraftConsole";
 import PlanCalculator from "@/components/PlanCalculator";
 import { Button } from "@/components/ui/button";
@@ -227,9 +227,6 @@ const Index = () => {
 
       <StructuredData type="website" />
       <StructuredData type="organization" />
-      
-      {/* Free Hosting Promotion Popup */}
-      <FreeHostingPromotion />
       
       <AnimatePresence mode="wait">
         <motion.div

@@ -10,7 +10,6 @@ import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import Discord from "./pages/Discord";
 import Locations from "./pages/Locations";
-import FreeHosting from "./pages/FreeHosting";
 import MinecraftPlans from "./pages/plans/MinecraftPlans";
 import CreeperShieldPlans from "./pages/plans/CreeperShieldPlans";
 import CreeperShieldAnycasted from "./pages/CreeperShieldAnycasted";
@@ -31,7 +30,7 @@ const App = () => (
           <BreadcrumbStructuredData />
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/free-hosting" element={<FreeHosting />} />
+            
             <Route path="/contact" element={<Contact />} />
             <Route path="/discord" element={<Discord />} />
             <Route path="/locations" element={<Locations />} />
