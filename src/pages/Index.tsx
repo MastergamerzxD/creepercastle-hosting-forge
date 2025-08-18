@@ -1,4 +1,5 @@
 
+// Index page component - Home page of CreeperCastle.cloud
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
