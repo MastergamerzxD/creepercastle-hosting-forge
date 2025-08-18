@@ -434,40 +434,6 @@ const Index = () => {
               </div>
             </section>
 
-            {/* Minecraft Console & Plan Calculator Section */}
-            <section className="py-20 bg-navy-light">
-              <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                    Experience the <span className="text-creeper">CreeperCastle</span> Difference
-                  </h2>
-                  <p className="text-xl text-gray-300 mb-8">
-                    See how fast our servers start and find the perfect plan for your needs
-                  </p>
-                </div>
-                
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                  {/* Minecraft Console */}
-                  <div>
-                    <div className="text-center mb-8">
-                      <h3 className="text-2xl font-bold mb-4">Lightning-Fast Server Startup</h3>
-                      <p className="text-gray-300">Watch your Minecraft server come to life in seconds</p>
-                    </div>
-                    <MinecraftConsole />
-                  </div>
-                  
-                  {/* Plan Calculator */}
-                  <div>
-                    <div className="text-center mb-8">
-                      <h3 className="text-2xl font-bold mb-4">Find Your Perfect Plan</h3>
-                      <p className="text-gray-300">Let us recommend the ideal hosting solution</p>
-                    </div>
-                    <PlanCalculator />
-                  </div>
-                </div>
-              </div>
-            </section>
-
             {/* CreeperPanel Section */}
             <section className="py-16 bg-navy-light">
               <div className="container mx-auto px-4">

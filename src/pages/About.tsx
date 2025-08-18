@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Heart, Zap, Shield } from "lucide-react";
+import { motion } from "framer-motion";
 
 const About = () => {
   useEffect(() => {
@@ -51,57 +52,94 @@ const About = () => {
 
   return (
     <>
-      <Navbar />
-      <Helmet>
-        <title>About Us - Meet the CreeperCastle Founders | Our Story</title>
-        <meta 
-          name="description" 
-          content="Meet Ahaan Gupta and Yaswanth, the passionate founders behind CreeperCastle. Learn about our journey, mission, and commitment to revolutionizing Minecraft hosting." 
-        />
-        <meta name="keywords" content="CreeperCastle founders, about us, Ahaan Gupta CEO, Yaswanth co-founder, minecraft hosting company story, gaming entrepreneurs, server hosting founders" />
+      <div className="min-h-screen bg-navy text-white relative">
+        {/* Enhanced background with underwater Minecraft scene */}
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          {/* Background image overlay with underwater Minecraft scene */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" 
+            style={{ backgroundImage: 'url("/lovable-uploads/aecdd243-6cbd-4e56-82a8-b494c26108cc.png")' }}
+          ></div>
+          
+          {/* Gradient overlay for better text visibility */}
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/90 via-navy/80 to-navy-light/70"></div>
+          
+          {/* Animated particles */}
+          {Array.from({ length: 10 }).map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute bg-creeper/20 rounded-full"
+              initial={{
+                width: Math.random() * 6 + 2,
+                height: Math.random() * 6 + 2,
+                x: Math.random() * 100 + "%",
+                y: Math.random() * 100 + "%",
+                opacity: Math.random() * 0.5,
+              }}
+              animate={{
+                y: ["-10%", "110%"],
+                opacity: [0, 0.6, 0],
+              }}
+              transition={{
+                duration: Math.random() * 15 + 20,
+                repeat: Infinity,
+                ease: "linear",
+                delay: Math.random() * 10,
+              }}
+            />
+          ))}
+        </div>
         
-        {/* Open Graph */}
-        <meta property="og:title" content="About Us - Meet the CreeperCastle Founders" />
-        <meta property="og:description" content="Meet the passionate founders behind CreeperCastle and learn about our mission to revolutionize Minecraft hosting with community-first approach." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://creepercastle.cloud/about" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About CreeperCastle - Meet Our Founders" />
-        <meta name="twitter:description" content="Discover the story behind CreeperCastle and meet the founders revolutionizing Minecraft hosting." />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "AboutPage",
-            "name": "About CreeperCastle",
-            "description": "Learn about CreeperCastle founders and our mission to provide exceptional Minecraft hosting services",
-            "mainEntity": {
-              "@type": "Organization",
-              "name": "CreeperCastle",
-              "url": "https://creepercastle.cloud",
-              "founder": [
-                {
-                  "@type": "Person",
-                  "name": "Ahaan Gupta",
-                  "jobTitle": "CEO / Founder"
-                },
-                {
-                  "@type": "Person", 
-                  "name": "Yaswanth",
-                  "jobTitle": "Lead Management / Co-Founder"
-                }
-              ]
-            }
-          })}
-        </script>
-      </Helmet>
+        <Navbar />
+        <Helmet>
+          <title>About Us - Meet the CreeperCastle Founders | Our Story</title>
+          <meta 
+            name="description" 
+            content="Meet Ahaan Gupta and Yaswanth, the passionate founders behind CreeperCastle. Learn about our journey, mission, and commitment to revolutionizing Minecraft hosting." 
+          />
+          <meta name="keywords" content="CreeperCastle founders, about us, Ahaan Gupta CEO, Yaswanth co-founder, minecraft hosting company story, gaming entrepreneurs, server hosting founders" />
+          
+          {/* Open Graph */}
+          <meta property="og:title" content="About Us - Meet the CreeperCastle Founders" />
+          <meta property="og:description" content="Meet the passionate founders behind CreeperCastle and learn about our mission to revolutionize Minecraft hosting with community-first approach." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://creepercastle.cloud/about" />
+          
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="About CreeperCastle - Meet Our Founders" />
+          <meta name="twitter:description" content="Discover the story behind CreeperCastle and meet the founders revolutionizing Minecraft hosting." />
+          
+          {/* Structured Data */}
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AboutPage",
+              "name": "About CreeperCastle",
+              "description": "Learn about CreeperCastle founders and our mission to provide exceptional Minecraft hosting services",
+              "mainEntity": {
+                "@type": "Organization",
+                "name": "CreeperCastle",
+                "url": "https://creepercastle.cloud",
+                "founder": [
+                  {
+                    "@type": "Person",
+                    "name": "Ahaan Gupta",
+                    "jobTitle": "CEO / Founder"
+                  },
+                  {
+                    "@type": "Person", 
+                    "name": "Yaswanth",
+                    "jobTitle": "Lead Management / Co-Founder"
+                  }
+                ]
+              }
+            })}
+          </script>
+        </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-navy-dark via-navy to-navy-light">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4">
+        <section className="relative pt-32 pb-20 px-4 z-10">
           <div className="absolute inset-0 bg-[url('/creeper-pattern.png')] opacity-5"></div>
           <div className="relative max-w-6xl mx-auto text-center">
             <Badge variant="secondary" className="mb-6 text-sm bg-creeper/20 text-creeper border-creeper/30">
@@ -117,7 +155,7 @@ const About = () => {
         </section>
 
         {/* Founders Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">

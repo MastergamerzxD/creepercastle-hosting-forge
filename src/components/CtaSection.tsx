@@ -130,7 +130,7 @@ const CtaSection = () => {
                 className="text-2xl font-bold"
                 whileHover={{ scale: 1.1, color: "#50C878" }}
                 transition={{ type: "spring", stiffness: 300 }}
-              >300+</motion.div>
+              >1000+</motion.div>
               <motion.div 
                 className="text-2xl font-bold"
                 whileHover={{ scale: 1.1, color: "#50C878" }}
@@ -149,7 +149,6 @@ const CtaSection = () => {
             </div>
             <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-500">
               <div>Active Servers</div>
-              <div>Global Locations</div>
               <div>Uptime</div>
               <div>Support</div>
             </div>

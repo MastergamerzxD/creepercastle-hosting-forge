@@ -29,7 +29,7 @@ const Navbar = () => {
         </Link>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-4 lg:space-x-6 flex-wrap">
+        <div className="hidden md:flex items-center space-x-3 lg:space-x-4 flex-wrap">
           <Link to="/" className="text-white hover:text-creeper transition-colors whitespace-nowrap">Home</Link>
           <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors whitespace-nowrap">Minecraft Hosting</Link>
           <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-colors whitespace-nowrap">CreeperShield</Link>
@@ -39,11 +39,22 @@ const Navbar = () => {
           <Link to="/locations" className="text-white hover:text-creeper transition-colors whitespace-nowrap">Locations</Link>
           <a href="/about" className="text-white hover:text-creeper transition-colors whitespace-nowrap" onClick={(e) => handleNavigation('/about', e)}>About</a>
           <Link to="/contact" className="text-white hover:text-creeper transition-colors whitespace-nowrap">Contact</Link>
-          <Link to="/discord" className="text-white hover:text-creeper transition-colors whitespace-nowrap">Discord</Link>
           
-          <Button className="minecraft-btn rounded" asChild>
-            <a href="https://billing.creepercastle.in/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-              <Store size={18} />
+          <Button className="minecraft-btn rounded text-sm px-3 py-2" asChild>
+            <a href="https://control.creepercastle.in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+              Game Panel
+            </a>
+          </Button>
+          
+          <Button className="minecraft-btn rounded text-sm px-3 py-2 bg-purple-600 hover:bg-purple-700" asChild>
+            <Link to="/discord" className="flex items-center gap-1">
+              Discord
+            </Link>
+          </Button>
+          
+          <Button className="minecraft-btn rounded text-sm px-3 py-2" asChild>
+            <a href="https://billing.creepercastle.in/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+              <Store size={16} />
               Store
             </a>
           </Button>
@@ -73,9 +84,20 @@ const Navbar = () => {
             <Link to="/locations" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Locations</Link>
             <a href="/about" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/about', e)}>About</a>
             <Link to="/contact" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
-            <Link to="/discord" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Discord</Link>
             
-            <div className="pt-2 border-t border-gray-800">
+            <div className="pt-2 border-t border-gray-800 space-y-3">
+              <Button className="minecraft-btn rounded w-full" asChild>
+                <a href="https://control.creepercastle.in" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                  Game Panel
+                </a>
+              </Button>
+              
+              <Button className="minecraft-btn rounded w-full bg-purple-600 hover:bg-purple-700" asChild>
+                <Link to="/discord" className="flex items-center justify-center gap-2" onClick={() => setIsOpen(false)}>
+                  Discord
+                </Link>
+              </Button>
+              
               <Button className="minecraft-btn rounded w-full" asChild>
                 <a href="https://billing.creepercastle.in/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                   <Store size={18} />
