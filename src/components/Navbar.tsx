@@ -29,42 +29,43 @@ const Navbar = () => {
         </Link>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-3 lg:space-x-4 flex-wrap">
-          <Link to="/" className="text-white hover:text-creeper transition-colors whitespace-nowrap">Home</Link>
-          <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors whitespace-nowrap">Minecraft Hosting</Link>
-          <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-colors whitespace-nowrap">CreeperShield</Link>
-          <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-colors whitespace-nowrap">CreeperShield Anycasted</Link>
-          <Link to="/plans/other" className="text-white hover:text-creeper transition-colors whitespace-nowrap">Other Hosting</Link>
-          <Link to="/creeperpanel" className="text-white hover:text-creeper transition-colors whitespace-nowrap">CreeperPanel</Link>
-          <Link to="/locations" className="text-white hover:text-creeper transition-colors whitespace-nowrap">Locations</Link>
-          <a href="/about" className="text-white hover:text-creeper transition-colors whitespace-nowrap" onClick={(e) => handleNavigation('/about', e)}>About</a>
-          <Link to="/contact" className="text-white hover:text-creeper transition-colors whitespace-nowrap">Contact</Link>
+        <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 flex-wrap">
+          <Link to="/" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Home</Link>
+          <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Minecraft Hosting</Link>
+          <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">CreeperShield</Link>
+          <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">CreeperShield Anycasted</Link>
+          <Link to="/plans/other" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Other Hosting</Link>
+          <Link to="/creeperpanel" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">CreeperPanel</Link>
+          <Link to="/locations" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Locations</Link>
+          <a href="/about" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base" onClick={(e) => handleNavigation('/about', e)}>About</a>
+          <Link to="/contact" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Contact</Link>
+          <Link to="/links" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base bg-creeper/10 px-2 py-1 rounded border border-creeper/30">Links</Link>
           
-          <Button className="minecraft-btn rounded text-sm px-3 py-2" asChild>
+          <Button className="minecraft-btn rounded text-xs xl:text-sm px-2 xl:px-3 py-2" asChild>
             <a href="https://control.creepercastle.in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
               Game Panel
             </a>
           </Button>
           
-          <Button className="minecraft-btn rounded text-sm px-3 py-2 bg-purple-600 hover:bg-purple-700" asChild>
+          <Button className="minecraft-btn rounded text-xs xl:text-sm px-2 xl:px-3 py-2 bg-purple-600 hover:bg-purple-700 border border-purple-500/30" asChild>
             <Link to="/discord" className="flex items-center gap-1">
               Discord
             </Link>
           </Button>
           
-          <Button className="minecraft-btn rounded text-sm px-3 py-2" asChild>
+          <Button className="minecraft-btn rounded text-xs xl:text-sm px-2 xl:px-3 py-2" asChild>
             <a href="https://billing.creepercastle.in/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-              <Store size={16} />
+              <Store size={14} className="xl:w-4 xl:h-4" />
               Store
             </a>
           </Button>
         </div>
         
         {/* Mobile menu button */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="text-white hover:text-creeper"
+            className="text-white hover:text-creeper p-2"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -73,26 +74,27 @@ const Navbar = () => {
       
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-navy-dark/98 backdrop-blur-lg absolute top-16 left-0 w-full border-b border-creeper/20 z-[9998] shadow-xl">
-          <div className="container mx-auto px-4 py-4 space-y-4 flex flex-col">
-            <Link to="/" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Home</Link>
-            <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Minecraft Hosting</Link>
-            <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>CreeperShield</Link>
-            <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>CreeperShield Anycasted</Link>
-            <Link to="/plans/other" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Other Hosting</Link>
-            <Link to="/creeperpanel" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>CreeperPanel</Link>
-            <Link to="/locations" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Locations</Link>
-            <a href="/about" className="text-white hover:text-creeper transition-colors" onClick={(e) => handleNavigation('/about', e)}>About</a>
-            <Link to="/contact" className="text-white hover:text-creeper transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
+        <div className="lg:hidden bg-navy-dark/98 backdrop-blur-lg absolute top-[4.5rem] left-0 w-full border-b border-creeper/20 z-[9998] shadow-xl max-h-[80vh] overflow-y-auto">
+          <div className="container mx-auto px-4 py-6 space-y-4 flex flex-col">
+            <Link to="/" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Home</Link>
+            <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Minecraft Hosting</Link>
+            <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>CreeperShield</Link>
+            <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>CreeperShield Anycasted</Link>
+            <Link to="/plans/other" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Other Hosting</Link>
+            <Link to="/creeperpanel" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>CreeperPanel</Link>
+            <Link to="/locations" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Locations</Link>
+            <a href="/about" className="text-white hover:text-creeper transition-colors py-2" onClick={(e) => handleNavigation('/about', e)}>About</a>
+            <Link to="/contact" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Contact</Link>
+            <Link to="/links" className="text-white hover:text-creeper transition-colors py-2 bg-creeper/10 px-3 rounded border border-creeper/30" onClick={() => setIsOpen(false)}>Official Links</Link>
             
-            <div className="pt-2 border-t border-gray-800 space-y-3">
+            <div className="pt-4 border-t border-gray-800 space-y-3">
               <Button className="minecraft-btn rounded w-full" asChild>
                 <a href="https://control.creepercastle.in" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                   Game Panel
                 </a>
               </Button>
               
-              <Button className="minecraft-btn rounded w-full bg-purple-600 hover:bg-purple-700" asChild>
+              <Button className="minecraft-btn rounded w-full bg-purple-600 hover:bg-purple-700 border border-purple-500/30" asChild>
                 <Link to="/discord" className="flex items-center justify-center gap-2" onClick={() => setIsOpen(false)}>
                   Discord
                 </Link>

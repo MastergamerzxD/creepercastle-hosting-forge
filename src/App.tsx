@@ -16,6 +16,7 @@ import CreeperShieldAnycasted from "./pages/CreeperShieldAnycasted";
 import OtherHosting from "./pages/OtherHosting";
 import CreeperPanel from "./pages/CreeperPanel";
 import About from "./pages/About";
+import Links from "./pages/Links";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/plans/other" element={<OtherHosting />} />
             <Route path="/creeperpanel" element={<CreeperPanel />} />
             <Route path="/about" element={<About />} />
+            <Route path="/links" element={<Links />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

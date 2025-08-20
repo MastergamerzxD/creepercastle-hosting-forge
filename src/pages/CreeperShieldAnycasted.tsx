@@ -104,39 +104,88 @@ const CreeperShieldAnycasted = () => {
 
   return (
     <>
-      <Navbar />
       <Helmet>
-        <title>CreeperShield Anycasted - 17 Tbps DDoS Protection for Minecraft | Mumbai Location</title>
+        <title>CreeperShield Anycasted DDoS Protection | 17 Tbps Capacity | Mumbai Location</title>
         <meta 
           name="description" 
-          content="Advanced anycasted DDoS protection for Minecraft servers. Up to 17 Tbps capacity, Mumbai location, hidden backend IP, and detailed attack analysis. Starting ₹299/month." 
+          content="Advanced anycasted DDoS protection for Minecraft servers with up to 17 Tbps capacity. Mumbai location deployment with bot protection and IP firewall starting at ₹299/month."
         />
-        <meta name="keywords" content="minecraft ddos protection, anycasted protection, minecraft security, ddos mitigation, minecraft server protection, mumbai server protection, minecraft firewall" />
+        <meta
+          name="keywords"
+          content="anycasted ddos protection, 17 tbps ddos mitigation, minecraft ddos protection mumbai, bot attack protection, ip firewall minecraft, anycasted protection india, creepershield anycasted"
+        />
         
-        {/* Open Graph */}
-        <meta property="og:title" content="CreeperShield Anycasted - Advanced DDoS Protection" />
-        <meta property="og:description" content="Protect your Minecraft server with our advanced anycasted DDoS protection. Up to 17 Tbps capacity with Mumbai location deployment." />
-        <meta property="og:type" content="product" />
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/plans/creepershield-anycasted" />
+        <meta property="og:title" content="CreeperShield Anycasted - 17 Tbps DDoS Protection" />
+        <meta property="og:description" content="Enterprise-grade anycasted DDoS protection with 17 Tbps capacity. Advanced security for Minecraft servers in Mumbai." />
+        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" />
+        <meta property="og:image:alt" content="CreeperShield Anycasted DDoS Protection" />
         
         {/* Twitter */}
-        <meta name="twitter:title" content="CreeperShield Anycasted - Advanced DDoS Protection" />
-        <meta name="twitter:description" content="Protect your Minecraft server with our advanced anycasted DDoS protection. Up to 17 Tbps capacity with Mumbai location deployment." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="CreeperShield Anycasted - 17 Tbps Protection 🛡️" />
+        <meta name="twitter:description" content="Ultimate DDoS protection with 17 Tbps capacity and anycasted deployment for Minecraft servers." />
+        <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" />
         
-        {/* Structured Data */}
+        {/* Additional SEO tags */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="author" content="CreeperCastle.cloud" />
+        <meta name="geo.region" content="IN" />
+        <meta name="geo.placename" content="Mumbai" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://creepercastle.cloud/plans/creepershield-anycasted" />
+        
+        {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(anycastedStructuredData)}
         </script>
         <script type="application/ld+json">
           {JSON.stringify(faqStructuredData)}
         </script>
-        
-        <link rel="canonical" href="https://creepercastle.cloud/plans/creepershield-anycasted" />
       </Helmet>
 
-      <div className="min-h-screen bg-navy text-white">
+      <div className="min-h-screen bg-navy text-white relative">
+        {/* Enhanced background with underwater Minecraft scene */}
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" 
+            style={{ backgroundImage: 'url("/lovable-uploads/aecdd243-6cbd-4e56-82a8-b494c26108cc.png")' }}
+          ></div>
+          
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/90 via-navy/80 to-navy-light/70"></div>
+          
+          {/* Animated particles */}
+          {Array.from({ length: 10 }).map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute bg-creeper/20 rounded-full"
+              initial={{
+                width: Math.random() * 6 + 2,
+                height: Math.random() * 6 + 2,
+                x: Math.random() * 100 + "%",
+                y: Math.random() * 100 + "%",
+                opacity: Math.random() * 0.5,
+              }}
+              animate={{
+                y: ["-10%", "110%"],
+                opacity: [0, 0.6, 0],
+              }}
+              transition={{
+                duration: Math.random() * 15 + 20,
+                repeat: Infinity,
+                ease: "linear",
+                delay: Math.random() * 10,
+              }}
+            />
+          ))}
+        </div>
+        
+        <Navbar />
         {/* Hero Section */}
-        <section className="pt-24 pb-16 bg-gradient-to-b from-navy-dark to-navy">
+        <section className="pt-32 pb-16 relative z-10">
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-16"
