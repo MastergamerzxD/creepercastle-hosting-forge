@@ -17,6 +17,7 @@ import OtherHosting from "./pages/OtherHosting";
 import CreeperPanel from "./pages/CreeperPanel";
 import About from "./pages/About";
 import Links from "./pages/Links";
+import FreeHosting from "./pages/FreeHosting";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <BreadcrumbStructuredData />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/free-hosting" element={<FreeHosting />} />
             
             <Route path="/contact" element={<Contact />} />
             <Route path="/discord" element={<Discord />} />

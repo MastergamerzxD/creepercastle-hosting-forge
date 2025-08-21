@@ -31,6 +31,7 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 flex-wrap">
           <Link to="/" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Home</Link>
+          <Link to="/free-hosting" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base bg-green-500/10 px-2 py-1 rounded border border-green-500/30">Free Hosting</Link>
           <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Minecraft Hosting</Link>
           <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">CreeperShield</Link>
           <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">CreeperShield Anycasted</Link>
@@ -77,6 +78,7 @@ const Navbar = () => {
         <div className="lg:hidden bg-navy-dark/98 backdrop-blur-lg absolute top-[4.5rem] left-0 w-full border-b border-creeper/20 z-[9998] shadow-xl max-h-[80vh] overflow-y-auto">
           <div className="container mx-auto px-4 py-6 space-y-4 flex flex-col">
             <Link to="/" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Home</Link>
+            <Link to="/free-hosting" className="text-white hover:text-creeper transition-colors py-2 bg-green-500/10 px-3 rounded border border-green-500/30" onClick={() => setIsOpen(false)}>Free Hosting</Link>
             <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Minecraft Hosting</Link>
             <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>CreeperShield</Link>
             <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>CreeperShield Anycasted</Link>

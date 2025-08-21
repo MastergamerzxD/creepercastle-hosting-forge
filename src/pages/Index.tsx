@@ -1,9 +1,10 @@
 
-// Index page component - Home page of CreeperCastle.cloud
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import FreeHostingPopup from "@/components/FreeHostingPopup";
 import LocationsSection from "@/components/LocationsSection";
 import CreeperShieldSection from "@/components/CreeperShieldSection";
 import ReviewsSection from "@/components/ReviewsSection";
@@ -20,7 +21,6 @@ import StructuredData from "@/components/StructuredData";
 
 // Import framer-motion for animations
 import { motion, AnimatePresence } from "framer-motion";
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -238,6 +238,7 @@ const Index = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col min-h-screen bg-navy text-white relative"
         >
+          <FreeHostingPopup />
           {/* Enhanced background with underwater Minecraft scene */}
           <div className="fixed inset-0 z-0 pointer-events-none">
             {/* Background image overlay with underwater Minecraft scene */}
