@@ -187,7 +187,7 @@ const CreeperPanel = () => {
   return (
     <>
       <Helmet>
-        <title>CreeperPanel - Advanced Pterodactyl Game Server Management Panel | India's Best Minecraft Hosting Control Panel</title>
+        <title>CreeperPanel Control Panel - Easy Minecraft Server Management | One-Click Features</title>
         <meta 
           name="description" 
           content="Experience CreeperPanel - India's most advanced Pterodactyl-based game server management system. Features real-time monitoring, automated backups, advanced security, and intuitive controls for professional Minecraft server hosting."

@@ -105,7 +105,7 @@ const CreeperShieldAnycasted = () => {
   return (
     <>
       <Helmet>
-        <title>CreeperShield Anycasted DDoS Protection | 17 Tbps Capacity | Mumbai Location</title>
+        <title>CreeperShield Anycasted Protection - Global DDoS Defense Network | Enterprise Security</title>
         <meta 
           name="description" 
           content="Advanced anycasted DDoS protection for Minecraft servers with up to 17 Tbps capacity. Mumbai location deployment with bot protection and IP firewall starting at ₹299/month."

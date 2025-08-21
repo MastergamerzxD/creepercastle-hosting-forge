@@ -90,7 +90,7 @@ const OtherHosting = () => {
   return (
     <>
       <Helmet>
-        <title>VPS & Discord Bot Hosting Plans | Custom Solutions & 24/7 Support | CreeperCastle.cloud</title>
+        <title>VPS Hosting & Other Games India - FiveM, CS2, Valheim Server Hosting | CreeperCastle</title>
         <meta 
           name="description" 
           content="Choose from our custom VPS hosting plans or Discord bot hosting solutions. Custom VPS configurations starting from ₹299 and Discord bot hosting from ₹22/month with 24/7 support."

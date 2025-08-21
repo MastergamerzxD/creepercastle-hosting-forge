@@ -92,7 +92,7 @@ const About = () => {
         
         <Navbar />
         <Helmet>
-          <title>About Us - Meet the CreeperCastle Founders | Our Story</title>
+          <title>About CreeperCastle - India's Premier Minecraft Hosting Company | Expert Team & Vision</title>
           <meta 
             name="description" 
             content="Meet Ahaan Gupta and Yaswanth, the passionate founders behind CreeperCastle. Learn about our journey, mission, and commitment to revolutionizing Minecraft hosting." 

@@ -94,7 +94,7 @@ const Links = () => {
   return (
     <>
       <Helmet>
-        <title>Official Links - CreeperCastle Reviews & Social Media | Customer Testimonials</title>
+        <title>CreeperCastle Official Links - Reviews, YouTube, Discord & Social Media | All Resources</title>
         <meta 
           name="description" 
           content="Find all official CreeperCastle links including customer reviews on Trustpilot & Google Business, YouTube tutorials, Discord community, and social media channels for support and updates."

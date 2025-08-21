@@ -70,7 +70,7 @@ const Locations = () => {
   return (
     <>
       <Helmet>
-        <title>Server Locations - Mumbai & Delhi NCR | Low Latency Minecraft Hosting | CreeperCastle</title>
+        <title>Minecraft Server Locations India - Mumbai & Delhi Data Centers | Low Ping Hosting</title>
         <meta 
           name="description" 
           content="CreeperCastle operates premium Minecraft servers in Mumbai & Delhi NCR, India. Ultra-low latency, enterprise hardware, and 99.9% uptime guarantee for Indian gamers."

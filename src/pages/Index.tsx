@@ -10,6 +10,7 @@ import ReviewsSection from "@/components/ReviewsSection";
 import CtaSection from "@/components/CtaSection";
 import DiscordSection from "@/components/DiscordSection";
 import LoadingScreen from "@/components/LoadingScreen";
+import FreeHostingPromotion from "@/components/FreeHostingPromotion";
 
 import MinecraftConsole from "@/components/MinecraftConsole";
 import PlanCalculator from "@/components/PlanCalculator";
@@ -166,7 +167,7 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>CreeperCastle.cloud - Best Minecraft Server Hosting in India | Premium Gaming Servers</title>
+        <title>CreeperCastle - Best Minecraft Server Hosting India 2024 | Premium Gaming Experience</title>
         <meta name="description" content="India's #1 Minecraft server hosting provider with instant setup, NVMe storage, DDoS protection & 24/7 support. Starting at ₹99/month. Mumbai & Delhi servers." />
         <meta name="keywords" content="minecraft hosting india, minecraft server hosting, minecraft smp hosting, bedrock servers, java servers, minecraft india, ddos protection, minecraft mods, game server, minecraft multiplayer, best minecraft hosting india, budget minecraft server, modded minecraft hosting, minecraft plugins, cheap minecraft hosting, affordable minecraft server india, mumbai minecraft hosting, delhi minecraft hosting" />
         

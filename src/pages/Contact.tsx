@@ -64,7 +64,7 @@ const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - 24/7 Expert Support | CreeperCastle.cloud Minecraft Hosting</title>
+        <title>Contact CreeperCastle Support - 24/7 Minecraft Server Help | Live Chat & Ticket System</title>
         <meta 
           name="description" 
           content="Get 24/7 expert support for your Minecraft server hosting needs. Contact CreeperCastle team via Discord, email, or live chat. Fast response times guaranteed."

@@ -15,33 +15,46 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center max-w-md mx-auto p-8">
-        <h1 className="text-6xl font-bold text-gray-800 mb-4">404</h1>
-        <h2 className="text-2xl font-semibold text-gray-700 mb-4">Page Not Found</h2>
-        <p className="text-gray-600 mb-6">
-          The page you're looking for doesn't exist or has been moved.
-        </p>
-        <p className="text-sm text-gray-500 mb-8">
-          Attempted to access: <code className="bg-gray-200 px-2 py-1 rounded">{location.pathname}</code>
-        </p>
-        <div className="space-y-3">
-          <Button 
-            onClick={() => navigate('/')} 
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-          >
-            Go to Homepage
-          </Button>
-          <Button 
-            onClick={() => navigate(-1)} 
-            variant="outline" 
-            className="w-full"
-          >
-            Go Back
-          </Button>
+    <>
+      <title>Page Not Found | CreeperCastle - Return to Minecraft Hosting</title>
+      <div className="flex flex-col min-h-screen bg-navy text-white">
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" 
+            style={{ backgroundImage: 'url("/lovable-uploads/4fca9c12-4db7-435f-a6c5-3fe7e04cf205.png")' }}
+          ></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/90 via-navy/80 to-navy-light/70"></div>
+        </div>
+        
+        <div className="min-h-screen flex items-center justify-center relative z-10">
+          <div className="text-center max-w-md mx-auto p-8">
+            <h1 className="text-6xl font-bold text-creeper mb-4">404</h1>
+            <h2 className="text-2xl font-semibold text-white mb-4">Page Not Found</h2>
+            <p className="text-gray-300 mb-6">
+              The page you're looking for doesn't exist or has been moved.
+            </p>
+            <p className="text-sm text-gray-400 mb-8">
+              Attempted to access: <code className="bg-navy-light px-2 py-1 rounded">{location.pathname}</code>
+            </p>
+            <div className="space-y-3">
+              <Button 
+                onClick={() => navigate('/')} 
+                className="w-full minecraft-btn"
+              >
+                Go to Homepage
+              </Button>
+              <Button 
+                onClick={() => navigate(-1)} 
+                variant="outline" 
+                className="w-full border-gray-600 text-gray-300 hover:bg-gray-800"
+              >
+                Go Back
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

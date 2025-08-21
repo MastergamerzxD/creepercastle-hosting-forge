@@ -13,7 +13,7 @@ const PricingPage = () => {
   return (
     <>
       <Helmet>
-        <title>Minecraft Server Pricing | CreeperCastle.cloud</title>
+        <title>Minecraft Server Pricing India - Affordable Hosting Plans | CreeperCastle Pricing</title>
         <meta 
           name="description" 
           content="Affordable and transparent pricing for Minecraft server hosting. Compare plans and features to find the perfect hosting solution for your Minecraft adventure."

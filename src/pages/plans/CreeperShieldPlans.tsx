@@ -148,7 +148,7 @@ const CreeperShieldPlans = () => {
   return (
     <>
       <Helmet>
-        <title>CreeperShield - Best DDoS Protection for Minecraft Servers India | Up to 3 Tbps Capacity</title>
+        <title>CreeperShield DDoS Protection India - Advanced Game Server Security | Anti-DDoS Plans</title>
         <meta 
           name="description" 
           content="Advanced DDoS protection for Minecraft servers starting at ₹84/month. Up to 3 Tbps mitigation capacity, Layer 3-7 protection, real-time monitoring. Keep your server online 24/7."
