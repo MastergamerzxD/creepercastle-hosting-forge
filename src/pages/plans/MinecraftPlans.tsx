@@ -514,7 +514,15 @@ const MinecraftPlans = () => {
                         <Button className="w-full minecraft-btn mt-6" asChild>
                           {!plan.isCustom ? (
                             <a 
-                              href="https://billing.creepercastle.in/index.php?rp=/store/minecraft-performance-servers" 
+                              href={
+                                plan.name === "Redstone Power Plan" ? "https://billing.creepercastle.in/products/minecraft-hosting/redstone-power-plan" :
+                                plan.name === "Diamond Core Plan" ? "https://billing.creepercastle.in/products/minecraft-hosting/diamond-core-plan" :
+                                plan.name === "Nether Storm Plan" ? "https://billing.creepercastle.in/products/minecraft-hosting/nether-storm-plan" :
+                                plan.name === "End Storm Plan" ? "https://billing.creepercastle.in/products/minecraft-hosting/end-storm-plan" :
+                                plan.name === "Wither Storm Plan" ? "https://billing.creepercastle.in/products/minecraft-hosting/wither-storm-plan" :
+                                plan.name === "Dragon Buff Plan" ? "https://billing.creepercastle.in/products/minecraft-hosting/dragon-buff-plan" :
+                                "https://billing.creepercastle.in/products/minecraft-hosting/"
+                              }
                               target="_blank" 
                               rel="noopener noreferrer"
                             >

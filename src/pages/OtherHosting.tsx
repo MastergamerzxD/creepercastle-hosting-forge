@@ -459,7 +459,11 @@ const OtherHosting = () => {
                             
                             <Button className="w-full minecraft-btn" asChild>
                               <a 
-                                href="https://billing.creepercastle.in/index.php?rp=/store/discord-bot-hosting" 
+                                href={
+                                  plan.name === "Coder" ? "https://billing.creepercastle.in/products/discord-bot-hosting/coder" :
+                                  plan.name === "Developer" ? "https://billing.creepercastle.in/products/discord-bot-hosting/developer" :
+                                  "https://billing.creepercastle.in/products/discord-bot-hosting/"
+                                }
                                 target="_blank" 
                                 rel="noopener noreferrer"
                               >

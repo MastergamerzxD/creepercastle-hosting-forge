@@ -32,7 +32,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><a href="https://billing.creepercastle.in/index.php?rp=/store/minecraft-performance-servers" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-creeper transition-colors duration-300">Minecraft Plans</a></li>
               <li><a href="https://billing.creepercastle.in/index.php?rp=/store/vps-hosting" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-creeper transition-colors duration-300">VPS Hosting</a></li>
-              <li><a href="https://billing.creepercastle.in/index.php?rp=/store/creepershield" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-creeper transition-colors duration-300">CreeperShield</a></li>
+              <li><a href="/plans/creepershield-anycasted" className="text-gray-300 hover:text-creeper transition-colors duration-300">CreeperShield Anycasted</a></li>
               <li><a href="https://discord.gg/RuQ9neH56S" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-creeper transition-colors duration-300">Enterprise Solutions</a></li>
             </ul>
           </div>

@@ -23,7 +23,7 @@ const anycastedPlans = [
       "Minecraft TCP Connection Only"
     ],
     highlighted: false,
-    buyLink: "https://billing.creepercastle.in/index.php?rp=/store/creepershield-anycasted"
+    buyLink: "https://billing.creepercastle.in/products/creepershield-anycasted/anycasted-wither"
   },
   {
     name: "Anycasted Warden", 
@@ -41,7 +41,7 @@ const anycastedPlans = [
       "Minecraft TCP Connection Only"
     ],
     highlighted: true,
-    buyLink: "https://billing.creepercastle.in/index.php?rp=/store/creepershield-anycasted"
+    buyLink: "https://billing.creepercastle.in/products/creepershield-anycasted/anycasted-warden"
   }
 ];
 
@@ -409,7 +409,7 @@ const CreeperShieldAnycasted = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="minecraft-btn" asChild>
-                  <a href="https://billing.creepercastle.in/index.php?rp=/store/creepershield-anycasted" target="_blank" rel="noopener noreferrer">
+                  <a href="https://billing.creepercastle.in/products/creepershield-anycasted/" target="_blank" rel="noopener noreferrer">
                     Get Protection Now
                   </a>
                 </Button>
