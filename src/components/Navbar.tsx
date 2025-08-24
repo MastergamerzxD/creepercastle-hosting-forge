@@ -33,7 +33,7 @@ const Navbar = () => {
           <Link to="/" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Home</Link>
           <Link to="/free-hosting" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base bg-green-500/10 px-2 py-1 rounded border border-green-500/30">Free Hosting</Link>
           <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Minecraft Hosting</Link>
-          <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">CreeperShield</Link>
+          
           <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">CreeperShield Anycasted</Link>
           <Link to="/plans/other" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Other Hosting</Link>
           <Link to="/creeperpanel" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">CreeperPanel</Link>
@@ -80,7 +80,7 @@ const Navbar = () => {
             <Link to="/" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Home</Link>
             <Link to="/free-hosting" className="text-white hover:text-creeper transition-colors py-2 bg-green-500/10 px-3 rounded border border-green-500/30" onClick={() => setIsOpen(false)}>Free Hosting</Link>
             <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Minecraft Hosting</Link>
-            <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>CreeperShield</Link>
+            
             <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>CreeperShield Anycasted</Link>
             <Link to="/plans/other" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Other Hosting</Link>
             <Link to="/creeperpanel" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>CreeperPanel</Link>
