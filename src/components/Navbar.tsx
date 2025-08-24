@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="py-4 border-b border-creeper/20 bg-navy-dark/95 backdrop-blur-lg fixed top-0 w-full z-[9999] shadow-lg">
+    <nav className="py-4 border-b border-creeper/20 bg-navy-dark backdrop-blur-lg fixed top-0 w-full z-[9999] shadow-lg">
       <div className="container mx-auto px-4 flex justify-between items-center min-h-[4rem]">
         <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
           <div className="flex items-center">
@@ -75,7 +75,7 @@ const Navbar = () => {
       
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="lg:hidden bg-navy-dark/98 backdrop-blur-lg absolute top-[4.5rem] left-0 w-full border-b border-creeper/20 z-[9998] shadow-xl max-h-[80vh] overflow-y-auto">
+        <div className="lg:hidden bg-navy-dark backdrop-blur-lg absolute top-[4.5rem] left-0 w-full border-b border-creeper/20 z-[9998] shadow-xl max-h-[80vh] overflow-y-auto">
           <div className="container mx-auto px-4 py-6 space-y-4 flex flex-col">
             <Link to="/" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Home</Link>
             <Link to="/free-hosting" className="text-white hover:text-creeper transition-colors py-2 bg-green-500/10 px-3 rounded border border-green-500/30" onClick={() => setIsOpen(false)}>Free Hosting</Link>
