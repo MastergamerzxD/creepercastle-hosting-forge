@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Menu, X, Store, ChevronDown } from "lucide-react";
+import { Menu, X, Store, ChevronDown, Server, MapPin, Building2, Gamepad2, Bot, Monitor } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="py-4 border-b border-creeper/20 bg-navy-dark backdrop-blur-lg fixed top-0 w-full z-[9999] shadow-lg">
+    <nav className="py-4 border-b border-creeper/30 bg-navy-dark/95 backdrop-blur-xl fixed top-0 w-full z-[9999] shadow-2xl shadow-creeper/10">
       <div className="container mx-auto px-4 flex justify-between items-center min-h-[4rem]">
         <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
           <div className="flex items-center">
@@ -36,45 +36,97 @@ const Navbar = () => {
         
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 flex-wrap">
-          <Link to="/" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Home</Link>
-          <Link to="/free-hosting" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base bg-green-500/10 px-2 py-1 rounded border border-green-500/30">Free Hosting</Link>
-          <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Minecraft Hosting</Link>
-          
-          <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">CreeperShield Anycasted</Link>
+          <Link to="/" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm xl:text-base relative group">
+            <span className="relative z-10">Home</span>
+            <span className="absolute inset-0 bg-creeper/10 rounded-md scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+          </Link>
+          <Link to="/free-hosting" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm xl:text-base bg-green-500/10 px-3 py-2 rounded-lg border border-green-500/30 hover:border-green-400/50 hover:bg-green-500/20">
+            <span className="flex items-center gap-2">
+              🎯 Free Hosting
+            </span>
+          </Link>
+          <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm xl:text-base bg-creeper/15 px-3 py-2 rounded-lg border border-creeper/40 hover:border-creeper/60 hover:bg-creeper/25 relative overflow-hidden group">
+            <span className="flex items-center gap-2 relative z-10">
+              <Gamepad2 size={16} />
+              Minecraft Hosting
+            </span>
+            <span className="absolute inset-0 bg-gradient-to-r from-creeper/0 via-creeper/10 to-creeper/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
+          </Link>
           
           <DropdownMenu>
-            <DropdownMenuTrigger className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base flex items-center gap-1 bg-transparent border-none p-0 focus:outline-none">
-              Other Hosting <ChevronDown size={14} />
+            <DropdownMenuTrigger className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm xl:text-base flex items-center gap-2 bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/5 focus:outline-none group">
+              <Server size={16} />
+              Other Hosting 
+              <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-navy-dark border border-creeper/20 z-[10000]">
-              <DropdownMenuItem className="text-white hover:text-creeper hover:bg-navy-light focus:text-creeper focus:bg-navy-light">
-                <Link to="/plans/vps" className="w-full">VPS Hosting</Link>
+            <DropdownMenuContent className="bg-navy-dark/95 backdrop-blur-xl border border-creeper/30 z-[10000] rounded-xl shadow-2xl shadow-creeper/20 min-w-[200px]">
+              <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
+                <Link to="/plans/vps" className="w-full flex items-center gap-3">
+                  <Monitor size={16} className="text-creeper" />
+                  VPS Hosting
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="text-white hover:text-creeper hover:bg-navy-light focus:text-creeper focus:bg-navy-light">
-                <Link to="/plans/discord-bot" className="w-full">Discord Bot Hosting</Link>
+              <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
+                <Link to="/plans/discord-bot" className="w-full flex items-center gap-3">
+                  <Bot size={16} className="text-purple-400" />
+                  Discord Bot Hosting
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <Link to="/creeperpanel" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">CreeperPanel</Link>
-          <Link to="/locations" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Locations</Link>
-          <a href="/about" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base" onClick={(e) => handleNavigation('/about', e)}>About</a>
-          <Link to="/contact" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Contact</Link>
-          <Link to="/links" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base bg-creeper/10 px-2 py-1 rounded border border-creeper/30">Links</Link>
+          <Link to="/creeperpanel" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm xl:text-base relative group">
+            <span className="relative z-10">CreeperPanel</span>
+            <span className="absolute inset-0 bg-creeper/10 rounded-md scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+          </Link>
           
-          <Button className="minecraft-btn rounded text-xs xl:text-sm px-2 xl:px-3 py-2" asChild>
-            <a href="https://control.creepercastle.in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-              Game Panel
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm xl:text-base flex items-center gap-2 bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/5 focus:outline-none group">
+              <Building2 size={16} />
+              Infrastructure 
+              <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-navy-dark/95 backdrop-blur-xl border border-creeper/30 z-[10000] rounded-xl shadow-2xl shadow-creeper/20 min-w-[200px]">
+              <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
+                <Link to="/locations" className="w-full flex items-center gap-3">
+                  <MapPin size={16} className="text-blue-400" />
+                  Locations
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
+                <Link to="/datacenter" className="w-full flex items-center gap-3">
+                  <Server size={16} className="text-creeper" />
+                  Datacenter
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          
+          <a href="/about" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm xl:text-base relative group" onClick={(e) => handleNavigation('/about', e)}>
+            <span className="relative z-10">About</span>
+            <span className="absolute inset-0 bg-creeper/10 rounded-md scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+          </a>
+          <Link to="/contact" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm xl:text-base relative group">
+            <span className="relative z-10">Contact</span>
+            <span className="absolute inset-0 bg-creeper/10 rounded-md scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+          </Link>
+          <Link to="/links" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm xl:text-base bg-creeper/10 px-3 py-2 rounded-lg border border-creeper/30 hover:border-creeper/50 hover:bg-creeper/20">
+            Links
+          </Link>
+          
+          <Button className="minecraft-btn rounded text-xs xl:text-sm px-3 xl:px-4 py-2 hover:scale-105 transition-all duration-300" asChild>
+            <a href="https://control.creepercastle.in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              🎮 Game Panel
             </a>
           </Button>
           
-          <Button className="minecraft-btn rounded text-xs xl:text-sm px-2 xl:px-3 py-2 bg-purple-600 hover:bg-purple-700 border border-purple-500/30" asChild>
-            <Link to="/discord" className="flex items-center gap-1">
-              Discord
+          <Button className="minecraft-btn rounded text-xs xl:text-sm px-3 xl:px-4 py-2 bg-purple-600 hover:bg-purple-700 border border-purple-500/30 hover:scale-105 transition-all duration-300" asChild>
+            <Link to="/discord" className="flex items-center gap-2">
+              💬 Discord
             </Link>
           </Button>
           
-          <Button className="minecraft-btn rounded text-xs xl:text-sm px-2 xl:px-3 py-2" asChild>
-            <a href="https://billing.creepercastle.in/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+          <Button className="minecraft-btn rounded text-xs xl:text-sm px-3 xl:px-4 py-2 hover:scale-105 transition-all duration-300" asChild>
+            <a href="https://billing.creepercastle.in/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               <Store size={14} className="xl:w-4 xl:h-4" />
               Store
             </a>
@@ -94,23 +146,47 @@ const Navbar = () => {
       
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="lg:hidden bg-navy-dark backdrop-blur-lg absolute top-[4.5rem] left-0 w-full border-b border-creeper/20 z-[9998] shadow-xl max-h-[80vh] overflow-y-auto">
+        <div className="lg:hidden bg-navy-dark/95 backdrop-blur-xl absolute top-[4.5rem] left-0 w-full border-b border-creeper/30 z-[9998] shadow-2xl shadow-creeper/20 max-h-[80vh] overflow-y-auto">
           <div className="container mx-auto px-4 py-6 space-y-4 flex flex-col">
-            <Link to="/" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Home</Link>
-            <Link to="/free-hosting" className="text-white hover:text-creeper transition-colors py-2 bg-green-500/10 px-3 rounded border border-green-500/30" onClick={() => setIsOpen(false)}>Free Hosting</Link>
-            <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Minecraft Hosting</Link>
+            <Link to="/" className="text-white hover:text-creeper transition-all duration-300 py-2 px-2 rounded-lg hover:bg-creeper/10" onClick={() => setIsOpen(false)}>🏠 Home</Link>
+            <Link to="/free-hosting" className="text-white hover:text-creeper transition-all duration-300 py-2 bg-green-500/10 px-3 rounded-lg border border-green-500/30 hover:border-green-400/50" onClick={() => setIsOpen(false)}>🎯 Free Hosting</Link>
+            <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-all duration-300 py-2 bg-creeper/15 px-3 rounded-lg border border-creeper/40 hover:border-creeper/60" onClick={() => setIsOpen(false)}>🎮 Minecraft Hosting</Link>
             
-            <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>CreeperShield Anycasted</Link>
             <div className="text-white py-2">
-              <span className="text-gray-300 font-medium">Other Hosting:</span>
-              <Link to="/plans/vps" className="text-white hover:text-creeper transition-colors py-1 pl-4 block" onClick={() => setIsOpen(false)}>• VPS Hosting</Link>
-              <Link to="/plans/discord-bot" className="text-white hover:text-creeper transition-colors py-1 pl-4 block" onClick={() => setIsOpen(false)}>• Discord Bot Hosting</Link>
+              <span className="text-gray-300 font-medium flex items-center gap-2 mb-2">
+                <Server size={16} />
+                Other Hosting:
+              </span>
+              <Link to="/plans/vps" className="text-white hover:text-creeper transition-all duration-300 py-2 pl-4 block hover:bg-creeper/10 rounded-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
+                <Monitor size={14} />
+                VPS Hosting
+              </Link>
+              <Link to="/plans/discord-bot" className="text-white hover:text-creeper transition-all duration-300 py-2 pl-4 block hover:bg-creeper/10 rounded-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
+                <Bot size={14} className="text-purple-400" />
+                Discord Bot Hosting
+              </Link>
             </div>
-            <Link to="/creeperpanel" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>CreeperPanel</Link>
-            <Link to="/locations" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Locations</Link>
-            <a href="/about" className="text-white hover:text-creeper transition-colors py-2" onClick={(e) => handleNavigation('/about', e)}>About</a>
-            <Link to="/contact" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Contact</Link>
-            <Link to="/links" className="text-white hover:text-creeper transition-colors py-2 bg-creeper/10 px-3 rounded border border-creeper/30" onClick={() => setIsOpen(false)}>Official Links</Link>
+            
+            <Link to="/creeperpanel" className="text-white hover:text-creeper transition-all duration-300 py-2 px-2 rounded-lg hover:bg-creeper/10" onClick={() => setIsOpen(false)}>⚙️ CreeperPanel</Link>
+            
+            <div className="text-white py-2">
+              <span className="text-gray-300 font-medium flex items-center gap-2 mb-2">
+                <Building2 size={16} />
+                Infrastructure:
+              </span>
+              <Link to="/locations" className="text-white hover:text-creeper transition-all duration-300 py-2 pl-4 block hover:bg-creeper/10 rounded-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
+                <MapPin size={14} className="text-blue-400" />
+                Locations
+              </Link>
+              <Link to="/datacenter" className="text-white hover:text-creeper transition-all duration-300 py-2 pl-4 block hover:bg-creeper/10 rounded-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
+                <Server size={14} className="text-creeper" />
+                Datacenter
+              </Link>
+            </div>
+            
+            <a href="/about" className="text-white hover:text-creeper transition-all duration-300 py-2 px-2 rounded-lg hover:bg-creeper/10" onClick={(e) => handleNavigation('/about', e)}>📋 About</a>
+            <Link to="/contact" className="text-white hover:text-creeper transition-all duration-300 py-2 px-2 rounded-lg hover:bg-creeper/10" onClick={() => setIsOpen(false)}>📧 Contact</Link>
+            <Link to="/links" className="text-white hover:text-creeper transition-all duration-300 py-2 bg-creeper/10 px-3 rounded-lg border border-creeper/30 hover:border-creeper/50" onClick={() => setIsOpen(false)}>🔗 Official Links</Link>
             
             <div className="pt-4 border-t border-gray-800 space-y-3">
               <Button className="minecraft-btn rounded w-full" asChild>

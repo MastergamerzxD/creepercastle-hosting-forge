@@ -13,6 +13,7 @@ import Locations from "./pages/Locations";
 import MinecraftPlans from "./pages/plans/MinecraftPlans";
 import VPSPlans from "./pages/plans/VPSPlans";
 import DiscordBotPlans from "./pages/plans/DiscordBotPlans";
+import Datacenter from "./pages/Datacenter";
 import CreeperShieldAnycasted from "./pages/CreeperShieldAnycasted";
 import OtherHosting from "./pages/OtherHosting";
 import CreeperPanel from "./pages/CreeperPanel";
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="/plans/minecraft" element={<MinecraftPlans />} />
             <Route path="/plans/vps" element={<VPSPlans />} />
             <Route path="/plans/discord-bot" element={<DiscordBotPlans />} />
+            <Route path="/datacenter" element={<Datacenter />} />
             
             <Route path="/plans/creepershield-anycasted" element={<CreeperShieldAnycasted />} />
             <Route path="/plans/other" element={<OtherHosting />} />
