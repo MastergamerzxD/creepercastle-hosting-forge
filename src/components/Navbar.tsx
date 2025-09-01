@@ -2,7 +2,13 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Menu, X, Store } from "lucide-react";
+import { Menu, X, Store, ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +41,20 @@ const Navbar = () => {
           <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Minecraft Hosting</Link>
           
           <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">CreeperShield Anycasted</Link>
-          <Link to="/plans/other" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Other Hosting</Link>
+          
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base flex items-center gap-1 bg-transparent border-none p-0 focus:outline-none">
+              Other Hosting <ChevronDown size={14} />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-navy-dark border border-creeper/20 z-[10000]">
+              <DropdownMenuItem className="text-white hover:text-creeper hover:bg-navy-light focus:text-creeper focus:bg-navy-light">
+                <Link to="/plans/vps" className="w-full">VPS Hosting</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="text-white hover:text-creeper hover:bg-navy-light focus:text-creeper focus:bg-navy-light">
+                <Link to="/plans/discord-bot" className="w-full">Discord Bot Hosting</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Link to="/creeperpanel" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">CreeperPanel</Link>
           <Link to="/locations" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base">Locations</Link>
           <a href="/about" className="text-white hover:text-creeper transition-colors whitespace-nowrap text-sm xl:text-base" onClick={(e) => handleNavigation('/about', e)}>About</a>
@@ -82,7 +101,11 @@ const Navbar = () => {
             <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Minecraft Hosting</Link>
             
             <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>CreeperShield Anycasted</Link>
-            <Link to="/plans/other" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Other Hosting</Link>
+            <div className="text-white py-2">
+              <span className="text-gray-300 font-medium">Other Hosting:</span>
+              <Link to="/plans/vps" className="text-white hover:text-creeper transition-colors py-1 pl-4 block" onClick={() => setIsOpen(false)}>• VPS Hosting</Link>
+              <Link to="/plans/discord-bot" className="text-white hover:text-creeper transition-colors py-1 pl-4 block" onClick={() => setIsOpen(false)}>• Discord Bot Hosting</Link>
+            </div>
             <Link to="/creeperpanel" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>CreeperPanel</Link>
             <Link to="/locations" className="text-white hover:text-creeper transition-colors py-2" onClick={() => setIsOpen(false)}>Locations</Link>
             <a href="/about" className="text-white hover:text-creeper transition-colors py-2" onClick={(e) => handleNavigation('/about', e)}>About</a>
