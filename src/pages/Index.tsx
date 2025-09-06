@@ -12,7 +12,6 @@ import CtaSection from "@/components/CtaSection";
 import DiscordSection from "@/components/DiscordSection";
 import LoadingScreen from "@/components/LoadingScreen";
 import FreeHostingPromotion from "@/components/FreeHostingPromotion";
-import MumbaiRestockPopup from "@/components/MumbaiRestockPopup";
 
 import MinecraftConsole from "@/components/MinecraftConsole";
 import PlanCalculatorSidebar from "@/components/PlanCalculatorSidebar";
@@ -280,7 +279,6 @@ const Index = () => {
           
           <Navbar />
           
-          <MumbaiRestockPopup />
           <PlanCalculatorSidebar 
             isOpen={calculatorOpen} 
             onClose={() => setCalculatorOpen(false)} 
