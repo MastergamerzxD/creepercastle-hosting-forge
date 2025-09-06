@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
-import FreeHostingPopup from "@/components/FreeHostingPopup";
+
 import LocationsSection from "@/components/LocationsSection";
 import CreeperShieldSection from "@/components/CreeperShieldSection";
 import ReviewsSection from "@/components/ReviewsSection";
@@ -14,9 +14,9 @@ import LoadingScreen from "@/components/LoadingScreen";
 import FreeHostingPromotion from "@/components/FreeHostingPromotion";
 
 import MinecraftConsole from "@/components/MinecraftConsole";
-import PlanCalculator from "@/components/PlanCalculator";
+import PlanCalculatorSidebar from "@/components/PlanCalculatorSidebar";
 import { Button } from "@/components/ui/button";
-import { Server, Shield, Settings } from "lucide-react";
+import { Server, Shield, Settings, Calculator } from "lucide-react";
 import StructuredData from "@/components/StructuredData";
 
 // Import framer-motion for animations
@@ -25,6 +25,7 @@ import { Link } from "react-router-dom";
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
+  const [calculatorOpen, setCalculatorOpen] = useState(false);
 
   useEffect(() => {
     // Update document title
@@ -238,7 +239,7 @@ const Index = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col min-h-screen bg-navy text-white relative"
         >
-          <FreeHostingPopup />
+          
           {/* Enhanced background with underwater Minecraft scene */}
           <div className="fixed inset-0 z-0 pointer-events-none">
             {/* Background image overlay with underwater Minecraft scene */}
@@ -278,12 +279,17 @@ const Index = () => {
           
           <Navbar />
           
+          <PlanCalculatorSidebar 
+            isOpen={calculatorOpen} 
+            onClose={() => setCalculatorOpen(false)} 
+          />
+          
           <main className="flex-grow pt-16 relative z-10">
             <section id="home">
               <HeroSection />
             </section>
             
-            {/* Minecraft Console and Plan Calculator */}
+            {/* Minecraft Console and Plan Calculator Button */}
             <section className="py-16 bg-navy-light">
               <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -308,7 +314,47 @@ const Index = () => {
                     >
                       Plan <span className="text-creeper">Calculator</span>
                     </motion.h2>
-                    <PlanCalculator />
+                    
+                    <motion.div
+                      className="max-w-2xl mx-auto"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.3 }}
+                    >
+                      <div className="bg-navy-light border border-gray-800 rounded-xl p-8 text-center">
+                        <div className="flex justify-center mb-6">
+                          <div className="w-16 h-16 bg-creeper/20 rounded-full flex items-center justify-center">
+                            <img 
+                              src="/lovable-uploads/1a0d50b6-cd93-42c1-bb4d-18c8aed41a15.png" 
+                              alt="Calculator" 
+                              className="h-8 w-8"
+                              onError={(e) => {
+                                // Fallback to Calculator icon if image fails to load
+                                e.currentTarget.style.display = 'none';
+                                const fallback = document.createElement('div');
+                                fallback.innerHTML = '<svg class="h-8 w-8 text-creeper" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>';
+                                e.currentTarget.parentElement?.appendChild(fallback.firstChild!);
+                              }}
+                            />
+                            <Calculator className="h-8 w-8 text-creeper hidden" />
+                          </div>
+                        </div>
+                        
+                        <h3 className="text-2xl font-bold text-white mb-4">
+                          Find Your Perfect Plan
+                        </h3>
+                        <p className="text-gray-400 mb-6">
+                          Tell us about your server and we'll recommend the perfect plan for your needs
+                        </p>
+                        
+                        <Button 
+                          onClick={() => setCalculatorOpen(true)}
+                          className="minecraft-btn text-lg px-8 py-3"
+                        >
+                          Open Plan Calculator
+                        </Button>
+                      </div>
+                    </motion.div>
                   </div>
                 </div>
               </div>

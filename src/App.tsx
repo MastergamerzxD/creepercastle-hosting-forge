@@ -34,7 +34,6 @@ const App = () => (
           <BreadcrumbStructuredData />
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/free-hosting" element={<FreeHosting />} />
             
             <Route path="/contact" element={<Contact />} />
             <Route path="/discord" element={<Discord />} />
