@@ -40,11 +40,6 @@ const Navbar = () => {
             <span className="relative z-10">Home</span>
             <span className="absolute inset-0 bg-creeper/10 rounded-md scale-0 group-hover:scale-100 transition-transform duration-300"></span>
           </Link>
-          <Link to="/free-hosting" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm xl:text-base bg-green-500/10 px-3 py-2 rounded-lg border border-green-500/30 hover:border-green-400/50 hover:bg-green-500/20">
-            <span className="flex items-center gap-2">
-              🎯 Free Hosting
-            </span>
-          </Link>
           <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm xl:text-base bg-creeper/15 px-3 py-2 rounded-lg border border-creeper/40 hover:border-creeper/60 hover:bg-creeper/25 relative overflow-hidden group">
             <span className="flex items-center gap-2 relative z-10">
               <Gamepad2 size={16} />
@@ -156,7 +151,7 @@ const Navbar = () => {
         <div className="lg:hidden bg-navy-dark/95 backdrop-blur-xl absolute top-[4.5rem] left-0 w-full border-b border-creeper/30 z-[9998] shadow-2xl shadow-creeper/20 max-h-[80vh] overflow-y-auto">
           <div className="container mx-auto px-4 py-6 space-y-4 flex flex-col">
             <Link to="/" className="text-white hover:text-creeper transition-all duration-300 py-2 px-2 rounded-lg hover:bg-creeper/10" onClick={() => setIsOpen(false)}>🏠 Home</Link>
-            <Link to="/free-hosting" className="text-white hover:text-creeper transition-all duration-300 py-2 bg-green-500/10 px-3 rounded-lg border border-green-500/30 hover:border-green-400/50" onClick={() => setIsOpen(false)}>🎯 Free Hosting</Link>
+            
             <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-all duration-300 py-2 bg-creeper/15 px-3 rounded-lg border border-creeper/40 hover:border-creeper/60" onClick={() => setIsOpen(false)}>🎮 Minecraft Hosting</Link>
             
             <div className="text-white py-2">
