@@ -406,7 +406,7 @@ const MinecraftPlans = () => {
               >
                 {minecraftPlans.map((plan, index) => (
                   <motion.div
-                    key={index}
+                    key={`plan-${index}`}
                     variants={cardVariants}
                     whileHover="hover"
                   >
