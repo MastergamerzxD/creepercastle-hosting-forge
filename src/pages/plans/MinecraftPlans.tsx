@@ -363,14 +363,54 @@ const MinecraftPlans = () => {
         </script>
       </Helmet>
       
-      <div className="flex flex-col min-h-screen bg-navy text-white">
+      <div className="flex flex-col min-h-screen bg-navy text-white relative">
+        {/* Enhanced background matching home page */}
         <div className="fixed inset-0 z-0 pointer-events-none">
+          {/* Background image overlay with underwater Minecraft scene */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" 
-            style={{ backgroundImage: 'url("/lovable-uploads/4fca9c12-4db7-435f-a6c5-3fe7e04cf205.png")' }}
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" 
+            style={{ backgroundImage: 'url("/lovable-uploads/aecdd243-6cbd-4e56-82a8-b494c26108cc.png")' }}
           ></div>
           
+          {/* Gradient overlay for better text visibility */}
           <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/90 via-navy/80 to-navy-light/70"></div>
+          
+          {/* Animated particles */}
+          {Array.from({ length: 10 }).map((_, i) => {
+            const randomValues = {
+              width: Math.random() * 6 + 2,
+              height: Math.random() * 6 + 2,
+              x: Math.random() * 100 + "%",
+              y: Math.random() * 100 + "%",
+              opacity: Math.random() * 0.5,
+              duration: Math.random() * 15 + 20,
+              delay: Math.random() * 10,
+            };
+            
+            return (
+              <motion.div
+                key={i}
+                className="absolute bg-creeper/20 rounded-full"
+                initial={{
+                  width: randomValues.width,
+                  height: randomValues.height,  
+                  x: randomValues.x,
+                  y: randomValues.y,
+                  opacity: randomValues.opacity,
+                }}
+                animate={{
+                  y: ["-10%", "110%"],
+                  opacity: [0, 0.6, 0],
+                }}
+                transition={{
+                  duration: randomValues.duration,
+                  repeat: Infinity,
+                  ease: "linear",
+                  delay: randomValues.delay,
+                }}
+              />
+            );
+          })}
         </div>
         
         <Navbar />
@@ -406,7 +446,7 @@ const MinecraftPlans = () => {
               >
                 {minecraftPlans.map((plan, index) => (
                   <motion.div
-                    key={`plan-${index}`}
+                    key={index}
                     variants={cardVariants}
                     whileHover="hover"
                   >
