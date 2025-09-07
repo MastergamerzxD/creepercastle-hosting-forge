@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Heart, Zap, Shield } from "lucide-react";
