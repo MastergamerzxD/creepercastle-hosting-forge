@@ -292,8 +292,12 @@ const Index = () => {
             </section>
             
             {/* Minecraft Console and Plan Calculator Button */}
-            <section className="py-16 bg-navy-light">
-              <div className="container mx-auto px-4">
+            <section className="py-16 bg-navy-light relative">
+              {/* Highlight overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-creeper/10 to-transparent opacity-50"></div>
+              <div className="absolute inset-0 border-2 border-creeper/30 rounded-lg m-4"></div>
+              
+              <div className="container mx-auto px-4 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <motion.h2 
@@ -323,7 +327,7 @@ const Index = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.3 }}
                     >
-                      <div className="bg-navy-light border border-gray-800 rounded-xl p-8 text-center">
+                      <div className="bg-navy-dark border-2 border-creeper/50 rounded-xl p-8 text-center shadow-lg shadow-creeper/20">
                         <div className="flex justify-center mb-6">
                           <div className="w-16 h-16 bg-creeper/20 rounded-full flex items-center justify-center">
                             <img 
@@ -342,8 +346,8 @@ const Index = () => {
                           </div>
                         </div>
                         
-                        <h3 className="text-2xl font-bold text-white mb-4">
-                          Find Your Perfect Plan
+                        <h3 className="text-2xl font-bold text-creeper mb-4">
+                          🎯 Find Your Perfect Plan
                         </h3>
                         <p className="text-gray-400 mb-6">
                           Tell us about your server and we'll recommend the perfect plan for your needs
@@ -351,9 +355,9 @@ const Index = () => {
                         
                         <Button 
                           onClick={() => setCalculatorOpen(true)}
-                          className="minecraft-btn text-lg px-8 py-3"
+                          className="minecraft-btn text-lg px-8 py-3 shadow-lg shadow-creeper/30 hover:shadow-creeper/50 transition-all duration-300"
                         >
-                          Open Plan Calculator
+                          🚀 Open Plan Calculator
                         </Button>
                       </div>
                     </motion.div>

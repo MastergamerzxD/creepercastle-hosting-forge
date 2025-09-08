@@ -106,6 +106,27 @@ const vpsPlans = [
     },
     buyLink: "https://billing.creepercastle.in/products/vps-hosting/creepercastle-overlord",
     highlighted: false
+  },
+  {
+    name: "Custom VPS Plan",
+    price: "Custom",
+    logo: "/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png",
+    specs: {
+      cpu: "Tailored to your needs 💫",
+      cores: "Custom Cores 🚀",
+      baseFreq: "Optimized Performance 🚀",
+      turboFreq: "Maximum Efficiency 🚀",
+      ram: "Custom RAM Configuration 🪄",
+      storage: "Flexible Storage Options 🪄",
+      network: "Dedicated Bandwidth 🛜",
+      location: "Multiple Locations Available 🚩",
+      ddos: "Enterprise DDoS Protection 🛡️",
+      mitigation: "Advanced Security 🛡️",
+      rdns: "Full Management Support ✅"
+    },
+    buyLink: "https://discord.gg/creepercastle",
+    highlighted: false,
+    isCustom: true
   }
 ];
 
@@ -267,13 +288,13 @@ const VPSPlans = () => {
                           
                           <div className="mt-6">
                             <Button className="w-full minecraft-btn" asChild>
-                              <a 
-                                href={plan.buyLink} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                              >
-                                Buy Now
-                              </a>
+                          <a 
+                            href={plan.isCustom ? plan.buyLink : plan.buyLink} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                          >
+                            {plan.isCustom ? "Get Custom Quote" : "Buy Now"}
+                          </a>
                             </Button>
                           </div>
                         </div>

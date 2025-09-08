@@ -214,7 +214,7 @@ const CreeperShieldSection = () => {
                 </div>
                 <div className="mt-4">
                   <Button className="minecraft-btn rounded-md w-full" asChild>
-                    <Link to="https://store.creepercastle.cloud" target="_blank">
+                    <Link to="https://billing.creepercastle.in" target="_blank">
                       Upgrade Your Protection
                     </Link>
                   </Button>
