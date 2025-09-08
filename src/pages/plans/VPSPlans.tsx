@@ -206,13 +206,54 @@ const VPSPlans = () => {
                   VPS <span className="text-creeper">Hosting Plans</span>
                 </motion.h1>
                 <motion.p 
-                  className="text-xl text-gray-300 max-w-3xl mx-auto"
+                  className="text-xl text-gray-300 max-w-3xl mx-auto mb-12"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
                   Professional VPS hosting with Intel Xeon processors, NVMe storage, and enterprise-grade DDoS protection
                 </motion.p>
+
+                {/* Features Section */}
+                <motion.div 
+                  className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                  <div className="bg-navy-light/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 text-center">
+                    <div className="bg-creeper/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Server className="h-8 w-8 text-creeper" />
+                    </div>
+                    <h3 className="text-xl font-bold text-creeper mb-3">Gaming Performance Beast</h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Our VPS servers are perfect for gaming with ultra-low latency, high-performance Intel Xeon processors, and blazing-fast NVMe storage. 
+                      Run game servers, hosting platforms, or gaming applications with zero lag and maximum uptime.
+                    </p>
+                  </div>
+
+                  <div className="bg-navy-light/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 text-center">
+                    <div className="bg-creeper/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-2xl">🛡️</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-creeper mb-3">Ultimate DDoS Protection</h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Protected by OVH's industry-leading DDoS shield with 500 Gbps smart mitigation capacity. 
+                      Your servers stay online even during the most sophisticated attacks, ensuring 99.9% uptime for your critical applications.
+                    </p>
+                  </div>
+
+                  <div className="bg-navy-light/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 text-center">
+                    <div className="bg-creeper/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-2xl">💫</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-creeper mb-3">Intel Xeon 2667/v4 Power</h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Experience enterprise-grade performance with Intel Xeon 2667/v4 processors featuring 8 cores, 3.2GHz base frequency, 
+                      and turbo boost up to 3.8GHz. Built for demanding workloads with ECC RAM for maximum reliability and data integrity.
+                    </p>
+                  </div>
+                </motion.div>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
