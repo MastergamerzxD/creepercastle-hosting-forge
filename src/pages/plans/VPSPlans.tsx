@@ -8,28 +8,104 @@ import { motion } from "framer-motion";
 
 const vpsPlans = [
   {
-    name: "Custom VPS Plan",
-    price: "Custom",
+    name: "Creeper Small",
+    price: "₹399",
+    logo: "/lovable-uploads/2e0d644d-6f7e-43e0-93e8-2efabb828007.png",
     specs: {
-      ram: "Tailored to your needs",
-      cpu: "As per requirements",
-      storage: "Custom allocation",
-      bandwidth: "Unmetered",
-      protection: "CreeperShield Protection"
+      cpu: "Intel Xeon 2667/v4 💫",
+      cores: "2V Cores 🚀",
+      baseFreq: "Base frequency @3.2ghz 🚀",
+      turboFreq: "Turbo frequency @3.8 ghz 🚀",
+      ram: "4 GB DDR4 ECC RAM 🪄",
+      storage: "20 GB NVMe Storage🪄",
+      network: "Upto 1Gbps network speed🛜",
+      location: "India, Mumbai🚩",
+      ddos: "OVH-DDOS Protect Shield🛡️",
+      mitigation: "500 Gbps Smart MITIGATION🛡️",
+      rdns: "RDNS Facility Available✅"
     },
-    features: [
-      "Custom Hardware Configuration",
-      "Tailored Resource Allocation",
-      "Root Access",
-      "Full SSH Access",
-      "Choose Your OS",
-      "Dedicated Resources",
-      "99.9% Uptime SLA",
-      "24/7 Priority Support",
-      "Custom Setup Assistance"
-    ],
-    highlighted: true,
-    isCustom: true
+    buyLink: "https://billing.creepercastle.in/products/vps-hosting/creeper-mini",
+    highlighted: false
+  },
+  {
+    name: "CreeperCastle Knight",
+    price: "₹689",
+    logo: "/lovable-uploads/92e056f5-c85f-4f06-9432-7c5ca32fe8b2.png",
+    specs: {
+      cpu: "Intel Xeon 2667/v4 💫",
+      cores: "4V Cores 🚀",
+      baseFreq: "Base frequency @3.2ghz 🚀",
+      turboFreq: "Turbo frequency @3.8 ghz 🚀",
+      ram: "8 GB DDR4 ECC RAM 🪄",
+      storage: "40 GB NVMe Storage🪄",
+      network: "Upto 1Gbps network speed🛜",
+      location: "India, Mumbai🚩",
+      ddos: "OVH-DDOS Protect Shield🛡️",
+      mitigation: "500 Gbps Smart MITIGATION🛡️",
+      rdns: "RDNS Facility Available✅"
+    },
+    buyLink: "https://billing.creepercastle.in/products/vps-hosting/creepercastle-knight",
+    highlighted: true
+  },
+  {
+    name: "CreeperCastle Titan",
+    price: "₹1,299",
+    logo: "/lovable-uploads/592d5824-5311-47bb-beb0-5aae9ff5c280.png",
+    specs: {
+      cpu: "Intel Xeon 2667/v4 💫",
+      cores: "6V Cores 🚀",
+      baseFreq: "Base frequency @3.2ghz 🚀",
+      turboFreq: "Turbo frequency @3.8 ghz 🚀",
+      ram: "16 GB DDR4 ECC RAM 🪄",
+      storage: "60 GB NVMe Storage🪄",
+      network: "Upto 1Gbps network speed🛜",
+      location: "India, Mumbai🚩",
+      ddos: "OVH-DDOS Protect Shield🛡️",
+      mitigation: "500 Gbps Smart MITIGATION🛡️",
+      rdns: "RDNS Facility Available✅"
+    },
+    buyLink: "https://billing.creepercastle.in/products/vps-hosting/creepercastle-titan",
+    highlighted: false
+  },
+  {
+    name: "CreeperCastle Guardian",
+    price: "₹1,999",
+    logo: "/lovable-uploads/102f77a4-d71f-456c-b542-1f98a55eb506.png",
+    specs: {
+      cpu: "Intel Xeon 2667/v4 💫",
+      cores: "8V Cores 🚀",
+      baseFreq: "Base frequency @3.2ghz 🚀",
+      turboFreq: "Turbo frequency @3.8 ghz 🚀",
+      ram: "32 GB DDR4 ECC RAM 🪄",
+      storage: "100 GB NVMe Storage🪄",
+      network: "Upto 1Gbps network speed🛜",
+      location: "India, Mumbai🚩",
+      ddos: "OVH-DDOS Protect Shield🛡️",
+      mitigation: "500 Gbps Smart MITIGATION🛡️",
+      rdns: "RDNS Facility Available✅"
+    },
+    buyLink: "https://billing.creepercastle.in/products/vps-hosting/creepercastle-guardian",
+    highlighted: false
+  },
+  {
+    name: "CreeperCastle Overlord",
+    price: "₹2,999",
+    logo: "/lovable-uploads/c78b0c32-1019-4b21-a48b-1581857db978.png",
+    specs: {
+      cpu: "Intel Xeon 2667/v4 💫",
+      cores: "12V Cores 🚀",
+      baseFreq: "Base frequency @3.2ghz 🚀",
+      turboFreq: "Turbo frequency @3.8 ghz 🚀",
+      ram: "64 GB DDR4 ECC RAM 🪄",
+      storage: "200 GB NVMe Storage🪄",
+      network: "Upto 1Gbps network speed🛜",
+      location: "India, Mumbai🚩",
+      ddos: "OVH-DDOS Protect Shield🛡️",
+      mitigation: "500 Gbps Smart MITIGATION🛡️",
+      rdns: "RDNS Facility Available✅"
+    },
+    buyLink: "https://billing.creepercastle.in/products/vps-hosting/creepercastle-overlord",
+    highlighted: false
   }
 ];
 
@@ -37,10 +113,10 @@ const VPSPlans = () => {
   return (
     <>
       <Helmet>
-        <title>VPS Hosting Plans India - Custom Virtual Private Servers | CreeperCastle</title>
+        <title>VPS Hosting Plans India - Starting from ₹399/month | CreeperCastle</title>
         <meta 
           name="description" 
-          content="Custom VPS hosting plans in India with dedicated resources, full root access, and CreeperShield protection. Starting from ₹299/month with 24/7 support."
+          content="Professional VPS hosting plans in India starting from ₹399/month. Intel Xeon processors, NVMe storage, DDoS protection. Choose from 5 powerful VPS plans."
         />
         <meta
           name="keywords"
@@ -50,8 +126,8 @@ const VPSPlans = () => {
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/plans/vps" />
-        <meta property="og:title" content="Custom VPS Hosting Plans | Dedicated Resources | CreeperCastle" />
-        <meta property="og:description" content="Professional VPS hosting with custom configurations starting from ₹299/month. Full root access and dedicated support." />
+        <meta property="og:title" content="VPS Hosting Plans India | Starting ₹399/month | CreeperCastle" />
+        <meta property="og:description" content="Professional VPS hosting plans with Intel Xeon processors, NVMe storage, and DDoS protection. Plans from ₹399 to ₹2999/month." />
         <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
         
         {/* Canonical URL */}
@@ -114,20 +190,20 @@ const VPSPlans = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  High-performance virtual private servers with dedicated resources and full root access
+                  Professional VPS hosting with Intel Xeon processors, NVMe storage, and enterprise-grade DDoS protection
                 </motion.p>
               </div>
               
-              <div className="grid grid-cols-1 max-w-md mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 {vpsPlans.map((plan, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
+                    transition={{ duration: 0.6, delay: 0.1 * index }}
                   >
                     <Card 
-                      className={`bg-navy-light ${plan.highlighted ? 'border-2 border-creeper relative' : 'border border-gray-800'} hover:transform hover:-translate-y-2 transition-all duration-300`}
+                      className={`bg-navy-light ${plan.highlighted ? 'border-2 border-creeper relative' : 'border border-gray-800'} hover:transform hover:-translate-y-2 transition-all duration-300 h-full`}
                     >
                       {plan.highlighted && (
                         <div className="absolute top-0 right-0 bg-creeper text-navy-dark font-medium text-sm px-4 py-1 rounded-bl-lg">
@@ -136,73 +212,70 @@ const VPSPlans = () => {
                       )}
                       <CardHeader className="text-center">
                         <div className="mx-auto mb-4">
-                          <Server className="h-12 w-12 text-creeper" />
+                          <img 
+                            src={plan.logo} 
+                            alt={`${plan.name} logo`}
+                            className="h-16 w-auto mx-auto"
+                          />
                         </div>
                         <CardTitle className="text-2xl">{plan.name}</CardTitle>
                         <div className="flex items-baseline justify-center mt-2">
-                          <span className="text-2xl text-gray-400">Starting from ₹299</span>
+                          <span className="text-3xl font-bold text-creeper">{plan.price}</span>
+                          <span className="text-lg text-gray-400 ml-1">/month</span>
                         </div>
-                        <div className="flex items-baseline justify-center mt-1">
-                          <span className="text-3xl font-bold text-creeper">Custom Pricing</span>
-                        </div>
-                        <CardDescription className="text-gray-400 mt-2">
-                          Get a personalized VPS solution tailored to your specific needs
-                        </CardDescription>
                       </CardHeader>
-                      <CardContent>
+                      <CardContent className="flex-1">
                         <div className="space-y-4">
                           <div className="border-t border-gray-700 pt-4">
-                            <ul className="space-y-2">
-                              <li className="flex justify-between">
-                                <span className="text-gray-400">RAM</span>
-                                <span className="font-medium text-creeper">{plan.specs.ram}</span>
+                            <h4 className="font-medium mb-3 text-creeper">Specifications:</h4>
+                            <ul className="space-y-2 text-sm">
+                              <li className="flex items-center">
+                                <span className="text-gray-300">{plan.specs.cpu}</span>
                               </li>
-                              <li className="flex justify-between">
-                                <span className="text-gray-400">CPU</span>
-                                <span className="font-medium text-creeper">{plan.specs.cpu}</span>
+                              <li className="flex items-center">
+                                <span className="text-gray-300">{plan.specs.cores}</span>
                               </li>
-                              <li className="flex justify-between">
-                                <span className="text-gray-400">Storage</span>
-                                <span className="font-medium text-creeper">{plan.specs.storage}</span>
+                              <li className="flex items-center">
+                                <span className="text-gray-300">{plan.specs.baseFreq}</span>
                               </li>
-                              <li className="flex justify-between">
-                                <span className="text-gray-400">Bandwidth</span>
-                                <span className="font-medium text-creeper">{plan.specs.bandwidth}</span>
+                              <li className="flex items-center">
+                                <span className="text-gray-300">{plan.specs.turboFreq}</span>
                               </li>
-                              <li className="flex justify-between">
-                                <span className="text-gray-400">DDoS Protection</span>
-                                <span className="font-medium text-creeper">{plan.specs.protection}</span>
+                              <li className="flex items-center">
+                                <span className="text-gray-300">{plan.specs.ram}</span>
+                              </li>
+                              <li className="flex items-center">
+                                <span className="text-gray-300">{plan.specs.storage}</span>
+                              </li>
+                              <li className="flex items-center">
+                                <span className="text-gray-300">{plan.specs.network}</span>
+                              </li>
+                              <li className="flex items-center">
+                                <span className="text-gray-300">{plan.specs.location}</span>
+                              </li>
+                              <li className="flex items-center">
+                                <span className="text-gray-300">{plan.specs.ddos}</span>
+                              </li>
+                              <li className="flex items-center">
+                                <span className="text-gray-300">{plan.specs.mitigation}</span>
+                              </li>
+                              <li className="flex items-center">
+                                <span className="text-gray-300">{plan.specs.rdns}</span>
                               </li>
                             </ul>
                           </div>
                           
-                          <div className="border-t border-gray-700 pt-4">
-                            <h4 className="font-medium mb-2">Features:</h4>
-                            <ul className="space-y-1">
-                              {plan.features.map((feature, i) => (
-                                <li key={i} className="flex items-start">
-                                  <Check className="h-5 w-5 text-creeper mr-2 mt-0.5 flex-shrink-0" />
-                                  <span className="text-sm text-gray-300">{feature}</span>
-                                </li>
-                              ))}
-                            </ul>
+                          <div className="mt-6">
+                            <Button className="w-full minecraft-btn" asChild>
+                              <a 
+                                href={plan.buyLink} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                              >
+                                Buy Now
+                              </a>
+                            </Button>
                           </div>
-                          
-                          <div className="text-center mt-6 mb-4">
-                            <p className="text-sm text-gray-400 mb-2">
-                              Ready to get started? Open a ticket on our Discord server for a custom quote!
-                            </p>
-                          </div>
-                          
-                          <Button className="w-full minecraft-btn" asChild>
-                            <a 
-                              href="https://discord.gg/creepercastle" 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                            >
-                              Get Custom Quote on Discord
-                            </a>
-                          </Button>
                         </div>
                       </CardContent>
                     </Card>
