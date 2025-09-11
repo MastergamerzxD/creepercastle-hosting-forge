@@ -48,6 +48,7 @@ const App = () => (
             <Route path="/creeperpanel" element={<CreeperPanel />} />
             <Route path="/about" element={<About />} />
             <Route path="/links" element={<Links />} />
+            <Route path="/free-hosting" element={<FreeHosting />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
