@@ -381,9 +381,9 @@ const Index = () => {
                     </div>
                     
                     <div className="space-y-3 mb-6">
-                      <div className="flex justify-between text-sm">
+                       <div className="flex justify-between text-sm">
                         <span className="text-gray-400">VPS Hosting:</span>
-                        <span className="text-creeper">From ₹299</span>
+                        <span className="text-creeper">From ₹399</span>
                       </div>
                       <div className="flex justify-between text-sm">
                         <span className="text-gray-400">Discord Hosting:</span>
@@ -399,10 +399,10 @@ const Index = () => {
                       </div>
                     </div>
                     
-                    <div className="text-center">
+                     <div className="text-center">
                       <div className="text-2xl font-bold text-creeper mb-2">Starting ₹22/mo</div>
                       <Button className="w-full minecraft-btn" asChild>
-                        <Link to="/plans/other">View Plans</Link>
+                        <Link to="/plans/vps">View Plans</Link>
                       </Button>
                     </div>
                   </div>
