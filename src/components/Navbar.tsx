@@ -47,6 +47,12 @@ const Navbar = () => {
             </span>
             <span className="absolute inset-0 bg-gradient-to-r from-creeper/0 via-creeper/10 to-creeper/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
           </Link>
+          <Link to="/free-hosting" className="text-white hover:text-green-400 transition-all duration-300 whitespace-nowrap text-sm xl:text-base bg-green-500/15 px-3 py-2 rounded-lg border border-green-500/40 hover:border-green-500/60 hover:bg-green-500/25 relative overflow-hidden group">
+            <span className="flex items-center gap-2 relative z-10">
+              🆓 Free Hosting
+            </span>
+            <span className="absolute inset-0 bg-gradient-to-r from-green-500/0 via-green-500/10 to-green-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
+          </Link>
           
           <DropdownMenu>
             <DropdownMenuTrigger className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm xl:text-base flex items-center gap-2 bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/5 focus:outline-none group">
@@ -153,6 +159,7 @@ const Navbar = () => {
             <Link to="/" className="text-white hover:text-creeper transition-all duration-300 py-2 px-2 rounded-lg hover:bg-creeper/10" onClick={() => setIsOpen(false)}>🏠 Home</Link>
             
             <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-all duration-300 py-2 bg-creeper/15 px-3 rounded-lg border border-creeper/40 hover:border-creeper/60" onClick={() => setIsOpen(false)}>🎮 Minecraft Hosting</Link>
+            <Link to="/free-hosting" className="text-white hover:text-green-400 transition-all duration-300 py-2 bg-green-500/15 px-3 rounded-lg border border-green-500/40 hover:border-green-500/60" onClick={() => setIsOpen(false)}>🆓 Free Hosting</Link>
             
             <div className="text-white py-2">
               <span className="text-gray-300 font-medium flex items-center gap-2 mb-2">
