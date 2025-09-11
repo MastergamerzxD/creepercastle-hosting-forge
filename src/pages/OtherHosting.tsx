@@ -9,28 +9,49 @@ import { useState } from "react";
 
 const vpsPlans = [
   {
-    name: "Custom VPS Plan",
-    price: "Custom",
+    name: "Creeper Small",
+    price: 399,
     specs: {
-      ram: "Tailored to your needs",
-      cpu: "As per requirements",
-      storage: "Custom allocation",
-      bandwidth: "Unmetered",
-      protection: "CreeperShield Protection"
+      ram: "4 GB DDR4 ECC RAM",
+      cpu: "Intel Xeon 2667/v4 - 2V Cores",
+      storage: "20 GB NVMe Storage",
+      bandwidth: "Up to 1Gbps",
+      protection: "500 Gbps DDoS Protection"
     },
     features: [
-      "Custom Hardware Configuration",
-      "Tailored Resource Allocation",
-      "Root Access",
-      "Full SSH Access",
-      "Choose Your OS",
-      "Dedicated Resources",
+      "Intel Xeon 2667/v4 Processor",
+      "3.2GHz Base / 3.8GHz Turbo",
+      "Full Root Access",
+      "India, Mumbai Location", 
+      "OVH DDoS Shield",
+      "RDNS Facility Available",
       "99.9% Uptime SLA",
-      "24/7 Priority Support",
-      "Custom Setup Assistance"
+      "24/7 Technical Support"
     ],
     highlighted: true,
-    isCustom: true
+    buyLink: "https://billing.creepercastle.in/products/vps-hosting/creeper-mini"
+  },
+  {
+    name: "CreeperCastle Knight",
+    price: 689,
+    specs: {
+      ram: "8 GB DDR4 ECC RAM",
+      cpu: "Intel Xeon 2667/v4 - 4V Cores", 
+      storage: "40 GB NVMe Storage",
+      bandwidth: "Up to 1Gbps",
+      protection: "500 Gbps DDoS Protection"
+    },
+    features: [
+      "Intel Xeon 2667/v4 Processor",
+      "3.2GHz Base / 3.8GHz Turbo",
+      "Full Root Access",
+      "India, Mumbai Location",
+      "OVH DDoS Shield", 
+      "RDNS Facility Available",
+      "99.9% Uptime SLA",
+      "24/7 Technical Support"
+    ],
+    buyLink: "https://billing.creepercastle.in/products/vps-hosting/creepercastle-knight"
   }
 ];
 
@@ -205,29 +226,38 @@ const OtherHosting = () => {
                     </CardHeader>
                     <CardContent>
                       <div className="text-center mb-4">
-                        <p className="text-sm text-gray-400 mb-2">Starting from just ₹299</p>
-                        <p className="text-3xl font-bold text-creeper">Custom<span className="text-lg text-gray-400"> pricing</span></p>
+                        <p className="text-sm text-gray-400 mb-2">Starting from</p>
+                        <p className="text-3xl font-bold text-creeper">₹399<span className="text-lg text-gray-400">/month</span></p>
                       </div>
                       <ul className="space-y-2 mb-6">
                         <li className="flex items-center text-sm">
                           <Check className="h-4 w-4 text-creeper mr-2" />
-                          Custom Hardware Configuration
+                          Intel Xeon 2667/v4 Processors
                         </li>
                         <li className="flex items-center text-sm">
                           <Check className="h-4 w-4 text-creeper mr-2" />
-                          Tailored Resource Allocation
+                          NVMe Storage & ECC RAM
                         </li>
                         <li className="flex items-center text-sm">
                           <Check className="h-4 w-4 text-creeper mr-2" />
-                          Open a ticket on Discord for custom quote
+                          500 Gbps DDoS Protection
                         </li>
                       </ul>
-                      <Button 
-                        className="w-full minecraft-btn" 
-                        onClick={() => toggleSection('vps')}
-                      >
-                        View More {expandedSection === 'vps' ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
-                      </Button>
+                      <div className="space-y-2">
+                        <Button 
+                          className="w-full minecraft-btn" 
+                          onClick={() => toggleSection('vps')}
+                        >
+                          View More {expandedSection === 'vps' ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
+                        </Button>
+                        <Button 
+                          variant="outline"
+                          className="w-full border-creeper/50 text-creeper hover:bg-creeper/10" 
+                          asChild
+                        >
+                          <a href="/plans/vps">View All VPS Plans</a>
+                        </Button>
+                      </div>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -267,12 +297,21 @@ const OtherHosting = () => {
                           Instant Setup
                         </li>
                       </ul>
-                      <Button 
-                        className="w-full minecraft-btn" 
-                        onClick={() => toggleSection('discord')}
-                      >
-                        View More {expandedSection === 'discord' ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
-                      </Button>
+                      <div className="space-y-2">
+                        <Button 
+                          className="w-full minecraft-btn" 
+                          onClick={() => toggleSection('discord')}
+                        >
+                          View More {expandedSection === 'discord' ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
+                        </Button>
+                        <Button 
+                          variant="outline"
+                          className="w-full border-creeper/50 text-creeper hover:bg-creeper/10" 
+                          asChild
+                        >
+                          <a href="/plans/discord-bot">View All Discord Plans</a>
+                        </Button>
+                      </div>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -288,9 +327,9 @@ const OtherHosting = () => {
                   className="mb-12"
                 >
                   <h2 className="text-3xl font-bold mb-8 text-center">
-                    Custom VPS <span className="text-creeper">Hosting</span>
+                    VPS <span className="text-creeper">Hosting Plans</span>
                   </h2>
-                  <div className="grid grid-cols-1 max-w-md mx-auto">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                     {vpsPlans.map((plan, index) => (
                       <Card 
                         key={index} 
@@ -307,14 +346,9 @@ const OtherHosting = () => {
                           </div>
                           <CardTitle className="text-2xl">{plan.name}</CardTitle>
                           <div className="flex items-baseline justify-center mt-2">
-                            <span className="text-2xl text-gray-400">Starting from ₹299</span>
+                            <span className="text-3xl font-bold text-creeper">₹{plan.price}</span>
+                            <span className="text-lg text-gray-400">/month</span>
                           </div>
-                          <div className="flex items-baseline justify-center mt-1">
-                            <span className="text-3xl font-bold text-creeper">Custom Pricing</span>
-                          </div>
-                          <CardDescription className="text-gray-400 mt-2">
-                            Get a personalized VPS solution tailored to your specific needs
-                          </CardDescription>
                         </CardHeader>
                         <CardContent>
                           <div className="space-y-4">
@@ -322,58 +356,61 @@ const OtherHosting = () => {
                               <ul className="space-y-2">
                                 <li className="flex justify-between">
                                   <span className="text-gray-400">RAM</span>
-                                  <span className="font-medium text-creeper">{plan.specs.ram}</span>
+                                  <span className="font-medium text-creeper text-sm">{plan.specs.ram}</span>
                                 </li>
                                 <li className="flex justify-between">
                                   <span className="text-gray-400">CPU</span>
-                                  <span className="font-medium text-creeper">{plan.specs.cpu}</span>
+                                  <span className="font-medium text-creeper text-sm">{plan.specs.cpu}</span>
                                 </li>
                                 <li className="flex justify-between">
                                   <span className="text-gray-400">Storage</span>
-                                  <span className="font-medium text-creeper">{plan.specs.storage}</span>
+                                  <span className="font-medium text-creeper text-sm">{plan.specs.storage}</span>
                                 </li>
                                 <li className="flex justify-between">
-                                  <span className="text-gray-400">Bandwidth</span>
-                                  <span className="font-medium text-creeper">{plan.specs.bandwidth}</span>
+                                  <span className="text-gray-400">Network</span>
+                                  <span className="font-medium text-creeper text-sm">{plan.specs.bandwidth}</span>
                                 </li>
                                 <li className="flex justify-between">
                                   <span className="text-gray-400">DDoS Protection</span>
-                                  <span className="font-medium text-creeper">{plan.specs.protection}</span>
+                                  <span className="font-medium text-creeper text-sm">{plan.specs.protection}</span>
                                 </li>
                               </ul>
                             </div>
                             
                             <div className="border-t border-gray-700 pt-4">
-                              <h4 className="font-medium mb-2">Features:</h4>
                               <ul className="space-y-1">
-                                {plan.features.map((feature, i) => (
+                                {plan.features.slice(0, 6).map((feature, i) => (
                                   <li key={i} className="flex items-start">
-                                    <Check className="h-5 w-5 text-creeper mr-2 mt-0.5 flex-shrink-0" />
+                                    <Check className="h-4 w-4 text-creeper mr-2 mt-0.5 flex-shrink-0" />
                                     <span className="text-sm text-gray-300">{feature}</span>
                                   </li>
                                 ))}
                               </ul>
                             </div>
                             
-                            <div className="text-center mt-6 mb-4">
-                              <p className="text-sm text-gray-400 mb-2">
-                                Ready to get started? Open a ticket on our Discord server for a custom quote!
-                              </p>
-                            </div>
-                            
                             <Button className="w-full minecraft-btn" asChild>
                               <a 
-                                href="https://discord.gg/creepercastle" 
+                                href={plan.buyLink}
                                 target="_blank" 
                                 rel="noopener noreferrer"
                               >
-                                Get Custom Quote on Discord
+                                Buy Now
                               </a>
                             </Button>
                           </div>
                         </CardContent>
                       </Card>
                     ))}
+                  </div>
+                  <div className="text-center mt-8">
+                    <Button 
+                      variant="outline"
+                      size="lg"
+                      className="border-creeper/50 text-creeper hover:bg-creeper/10" 
+                      asChild
+                    >
+                      <a href="/plans/vps">View All 5 VPS Plans →</a>
+                    </Button>
                   </div>
                 </motion.div>
               )}

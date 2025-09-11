@@ -402,7 +402,7 @@ const Index = () => {
                      <div className="text-center">
                       <div className="text-2xl font-bold text-creeper mb-2">Starting ₹22/mo</div>
                       <Button className="w-full minecraft-btn" asChild>
-                        <Link to="/plans/vps">View Plans</Link>
+                        <Link to="/plans/other">View Plans</Link>
                       </Button>
                     </div>
                   </div>
