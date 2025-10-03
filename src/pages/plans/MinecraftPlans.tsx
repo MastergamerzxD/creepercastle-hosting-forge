@@ -438,6 +438,146 @@ const MinecraftPlans = () => {
                 </motion.p>
               </div>
               
+              {/* Features Section - Why Choose Us */}
+              <div className="mb-16">
+                <div className="text-center mb-12">
+                  <motion.h2 
+                    className="text-3xl font-bold mb-4"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                  >
+                    Why Choose <span className="text-creeper">Our Minecraft Hosting</span>?
+                  </motion.h2>
+                  <motion.p 
+                    className="text-xl text-gray-400 max-w-2xl mx-auto"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                  >
+                    We offer the best features and support to ensure your Minecraft server runs perfectly
+                  </motion.p>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                  <motion.div 
+                    className="bg-navy-light p-6 rounded-lg border border-gray-800 hover:border-creeper/50 transition-all duration-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(124, 252, 0, 0.2)" }}
+                  >
+                    <h3 className="text-xl font-semibold mb-3 flex items-center">
+                      <Server className="mr-2 text-creeper h-5 w-5" /> 
+                      Enterprise-Grade Processors
+                    </h3>
+                    <p className="text-gray-400">
+                      Powered by cutting-edge <span className="text-creeper font-semibold">Intel Xeon 2386G</span> or <span className="text-creeper font-semibold">AMD EPYC 4004 P</span> processors, delivering unmatched performance with exceptional single-thread speeds and multi-core processing power for lag-free gaming experiences.
+                    </p>
+                  </motion.div>
+                  
+                  <motion.div 
+                    className="bg-navy-light p-6 rounded-lg border border-gray-800 hover:border-creeper/50 transition-all duration-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                    whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(124, 252, 0, 0.2)" }}
+                  >
+                    <h3 className="text-xl font-semibold mb-3 flex items-center">
+                      <span className="mr-2 text-creeper text-xl">🛡️</span> 
+                      17TB DDoS Protection
+                    </h3>
+                    <p className="text-gray-400">
+                      Industry-leading <span className="text-creeper font-semibold">17 TB DDoS protection</span> powered by CreeperShield keeps your server online 24/7, even during the most sophisticated attacks. Your players never experience downtime.
+                    </p>
+                  </motion.div>
+                  
+                  <motion.div 
+                    className="bg-navy-light p-6 rounded-lg border border-gray-800 hover:border-creeper/50 transition-all duration-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.7 }}
+                    whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(124, 252, 0, 0.2)" }}
+                  >
+                    <h3 className="text-xl font-semibold mb-3 flex items-center">
+                      <span className="mr-2 text-creeper text-xl">🏢</span> 
+                      OVH Bare Metal Infrastructure
+                    </h3>
+                    <p className="text-gray-400">
+                      Hosted on premium <span className="text-creeper font-semibold">OVH bare metal servers</span> - the gold standard in hosting infrastructure. No virtualization overhead means maximum performance and reliability for your gaming community.
+                    </p>
+                  </motion.div>
+                  
+                  <motion.div 
+                    className="bg-navy-light p-6 rounded-lg border border-gray-800 hover:border-creeper/50 transition-all duration-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                    whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(124, 252, 0, 0.2)" }}
+                  >
+                    <h3 className="text-xl font-semibold mb-3 flex items-center">
+                      <span className="mr-2 text-creeper text-xl">⚡</span> 
+                      Ultra-Low Latency
+                    </h3>
+                    <p className="text-gray-400">
+                      Experience <span className="text-creeper font-semibold">sub-5ms ping</span> with servers strategically located in India. Perfect for competitive gameplay and smooth PvP experiences. Your players will feel the difference instantly.
+                    </p>
+                  </motion.div>
+                  
+                  <motion.div 
+                    className="bg-navy-light p-6 rounded-lg border border-gray-800 hover:border-creeper/50 transition-all duration-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.9 }}
+                    whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(124, 252, 0, 0.2)" }}
+                  >
+                    <h3 className="text-xl font-semibold mb-3 flex items-center">
+                      <Check className="mr-2 text-creeper h-5 w-5" /> 
+                      One-Click Installation
+                    </h3>
+                    <p className="text-gray-400">
+                      Install Minecraft versions, plugins, and modpacks with just one click through our control panel. Get your server running in seconds, not hours.
+                    </p>
+                  </motion.div>
+                  
+                  <motion.div 
+                    className="bg-navy-light p-6 rounded-lg border border-gray-800 hover:border-creeper/50 transition-all duration-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 1.0 }}
+                    whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(124, 252, 0, 0.2)" }}
+                  >
+                    <h3 className="text-xl font-semibold mb-3 flex items-center">
+                      <Check className="mr-2 text-creeper h-5 w-5" /> 
+                      24/7 Expert Support
+                    </h3>
+                    <p className="text-gray-400">
+                      Our expert team is available around the clock to assist with any issues. Real humans who understand Minecraft hosting, not automated responses.
+                    </p>
+                  </motion.div>
+                </div>
+              </div>
+              
+              {/* Plans Section */}
+              <div className="text-center mb-12">
+                <motion.h2 
+                  className="text-3xl font-bold mb-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  Choose Your <span className="text-creeper">Perfect Plan</span>
+                </motion.h2>
+                <motion.p 
+                  className="text-xl text-gray-400 max-w-2xl mx-auto"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                  Select the plan that fits your community size and requirements
+                </motion.p>
+              </div>
+              
               <motion.div 
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 variants={containerVariants}
@@ -603,106 +743,6 @@ const MinecraftPlans = () => {
                     </a>
                   </Button>
                 </div>
-              </div>
-            </div>
-          </section>
-          
-          {/* Features Section */}
-          <section className="py-16 bg-navy-dark/50">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4">
-                  Why Choose <span className="text-creeper">Our Minecraft Hosting</span>?
-                </h2>
-                <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                  We offer the best features and support to ensure your Minecraft server runs perfectly
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <motion.div 
-                  className="bg-navy-light p-6 rounded-lg border border-gray-800 hover:border-creeper/50 transition-all duration-300"
-                  whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(124, 252, 0, 0.2)" }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <h3 className="text-xl font-semibold mb-3 flex items-center">
-                    <Server className="mr-2 text-creeper h-5 w-5" /> 
-                    Enterprise-Grade Processors
-                  </h3>
-                  <p className="text-gray-400">
-                    Powered by cutting-edge <span className="text-creeper font-semibold">Intel Xeon 2386G</span> or <span className="text-creeper font-semibold">AMD EPYC 4004 P</span> processors, delivering unmatched performance with exceptional single-thread speeds and multi-core processing power for lag-free gaming experiences.
-                  </p>
-                </motion.div>
-                
-                <motion.div 
-                  className="bg-navy-light p-6 rounded-lg border border-gray-800 hover:border-creeper/50 transition-all duration-300"
-                  whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(124, 252, 0, 0.2)" }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <h3 className="text-xl font-semibold mb-3 flex items-center">
-                    <span className="mr-2 text-creeper text-xl">🛡️</span> 
-                    17TB DDoS Protection
-                  </h3>
-                  <p className="text-gray-400">
-                    Industry-leading <span className="text-creeper font-semibold">17 TB DDoS protection</span> powered by CreeperShield keeps your server online 24/7, even during the most sophisticated attacks. Your players never experience downtime.
-                  </p>
-                </motion.div>
-                
-                <motion.div 
-                  className="bg-navy-light p-6 rounded-lg border border-gray-800 hover:border-creeper/50 transition-all duration-300"
-                  whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(124, 252, 0, 0.2)" }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <h3 className="text-xl font-semibold mb-3 flex items-center">
-                    <span className="mr-2 text-creeper text-xl">🏢</span> 
-                    OVH Bare Metal Infrastructure
-                  </h3>
-                  <p className="text-gray-400">
-                    Hosted on premium <span className="text-creeper font-semibold">OVH bare metal servers</span> - the gold standard in hosting infrastructure. No virtualization overhead means maximum performance and reliability for your gaming community.
-                  </p>
-                </motion.div>
-                
-                <motion.div 
-                  className="bg-navy-light p-6 rounded-lg border border-gray-800 hover:border-creeper/50 transition-all duration-300"
-                  whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(124, 252, 0, 0.2)" }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <h3 className="text-xl font-semibold mb-3 flex items-center">
-                    <span className="mr-2 text-creeper text-xl">⚡</span> 
-                    Ultra-Low Latency
-                  </h3>
-                  <p className="text-gray-400">
-                    Experience <span className="text-creeper font-semibold">sub-5ms ping</span> with servers strategically located in India. Perfect for competitive gameplay and smooth PvP experiences. Your players will feel the difference instantly.
-                  </p>
-                </motion.div>
-                
-                <motion.div 
-                  className="bg-navy-light p-6 rounded-lg border border-gray-800 hover:border-creeper/50 transition-all duration-300"
-                  whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(124, 252, 0, 0.2)" }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <h3 className="text-xl font-semibold mb-3 flex items-center">
-                    <Check className="mr-2 text-creeper h-5 w-5" /> 
-                    One-Click Installation
-                  </h3>
-                  <p className="text-gray-400">
-                    Install Minecraft versions, plugins, and modpacks with just one click through our control panel. Get your server running in seconds, not hours.
-                  </p>
-                </motion.div>
-                
-                <motion.div 
-                  className="bg-navy-light p-6 rounded-lg border border-gray-800 hover:border-creeper/50 transition-all duration-300"
-                  whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(124, 252, 0, 0.2)" }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <h3 className="text-xl font-semibold mb-3 flex items-center">
-                    <Check className="mr-2 text-creeper h-5 w-5" /> 
-                    24/7 Expert Support
-                  </h3>
-                  <p className="text-gray-400">
-                    Our expert team is available around the clock to assist with any issues. Real humans who understand Minecraft hosting, not automated responses.
-                  </p>
-                </motion.div>
               </div>
             </div>
           </section>
