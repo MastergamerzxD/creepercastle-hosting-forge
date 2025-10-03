@@ -12,10 +12,10 @@ const vpsPlans = [
     price: "₹399",
     logo: "/lovable-uploads/2e0d644d-6f7e-43e0-93e8-2efabb828007.png",
     specs: {
-      cpu: "Intel Xeon 2667/v4 💫",
+      cpu: "Intel Xeon 2386G 💫",
       cores: "2V Cores 🚀",
-      baseFreq: "Base frequency @3.2ghz 🚀",
-      turboFreq: "Turbo frequency @3.8 ghz 🚀",
+      baseFreq: "Base frequency @3.5ghz 🚀",
+      turboFreq: "Turbo frequency @4.7 ghz 🚀",
       ram: "4 GB DDR4 ECC RAM 🪄",
       storage: "20 GB NVMe Storage🪄",
       network: "Upto 1Gbps network speed🛜",
@@ -32,10 +32,10 @@ const vpsPlans = [
     price: "₹689",
     logo: "/lovable-uploads/92e056f5-c85f-4f06-9432-7c5ca32fe8b2.png",
     specs: {
-      cpu: "Intel Xeon 2667/v4 💫",
+      cpu: "Intel Xeon 2386G 💫",
       cores: "4V Cores 🚀",
-      baseFreq: "Base frequency @3.2ghz 🚀",
-      turboFreq: "Turbo frequency @3.8 ghz 🚀",
+      baseFreq: "Base frequency @3.5ghz 🚀",
+      turboFreq: "Turbo frequency @4.7 ghz 🚀",
       ram: "8 GB DDR4 ECC RAM 🪄",
       storage: "40 GB NVMe Storage🪄",
       network: "Upto 1Gbps network speed🛜",
@@ -52,10 +52,10 @@ const vpsPlans = [
     price: "₹1,299",
     logo: "/lovable-uploads/592d5824-5311-47bb-beb0-5aae9ff5c280.png",
     specs: {
-      cpu: "Intel Xeon 2667/v4 💫",
+      cpu: "Intel Xeon 2386G 💫",
       cores: "6V Cores 🚀",
-      baseFreq: "Base frequency @3.2ghz 🚀",
-      turboFreq: "Turbo frequency @3.8 ghz 🚀",
+      baseFreq: "Base frequency @3.5ghz 🚀",
+      turboFreq: "Turbo frequency @4.7 ghz 🚀",
       ram: "16 GB DDR4 ECC RAM 🪄",
       storage: "60 GB NVMe Storage🪄",
       network: "Upto 1Gbps network speed🛜",
@@ -72,10 +72,10 @@ const vpsPlans = [
     price: "₹1,999",
     logo: "/lovable-uploads/102f77a4-d71f-456c-b542-1f98a55eb506.png",
     specs: {
-      cpu: "Intel Xeon 2667/v4 💫",
+      cpu: "Intel Xeon 2386G 💫",
       cores: "8V Cores 🚀",
-      baseFreq: "Base frequency @3.2ghz 🚀",
-      turboFreq: "Turbo frequency @3.8 ghz 🚀",
+      baseFreq: "Base frequency @3.5ghz 🚀",
+      turboFreq: "Turbo frequency @4.7 ghz 🚀",
       ram: "32 GB DDR4 ECC RAM 🪄",
       storage: "100 GB NVMe Storage🪄",
       network: "Upto 1Gbps network speed🛜",
@@ -92,10 +92,10 @@ const vpsPlans = [
     price: "₹2,999",
     logo: "/lovable-uploads/c78b0c32-1019-4b21-a48b-1581857db978.png",
     specs: {
-      cpu: "Intel Xeon 2667/v4 💫",
+      cpu: "Intel Xeon 2386G 💫",
       cores: "12V Cores 🚀",
-      baseFreq: "Base frequency @3.2ghz 🚀",
-      turboFreq: "Turbo frequency @3.8 ghz 🚀",
+      baseFreq: "Base frequency @3.5ghz 🚀",
+      turboFreq: "Turbo frequency @4.7 ghz 🚀",
       ram: "64 GB DDR4 ECC RAM 🪄",
       storage: "200 GB NVMe Storage🪄",
       network: "Upto 1Gbps network speed🛜",
@@ -112,7 +112,7 @@ const vpsPlans = [
     price: "Custom",
     logo: "/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png",
     specs: {
-      cpu: "Tailored to your needs 💫",
+      cpu: "Intel Xeon 2386G (Custom) 💫",
       cores: "Custom Cores 🚀",
       baseFreq: "Optimized Performance 🚀",
       turboFreq: "Maximum Efficiency 🚀",
@@ -134,10 +134,10 @@ const VPSPlans = () => {
   return (
     <>
       <Helmet>
-        <title>VPS Hosting Plans India - Starting from ₹399/month | CreeperCastle</title>
+        <title>VPS Hosting Plans India - Intel Xeon 2386G | Starting ₹399/month | CreeperCastle</title>
         <meta 
           name="description" 
-          content="Professional VPS hosting plans in India starting from ₹399/month. Intel Xeon processors, NVMe storage, DDoS protection. Choose from 5 powerful VPS plans."
+          content="Premium VPS hosting in India powered by Intel Xeon 2386G processors starting from ₹399/month. NVMe storage, 500 Gbps DDoS protection, up to 4.7GHz turbo boost. Choose from 5 powerful VPS plans."
         />
         <meta
           name="keywords"
@@ -147,8 +147,8 @@ const VPSPlans = () => {
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/plans/vps" />
-        <meta property="og:title" content="VPS Hosting Plans India | Starting ₹399/month | CreeperCastle" />
-        <meta property="og:description" content="Professional VPS hosting plans with Intel Xeon processors, NVMe storage, and DDoS protection. Plans from ₹399 to ₹2999/month." />
+        <meta property="og:title" content="VPS Hosting India - Intel Xeon 2386G | Starting ₹399/month | CreeperCastle" />
+        <meta property="og:description" content="Premium VPS hosting with Intel Xeon 2386G processors, up to 4.7GHz turbo boost, NVMe storage, and 500 Gbps DDoS protection. Plans from ₹399 to ₹2999/month." />
         <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
         
         {/* Canonical URL */}
@@ -211,7 +211,7 @@ const VPSPlans = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  Professional VPS hosting with Intel Xeon processors, NVMe storage, and enterprise-grade DDoS protection
+                  Experience premium VPS hosting powered by the latest <span className="text-creeper font-bold">Intel Xeon 2386G</span> processors with blazing-fast NVMe storage and enterprise-grade DDoS protection
                 </motion.p>
 
                 {/* Features Section */}
@@ -221,38 +221,54 @@ const VPSPlans = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  <div className="bg-navy-light/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 text-center">
+                  <motion.div 
+                    className="bg-navy-light/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 text-center hover:border-creeper/50 transition-all duration-300"
+                    whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(124, 252, 0, 0.3)" }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
                     <div className="bg-creeper/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Server className="h-8 w-8 text-creeper" />
                     </div>
-                    <h3 className="text-xl font-bold text-creeper mb-3">Gaming Performance Beast</h3>
+                    <h3 className="text-xl font-bold text-creeper mb-3">Elite Gaming Performance</h3>
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      Our VPS servers are perfect for gaming with ultra-low latency, high-performance Intel Xeon processors, and blazing-fast NVMe storage. 
-                      Run game servers, hosting platforms, or gaming applications with zero lag and maximum uptime.
+                      Powered by the cutting-edge <span className="text-creeper font-bold">Intel Xeon 2386G</span> - an absolute powerhouse for gaming! 
+                      With ultra-low latency, blazing-fast NVMe storage, and industry-leading single-core performance, run game servers, 
+                      hosting platforms, or any gaming application with zero lag and maximum uptime. This is premium hosting at its finest!
                     </p>
-                  </div>
+                  </motion.div>
 
-                  <div className="bg-navy-light/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 text-center">
+                  <motion.div 
+                    className="bg-navy-light/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 text-center hover:border-creeper/50 transition-all duration-300"
+                    whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(124, 252, 0, 0.3)" }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
                     <div className="bg-creeper/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-2xl">🛡️</span>
                     </div>
-                    <h3 className="text-xl font-bold text-creeper mb-3">Ultimate DDoS Protection</h3>
+                    <h3 className="text-xl font-bold text-creeper mb-3">Military-Grade Protection</h3>
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      Protected by OVH's industry-leading DDoS shield with 500 Gbps smart mitigation capacity. 
-                      Your servers stay online even during the most sophisticated attacks, ensuring 99.9% uptime for your critical applications.
+                      Protected by OVH's world-class DDoS shield with 500 Gbps smart mitigation capacity. 
+                      Your servers stay online even during the most sophisticated attacks, ensuring 99.9% uptime. 
+                      <span className="text-creeper font-semibold"> This is the same protection trusted by Fortune 500 companies!</span>
                     </p>
-                  </div>
+                  </motion.div>
 
-                  <div className="bg-navy-light/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 text-center">
+                  <motion.div 
+                    className="bg-navy-light/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 text-center hover:border-creeper/50 transition-all duration-300"
+                    whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(124, 252, 0, 0.3)" }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
                     <div className="bg-creeper/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl">💫</span>
+                      <span className="text-2xl">💎</span>
                     </div>
-                    <h3 className="text-xl font-bold text-creeper mb-3">Intel Xeon 2667/v4 Power</h3>
+                    <h3 className="text-xl font-bold text-creeper mb-3">Intel Xeon 2386G Beast</h3>
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      Experience enterprise-grade performance with Intel Xeon 2667/v4 processors featuring 8 cores, 3.2GHz base frequency, 
-                      and turbo boost up to 3.8GHz. Built for demanding workloads with ECC RAM for maximum reliability and data integrity.
+                      The game-changer! <span className="text-creeper font-bold">Intel Xeon 2386G</span> with 6 cores, 
+                      <span className="text-creeper font-semibold"> 3.5GHz base</span> and mind-blowing <span className="text-creeper font-semibold">4.7GHz turbo boost</span>! 
+                      This premium processor delivers exceptional performance with ECC RAM for unmatched reliability. 
+                      Perfect for demanding workloads, gaming, and high-traffic applications. You simply can't beat this value!
                     </p>
-                  </div>
+                  </motion.div>
                 </motion.div>
               </div>
               

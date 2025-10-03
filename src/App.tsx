@@ -19,7 +19,6 @@ import OtherHosting from "./pages/OtherHosting";
 import CreeperPanel from "./pages/CreeperPanel";
 import About from "./pages/About";
 import Links from "./pages/Links";
-import FreeHosting from "./pages/FreeHosting";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,7 +47,6 @@ const App = () => (
             <Route path="/creeperpanel" element={<CreeperPanel />} />
             <Route path="/about" element={<About />} />
             <Route path="/links" element={<Links />} />
-            <Route path="/free-hosting" element={<FreeHosting />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
