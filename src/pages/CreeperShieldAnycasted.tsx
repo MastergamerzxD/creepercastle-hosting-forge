@@ -11,37 +11,65 @@ import { motion } from "framer-motion";
 // Plan data for CreeperShield Anycasted
 const anycastedPlans = [
   {
-    name: "Anycasted Wither",
-    price: "₹299",
-    bandwidth: "1 TB",
+    name: "Starter",
+    price: "₹99",
     features: [
-      "1 TB Monthly Anycasted Traffic",
-      "Bot Attack Protection", 
-      "Backend IP Hidden",
-      "IP Firewall Protection",
-      "Mumbai Location",
-      "Minecraft TCP Connection Only"
+      { text: "3 Proxies (TCP + UDP)", highlighted: true },
+      { text: "2 Origin Servers", highlighted: true },
+      { text: "100 Max Connections", highlighted: false },
+      { text: "Advanced Protection", highlighted: true },
+      { text: "Load Balancing", highlighted: false },
+      { text: "Priority Support", highlighted: false }
     ],
     highlighted: false,
-    buyLink: "https://billing.creepercastle.in/products/creepershield-anycasted/anycasted-wither"
+    buyLink: "https://billing.creepercastle.in/products/creepershield-anycasted/starter"
   },
   {
-    name: "Anycasted Warden", 
-    price: "₹499",
-    bandwidth: "5 TB",
+    name: "Pro",
+    price: "₹299",
     features: [
-      "5 TB Monthly Anycasted Traffic",
-      "Full Layer 3/4 Protection",
-      "Detailed DDoS Analysis via Email",
-      "No Ping Spikes During DDoS",
-      "Bot Attack Protection",
-      "Backend IP Hidden", 
-      "IP Firewall Protection",
-      "Mumbai Location",
-      "Minecraft TCP Connection Only"
+      { text: "10 Proxies (TCP + UDP)", highlighted: true },
+      { text: "5 Origin Servers", highlighted: true },
+      { text: "500 Max Connections", highlighted: true },
+      { text: "Premium Protection", highlighted: true },
+      { text: "Fallback Servers", highlighted: false },
+      { text: "Real-time Analytics", highlighted: true },
+      { text: "24/7 Premium Support", highlighted: false }
     ],
     highlighted: true,
-    buyLink: "https://billing.creepercastle.in/products/creepershield-anycasted/anycasted-warden"
+    buyLink: "https://billing.creepercastle.in/products/creepershield-anycasted/pro"
+  },
+  {
+    name: "Network",
+    price: "₹599",
+    features: [
+      { text: "25 Proxies (TCP + UDP)", highlighted: true },
+      { text: "10 Origin Servers", highlighted: true },
+      { text: "1000 Max Connections", highlighted: true },
+      { text: "Enterprise Protection", highlighted: true },
+      { text: "Custom Port Ranges", highlighted: true },
+      { text: "Advanced Analytics", highlighted: true },
+      { text: "Dedicated Support", highlighted: false },
+      { text: "SLA Guarantee", highlighted: true }
+    ],
+    highlighted: false,
+    buyLink: "https://billing.creepercastle.in/products/creepershield-anycasted/network"
+  },
+  {
+    name: "Business",
+    price: "₹999",
+    features: [
+      { text: "100 Proxies (TCP + UDP)", highlighted: true },
+      { text: "Unlimited Origins", highlighted: true },
+      { text: "5000 Max Connections", highlighted: true },
+      { text: "White-label Support", highlighted: true },
+      { text: "API Access", highlighted: true },
+      { text: "Bulk Management", highlighted: true },
+      { text: "Priority Network", highlighted: true },
+      { text: "99.9% SLA", highlighted: true }
+    ],
+    highlighted: false,
+    buyLink: "https://billing.creepercastle.in/products/creepershield-anycasted/business"
   }
 ];
 
@@ -56,7 +84,7 @@ const CreeperShieldAnycasted = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "CreeperShield Anycasted DDoS Protection",
-    "description": "Advanced anycasted DDoS protection for Minecraft servers with up to 17 Tbps capacity, Mumbai location, and comprehensive security features.",
+    "description": "Advanced anycasted DDoS protection for Minecraft servers with up to 50 Tbps capacity, Mumbai location, and comprehensive security features.",
     "provider": {
       "@type": "Organization", 
       "name": "CreeperCastle.cloud"
@@ -67,7 +95,7 @@ const CreeperShieldAnycasted = () => {
       "name": plan.name,
       "price": plan.price.replace('₹', ''),
       "priceCurrency": "INR",
-      "description": `${plan.name} - ${plan.bandwidth} bandwidth with advanced DDoS protection`
+      "description": `${plan.name} - Advanced DDoS protection with anycasted network`
     }))
   };
 
@@ -80,7 +108,7 @@ const CreeperShieldAnycasted = () => {
         "name": "What makes CreeperShield Anycasted special?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "CreeperShield Anycasted provides up to 17 Tbps DDoS protection capacity with Mumbai location deployment, ensuring your Minecraft server stays protected against even the largest attacks."
+          "text": "CreeperShield Anycasted provides up to 50 Tbps DDoS protection capacity with Mumbai location deployment, ensuring your Minecraft server stays protected against even the largest attacks."
         }
       },
       {
@@ -108,25 +136,25 @@ const CreeperShieldAnycasted = () => {
         <title>CreeperShield Anycasted Protection - Global DDoS Defense Network | Enterprise Security</title>
         <meta 
           name="description" 
-          content="Advanced anycasted DDoS protection for Minecraft servers with up to 17 Tbps capacity. Mumbai location deployment with bot protection and IP firewall starting at ₹299/month."
+          content="Advanced anycasted DDoS protection for Minecraft servers with up to 50 Tbps capacity. Mumbai location deployment with bot protection and IP firewall starting at ₹99/month."
         />
         <meta
           name="keywords"
-          content="anycasted ddos protection, 17 tbps ddos mitigation, minecraft ddos protection mumbai, bot attack protection, ip firewall minecraft, anycasted protection india, creepershield anycasted"
+          content="anycasted ddos protection, 50 tbps ddos mitigation, minecraft ddos protection mumbai, bot attack protection, ip firewall minecraft, anycasted protection india, creepershield anycasted"
         />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/plans/creepershield-anycasted" />
-        <meta property="og:title" content="CreeperShield Anycasted - 17 Tbps DDoS Protection" />
-        <meta property="og:description" content="Enterprise-grade anycasted DDoS protection with 17 Tbps capacity. Advanced security for Minecraft servers in Mumbai." />
+        <meta property="og:title" content="CreeperShield Anycasted - 50 Tbps DDoS Protection" />
+        <meta property="og:description" content="Enterprise-grade anycasted DDoS protection with 50 Tbps capacity. Advanced security for Minecraft servers in Mumbai." />
         <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" />
         <meta property="og:image:alt" content="CreeperShield Anycasted DDoS Protection" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="CreeperShield Anycasted - 17 Tbps Protection 🛡️" />
-        <meta name="twitter:description" content="Ultimate DDoS protection with 17 Tbps capacity and anycasted deployment for Minecraft servers." />
+        <meta name="twitter:title" content="CreeperShield Anycasted - 50 Tbps Protection 🛡️" />
+        <meta name="twitter:description" content="Ultimate DDoS protection with 50 Tbps capacity and anycasted deployment for Minecraft servers." />
         <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" />
         
         {/* Additional SEO tags */}
@@ -205,7 +233,7 @@ const CreeperShieldAnycasted = () => {
                 CreeperShield <span className="text-creeper">Anycasted</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Revolutionary anycasted DDoS protection for Minecraft servers with <span className="text-creeper font-bold">17 Tbps capacity</span>. 
+                Revolutionary anycasted DDoS protection for Minecraft servers with <span className="text-creeper font-bold">50 Tbps capacity</span>. 
                 Mumbai location deployment ensures maximum protection for your gaming community.
               </p>
               
@@ -216,7 +244,7 @@ const CreeperShieldAnycasted = () => {
                 </Badge>
                 <Badge variant="secondary" className="bg-creeper/20 text-creeper border-creeper/50 px-4 py-2">
                   <Shield className="h-4 w-4 mr-2" />
-                  17 Tbps Capacity
+                  50 Tbps Capacity
                 </Badge>
                 <Badge variant="secondary" className="bg-creeper/20 text-creeper border-creeper/50 px-4 py-2">
                   <Zap className="h-4 w-4 mr-2" />
@@ -235,10 +263,10 @@ const CreeperShieldAnycasted = () => {
               <p className="text-gray-300 text-lg">Advanced technology meets uncompromising security</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <motion.div 
-                className="bg-navy rounded-xl p-6 border border-gray-800"
-                whileHover={{ y: -5 }}
+                className="bg-navy rounded-xl p-6 border border-gray-800 hover:border-creeper/50 transition-all duration-300"
+                whileHover={{ y: -5, scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
                 <Globe className="h-12 w-12 text-creeper mb-4" />
@@ -247,8 +275,8 @@ const CreeperShieldAnycasted = () => {
               </motion.div>
 
               <motion.div 
-                className="bg-navy rounded-xl p-6 border border-gray-800"
-                whileHover={{ y: -5 }}
+                className="bg-navy rounded-xl p-6 border border-gray-800 hover:border-creeper/50 transition-all duration-300"
+                whileHover={{ y: -5, scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
                 <Eye className="h-12 w-12 text-creeper mb-4" />
@@ -257,8 +285,8 @@ const CreeperShieldAnycasted = () => {
               </motion.div>
 
               <motion.div 
-                className="bg-navy rounded-xl p-6 border border-gray-800"
-                whileHover={{ y: -5 }}
+                className="bg-navy rounded-xl p-6 border border-gray-800 hover:border-creeper/50 transition-all duration-300"
+                whileHover={{ y: -5, scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
                 <Lock className="h-12 w-12 text-creeper mb-4" />
@@ -267,8 +295,8 @@ const CreeperShieldAnycasted = () => {
               </motion.div>
 
               <motion.div 
-                className="bg-navy rounded-xl p-6 border border-gray-800"
-                whileHover={{ y: -5 }}
+                className="bg-navy rounded-xl p-6 border border-gray-800 hover:border-creeper/50 transition-all duration-300"
+                whileHover={{ y: -5, scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
                 <MapPin className="h-12 w-12 text-creeper mb-4" />
@@ -277,23 +305,43 @@ const CreeperShieldAnycasted = () => {
               </motion.div>
 
               <motion.div 
-                className="bg-navy rounded-xl p-6 border border-gray-800"
-                whileHover={{ y: -5 }}
+                className="bg-navy rounded-xl p-6 border border-gray-800 hover:border-creeper/50 transition-all duration-300"
+                whileHover={{ y: -5, scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
                 <TrendingUp className="h-12 w-12 text-creeper mb-4" />
-                <h3 className="text-xl font-bold mb-3">Detailed Analytics</h3>
-                <p className="text-gray-300">Comprehensive DDoS attack reports sent directly to your email for transparency.</p>
+                <h3 className="text-xl font-bold mb-3">Real-time Analytics</h3>
+                <p className="text-gray-300">Comprehensive DDoS attack reports and monitoring sent directly to your dashboard.</p>
               </motion.div>
 
               <motion.div 
-                className="bg-navy rounded-xl p-6 border border-gray-800"
-                whileHover={{ y: -5 }}
+                className="bg-navy rounded-xl p-6 border border-gray-800 hover:border-creeper/50 transition-all duration-300"
+                whileHover={{ y: -5, scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
                 <Clock className="h-12 w-12 text-creeper mb-4" />
                 <h3 className="text-xl font-bold mb-3">Zero Ping Spikes</h3>
                 <p className="text-gray-300">Maintain smooth gameplay even during active DDoS attacks with our advanced mitigation.</p>
+              </motion.div>
+
+              <motion.div 
+                className="bg-gradient-to-br from-creeper/20 to-creeper/5 rounded-xl p-6 border-2 border-creeper/50 hover:border-creeper transition-all duration-300"
+                whileHover={{ y: -5, scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Shield className="h-12 w-12 text-creeper mb-4" />
+                <h3 className="text-xl font-bold mb-3 text-creeper">Beautiful Control Panel</h3>
+                <p className="text-gray-300">Separate, intuitive DDoS protection control panel to manage all your servers and proxies effortlessly.</p>
+              </motion.div>
+
+              <motion.div 
+                className="bg-gradient-to-br from-creeper/20 to-creeper/5 rounded-xl p-6 border-2 border-creeper/50 hover:border-creeper transition-all duration-300"
+                whileHover={{ y: -5, scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Zap className="h-12 w-12 text-creeper mb-4" />
+                <h3 className="text-xl font-bold mb-3 text-creeper">50 Tbps Capacity</h3>
+                <p className="text-gray-300">Industry-leading DDoS mitigation capacity ensures your server stays online during even the most massive attacks.</p>
               </motion.div>
             </div>
           </div>
@@ -307,7 +355,7 @@ const CreeperShieldAnycasted = () => {
               <p className="text-gray-300 text-lg">Professional DDoS protection tailored for Minecraft servers</p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {anycastedPlans.map((plan, index) => (
                 <motion.div
                   key={plan.name}
@@ -315,45 +363,51 @@ const CreeperShieldAnycasted = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -8 }}
                 >
-                  <Card className={`h-full ${plan.highlighted ? 'border-2 border-creeper bg-navy-light' : 'border border-gray-800 bg-navy-light'}`}>
+                  <Card className={`h-full ${plan.highlighted ? 'border-2 border-creeper bg-gradient-to-br from-creeper/10 to-navy-light shadow-lg shadow-creeper/20' : 'border border-gray-800 bg-navy-light hover:border-creeper/30 transition-all duration-300'}`}>
                     {plan.highlighted && (
                       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        <Badge className="bg-creeper text-navy-dark font-bold px-4 py-1">
-                          Recommended
+                        <Badge className="bg-creeper text-navy-dark font-bold px-4 py-1 shadow-lg shadow-creeper/50">
+                          Most Popular
                         </Badge>
                       </div>
                     )}
                     
-                    <CardContent className="p-8">
-                      <div className="text-center mb-8">
-                        <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                        <div className="mb-4">
+                    <CardContent className="p-6">
+                      <div className="text-center mb-6">
+                        <h3 className="text-2xl font-bold mb-3">{plan.name}</h3>
+                        <div className="mb-2">
                           <span className="text-4xl font-bold text-creeper">{plan.price}</span>
-                          <span className="text-gray-400 ml-2">/month</span>
+                          <span className="text-gray-400 text-sm ml-1">/month</span>
                         </div>
-                        <p className="text-gray-300">
-                          <span className="font-bold text-creeper">{plan.bandwidth}</span> Monthly Bandwidth
-                        </p>
                       </div>
                       
-                      <div className="space-y-4 mb-8">
+                      <div className="space-y-3 mb-6">
                         {plan.features.map((feature, idx) => (
-                          <div key={idx} className="flex items-center">
-                            <div className="w-5 h-5 rounded-full bg-creeper/20 flex items-center justify-center mr-3 flex-shrink-0">
+                          <motion.div 
+                            key={idx} 
+                            className="flex items-start"
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: index * 0.1 + idx * 0.05 }}
+                          >
+                            <div className="w-5 h-5 rounded-full bg-creeper/20 flex items-center justify-center mr-3 flex-shrink-0 mt-0.5">
                               <div className="w-2 h-2 bg-creeper rounded-full"></div>
                             </div>
-                            <span className="text-gray-300">{feature}</span>
-                          </div>
+                            <span className={`text-sm ${feature.highlighted ? 'text-creeper font-semibold' : 'text-gray-300'}`}>
+                              {feature.text}
+                            </span>
+                          </motion.div>
                         ))}
                       </div>
                       
                       <Button 
-                        className={`w-full minecraft-btn ${plan.highlighted ? 'minecraft-btn-primary' : ''}`}
+                        className={`w-full ${plan.highlighted ? 'bg-creeper hover:bg-creeper/90 text-navy-dark font-bold shadow-lg shadow-creeper/30' : 'bg-navy hover:bg-navy-dark border border-creeper/30 hover:border-creeper'} transition-all duration-300`}
                         asChild
                       >
                         <a href={plan.buyLink} target="_blank" rel="noopener noreferrer">
-                          Get Started - {plan.price}/month
+                          Get Started
                         </a>
                       </Button>
                     </CardContent>
@@ -373,10 +427,13 @@ const CreeperShieldAnycasted = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-navy rounded-xl p-6 text-center border border-gray-800">
-                <h3 className="text-2xl font-bold text-creeper mb-2">17 Tbps</h3>
-                <p className="text-gray-300">Maximum Protection Capacity</p>
-              </div>
+              <motion.div 
+                className="bg-gradient-to-br from-creeper/20 to-navy rounded-xl p-6 text-center border-2 border-creeper/50 hover:border-creeper transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+              >
+                <h3 className="text-3xl font-bold text-creeper mb-2">50 Tbps</h3>
+                <p className="text-gray-300 font-semibold">Maximum Protection Capacity</p>
+              </motion.div>
               <div className="bg-navy rounded-xl p-6 text-center border border-gray-800">
                 <h3 className="text-2xl font-bold text-creeper mb-2">&lt; 1ms</h3>
                 <p className="text-gray-300">Additional Latency</p>
