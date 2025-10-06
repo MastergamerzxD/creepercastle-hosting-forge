@@ -5,8 +5,9 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Globe, Zap, Eye, Lock, MapPin, Clock, TrendingUp } from "lucide-react";
+import { Shield, Globe, Zap, Eye, Lock, MapPin, Clock, TrendingUp, ExternalLink, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
+import { useToast } from "@/hooks/use-toast";
 
 // Plan data for CreeperShield Anycasted
 const anycastedPlans = [
@@ -70,14 +71,61 @@ const anycastedPlans = [
     ],
     highlighted: false,
     buyLink: "https://billing.creepercastle.in/products/creepershield-anycasted/business"
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    features: [
+      { text: "Unlimited Proxies (TCP + UDP)", highlighted: true },
+      { text: "Unlimited Origins", highlighted: true },
+      { text: "Unlimited Connections", highlighted: true },
+      { text: "Custom Protection Rules", highlighted: true },
+      { text: "Dedicated Account Manager", highlighted: true },
+      { text: "Custom API Integration", highlighted: true },
+      { text: "Multi-Region Deployment", highlighted: true },
+      { text: "Custom SLA", highlighted: true },
+      { text: "Priority 24/7 Support", highlighted: true },
+      { text: "Everything Unlimited", highlighted: true }
+    ],
+    highlighted: false,
+    buyLink: "enterprise",
+    isEnterprise: true
   }
 ];
 
 const CreeperShieldAnycasted = () => {
+  const { toast } = useToast();
+  
   useEffect(() => {
     document.title = "CreeperShield Anycasted - Advanced DDoS Protection | CreeperCastle.cloud";
     window.scrollTo(0, 0);
   }, []);
+
+  const handleEnterpriseClick = () => {
+    toast({
+      title: "Enterprise Plan - Custom Solution",
+      description: (
+        <div className="space-y-2">
+          <p>For custom enterprise solutions, please open a ticket on our Discord server to discuss your specific requirements.</p>
+          <Button 
+            className="mt-2 w-full bg-discord hover:bg-discord/90"
+            asChild
+          >
+            <a 
+              href="https://discord.gg/RuQ9neH56S" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2"
+            >
+              <MessageSquare className="h-4 w-4" />
+              Open Discord Ticket
+            </a>
+          </Button>
+        </div>
+      ),
+      duration: 10000,
+    });
+  };
 
   // Structured data for SEO
   const anycastedStructuredData = {
@@ -237,6 +285,30 @@ const CreeperShieldAnycasted = () => {
                 Mumbai location deployment ensures maximum protection for your gaming community.
               </p>
               
+              {/* Dashboard Button - Prominent CTA */}
+              <motion.div
+                className="mb-8"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                <Button 
+                  className="bg-gradient-to-r from-creeper to-creeper-light hover:from-creeper-light hover:to-creeper text-navy-dark font-bold text-lg px-8 py-6 rounded-lg shadow-lg shadow-creeper/50 hover:shadow-creeper/70 transition-all duration-300 transform hover:scale-105"
+                  asChild
+                >
+                  <a 
+                    href="https://shield.creepercastle.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3"
+                  >
+                    <Shield className="h-6 w-6" />
+                    Visit CreeperShield Dashboard
+                    <ExternalLink className="h-5 w-5" />
+                  </a>
+                </Button>
+              </motion.div>
+              
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <Badge variant="secondary" className="bg-creeper/20 text-creeper border-creeper/50 px-4 py-2">
                   <MapPin className="h-4 w-4 mr-2" />
@@ -379,7 +451,9 @@ const CreeperShieldAnycasted = () => {
                         <h3 className="text-2xl font-bold mb-3">{plan.name}</h3>
                         <div className="mb-2">
                           <span className="text-4xl font-bold text-creeper">{plan.price}</span>
-                          <span className="text-gray-400 text-sm ml-1">/month</span>
+                          {plan.price !== "Custom" && (
+                            <span className="text-gray-400 text-sm ml-1">/month</span>
+                          )}
                         </div>
                       </div>
                       
@@ -402,14 +476,23 @@ const CreeperShieldAnycasted = () => {
                         ))}
                       </div>
                       
-                      <Button 
-                        className={`w-full ${plan.highlighted ? 'bg-creeper hover:bg-creeper/90 text-navy-dark font-bold shadow-lg shadow-creeper/30' : 'bg-navy hover:bg-navy-dark border border-creeper/30 hover:border-creeper'} transition-all duration-300`}
-                        asChild
-                      >
-                        <a href={plan.buyLink} target="_blank" rel="noopener noreferrer">
-                          Get Started
-                        </a>
-                      </Button>
+                      {plan.isEnterprise ? (
+                        <Button 
+                          className="w-full bg-gradient-to-r from-creeper to-creeper-light hover:from-creeper-light hover:to-creeper text-navy-dark font-bold shadow-lg shadow-creeper/30 transition-all duration-300"
+                          onClick={handleEnterpriseClick}
+                        >
+                          Contact Us
+                        </Button>
+                      ) : (
+                        <Button 
+                          className={`w-full ${plan.highlighted ? 'bg-creeper hover:bg-creeper/90 text-navy-dark font-bold shadow-lg shadow-creeper/30' : 'bg-navy hover:bg-navy-dark border border-creeper/30 hover:border-creeper'} transition-all duration-300`}
+                          asChild
+                        >
+                          <a href={plan.buyLink} target="_blank" rel="noopener noreferrer">
+                            Get Started
+                          </a>
+                        </Button>
+                      )}
                     </CardContent>
                   </Card>
                 </motion.div>

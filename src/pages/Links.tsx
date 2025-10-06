@@ -46,6 +46,17 @@ const Links = () => {
     }
   ];
 
+  const dashboardLinks = [
+    {
+      name: "CreeperShield Dashboard",
+      url: "https://shield.creepercastle.com",
+      description: "Access your DDoS protection control panel and manage your servers",
+      icon: <Users className="h-6 w-6" />,
+      type: "dashboard",
+      color: "bg-creeper/20 text-creeper border-creeper/30"
+    }
+  ];
+
   const linksStructuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -60,7 +71,8 @@ const Links = () => {
         "https://www.trustpilot.com/review/creepercastle.cloud",
         "https://share.google/z9njZNHT1uT4u8UYO",
         "https://www.youtube.com/channel/UCFHCS5QydQQhpazC2h9BHdA",
-        "https://discord.gg/RuQ9neH56S"
+        "https://discord.gg/RuQ9neH56S",
+        "https://shield.creepercastle.com"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -201,6 +213,54 @@ const Links = () => {
                   Find all our official links, read genuine customer reviews, and join our thriving community across all platforms
                 </motion.p>
               </div>
+
+              {/* Dashboard Links Section */}
+              <motion.section 
+                className="mb-16"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+                    Dashboard <span className="text-creeper">Access</span>
+                  </h2>
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Manage your services through our intuitive control panels
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
+                  {dashboardLinks.map((link, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                    >
+                      <Card className="bg-gradient-to-br from-creeper/10 to-navy-light border-2 border-creeper/50 backdrop-blur-sm h-full group hover:border-creeper transition-all duration-300 hover:scale-105 shadow-lg shadow-creeper/20">
+                        <CardHeader className="text-center">
+                          <div className={`mx-auto mb-4 p-4 rounded-full w-fit ${link.color} group-hover:scale-110 transition-transform duration-300`}>
+                            {link.icon}
+                          </div>
+                          <CardTitle className="text-2xl text-white">{link.name}</CardTitle>
+                          <CardDescription className="text-gray-300 mt-2">
+                            {link.description}
+                          </CardDescription>
+                        </CardHeader>
+                        <CardContent className="text-center">
+                          <Button className="minecraft-btn w-full group bg-creeper hover:bg-creeper/90 text-navy-dark font-bold" asChild>
+                            <a href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                              Access Dashboard
+                              <ExternalLink className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                            </a>
+                          </Button>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.section>
 
               {/* Customer Reviews Section */}
               <motion.section 
