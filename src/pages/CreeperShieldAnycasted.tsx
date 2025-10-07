@@ -184,11 +184,11 @@ const CreeperShieldAnycasted = () => {
         <title>CreeperShield Anycasted Protection - Global DDoS Defense Network | Enterprise Security</title>
         <meta 
           name="description" 
-          content="Advanced anycasted DDoS protection for Minecraft servers with up to 50 Tbps capacity. Mumbai location deployment with bot protection and IP firewall starting at ₹99/month."
+          content="🛡️ Advanced anycasted DDoS protection for Minecraft servers with up to 50 Tbps capacity. Mumbai location deployment with bot protection, IP firewall, Beautiful control panel and real-time analytics starting at ₹99/month. Best DDoS protection for Indian Minecraft servers."
         />
         <meta
           name="keywords"
-          content="anycasted ddos protection, 50 tbps ddos mitigation, minecraft ddos protection mumbai, bot attack protection, ip firewall minecraft, anycasted protection india, creepershield anycasted"
+          content="ddos protection minecraft, anycasted ddos protection, 50 tbps ddos mitigation, minecraft ddos protection india, minecraft ddos protection mumbai, bot attack protection, ip firewall minecraft, anycasted protection india, creepershield, creepershield anycasted, minecraft security india, server protection india, ddos mitigation service, minecraft network protection, anti-ddos minecraft hosting, tcp protection minecraft, game server ddos protection, minecraft server security"
         />
         
         {/* Open Graph / Facebook */}

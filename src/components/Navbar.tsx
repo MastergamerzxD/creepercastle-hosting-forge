@@ -35,24 +35,24 @@ const Navbar = () => {
         </Link>
         
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center space-x-1 xl:space-x-2 flex-wrap">
-          <Link to="/" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm px-2 py-1 relative group">
+        <div className="hidden lg:flex items-center space-x-2 flex-wrap">
+          <Link to="/" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base px-3 py-2 relative group">
             <span className="relative z-10">Home</span>
             <span className="absolute inset-0 bg-creeper/10 rounded-md scale-0 group-hover:scale-100 transition-transform duration-300"></span>
           </Link>
-          <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm bg-creeper/15 px-2 py-1 rounded-lg border border-creeper/40 hover:border-creeper/60 hover:bg-creeper/25 relative overflow-hidden group">
-            <span className="flex items-center gap-1 relative z-10">
-              <Gamepad2 size={14} />
+          <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base bg-creeper/15 px-3 py-2 rounded-lg border border-creeper/40 hover:border-creeper/60 hover:bg-creeper/25 relative overflow-hidden group">
+            <span className="flex items-center gap-2 relative z-10">
+              <Gamepad2 size={16} />
               Minecraft
             </span>
             <span className="absolute inset-0 bg-gradient-to-r from-creeper/0 via-creeper/10 to-creeper/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
           </Link>
           
           <DropdownMenu>
-            <DropdownMenuTrigger className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm flex items-center gap-1 bg-transparent border-none px-2 py-1 rounded-lg hover:bg-white/5 focus:outline-none group">
-              <Server size={14} />
+            <DropdownMenuTrigger className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base flex items-center gap-2 bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/5 focus:outline-none group">
+              <Server size={16} />
               Other
-              <ChevronDown size={12} className="group-hover:rotate-180 transition-transform duration-300" />
+              <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-navy-dark/95 backdrop-blur-xl border border-creeper/30 z-[10000] rounded-xl shadow-2xl shadow-creeper/20 min-w-[200px]">
               <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
@@ -69,23 +69,23 @@ const Navbar = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <Link to="/creeperpanel" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm px-2 py-1 relative group">
+          <Link to="/creeperpanel" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base px-3 py-2 relative group">
             <span className="relative z-10">Panel</span>
             <span className="absolute inset-0 bg-creeper/10 rounded-md scale-0 group-hover:scale-100 transition-transform duration-300"></span>
           </Link>
-          <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm bg-purple-500/15 px-2 py-1 rounded-lg border border-purple-500/40 hover:border-purple-500/60 hover:bg-purple-500/25 relative overflow-hidden group">
-            <span className="flex items-center gap-1 relative z-10">
-              <Shield size={14} />
+          <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base bg-purple-500/15 px-3 py-2 rounded-lg border border-purple-500/40 hover:border-purple-500/60 hover:bg-purple-500/25 relative overflow-hidden group">
+            <span className="flex items-center gap-2 relative z-10">
+              <Shield size={16} />
               Shield
             </span>
             <span className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
           </Link>
           
           <DropdownMenu>
-            <DropdownMenuTrigger className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm flex items-center gap-1 bg-transparent border-none px-2 py-1 rounded-lg hover:bg-white/5 focus:outline-none group">
-              <Building2 size={14} />
+            <DropdownMenuTrigger className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base flex items-center gap-2 bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/5 focus:outline-none group">
+              <Building2 size={16} />
               Info
-              <ChevronDown size={12} className="group-hover:rotate-180 transition-transform duration-300" />
+              <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-navy-dark/95 backdrop-blur-xl border border-creeper/30 z-[10000] rounded-xl shadow-2xl shadow-creeper/20 min-w-[200px]">
               <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
@@ -103,27 +103,27 @@ const Navbar = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           
-          <a href="/about" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm px-2 py-1 relative group" onClick={(e) => handleNavigation('/about', e)}>
+          <a href="/about" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base px-3 py-2 relative group" onClick={(e) => handleNavigation('/about', e)}>
             <span className="relative z-10">About</span>
             <span className="absolute inset-0 bg-creeper/10 rounded-md scale-0 group-hover:scale-100 transition-transform duration-300"></span>
           </a>
-          <Link to="/contact" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm px-2 py-1 relative group">
+          <Link to="/contact" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base px-3 py-2 relative group">
             <span className="relative z-10">Contact</span>
             <span className="absolute inset-0 bg-creeper/10 rounded-md scale-0 group-hover:scale-100 transition-transform duration-300"></span>
           </Link>
-          <Link to="/links" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-sm bg-creeper/10 px-2 py-1 rounded-lg border border-creeper/30 hover:border-creeper/50 hover:bg-creeper/20">
+          <Link to="/links" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base bg-creeper/10 px-3 py-2 rounded-lg border border-creeper/30 hover:border-creeper/50 hover:bg-creeper/20">
             Links
           </Link>
           
-          <Button className="minecraft-btn rounded text-xs px-3 py-1.5 bg-purple-600 hover:bg-purple-700 border border-purple-500/30 hover:scale-105 transition-all duration-300" asChild>
-            <Link to="/discord" className="flex items-center gap-1">
+          <Button className="minecraft-btn rounded text-sm px-4 py-2 bg-purple-600 hover:bg-purple-700 border border-purple-500/30 hover:scale-105 transition-all duration-300" asChild>
+            <Link to="/discord" className="flex items-center gap-2">
               💬 Discord
             </Link>
           </Button>
           
-          <Button className="minecraft-btn rounded text-xs px-3 py-1.5 hover:scale-105 transition-all duration-300" asChild>
-            <a href="https://billing.creepercastle.in/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-              <Store size={14} />
+          <Button className="minecraft-btn rounded text-sm px-4 py-2 hover:scale-105 transition-all duration-300" asChild>
+            <a href="https://billing.creepercastle.in/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              <Store size={16} />
               Store
             </a>
           </Button>

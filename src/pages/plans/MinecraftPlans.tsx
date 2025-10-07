@@ -318,14 +318,14 @@ const MinecraftPlans = () => {
   return (
     <>
       <Helmet>
-        <title>Best Minecraft Server Hosting India 2024 | Low Latency, DDoS Protection | CreeperCastle</title>
+        <title>Best Minecraft Server Hosting India 2025 | #1 Minecraft Hosting | Mumbai & Delhi | CreeperCastle</title>
         <meta 
           name="description" 
-          content="Premium Minecraft server hosting in India starting at ₹99/month. NVMe SSD storage, instant setup, DDoS protection, 24/7 support. Perfect for Java & Bedrock servers with low ping in Mumbai & Delhi."
+          content="🎮 India's best Minecraft server hosting starting at ₹99/month. Ultra-fast NVMe SSD, instant setup, 50 Tbps DDoS protection, 24/7 expert support. Perfect for Java, Bedrock, SMP, Modded servers. Low ping Mumbai & Delhi locations. Trusted by 10,000+ players."
         />
         <meta
           name="keywords"
-          content="minecraft server hosting india, minecraft hosting mumbai delhi, cheap minecraft server india, minecraft bedrock hosting, minecraft java hosting, low ping minecraft server, minecraft server rental india, minecraft hosting with ddos protection, creeper castle minecraft, minecraft server provider india"
+          content="minecraft server hosting india, best minecraft hosting india, minecraft hosting india, cheap minecraft server india, minecraft server india, minecraft hosting mumbai, minecraft hosting delhi, indian minecraft hosting, minecraft bedrock hosting india, minecraft java hosting india, low ping minecraft server india, minecraft server rental india, minecraft hosting with ddos protection, minecraft server provider india, modded minecraft hosting india, minecraft smp hosting india, minecraft plugin hosting, minecraft network hosting, pvp server hosting india, skyblock hosting india, prison server hosting india, faction server hosting india, minecraft dedicated server india, best minecraft host 2025, creepercastle, minecraft server plans india, affordable minecraft hosting, premium minecraft hosting india"
         />
         
         {/* Open Graph / Facebook */}
