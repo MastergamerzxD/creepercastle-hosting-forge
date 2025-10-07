@@ -485,7 +485,7 @@ const CreeperShieldAnycasted = () => {
                         </Button>
                       ) : (
                         <Button 
-                          className={`w-full ${plan.highlighted ? 'bg-creeper hover:bg-creeper/90 text-navy-dark font-bold shadow-lg shadow-creeper/30' : 'bg-navy hover:bg-navy-dark border border-creeper/30 hover:border-creeper'} transition-all duration-300`}
+                          className={`w-full ${plan.highlighted ? 'bg-creeper hover:bg-creeper/90 text-navy-dark font-bold shadow-lg shadow-creeper/30' : 'bg-gradient-to-r from-creeper/80 to-creeper hover:from-creeper hover:to-creeper/90 text-navy-dark font-semibold border border-creeper/50 shadow-md shadow-creeper/20'} transition-all duration-300`}
                           asChild
                         >
                           <a href={plan.buyLink} target="_blank" rel="noopener noreferrer">

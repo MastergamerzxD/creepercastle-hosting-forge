@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Star, ThumbsUp, MessageSquare, Youtube, Users } from "lucide-react";
+import { ExternalLink, Star, ThumbsUp, MessageSquare, Youtube, Users, Gamepad2, Shield, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Links = () => {
@@ -48,12 +48,28 @@ const Links = () => {
 
   const dashboardLinks = [
     {
-      name: "CreeperShield Dashboard",
-      url: "https://shield.creepercastle.com",
-      description: "Access your DDoS protection control panel and manage your servers",
-      icon: <Users className="h-6 w-6" />,
+      name: "Game Panel",
+      url: "https://control.creepercastle.in",
+      description: "Access your game server control panel and manage all your servers",
+      icon: <Gamepad2 className="h-6 w-6" />,
       type: "dashboard",
       color: "bg-creeper/20 text-creeper border-creeper/30"
+    },
+    {
+      name: "CreeperShield Dashboard",
+      url: "https://shield.creepercastle.com",
+      description: "Access your DDoS protection control panel and manage your proxies",
+      icon: <Shield className="h-6 w-6" />,
+      type: "dashboard",
+      color: "bg-purple-500/20 text-purple-400 border-purple-500/30"
+    },
+    {
+      name: "Status Page",
+      url: "https://status.creepercastle.in/",
+      description: "Check real-time status of all our services and infrastructure",
+      icon: <TrendingUp className="h-6 w-6" />,
+      type: "dashboard",
+      color: "bg-blue-500/20 text-blue-400 border-blue-500/30"
     }
   ];
 
@@ -72,7 +88,9 @@ const Links = () => {
         "https://share.google/z9njZNHT1uT4u8UYO",
         "https://www.youtube.com/channel/UCFHCS5QydQQhpazC2h9BHdA",
         "https://discord.gg/RuQ9neH56S",
-        "https://shield.creepercastle.com"
+        "https://control.creepercastle.in",
+        "https://shield.creepercastle.com",
+        "https://status.creepercastle.in/"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -230,7 +248,7 @@ const Links = () => {
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
+                <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                   {dashboardLinks.map((link, index) => (
                     <motion.div
                       key={index}
@@ -238,7 +256,7 @@ const Links = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                     >
-                      <Card className="bg-gradient-to-br from-creeper/10 to-navy-light border-2 border-creeper/50 backdrop-blur-sm h-full group hover:border-creeper transition-all duration-300 hover:scale-105 shadow-lg shadow-creeper/20">
+                      <Card className="bg-navy-light/50 border-2 backdrop-blur-sm h-full group hover:border-opacity-100 transition-all duration-300 hover:scale-105 shadow-lg" style={{ borderColor: link.color.split(' ')[2].replace('border-', '') }}>
                         <CardHeader className="text-center">
                           <div className={`mx-auto mb-4 p-4 rounded-full w-fit ${link.color} group-hover:scale-110 transition-transform duration-300`}>
                             {link.icon}
