@@ -43,7 +43,7 @@ const plans = [
     plugins: "Unlimited",
     features: ["Layer 3 & 4 Protection", "Minecraft Server Protection", "Zero Downtime Protection", "Automatic Filtering", "24/7 Security Team"],
     mostPopular: false,
-    link: "/plans/creepershield-anycasted",
+    link: "/plans/creepershield",
     icon: <Shield className="h-10 w-10 text-creeper mb-2" />
   }
 ];

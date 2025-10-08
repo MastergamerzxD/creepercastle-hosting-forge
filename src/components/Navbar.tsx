@@ -73,7 +73,7 @@ const Navbar = () => {
             <span className="relative z-10">Panel</span>
             <span className="absolute inset-0 bg-creeper/10 rounded-md scale-0 group-hover:scale-100 transition-transform duration-300"></span>
           </Link>
-          <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base bg-purple-500/15 px-3 py-2 rounded-lg border border-purple-500/40 hover:border-purple-500/60 hover:bg-purple-500/25 relative overflow-hidden group">
+          <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base bg-purple-500/15 px-3 py-2 rounded-lg border border-purple-500/40 hover:border-purple-500/60 hover:bg-purple-500/25 relative overflow-hidden group">
             <span className="flex items-center gap-2 relative z-10">
               <Shield size={16} />
               Shield
@@ -164,7 +164,7 @@ const Navbar = () => {
             </div>
             
             <Link to="/creeperpanel" className="text-white hover:text-creeper transition-all duration-300 py-2 px-2 rounded-lg hover:bg-creeper/10" onClick={() => setIsOpen(false)}>⚙️ CreeperPanel</Link>
-            <Link to="/plans/creepershield-anycasted" className="text-white hover:text-creeper transition-all duration-300 py-2 bg-purple-500/15 px-3 rounded-lg border border-purple-500/40 hover:border-purple-500/60" onClick={() => setIsOpen(false)}>🛡️ CreeperShield</Link>
+            <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-all duration-300 py-2 bg-purple-500/15 px-3 rounded-lg border border-purple-500/40 hover:border-purple-500/60" onClick={() => setIsOpen(false)}>🛡️ CreeperShield</Link>
             
             <div className="text-white py-2">
               <span className="text-gray-300 font-medium flex items-center gap-2 mb-2">

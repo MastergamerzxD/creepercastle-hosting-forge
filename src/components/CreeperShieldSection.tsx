@@ -3,8 +3,27 @@ import { Shield, Server, BarChart3, LineChart, Network, Clock, Lock, Fingerprint
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const CreeperShieldSection = () => {
+  // Dynamic statistics that increase over time
+  const [stats, setStats] = useState({
+    totalAttacks: 29847,
+    largestAttack: 216,
+    growthPercentage: 18
+  });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setStats(prev => ({
+        totalAttacks: prev.totalAttacks + Math.floor(Math.random() * 3) + 1, // Increase by 1-3
+        largestAttack: prev.largestAttack + (Math.random() > 0.95 ? Math.floor(Math.random() * 2) : 0), // Occasionally increase
+        growthPercentage: Math.min(prev.growthPercentage + (Math.random() > 0.9 ? 1 : 0), 25) // Slowly increase up to 25%
+      }));
+    }, 5000); // Update every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section className="py-20 relative overflow-hidden" id="creepershield">
       {/* Animated background elements */}
@@ -169,7 +188,7 @@ const CreeperShieldSection = () => {
                     </li>
                     <li className="flex items-center">
                       <Check className="h-4 w-4 text-creeper mr-2 flex-shrink-0" />
-                      <span>Layer 7 Protection</span>
+                      <span>Advanced Mitigation</span>
                     </li>
                     <li className="flex items-center">
                       <Check className="h-4 w-4 text-creeper mr-2 flex-shrink-0" />
@@ -232,22 +251,22 @@ const CreeperShieldSection = () => {
               <div className="grid grid-cols-2 gap-4 mb-5">
                 <div className="bg-navy p-3 rounded-lg border border-gray-800">
                   <div className="text-xs text-gray-400 mb-1">Total Attacks Blocked</div>
-                  <div className="text-2xl font-bold">29,847</div>
-                  <div className="text-xs text-creeper mt-1">+18% vs. previous period</div>
+                  <div className="text-2xl font-bold">{stats.totalAttacks.toLocaleString()}</div>
+                  <div className="text-xs text-creeper mt-1">+{stats.growthPercentage}% vs. previous period</div>
                 </div>
                 <div className="bg-navy p-3 rounded-lg border border-gray-800">
                   <div className="text-xs text-gray-400 mb-1">Largest Attack</div>
-                  <div className="text-2xl font-bold">216 Gbps</div>
+                  <div className="text-2xl font-bold">{stats.largestAttack} Gbps</div>
                   <div className="text-xs text-gray-400 mt-1">SYN Flood Attack</div>
                 </div>
               </div>
               <div className="grid grid-cols-3 gap-3">
                 <div className="bg-navy p-3 rounded-lg border border-gray-800">
-                  <div className="text-xs text-gray-400 mb-1">Layer 3/4</div>
+                  <div className="text-xs text-gray-400 mb-1">Network</div>
                   <div className="text-lg font-bold">78%</div>
                 </div>
                 <div className="bg-navy p-3 rounded-lg border border-gray-800">
-                  <div className="text-xs text-gray-400 mb-1">Layer 7</div>
+                  <div className="text-xs text-gray-400 mb-1">Application</div>
                   <div className="text-lg font-bold">19%</div>
                 </div>
                 <div className="bg-navy p-3 rounded-lg border border-gray-800">

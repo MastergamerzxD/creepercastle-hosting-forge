@@ -479,7 +479,7 @@ const Index = () => {
                     </div>
                     
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-creeper mb-2">₹84/mo</div>
+                      <div className="text-2xl font-bold text-creeper mb-2">₹99/mo</div>
                       <Button className="w-full minecraft-btn" asChild>
                         <Link to="/plans/creepershield">View Plans</Link>
                       </Button>

@@ -23,7 +23,7 @@ const anycastedPlans = [
       { text: "Priority Support", highlighted: false }
     ],
     highlighted: false,
-    buyLink: "https://billing.creepercastle.in/products/creepershield-anycasted/starter"
+    buyLink: "https://billing.creepercastle.in/products/creepershield/starter"
   },
   {
     name: "Pro",
@@ -38,7 +38,7 @@ const anycastedPlans = [
       { text: "24/7 Premium Support", highlighted: false }
     ],
     highlighted: true,
-    buyLink: "https://billing.creepercastle.in/products/creepershield-anycasted/pro"
+    buyLink: "https://billing.creepercastle.in/products/creepershield/pro"
   },
   {
     name: "Network",
@@ -54,7 +54,7 @@ const anycastedPlans = [
       { text: "SLA Guarantee", highlighted: true }
     ],
     highlighted: false,
-    buyLink: "https://billing.creepercastle.in/products/creepershield-anycasted/network"
+    buyLink: "https://billing.creepercastle.in/products/creepershield/network"
   },
   {
     name: "Business",
@@ -70,7 +70,7 @@ const anycastedPlans = [
       { text: "99.9% SLA", highlighted: true }
     ],
     highlighted: false,
-    buyLink: "https://billing.creepercastle.in/products/creepershield-anycasted/business"
+    buyLink: "https://billing.creepercastle.in/products/creepershield/business"
   },
   {
     name: "Enterprise",
@@ -97,7 +97,7 @@ const CreeperShieldAnycasted = () => {
   const { toast } = useToast();
   
   useEffect(() => {
-    document.title = "CreeperShield Anycasted - Advanced DDoS Protection | CreeperCastle.cloud";
+    document.title = "CreeperShield - Advanced DDoS Protection | CreeperCastle.cloud";
     window.scrollTo(0, 0);
   }, []);
 
@@ -128,11 +128,11 @@ const CreeperShieldAnycasted = () => {
   };
 
   // Structured data for SEO
-  const anycastedStructuredData = {
+  const shieldStructuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "CreeperShield Anycasted DDoS Protection",
-    "description": "Advanced anycasted DDoS protection for Minecraft servers with up to 50 Tbps capacity, Mumbai location, and comprehensive security features.",
+    "name": "CreeperShield DDoS Protection",
+    "description": "Advanced DDoS protection for Minecraft servers with up to 50 Tbps capacity, Mumbai location, and comprehensive security features.",
     "provider": {
       "@type": "Organization", 
       "name": "CreeperCastle.cloud"
@@ -143,7 +143,7 @@ const CreeperShieldAnycasted = () => {
       "name": plan.name,
       "price": plan.price.replace('₹', ''),
       "priceCurrency": "INR",
-      "description": `${plan.name} - Advanced DDoS protection with anycasted network`
+      "description": `${plan.name} - Advanced DDoS protection network`
     }))
   };
 
@@ -153,18 +153,18 @@ const CreeperShieldAnycasted = () => {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What makes CreeperShield Anycasted special?",
+        "name": "What makes CreeperShield special?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "CreeperShield Anycasted provides up to 50 Tbps DDoS protection capacity with Mumbai location deployment, ensuring your Minecraft server stays protected against even the largest attacks."
+          "text": "CreeperShield provides up to 50 Tbps DDoS protection capacity with Mumbai location deployment, ensuring your Minecraft server stays protected against even the largest attacks."
         }
       },
       {
         "@type": "Question",
-        "name": "How does anycasted protection work?",
+        "name": "How does the protection work?",
         "acceptedAnswer": {
           "@type": "Answer", 
-          "text": "Anycasted protection distributes traffic across multiple servers globally, allowing us to absorb and mitigate DDoS attacks before they reach your Minecraft server."
+          "text": "Our protection distributes traffic across multiple servers globally, allowing us to absorb and mitigate DDoS attacks before they reach your Minecraft server."
         }
       },
       {
@@ -172,7 +172,7 @@ const CreeperShieldAnycasted = () => {
         "name": "Can I use this with non-Minecraft servers?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Currently, CreeperShield Anycasted is optimized specifically for Minecraft TCP connections only."
+          "text": "Currently, CreeperShield is optimized specifically for Minecraft TCP connections only."
         }
       }
     ]
@@ -181,28 +181,28 @@ const CreeperShieldAnycasted = () => {
   return (
     <>
       <Helmet>
-        <title>CreeperShield Anycasted Protection - Global DDoS Defense Network | Enterprise Security</title>
+        <title>CreeperShield Protection - Global DDoS Defense Network | Enterprise Security</title>
         <meta 
           name="description" 
-          content="🛡️ Advanced anycasted DDoS protection for Minecraft servers with up to 50 Tbps capacity. Mumbai location deployment with bot protection, IP firewall, Beautiful control panel and real-time analytics starting at ₹99/month. Best DDoS protection for Indian Minecraft servers."
+          content="🛡️ Advanced DDoS protection for Minecraft servers with up to 50 Tbps capacity. Mumbai location deployment with bot protection, IP firewall, Beautiful control panel and real-time analytics starting at ₹99/month. Best DDoS protection for Indian Minecraft servers."
         />
         <meta
           name="keywords"
-          content="ddos protection minecraft, anycasted ddos protection, 50 tbps ddos mitigation, minecraft ddos protection india, minecraft ddos protection mumbai, bot attack protection, ip firewall minecraft, anycasted protection india, creepershield, creepershield anycasted, minecraft security india, server protection india, ddos mitigation service, minecraft network protection, anti-ddos minecraft hosting, tcp protection minecraft, game server ddos protection, minecraft server security"
+          content="ddos protection minecraft, 50 tbps ddos mitigation, minecraft ddos protection india, minecraft ddos protection mumbai, bot attack protection, ip firewall minecraft, protection india, creepershield, minecraft security india, server protection india, ddos mitigation service, minecraft network protection, anti-ddos minecraft hosting, tcp protection minecraft, game server ddos protection, minecraft server security"
         />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://creepercastle.cloud/plans/creepershield-anycasted" />
-        <meta property="og:title" content="CreeperShield Anycasted - 50 Tbps DDoS Protection" />
-        <meta property="og:description" content="Enterprise-grade anycasted DDoS protection with 50 Tbps capacity. Advanced security for Minecraft servers in Mumbai." />
+        <meta property="og:url" content="https://creepercastle.cloud/plans/creepershield" />
+        <meta property="og:title" content="CreeperShield - 50 Tbps DDoS Protection" />
+        <meta property="og:description" content="Enterprise-grade DDoS protection with 50 Tbps capacity. Advanced security for Minecraft servers in Mumbai." />
         <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" />
-        <meta property="og:image:alt" content="CreeperShield Anycasted DDoS Protection" />
+        <meta property="og:image:alt" content="CreeperShield DDoS Protection" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="CreeperShield Anycasted - 50 Tbps Protection 🛡️" />
-        <meta name="twitter:description" content="Ultimate DDoS protection with 50 Tbps capacity and anycasted deployment for Minecraft servers." />
+        <meta name="twitter:title" content="CreeperShield - 50 Tbps Protection 🛡️" />
+        <meta name="twitter:description" content="Ultimate DDoS protection with 50 Tbps capacity for Minecraft servers." />
         <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" />
         
         {/* Additional SEO tags */}
@@ -212,11 +212,11 @@ const CreeperShieldAnycasted = () => {
         <meta name="geo.placename" content="Mumbai" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://creepercastle.cloud/plans/creepershield-anycasted" />
+        <link rel="canonical" href="https://creepercastle.cloud/plans/creepershield" />
         
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
-          {JSON.stringify(anycastedStructuredData)}
+          {JSON.stringify(shieldStructuredData)}
         </script>
         <script type="application/ld+json">
           {JSON.stringify(faqStructuredData)}
@@ -278,10 +278,10 @@ const CreeperShieldAnycasted = () => {
               </motion.div>
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                CreeperShield <span className="text-creeper">Anycasted</span>
+                CreeperShield <span className="text-creeper">Protection</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Revolutionary anycasted DDoS protection for Minecraft servers with <span className="text-creeper font-bold">50 Tbps capacity</span>. 
+                Revolutionary DDoS protection for Minecraft servers with <span className="text-creeper font-bold">50 Tbps capacity</span>. 
                 Mumbai location deployment ensures maximum protection for your gaming community.
               </p>
               
@@ -342,7 +342,7 @@ const CreeperShieldAnycasted = () => {
                 transition={{ duration: 0.3 }}
               >
                 <Globe className="h-12 w-12 text-creeper mb-4" />
-                <h3 className="text-xl font-bold mb-3">Global Anycast Network</h3>
+                <h3 className="text-xl font-bold mb-3">Global Network</h3>
                 <p className="text-gray-300">Traffic distributed across multiple nodes worldwide for maximum resilience against attacks.</p>
               </motion.div>
 

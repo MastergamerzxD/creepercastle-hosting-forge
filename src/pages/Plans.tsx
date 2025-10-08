@@ -106,7 +106,7 @@ const Plans = () => {
         <title>Hosting Plans & Pricing | Minecraft VPS & DDoS Protection | CreeperCastle.cloud</title>
         <meta 
           name="description" 
-          content="Compare all CreeperCastle hosting plans: Minecraft servers from ₹99/mo, VPS hosting from ₹3,300/mo, and DDoS protection from ₹84/mo. Choose the perfect plan for your needs."
+          content="Compare all CreeperCastle hosting plans: Minecraft servers from ₹99/mo, VPS hosting from ₹3,300/mo, and DDoS protection from ₹99/mo. Choose the perfect plan for your needs."
         />
         <meta
           name="keywords"
@@ -117,7 +117,7 @@ const Plans = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/plans" />
         <meta property="og:title" content="Hosting Plans & Pricing | Minecraft VPS & DDoS Protection" />
-        <meta property="og:description" content="Compare all CreeperCastle hosting plans: Minecraft servers from ₹99/mo, VPS hosting from ₹3,300/mo, and DDoS protection from ₹84/mo." />
+        <meta property="og:description" content="Compare all CreeperCastle hosting plans: Minecraft servers from ₹99/mo, VPS hosting from ₹3,300/mo, and DDoS protection from ₹99/mo." />
         <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
         <meta property="og:image:alt" content="CreeperCastle Hosting Plans Comparison" />
         <meta property="og:site_name" content="CreeperCastle.cloud" />
@@ -126,7 +126,7 @@ const Plans = () => {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Hosting Plans & Pricing | CreeperCastle.cloud 🎮" />
-        <meta name="twitter:description" content="Compare Minecraft hosting, VPS plans, and DDoS protection. Starting from ₹84/month with premium Indian servers." />
+        <meta name="twitter:description" content="Compare Minecraft hosting, VPS plans, and DDoS protection. Starting from ₹99/month with premium Indian servers." />
         <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
         
         {/* Additional SEO tags */}
@@ -179,7 +179,7 @@ const Plans = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
                 >
-                  Premium Gaming Solutions Starting at ₹84/Month
+                  Premium Gaming Solutions Starting at ₹99/Month
                 </motion.h2>
                 <motion.p 
                   className="text-xl text-gray-300 max-w-3xl mx-auto"
