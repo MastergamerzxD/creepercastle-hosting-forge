@@ -59,9 +59,9 @@ const Partners = () => {
   const partnersStructuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "CreeperCastle Partners - Trusted Minecraft Community",
-    "description": "Meet our trusted partners and content creators who trust CreeperCastle for their Minecraft hosting needs. Join the best Minecraft community in India.",
-    "url": "https://creepercastle.in/partners",
+    "name": "CreeperCastle Partners - 23+ Trusted Minecraft Content Creators & YouTubers India",
+    "description": "Meet our 23+ trusted partners including FireMc, PSD1, SenpaiSpider, Bassu Plays and top Indian Minecraft content creators who trust CreeperCastle for their Minecraft hosting needs. Join India's #1 Minecraft community.",
+    "url": "https://creepercastle.cloud/partners",
     "isPartOf": {
       "@type": "WebSite",
       "name": "CreeperCastle",
@@ -84,23 +84,31 @@ const Partners = () => {
   return (
     <>
       <Helmet>
-        <title>Our Partners | CreeperCastle - Trusted by Top Minecraft Creators 2025</title>
-        <meta name="description" content="Meet CreeperCastle's trusted partners including FireMc, PSD1, SenpaiSpider, Bassu Plays & top Indian Minecraft content creators. Join India's #1 Minecraft hosting community." />
-        <meta name="keywords" content="CreeperCastle partners, Minecraft YouTubers India, FireMc, PSD1, SenpaiSpider, Bassu Plays, Indian Minecraft creators, Minecraft server partners, gaming community India, Minecraft hosting partners, content creator hosting, YouTuber Minecraft hosting" />
-        <link rel="canonical" href="https://creepercastle.in/partners" />
+        <title>CreeperCastle Partners 2025 | Trusted by 23+ Top Minecraft Creators & YouTubers India</title>
+        <meta name="description" content="Meet CreeperCastle's 23+ trusted partners: FireMc, PSD1, SenpaiSpider, Bassu Plays, Steel Wing, GlumeGamer, Teen Plays, MrLapis & more top Indian Minecraft content creators. Join India's #1 Minecraft hosting community powered by enterprise infrastructure with 99.9% uptime & 50 Tbps DDoS protection." />
+        <meta name="keywords" content="CreeperCastle partners, Minecraft YouTubers India, FireMc, PSD1, SenpaiSpider, Bassu Plays, Steel Wing, GlumeGamer, Teen Plays, MrLapis, Robbie Ton, PubiXD, Triggered Boy, Indian Minecraft creators, Minecraft content creators India, gaming influencers India, Minecraft server partners, gaming community India, YouTuber Minecraft hosting, content creator server hosting, influencer gaming hosting, Indian gaming community, Minecraft network partners, gaming creators partnership" />
+        <link rel="canonical" href="https://creepercastle.cloud/partners" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Our Partners | CreeperCastle - Trusted by Top Minecraft Creators" />
-        <meta property="og:description" content="Meet CreeperCastle's trusted partners including FireMc, PSD1, SenpaiSpider & top Indian Minecraft content creators." />
-        <meta property="og:url" content="https://creepercastle.in/partners" />
+        <meta property="og:title" content="CreeperCastle Partners - Trusted by 23+ Top Minecraft Creators India" />
+        <meta property="og:description" content="Meet our 23+ trusted partners: FireMc, PSD1, SenpaiSpider, Bassu Plays & top Indian Minecraft YouTubers powering their servers with CreeperCastle." />
+        <meta property="og:url" content="https://creepercastle.cloud/partners" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://creepercastle.in/lovable-uploads/firemc.png" />
+        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta property="og:image:alt" content="CreeperCastle Partners - Top Minecraft Creators" />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:site_name" content="CreeperCastle" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Our Partners | CreeperCastle Partners" />
-        <meta name="twitter:description" content="Meet our trusted partners and content creators who power their Minecraft servers with CreeperCastle." />
-        <meta name="twitter:image" content="https://creepercastle.in/lovable-uploads/firemc.png" />
+        <meta name="twitter:title" content="CreeperCastle Partners 🤝 | 23+ Top Minecraft Creators India" />
+        <meta name="twitter:description" content="Meet our trusted partners including FireMc, PSD1, SenpaiSpider, Bassu Plays & top Indian Minecraft content creators." />
+        <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta name="author" content="CreeperCastle" />
+        <meta name="geo.region" content="IN" />
         
         <script type="application/ld+json">
           {JSON.stringify(partnersStructuredData)}

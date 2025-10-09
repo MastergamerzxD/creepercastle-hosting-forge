@@ -13,15 +13,31 @@ const PricingPage = () => {
   return (
     <>
       <Helmet>
-        <title>Minecraft Server Pricing India - Affordable Hosting Plans | CreeperCastle Pricing</title>
+        <title>Minecraft Server Hosting Pricing India 2025 | Compare Plans from ₹99/mo | CreeperCastle</title>
         <meta 
           name="description" 
-          content="Affordable and transparent pricing for Minecraft server hosting. Compare plans and features to find the perfect hosting solution for your Minecraft adventure."
+          content="💰 Transparent Minecraft hosting pricing in India starting from ₹99/month. Compare budget, standard, premium VPS plans with DDoS protection, NVMe SSD, instant setup. No hidden fees. Best value for Indian gamers with Mumbai & Delhi servers."
         />
         <meta 
           name="keywords" 
-          content="minecraft server pricing, minecraft hosting cost, cheap minecraft server, premium minecraft hosting, minecraft host india, minecraft server price comparison"
+          content="minecraft hosting pricing india, minecraft server cost india, minecraft hosting plans india, cheap minecraft server india, minecraft hosting price comparison, affordable minecraft hosting india, minecraft server plans 2025, budget minecraft hosting, premium minecraft hosting plans, minecraft vps pricing india, minecraft server rental cost, minecraft hosting packages india, best minecraft hosting prices, minecraft hosting rates india, creepercastle pricing"
         />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://creepercastle.cloud/pricing" />
+        <meta property="og:title" content="Minecraft Hosting Pricing - Plans from ₹99/mo | CreeperCastle" />
+        <meta property="og:description" content="Transparent pricing for Minecraft hosting in India. Compare budget, standard, premium plans with DDoS protection from ₹99/month." />
+        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Minecraft Hosting Pricing India 💰 | From ₹99/mo" />
+        <meta name="twitter:description" content="Transparent pricing for Minecraft hosting. Budget to premium plans with DDoS protection from ₹99/month." />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <link rel="canonical" href="https://creepercastle.cloud/pricing" />
       </Helmet>
       
       <div className="flex flex-col min-h-screen bg-navy text-white relative">

@@ -92,23 +92,30 @@ const About = () => {
         
         <Navbar />
         <Helmet>
-          <title>About CreeperCastle - India's Premier Minecraft Hosting Company | Expert Team & Vision</title>
+          <title>About CreeperCastle | Meet the Founders | India's #1 Minecraft Hosting Company 2025</title>
           <meta 
             name="description" 
-            content="Meet Ahaan Gupta and Yaswanth, the passionate founders behind CreeperCastle. Learn about our journey, mission, and commitment to revolutionizing Minecraft hosting." 
+            content="Meet Ahaan Gupta (CEO) and Yaswanth (Co-Founder), the passionate minds behind India's premier Minecraft hosting company. Learn about CreeperCastle's journey from a small passion project to serving 10,000+ players with enterprise-grade infrastructure, 24/7 support, and unmatched reliability." 
           />
-          <meta name="keywords" content="CreeperCastle founders, about us, Ahaan Gupta CEO, Yaswanth co-founder, minecraft hosting company story, gaming entrepreneurs, server hosting founders" />
+          <meta name="keywords" content="CreeperCastle founders, Ahaan Gupta CEO, Yaswanth co-founder, about creepercastle, minecraft hosting company India, gaming entrepreneurs India, server hosting company story, creepercastle team, Indian gaming startup, minecraft hosting founders, creepercastle history, gaming company India, server hosting leadership" />
           
           {/* Open Graph */}
-          <meta property="og:title" content="About Us - Meet the CreeperCastle Founders" />
-          <meta property="og:description" content="Meet the passionate founders behind CreeperCastle and learn about our mission to revolutionize Minecraft hosting with community-first approach." />
+          <meta property="og:title" content="About CreeperCastle - Meet the Founders of India's #1 Minecraft Host" />
+          <meta property="og:description" content="Meet Ahaan Gupta & Yaswanth, the passionate founders revolutionizing Minecraft hosting in India with enterprise-grade infrastructure and community-first values." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://creepercastle.cloud/about" />
+          <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+          <meta property="og:locale" content="en_IN" />
           
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="About CreeperCastle - Meet Our Founders" />
-          <meta name="twitter:description" content="Discover the story behind CreeperCastle and meet the founders revolutionizing Minecraft hosting." />
+          <meta name="twitter:title" content="About CreeperCastle - Meet Our Founders 👥" />
+          <meta name="twitter:description" content="Discover the story behind India's premier Minecraft hosting company and meet the founders revolutionizing gaming infrastructure." />
+          <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+          
+          {/* Additional SEO */}
+          <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+          <link rel="canonical" href="https://creepercastle.cloud/about" />
           
           {/* Structured Data */}
           <script type="application/ld+json">
