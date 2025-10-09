@@ -15,6 +15,15 @@ import mcaddonImg from "@/assets/partners/mcaddon.png";
 import donvisionImg from "@/assets/partners/donvision.png";
 import livinglegendImg from "@/assets/partners/livinglegend.png";
 import glumegamerImg from "@/assets/partners/glumegamer.png";
+import warnetworkImg from "@/assets/partners/warnetwork.png";
+import flowpvpImg from "@/assets/partners/flowpvp.png";
+import indianmcImg from "@/assets/partners/indianmc.png";
+import indiamcImg from "@/assets/partners/indiamc.png";
+import servicemediaImg from "@/assets/partners/servicemedia.png";
+import bubblemcImg from "@/assets/partners/bubblemc.png";
+import teenplaysImg from "@/assets/partners/teenplays.jpg";
+import amongusindiaImg from "@/assets/partners/amongusindia.png";
+import betterdarkImg from "@/assets/partners/betterdark.png";
 
 const partners = [
   { name: "FireMc", image: firemcImg, category: "Content Creator" },
@@ -27,7 +36,15 @@ const partners = [
   { name: "Don Vision", image: donvisionImg, category: "Content Creator" },
   { name: "Living Legend", image: livinglegendImg, category: "Gaming Creator" },
   { name: "GlumeGamer", image: glumegamerImg, category: "YouTuber" },
-  { name: "MrLapis", image: glumegamerImg, category: "Content Creator" },
+  { name: "Warnetwork", image: warnetworkImg, category: "Gaming Network" },
+  { name: "Flowpvp", image: flowpvpImg, category: "PVP Community" },
+  { name: "Indianmc", image: indianmcImg, category: "Gaming Community" },
+  { name: "Indiamc.net", image: indiamcImg, category: "Minecraft Community" },
+  { name: "Service Media", image: servicemediaImg, category: "Media Partner" },
+  { name: "Bubble MC", image: bubblemcImg, category: "Minecraft Server" },
+  { name: "Teen Plays", image: teenplaysImg, category: "Gaming YouTuber" },
+  { name: "Among us India", image: amongusindiaImg, category: "Gaming Community" },
+  { name: "Better Dark", image: betterdarkImg, category: "Content Creator" },
 ];
 
 const Partners = () => {
