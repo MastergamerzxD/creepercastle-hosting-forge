@@ -14,11 +14,12 @@ import MinecraftPlans from "./pages/plans/MinecraftPlans";
 import VPSPlans from "./pages/plans/VPSPlans";
 import DiscordBotPlans from "./pages/plans/DiscordBotPlans";
 import Datacenter from "./pages/Datacenter";
-import CreeperShield from "./pages/CreeperShieldAnycasted";
+import CreeperShield from "./pages/CreeperShield";
 import OtherHosting from "./pages/OtherHosting";
 import CreeperPanel from "./pages/CreeperPanel";
 import About from "./pages/About";
 import Links from "./pages/Links";
+import Partners from "./pages/Partners";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -47,6 +48,7 @@ const App = () => (
             <Route path="/creeperpanel" element={<CreeperPanel />} />
             <Route path="/about" element={<About />} />
             <Route path="/links" element={<Links />} />
+            <Route path="/partners" element={<Partners />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

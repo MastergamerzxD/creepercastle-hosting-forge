@@ -144,4 +144,16 @@
       <image:caption>All official CreeperCastle links including reviews, social media and dashboards</image:caption>
     </image:image>
   </url>
+  
+  <url>
+    <loc>https://creepercastle.cloud/partners</loc>
+    <lastmod>2025-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
+      <image:title>CreeperCastle Partners - Trusted by Top Minecraft Creators India</image:title>
+      <image:caption>Meet our partners including FireMc, PSD1, SenpaiSpider and top Indian Minecraft content creators</image:caption>
+    </image:image>
+  </url>
 </urlset>

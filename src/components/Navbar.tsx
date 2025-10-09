@@ -107,6 +107,10 @@ const Navbar = () => {
             <span className="relative z-10">About</span>
             <span className="absolute inset-0 bg-creeper/10 rounded-md scale-0 group-hover:scale-100 transition-transform duration-300"></span>
           </a>
+          <Link to="/partners" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base px-3 py-2 relative group">
+            <span className="relative z-10">Partners</span>
+            <span className="absolute inset-0 bg-creeper/10 rounded-md scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+          </Link>
           <Link to="/contact" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base px-3 py-2 relative group">
             <span className="relative z-10">Contact</span>
             <span className="absolute inset-0 bg-creeper/10 rounded-md scale-0 group-hover:scale-100 transition-transform duration-300"></span>
@@ -182,6 +186,7 @@ const Navbar = () => {
             </div>
             
             <a href="/about" className="text-white hover:text-creeper transition-all duration-300 py-2 px-2 rounded-lg hover:bg-creeper/10" onClick={(e) => handleNavigation('/about', e)}>📋 About</a>
+            <Link to="/partners" className="text-white hover:text-creeper transition-all duration-300 py-2 px-2 rounded-lg hover:bg-creeper/10" onClick={() => setIsOpen(false)}>👥 Partners</Link>
             <Link to="/contact" className="text-white hover:text-creeper transition-all duration-300 py-2 px-2 rounded-lg hover:bg-creeper/10" onClick={() => setIsOpen(false)}>📧 Contact</Link>
             <Link to="/links" className="text-white hover:text-creeper transition-all duration-300 py-2 bg-creeper/10 px-3 rounded-lg border border-creeper/30 hover:border-creeper/50" onClick={() => setIsOpen(false)}>🔗 Official Links</Link>
             
