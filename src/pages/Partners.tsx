@@ -24,6 +24,10 @@ import bubblemcImg from "@/assets/partners/bubblemc.png";
 import teenplaysImg from "@/assets/partners/teenplays.jpg";
 import amongusindiaImg from "@/assets/partners/amongusindia.png";
 import betterdarkImg from "@/assets/partners/betterdark.png";
+import robbietonImg from "@/assets/partners/robbieton.png";
+import pubixdImg from "@/assets/partners/pubixd.png";
+import mrlapisImg from "@/assets/partners/mrlapis.png";
+import triggeredboyImg from "@/assets/partners/triggeredboy.png";
 
 const partners = [
   { name: "FireMc", image: firemcImg, category: "Content Creator" },
@@ -45,6 +49,10 @@ const partners = [
   { name: "Teen Plays", image: teenplaysImg, category: "Gaming YouTuber" },
   { name: "Among us India", image: amongusindiaImg, category: "Gaming Community" },
   { name: "Better Dark", image: betterdarkImg, category: "Content Creator" },
+  { name: "Robbie Ton", image: robbietonImg, category: "Content Creator" },
+  { name: "PubiXD", image: pubixdImg, category: "Gaming Creator" },
+  { name: "MrLapis", image: mrlapisImg, category: "Minecraft YouTuber" },
+  { name: "Triggered Boy", image: triggeredboyImg, category: "Gaming Influencer" },
 ];
 
 const Partners = () => {
