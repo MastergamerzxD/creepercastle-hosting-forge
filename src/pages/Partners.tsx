@@ -223,7 +223,7 @@ const Partners = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative bg-gradient-to-r from-primary/10 via-creeper/10 to-primary/10 rounded-2xl p-12 text-center overflow-hidden border border-primary/20"
+              className="relative bg-gradient-to-r from-primary/5 to-primary/5 rounded-2xl p-12 text-center overflow-hidden border border-primary/20"
             >
               <div className="absolute inset-0 bg-grid-animate opacity-10" />
               

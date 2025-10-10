@@ -12,7 +12,7 @@ import CtaSection from "@/components/CtaSection";
 import DiscordSection from "@/components/DiscordSection";
 import LoadingScreen from "@/components/LoadingScreen";
 import FreeHostingPromotion from "@/components/FreeHostingPromotion";
-import MumbaiRestockPopup from "@/components/MumbaiRestockPopup";
+
 
 import MinecraftConsole from "@/components/MinecraftConsole";
 import PlanCalculatorSidebar from "@/components/PlanCalculatorSidebar";
@@ -288,8 +288,7 @@ const Index = () => {
           
           <Navbar />
           
-          <MumbaiRestockPopup />
-          <PlanCalculatorSidebar 
+          <PlanCalculatorSidebar
             isOpen={calculatorOpen} 
             onClose={() => setCalculatorOpen(false)} 
           />
@@ -444,7 +443,7 @@ const Index = () => {
                       </div>
                       <div className="flex justify-between text-sm">
                         <span className="text-gray-400">Location:</span>
-                        <span className="text-creeper">Delhi, India</span>
+                        <span className="text-creeper">Mumbai, India</span>
                       </div>
                     </div>
                     
