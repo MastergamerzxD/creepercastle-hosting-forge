@@ -124,14 +124,14 @@ const Links = () => {
   return (
     <>
       <Helmet>
-        <title>CreeperCastle Official Links - Reviews, YouTube, Discord & Social Media | All Resources</title>
+        <title>CreeperCastle Official Links | Reviews, Discord, YouTube, Support</title>
         <meta 
           name="description" 
-          content="Find all official CreeperCastle links including customer reviews on Trustpilot & Google Business, YouTube tutorials, Discord community, and social media channels for support and updates."
+          content="All official CreeperCastle links: Trustpilot reviews (4.8★), Discord support, YouTube tutorials, control panels, status page. Join 10,000+ satisfied customers!"
         />
         <meta
           name="keywords"
-          content="creepercastle links, creepercastle reviews, trustpilot creepercastle, google reviews minecraft hosting, creepercastle youtube, creepercastle discord, minecraft hosting reviews india, creepercastle social media, customer testimonials, minecraft server hosting feedback"
+          content="creepercastle official links, creepercastle reviews, trustpilot creepercastle, google reviews minecraft hosting india, creepercastle discord server, creepercastle youtube channel, minecraft hosting support india, creepercastle control panel, creepershield dashboard, status page creepercastle, customer testimonials india, minecraft hosting feedback, best minecraft host reviews india"
         />
         
         {/* Open Graph / Facebook */}

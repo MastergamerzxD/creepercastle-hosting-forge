@@ -58,14 +58,14 @@ const DiscordBotPlans = () => {
   return (
     <>
       <Helmet>
-        <title>Discord Bot Hosting Plans India - 24/7 Reliable Bot Hosting | CreeperCastle</title>
+        <title>Best Discord Bot Hosting India 2025 | 24/7 Uptime | Starting ₹22/mo</title>
         <meta 
           name="description" 
-          content="Discord bot hosting plans starting from ₹22/month. 24/7 uptime, Node.js & Python support, instant setup. Host your Discord bots reliably in India."
+          content="🤖 #1 Discord bot hosting India! 24/7 online bots from ₹22/mo. Node.js, Python, Java support. SSH, SFTP, MySQL. Instant setup. 99.9% uptime guaranteed."
         />
         <meta
           name="keywords"
-          content="discord bot hosting india, bot hosting service, discord hosting, node.js bot hosting, python bot hosting, 24/7 bot uptime, discord server hosting"
+          content="discord bot hosting india, best discord bot hosting, cheap discord hosting, 24/7 discord bot online, node.js bot hosting india, python discord bot hosting, java discord bot hosting, discord.js hosting, discord.py hosting, music bot hosting india, discord bot server india, ssh discord hosting, sftp bot hosting, mysql discord bot, always online bot hosting, reliable discord hosting india"
         />
         
         {/* Open Graph / Facebook */}

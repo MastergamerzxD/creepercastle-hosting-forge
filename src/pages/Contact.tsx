@@ -64,14 +64,14 @@ const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>Contact CreeperCastle Support - 24/7 Minecraft Server Help | Live Chat & Ticket System</title>
+        <title>Contact Support 24/7 | CreeperCastle Minecraft Hosting Help India</title>
         <meta 
           name="description" 
-          content="Get 24/7 expert support for your Minecraft server hosting needs. Contact CreeperCastle team via Discord, email, or live chat. Fast response times guaranteed."
+          content="💬 Get instant 24/7 support! Discord, email, ticket system. Average 5-min response time. Expert help for Minecraft servers, billing, technical issues. We're here for you!"
         />
         <meta
           name="keywords"
-          content="minecraft hosting support, 24/7 gaming support india, minecraft server help, technical support gaming, contact creepercastle, minecraft hosting customer service, discord support minecraft, live chat gaming support"
+          content="creepercastle support, minecraft hosting support india, 24/7 minecraft support, contact minecraft host india, discord support minecraft, email support hosting, minecraft technical support india, server support india, billing support, instant minecraft help, live chat minecraft hosting, ticket system minecraft, fast response support india"
         />
         
         {/* Open Graph / Facebook */}

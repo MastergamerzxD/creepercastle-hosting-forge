@@ -53,14 +53,14 @@ const Datacenter = () => {
   return (
     <>
       <Helmet>
-        <title>Yotta Datacenter Noida - Enterprise Gaming Infrastructure | CreeperCastle</title>
+        <title>Yotta Datacenter Noida | Tier 3+ Infrastructure | CreeperCastle Hosting</title>
         <meta 
           name="description" 
-          content="CreeperCastle operates from Yotta's Tier 3 datacenter facility in Noida, India. Advanced gaming infrastructure with enterprise-grade power, cooling, and security systems."
+          content="🏢 Powered by Yotta NM1 Tier 3+ datacenter Noida. Intel Xeon servers, NVMe SSD, 99.99% uptime, N+1 redundancy, OVH DDoS protection. Enterprise-grade infrastructure."
         />
         <meta
           name="keywords"
-          content="yotta datacenter noida, tier 3 datacenter india, enterprise gaming infrastructure, minecraft server datacenter, gaming server facility, noida datacenter, professional gaming hosting, server infrastructure india"
+          content="yotta datacenter noida, tier 3 datacenter india, yotta nm1 datacenter, best datacenter india, enterprise datacenter india, minecraft datacenter infrastructure, gaming server infrastructure india, redundant datacenter india, uptime datacenter india, noida datacenter hosting, premium server infrastructure, yotta minecraft hosting"
         />
         
         {/* Open Graph / Facebook */}

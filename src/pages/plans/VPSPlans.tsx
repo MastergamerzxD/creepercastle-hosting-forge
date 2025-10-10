@@ -134,14 +134,14 @@ const VPSPlans = () => {
   return (
     <>
       <Helmet>
-        <title>VPS Hosting Plans India - Intel Xeon 2386G | Starting ₹399/month | CreeperCastle</title>
+        <title>Best VPS Hosting India 2025 | Intel Xeon 2386G 4.7GHz | Mumbai ₹399</title>
         <meta 
           name="description" 
-          content="Premium VPS hosting in India powered by Intel Xeon 2386G processors starting from ₹399/month. NVMe storage, 500 Gbps DDoS protection, up to 4.7GHz turbo boost. Choose from 5 powerful VPS plans."
+          content="⚡ Premium VPS India: Intel Xeon 2386G 4.7GHz, NVMe SSD, 500Gbps DDoS protection, Mumbai datacenter. Root access, KVM, ECC RAM. Starting ₹399/mo. Instant setup!"
         />
         <meta
           name="keywords"
-          content="vps hosting india, virtual private server, custom vps, dedicated hosting, root access vps, linux vps hosting, windows vps hosting, mumbai vps"
+          content="best vps hosting india 2025, intel xeon 2386g vps, cheap vps india, kvm vps hosting mumbai, nvme vps india, dedicated vps india, root access vps, linux vps india, windows vps india, gaming vps india, ddos protected vps, ecc ram vps, 4.7ghz vps india, premium vps mumbai, virtual private server india, vps with rdns india"
         />
         
         {/* Open Graph / Facebook */}

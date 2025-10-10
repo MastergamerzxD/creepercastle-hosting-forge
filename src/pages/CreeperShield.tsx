@@ -181,14 +181,14 @@ const CreeperShieldAnycasted = () => {
   return (
     <>
       <Helmet>
-        <title>CreeperShield Protection - Global DDoS Defense Network | Enterprise Security</title>
+        <title>Best Minecraft DDoS Protection India | 50 Tbps CreeperShield ₹99</title>
         <meta 
           name="description" 
-          content="🛡️ Advanced DDoS protection for Minecraft servers with up to 50 Tbps capacity. Mumbai location deployment with bot protection, IP firewall, Beautiful control panel and real-time analytics starting at ₹99/month. Best DDoS protection for Indian Minecraft servers."
+          content="🛡️ #1 Minecraft DDoS protection 50 Tbps capacity ₹99/mo. Anycasted network, bot filtering, IP firewall, Mumbai. Stop attacks instantly. Trusted by 1000+ servers."
         />
         <meta
           name="keywords"
-          content="ddos protection minecraft, 50 tbps ddos mitigation, minecraft ddos protection india, minecraft ddos protection mumbai, bot attack protection, ip firewall minecraft, protection india, creepershield, minecraft security india, server protection india, ddos mitigation service, minecraft network protection, anti-ddos minecraft hosting, tcp protection minecraft, game server ddos protection, minecraft server security"
+          content="minecraft ddos protection india, best ddos protection minecraft, 50 tbps ddos shield, creepershield minecraft, minecraft server security india, ddos mitigation india, bot attack protection minecraft, ip firewall minecraft india, minecraft proxy protection, anycasted ddos protection, tcp ddos protection minecraft, udp ddos shield, minecraft network security, anti ddos minecraft india, ddos protected minecraft hosting, server protection india, minecraft attack prevention, cheap ddos protection india"
         />
         
         {/* Open Graph / Facebook */}

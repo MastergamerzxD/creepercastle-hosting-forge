@@ -187,14 +187,14 @@ const CreeperPanel = () => {
   return (
     <>
       <Helmet>
-        <title>CreeperPanel Control Panel - Easy Minecraft Server Management | One-Click Features</title>
+        <title>CreeperPanel - Best Pterodactyl Minecraft Control Panel India 2025</title>
         <meta 
           name="description" 
-          content="Experience CreeperPanel - India's most advanced Pterodactyl-based game server management system. Features real-time monitoring, automated backups, advanced security, and intuitive controls for professional Minecraft server hosting."
+          content="🎮 Advanced Pterodactyl panel for Minecraft hosting in India. One-click modpacks, real-time stats, automated backups, FTP, SSH, MySQL. Best server management panel 2025."
         />
         <meta
           name="keywords"
-          content="pterodactyl panel india, advanced game server management, minecraft control panel, server administration dashboard, creeperpanel features, pterodactyl hosting india, professional minecraft panel, server monitoring dashboard, game server control system"
+          content="pterodactyl panel india, best minecraft control panel, minecraft server panel 2025, creeperpanel dashboard, advanced server management india, one click modpack installer, minecraft panel with ftp, pterodactyl hosting india, game server control panel, professional minecraft dashboard, server monitoring panel, automated backup panel, minecraft admin panel india, best hosting control panel, pterodactyl alternative india"
         />
         
         {/* Open Graph / Facebook */}

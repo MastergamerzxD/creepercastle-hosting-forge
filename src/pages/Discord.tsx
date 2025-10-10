@@ -48,14 +48,14 @@ const Discord = () => {
   return (
     <>
       <Helmet>
-        <title>Join Discord Community - 3000+ Minecraft Players | CreeperCastle Gaming Community</title>
+        <title>CreeperCastle Discord | 10,000+ Members | 24/7 Support & Giveaways</title>
         <meta 
           name="description" 
-          content="Join India's largest Minecraft Discord community with 3000+ members. Get instant support, find gaming partners, participate in events, and connect with fellow Minecraft enthusiasts."
+          content="🎮 Join 10,000+ Minecraft enthusiasts! Get 24/7 instant support, exclusive giveaways, server tips, community events. India's largest Minecraft hosting Discord!"
         />
         <meta
           name="keywords"
-          content="minecraft discord india, gaming community discord, minecraft players india, discord server minecraft, indian gaming community, minecraft friends discord, gaming discord india, minecraft multiplayer discord, creeper castle discord"
+          content="creepercastle discord server, minecraft hosting discord india, minecraft community discord india, 24/7 discord support, minecraft discord server india, server owner discord, minecraft giveaways discord, indian minecraft community, hosting support discord, free minecraft discord, active minecraft discord india"
         />
         
         {/* Open Graph / Facebook */}

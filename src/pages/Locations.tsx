@@ -70,14 +70,14 @@ const Locations = () => {
   return (
     <>
       <Helmet>
-        <title>Minecraft Server Locations India - Mumbai & Delhi Data Centers | Low Ping Hosting</title>
+        <title>India Server Locations - Mumbai & Delhi | 3ms Ping Minecraft Hosting</title>
         <meta 
           name="description" 
-          content="CreeperCastle operates premium Minecraft servers in Mumbai & Delhi NCR, India. Ultra-low latency, enterprise hardware, and 99.9% uptime guarantee for Indian gamers."
+          content="🇮🇳 Ultra-low 3-15ms ping Minecraft hosting in Mumbai & Delhi NCR. Tier 3 datacenters, NVMe SSD, 50 Tbps DDoS protection. Best Indian server locations for gaming."
         />
         <meta
           name="keywords"
-          content="minecraft servers mumbai, minecraft servers delhi, low latency minecraft hosting india, indian minecraft servers, mumbai gaming servers, delhi gaming servers, minecraft hosting locations india, local minecraft servers, indian data centers gaming"
+          content="minecraft server mumbai location, minecraft server delhi location, low ping server india, 3ms minecraft hosting, mumbai datacenter gaming, delhi ncr minecraft, indian server locations, tier 3 datacenter india, yotta datacenter minecraft, mumbai delhi minecraft hosting, local indian servers, india minecraft infrastructure, best indian server location, mumbai server hosting, delhi server hosting, low latency india gaming"
         />
         
         {/* Open Graph / Facebook */}

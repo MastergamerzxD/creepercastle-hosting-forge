@@ -111,14 +111,14 @@ const OtherHosting = () => {
   return (
     <>
       <Helmet>
-        <title>VPS Hosting & Other Games India - FiveM, CS2, Valheim Server Hosting | CreeperCastle</title>
+        <title>VPS & Discord Bot Hosting India | Intel Xeon ₹399 | 24/7 Bots ₹22</title>
         <meta 
           name="description" 
-          content="Choose from our custom VPS hosting plans or Discord bot hosting solutions. Custom VPS configurations starting from ₹299 and Discord bot hosting from ₹22/month with 24/7 support."
+          content="Premium VPS hosting with Intel Xeon 2386G from ₹399/mo. Discord bot hosting 24/7 from ₹22/mo. Mumbai datacenter, NVMe SSD, DDoS protected. Custom solutions available."
         />
         <meta
           name="keywords"
-          content="vps hosting india, discord bot hosting, custom vps plans, virtual private server india, discord hosting plans, bot hosting service, vps hosting mumbai delhi, custom server solutions"
+          content="vps hosting india cheap, best vps hosting india, intel xeon vps india, discord bot hosting india, 24/7 bot hosting, node.js bot hosting india, python discord bot hosting, cheap vps mumbai, dedicated server india, root access vps india, kvm vps hosting, nvme vps india, ddos protected vps, gaming vps india, discord hosting india"
         />
         
         {/* Open Graph / Facebook */}
