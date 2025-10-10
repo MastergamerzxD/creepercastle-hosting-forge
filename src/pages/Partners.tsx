@@ -138,9 +138,9 @@ const Partners = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-creeper to-primary bg-clip-text text-transparent animate-shine"
+              className="text-4xl md:text-6xl font-bold mb-6 text-foreground"
             >
-              Our Partners
+              Our <span className="text-primary">Partners</span>
             </motion.h1>
 
             <motion.p
