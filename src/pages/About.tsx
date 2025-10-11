@@ -288,12 +288,6 @@ const About = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/free-hosting"
-                className="inline-flex items-center justify-center px-8 py-3 bg-creeper text-navy-dark font-semibold rounded-lg hover:bg-creeper-light transition-colors duration-300"
-              >
-                Start Free Server
-              </a>
-              <a
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-3 border-2 border-creeper text-creeper font-semibold rounded-lg hover:bg-creeper hover:text-navy-dark transition-colors duration-300"
               >

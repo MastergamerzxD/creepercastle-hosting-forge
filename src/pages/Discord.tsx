@@ -210,7 +210,7 @@ const Discord = () => {
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-gray-400 text-sm">
-                      Participate in regular events and win amazing prizes including free hosting.
+                      Participate in regular events and win amazing prizes and exclusive giveaways.
                     </p>
                   </CardContent>
                 </Card>

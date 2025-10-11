@@ -64,7 +64,7 @@ const Footer = () => {
           </p>
           <div className="flex space-x-6">
             <a href="https://creepercastle-tos.edgeone.app/" target="_blank" rel="noopener noreferrer" className="text-gray-300 text-sm hover:text-creeper transition-colors duration-300">Terms of Service</a>
-            <a href="https://billing.creepercastle.in/index.php?rp=/knowledgebase/2/Privacy-policy-of-creepercastle.html" target="_blank" rel="noopener noreferrer" className="text-gray-300 text-sm hover:text-creeper transition-colors duration-300">Privacy Policy</a>
+            <a href="https://creepercastleprivacypolicy.edgeone.app/" target="_blank" rel="noopener noreferrer" className="text-gray-300 text-sm hover:text-creeper transition-colors duration-300">Privacy Policy</a>
             <a href="https://billing.creepercastle.in/index.php?rp=/knowledgebase/4/Refund-Policy-.html" target="_blank" rel="noopener noreferrer" className="text-gray-300 text-sm hover:text-creeper transition-colors duration-300">Refund Policy</a>
           </div>
         </div>

@@ -181,19 +181,19 @@ const Partners = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.3, delay: index * 0.02 }}
                   className="group relative"
                 >
-                  <div className="relative bg-card border border-border rounded-lg p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-2">
+                  <div className="relative bg-card border border-border rounded-lg p-6 transition-all duration-200 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-2">
                     {/* Partner Image */}
                     <div className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden bg-muted">
                       <img
                         src={partner.image}
                         alt={`${partner.name} - CreeperCastle Partner`}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                         loading="lazy"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                     </div>
 
                     {/* Partner Info */}
@@ -207,7 +207,7 @@ const Partners = () => {
                     </div>
 
                     {/* Glow Effect */}
-                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
                   </div>
                 </motion.div>
               ))}

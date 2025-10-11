@@ -11,7 +11,6 @@ import ReviewsSection from "@/components/ReviewsSection";
 import CtaSection from "@/components/CtaSection";
 import DiscordSection from "@/components/DiscordSection";
 import LoadingScreen from "@/components/LoadingScreen";
-import FreeHostingPromotion from "@/components/FreeHostingPromotion";
 
 
 import MinecraftConsole from "@/components/MinecraftConsole";
