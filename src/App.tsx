@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Discord from "./pages/Discord";
 import Locations from "./pages/Locations";
 import MinecraftPlans from "./pages/plans/MinecraftPlans";
+import Ryzen9Plans from "./pages/plans/Ryzen9Plans";
 import VPSPlans from "./pages/plans/VPSPlans";
 import DiscordBotPlans from "./pages/plans/DiscordBotPlans";
 import Datacenter from "./pages/Datacenter";
@@ -39,6 +40,7 @@ const App = () => (
             <Route path="/discord" element={<Discord />} />
             <Route path="/locations" element={<Locations />} />
             <Route path="/plans/minecraft" element={<MinecraftPlans />} />
+            <Route path="/plans/ryzen9" element={<Ryzen9Plans />} />
             <Route path="/plans/vps" element={<VPSPlans />} />
             <Route path="/plans/discord-bot" element={<DiscordBotPlans />} />
             <Route path="/datacenter" element={<Datacenter />} />
