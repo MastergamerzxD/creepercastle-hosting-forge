@@ -118,6 +118,13 @@ const Navbar = () => {
             <span className="relative z-10">Contact Us</span>
             <span className="absolute inset-0 bg-creeper/10 rounded-md scale-0 group-hover:scale-100 transition-transform duration-300"></span>
           </Link>
+
+          <Button className="minecraft-btn rounded text-base px-4 py-2 bg-emerald-600 hover:bg-emerald-700 border border-emerald-500/30 hover:scale-105 transition-all duration-300" asChild>
+            <a href="https://store.creepercastle.cloud" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              <Store size={16} />
+              Store
+            </a>
+          </Button>
           
           <Button className="minecraft-btn rounded text-base px-4 py-2 bg-violet-600 hover:bg-violet-700 border border-violet-500/30 hover:scale-105 transition-all duration-300" asChild>
             <Link to="/discord" className="flex items-center gap-2">
@@ -183,7 +190,12 @@ const Navbar = () => {
             <Link to="/contact" className="text-white hover:text-creeper transition-all duration-300 py-2 px-2 rounded-lg hover:bg-creeper/10" onClick={() => setIsOpen(false)}>📧 Contact Us</Link>
             
             <div className="pt-4 border-t border-gray-800 space-y-3">
-              <Button className="minecraft-btn rounded w-full bg-purple-600 hover:bg-purple-700 border border-purple-500/30" asChild>
+              <Button className="minecraft-btn rounded w-full bg-emerald-600 hover:bg-emerald-700 border border-emerald-500/30" asChild>
+                <a href="https://store.creepercastle.cloud" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                  🏪 Store
+                </a>
+              </Button>
+              <Button className="minecraft-btn rounded w-full bg-violet-600 hover:bg-violet-700 border border-violet-500/30" asChild>
                 <Link to="/discord" className="flex items-center justify-center gap-2" onClick={() => setIsOpen(false)}>
                   💬 Discord
                 </Link>

@@ -11,6 +11,7 @@ import ReviewsSection from "@/components/ReviewsSection";
 import CtaSection from "@/components/CtaSection";
 import DiscordSection from "@/components/DiscordSection";
 import LoadingScreen from "@/components/LoadingScreen";
+import DiwaliSalePopup from "@/components/DiwaliSalePopup";
 
 
 import MinecraftConsole from "@/components/MinecraftConsole";
@@ -167,6 +168,7 @@ const Index = () => {
 
   return (
     <>
+      <DiwaliSalePopup />
       <Helmet>
         <title>Best Minecraft Server Hosting India 2025 | #1 Mumbai & Delhi | 50 Tbps DDoS | ₹99</title>
         <meta name="description" content="🏆 #1 Minecraft Hosting India! ₹99/mo | 3ms ping Mumbai/Delhi | 50 Tbps DDoS | NVMe SSD | 24/7 support | 10,000+ servers | Instant setup | Java, Bedrock, Modded, SMP. Trusted by top creators! Best value & performance guaranteed." />
