@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Server, Shield, Cpu } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   // Enhanced rotating text variants with more attractive Minecraft hosting related keywords
@@ -19,33 +20,33 @@ const HeroSection = () => {
   ];
   
   return (
-    <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden pixel-grid">
-      {/* Minecraft-style background with floating blocks */}
+    <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden z-0">
-        {/* Floating Minecraft-style blocks */}
-        {Array(8).fill(0).map((_, i) => (
+        {/* Floating elements in background */}
+        {Array(6).fill(0).map((_, i) => (
           <motion.div 
             key={i}
-            className="absolute"
+            className="absolute opacity-10"
             initial={{ 
               x: Math.random() * 100 + "%", 
               y: Math.random() * 100 + "%",
-              rotate: Math.random() * 20 - 10,
-              scale: 0.3 + Math.random() * 0.4
+              rotate: Math.random() * 360,
+              scale: 0.5 + Math.random() * 0.5
             }}
             animate={{ 
               y: ["-10%", "110%"],
-              rotate: [-10, 10, -10],
-              opacity: [0.1, 0.2, 0.1]
+              rotate: [0, 360],
+              opacity: [0.05, 0.1, 0.05]
             }}
             transition={{ 
-              duration: 10 + Math.random() * 15,
+              duration: 15 + Math.random() * 20,
               repeat: Infinity,
               ease: "linear",
               delay: Math.random() * 5
             }}
           >
-            <div className={`w-16 h-16 rounded-pixel ${i % 3 === 0 ? 'grass-bg' : i % 3 === 1 ? 'dirt-bg' : 'stone-bg'} border-2 border-black/20`} />
+            <div className="w-16 h-16 bg-creeper/20 rounded-sm" />
           </motion.div>
         ))}
       </div>
@@ -59,7 +60,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <motion.h1 
-              className="text-3xl md:text-4xl lg:text-5xl font-minecraft mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -87,11 +88,11 @@ const HeroSection = () => {
                   </motion.span>
                 ))}
               </span>
-              {" "}Server
+              {" "}Server's True Potential
             </motion.h1>
             
             <motion.p 
-              className="text-lg font-pixel text-gray-300 mb-8 leading-relaxed"
+              className="text-xl text-gray-300 mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -106,16 +107,18 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button className="minecraft-btn rounded-pixel text-base py-6 px-8 pixel-animate font-minecraft" asChild>
+                <Button className="minecraft-btn rounded-md text-lg py-6 px-8 relative overflow-hidden group pixel-animate" asChild>
                   <a href="https://billing.creepercastle.in/" target="_blank" rel="noopener noreferrer">
-                    Store
+                    <span className="relative z-10">Store</span>
+                    <span className="absolute inset-0 bg-creeper-light opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
                   </a>
                 </Button>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button variant="outline" className="border-4 border-creeper text-creeper hover:bg-creeper/20 rounded-pixel text-base py-6 px-8 font-minecraft shadow-pixel" asChild>
+                <Button variant="outline" className="border-creeper text-creeper hover:bg-creeper/10 rounded-md text-lg py-6 px-8 relative overflow-hidden group" asChild>
                   <a href="https://discord.gg/RuQ9neH56S" target="_blank" rel="noopener noreferrer">
-                    Discord
+                    <span className="relative z-10">Discord</span>
+                    <span className="absolute inset-0 bg-creeper/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   </a>
                 </Button>
               </motion.div>
@@ -132,11 +135,11 @@ const HeroSection = () => {
                 whileHover={{ x: 5, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
-                <div className="mr-3 p-2 grass-bg rounded-pixel border-2 border-grass-dark animate-block-pop">
-                  <Server className="text-white h-5 w-5" />
+                <div className="mr-3 p-2 bg-creeper/10 rounded-full animate-pulse-slow">
+                  <Server className="text-creeper h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-pixel text-sm">Instant Setup</p>
+                  <p className="font-medium">Instant Setup</p>
                 </div>
               </motion.div>
               
@@ -145,11 +148,11 @@ const HeroSection = () => {
                 whileHover={{ x: 5, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
-                <div className="mr-3 p-2 bg-purple-600 rounded-pixel border-2 border-purple-800 animate-block-pop animation-delay-500">
-                  <Shield className="text-white h-5 w-5" />
+                <div className="mr-3 p-2 bg-creeper/10 rounded-full animate-pulse-slow animation-delay-500">
+                  <Shield className="text-creeper h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-pixel text-sm">CreeperShield™</p>
+                  <p className="font-medium">CreeperShield™</p>
                 </div>
               </motion.div>
               
@@ -158,11 +161,11 @@ const HeroSection = () => {
                 whileHover={{ x: 5, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
-                <div className="mr-3 p-2 stone-bg rounded-pixel border-2 border-stone-dark animate-block-pop animation-delay-1000">
-                  <Cpu className="text-white h-5 w-5" />
+                <div className="mr-3 p-2 bg-creeper/10 rounded-full animate-pulse-slow animation-delay-1000">
+                  <Cpu className="text-creeper h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-pixel text-sm">NVMe Storage</p>
+                  <p className="font-medium">NVMe Storage</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -176,7 +179,7 @@ const HeroSection = () => {
           >
             <div className="relative">
               <motion.div 
-                className="absolute inset-0 rounded-pixel blur-3xl bg-creeper/20"
+                className="absolute inset-0 rounded-full blur-3xl bg-creeper/20 animate-morph"
                 animate={{ 
                   scale: [0.8, 1, 0.8],
                   opacity: [0.2, 0.5, 0.2]
@@ -190,12 +193,16 @@ const HeroSection = () => {
               <motion.img 
                 src="/lovable-uploads/570fb7e4-e36a-4bb5-a9ef-be9e7ae57b15.png" 
                 alt="CreeperCastle.cloud Logo" 
-                className="w-4/5 mx-auto rounded-block border-4 border-creeper shadow-pixel-lg"
-                style={{ imageRendering: 'pixelated' }}
-                animate={{ y: [-10, 10, -10] }}
+                className="w-4/5 mx-auto rounded-lg"
+                animate={{ y: [-10, 10, -10], rotate: [0, 5, 0, -5, 0] }}
                 transition={{ 
                   y: {
-                    duration: 3,
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  },
+                  rotate: {
+                    duration: 10,
                     repeat: Infinity,
                     ease: "easeInOut"
                   }

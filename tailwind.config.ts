@@ -19,10 +19,6 @@ export default {
       },
     },
     extend: {
-      fontFamily: {
-        'minecraft': ['"Press Start 2P"', 'cursive'],
-        'pixel': ['"VT323"', 'monospace'],
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -67,31 +63,6 @@ export default {
           dark: "#3BA664",
           light: "#70E898",
         },
-        grass: {
-          DEFAULT: "#7CBD56",
-          dark: "#5A9B3F",
-          light: "#9DD770",
-        },
-        dirt: {
-          DEFAULT: "#8B6F47",
-          dark: "#6B5336",
-          light: "#A58A63",
-        },
-        stone: {
-          DEFAULT: "#7D7D7D",
-          dark: "#5A5A5A",
-          light: "#9E9E9E",
-        },
-        diamond: {
-          DEFAULT: "#5DADE2",
-          dark: "#3498DB",
-          light: "#85C1E9",
-        },
-        redstone: {
-          DEFAULT: "#DC143C",
-          dark: "#B01030",
-          light: "#E74C3C",
-        },
         discord: {
           DEFAULT: "hsl(var(--discord))",
           dark: "hsl(var(--discord-dark))",
@@ -102,15 +73,6 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-        pixel: "2px",
-        block: "4px",
-      },
-      boxShadow: {
-        'pixel': '4px 4px 0px rgba(0, 0, 0, 0.4)',
-        'pixel-lg': '6px 6px 0px rgba(0, 0, 0, 0.5)',
-        'pixel-sm': '2px 2px 0px rgba(0, 0, 0, 0.3)',
-        'block': '0 4px 0 0 rgba(0, 0, 0, 0.2)',
-        'block-hover': '0 2px 0 0 rgba(0, 0, 0, 0.2)',
       },
       keyframes: {
         "accordion-down": {
