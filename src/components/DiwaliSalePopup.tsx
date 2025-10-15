@@ -36,38 +36,39 @@ const DiwaliSalePopup = () => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/70 backdrop-blur-sm animate-fade-in">
+    <div className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/80 backdrop-blur-md animate-fade-in">
       <div className="relative w-full max-w-4xl mx-4 animate-scale-in">
         {/* Close Button */}
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute -top-4 -right-4 z-10 bg-white rounded-full p-2 shadow-2xl hover:scale-110 transition-transform duration-300 group"
+          className="absolute -top-4 -right-4 z-10 bg-creeper hover:bg-creeper/90 rounded-full p-2 shadow-2xl hover:scale-110 transition-transform duration-300 group"
         >
-          <X className="w-6 h-6 text-gray-800 group-hover:rotate-90 transition-transform duration-300" />
+          <X className="w-6 h-6 text-navy-dark group-hover:rotate-90 transition-transform duration-300" />
         </button>
 
         {/* Main Popup Container */}
-        <div className="relative bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 rounded-3xl overflow-hidden shadow-2xl border-4 border-amber-400/50">
+        <div className="relative bg-gradient-to-br from-navy-dark via-gray-900 to-black rounded-3xl overflow-hidden shadow-2xl border-4 border-creeper/50">
           {/* Decorative Elements */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-            <div className="absolute -top-20 -left-20 w-64 h-64 bg-gradient-to-br from-orange-400/20 to-amber-400/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute -top-20 -left-20 w-64 h-64 bg-gradient-to-br from-orange-500/20 to-creeper/20 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-creeper/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
           </div>
 
           <div className="relative p-8 md:p-12">
             {/* Header Section */}
             <div className="text-center mb-8">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-amber-600 text-white px-6 py-2 rounded-full mb-4 shadow-lg animate-bounce">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white px-6 py-2 rounded-full mb-4 shadow-lg shadow-orange-500/50 animate-bounce">
                 <Sparkles className="w-5 h-5" />
                 <span className="font-bold text-sm tracking-wider">DIWALI SPECIAL</span>
                 <Sparkles className="w-5 h-5" />
               </div>
               
-              <h2 className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-600 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-orange-400 via-amber-400 to-creeper bg-clip-text text-transparent drop-shadow-2xl">
                 🪔 Festival of Lights Sale! 🪔
               </h2>
               
-              <p className="text-lg text-gray-700 font-medium">
+              <p className="text-lg text-gray-300 font-medium">
                 October 15th - 21st | Limited Time Offers
               </p>
             </div>
@@ -76,36 +77,36 @@ const DiwaliSalePopup = () => {
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               {/* Ryzen 9 Offer */}
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative bg-white rounded-2xl p-6 shadow-xl border-2 border-amber-400/50 transform group-hover:scale-105 transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl p-6 shadow-xl border-2 border-amber-500/50 transform group-hover:scale-105 transition-all duration-300">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-gradient-to-br from-amber-400 to-orange-500 p-3 rounded-xl">
+                    <div className="bg-gradient-to-br from-amber-500 to-orange-600 p-3 rounded-xl shadow-lg shadow-amber-500/50">
                       <Zap className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-800">Ryzen 9 Special</h3>
-                      <p className="text-sm text-gray-600">Premium Performance</p>
+                      <h3 className="text-xl font-bold text-white">Ryzen 9 Special</h3>
+                      <p className="text-sm text-gray-400">Premium Performance</p>
                     </div>
                   </div>
                   
                   <div className="mb-4">
-                    <div className="text-5xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent mb-2">
+                    <div className="text-5xl font-bold bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent mb-2 drop-shadow-2xl">
                       40% OFF
                     </div>
-                    <p className="text-gray-700 font-medium">On Minecraft Ryzen 9 Hosting</p>
+                    <p className="text-gray-300 font-medium">On Minecraft Ryzen 9 Hosting</p>
                   </div>
 
-                  <div className="bg-gradient-to-r from-gray-50 to-amber-50 rounded-xl p-3 mb-4 border-2 border-dashed border-amber-400">
+                  <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-3 mb-4 border-2 border-dashed border-amber-500/50">
                     <div className="flex items-center justify-between">
-                      <code className="text-lg font-bold text-orange-600">RYZEN950</code>
+                      <code className="text-lg font-bold text-amber-400">RYZEN950</code>
                       <button
                         onClick={() => copyToClipboard('RYZEN950')}
-                        className="p-2 hover:bg-white rounded-lg transition-colors duration-200"
+                        className="p-2 hover:bg-gray-700 rounded-lg transition-colors duration-200"
                       >
                         {copiedCode === 'RYZEN950' ? (
-                          <Check className="w-5 h-5 text-green-600" />
+                          <Check className="w-5 h-5 text-creeper" />
                         ) : (
-                          <Copy className="w-5 h-5 text-gray-600" />
+                          <Copy className="w-5 h-5 text-gray-400" />
                         )}
                       </button>
                     </div>
@@ -113,7 +114,7 @@ const DiwaliSalePopup = () => {
 
                   <button
                     onClick={() => handleNavigation('/plans/ryzen9')}
-                    className="w-full bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                    className="w-full bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-bold py-3 rounded-xl shadow-lg shadow-orange-500/50 hover:shadow-xl hover:shadow-orange-500/70 transform hover:scale-105 transition-all duration-300"
                   >
                     Get Ryzen 9 Now →
                   </button>
@@ -122,36 +123,36 @@ const DiwaliSalePopup = () => {
 
               {/* Site-wide Offer */}
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative bg-white rounded-2xl p-6 shadow-xl border-2 border-yellow-400/50 transform group-hover:scale-105 transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-creeper to-green-600 rounded-2xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl p-6 shadow-xl border-2 border-creeper/50 transform group-hover:scale-105 transition-all duration-300">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-gradient-to-br from-yellow-400 to-orange-400 p-3 rounded-xl">
+                    <div className="bg-gradient-to-br from-creeper to-green-600 p-3 rounded-xl shadow-lg shadow-creeper/50">
                       <Store className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-800">Site-wide Sale</h3>
-                      <p className="text-sm text-gray-600">All Products</p>
+                      <h3 className="text-xl font-bold text-white">Site-wide Sale</h3>
+                      <p className="text-sm text-gray-400">All Products</p>
                     </div>
                   </div>
                   
                   <div className="mb-4">
-                    <div className="text-5xl font-bold bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent mb-2">
+                    <div className="text-5xl font-bold bg-gradient-to-r from-creeper to-green-400 bg-clip-text text-transparent mb-2 drop-shadow-2xl">
                       30% OFF
                     </div>
-                    <p className="text-gray-700 font-medium">On All Other Hosting Plans</p>
+                    <p className="text-gray-300 font-medium">On All Other Hosting Plans</p>
                   </div>
 
-                  <div className="bg-gradient-to-r from-gray-50 to-yellow-50 rounded-xl p-3 mb-4 border-2 border-dashed border-yellow-400">
+                  <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-3 mb-4 border-2 border-dashed border-creeper/50">
                     <div className="flex items-center justify-between">
-                      <code className="text-lg font-bold text-orange-600">DIWALI30</code>
+                      <code className="text-lg font-bold text-creeper">DIWALI30</code>
                       <button
                         onClick={() => copyToClipboard('DIWALI30')}
-                        className="p-2 hover:bg-white rounded-lg transition-colors duration-200"
+                        className="p-2 hover:bg-gray-700 rounded-lg transition-colors duration-200"
                       >
                         {copiedCode === 'DIWALI30' ? (
-                          <Check className="w-5 h-5 text-green-600" />
+                          <Check className="w-5 h-5 text-creeper" />
                         ) : (
-                          <Copy className="w-5 h-5 text-gray-600" />
+                          <Copy className="w-5 h-5 text-gray-400" />
                         )}
                       </button>
                     </div>
@@ -159,7 +160,7 @@ const DiwaliSalePopup = () => {
 
                   <button
                     onClick={() => handleNavigation('/plans/minecraft')}
-                    className="w-full bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                    className="w-full bg-gradient-to-r from-creeper to-green-600 hover:from-green-600 hover:to-creeper text-white font-bold py-3 rounded-xl shadow-lg shadow-creeper/50 hover:shadow-xl hover:shadow-creeper/70 transform hover:scale-105 transition-all duration-300"
                   >
                     Browse All Plans →
                   </button>
@@ -169,25 +170,25 @@ const DiwaliSalePopup = () => {
 
             {/* Footer CTA */}
             <div className="text-center">
-              <p className="text-gray-600 mb-4 font-medium">
+              <p className="text-gray-400 mb-4 font-medium">
                 ✨ Limited time offer • Valid till October 21st • Don't miss out! ✨
               </p>
               <div className="flex flex-wrap justify-center gap-3">
                 <button
                   onClick={() => handleNavigation('/plans/minecraft')}
-                  className="px-6 py-2 bg-white hover:bg-gray-50 text-gray-800 font-semibold rounded-xl border-2 border-gray-300 hover:border-gray-400 transition-all duration-300"
+                  className="px-6 py-2 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-xl border-2 border-creeper/30 hover:border-creeper/60 transition-all duration-300"
                 >
                   Minecraft Classic
                 </button>
                 <button
                   onClick={() => handleNavigation('/plans/vps')}
-                  className="px-6 py-2 bg-white hover:bg-gray-50 text-gray-800 font-semibold rounded-xl border-2 border-gray-300 hover:border-gray-400 transition-all duration-300"
+                  className="px-6 py-2 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-xl border-2 border-creeper/30 hover:border-creeper/60 transition-all duration-300"
                 >
                   VPS Hosting
                 </button>
                 <button
                   onClick={() => handleNavigation('/plans/discord-bot')}
-                  className="px-6 py-2 bg-white hover:bg-gray-50 text-gray-800 font-semibold rounded-xl border-2 border-gray-300 hover:border-gray-400 transition-all duration-300"
+                  className="px-6 py-2 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-xl border-2 border-creeper/30 hover:border-creeper/60 transition-all duration-300"
                 >
                   Discord Bot
                 </button>
