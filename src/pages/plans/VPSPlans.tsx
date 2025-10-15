@@ -3,7 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, Server } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Check, Server, Cpu, Zap, Shield, HardDrive, Globe, Sparkles, Crown, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 
 const vpsPlans = [
@@ -131,6 +132,45 @@ const vpsPlans = [
 ];
 
 const VPSPlans = () => {
+  const features = [
+    {
+      icon: <Cpu className="w-6 h-6" />,
+      title: 'AMD EPYC 4244P',
+      description: 'Next-gen server processor with 6 cores, 3.8GHz base and blazing 5.1GHz turbo boost for unmatched performance',
+      gradient: 'from-cyan-500 to-blue-600',
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Lightning Fast NVMe',
+      description: 'Enterprise-grade NVMe SSD storage delivering 7000MB/s speeds for instant application response',
+      gradient: 'from-blue-500 to-cyan-600',
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: '17 Tbps DDoS Shield',
+      description: 'OVH enterprise protection with massive 17 Tbps mitigation capacity keeps you online 24/7',
+      gradient: 'from-cyan-600 to-teal-600',
+    },
+    {
+      icon: <HardDrive className="w-6 h-6" />,
+      title: 'ECC RAM Technology',
+      description: 'Error-correcting memory ensures maximum stability and data integrity for mission-critical workloads',
+      gradient: 'from-blue-600 to-indigo-600',
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: 'Mumbai Datacenter',
+      description: 'Strategic India location with 1Gbps network, perfect latency for South Asian audiences',
+      gradient: 'from-cyan-500 to-blue-500',
+    },
+    {
+      icon: <Rocket className="w-6 h-6" />,
+      title: 'Full Root Access',
+      description: 'Complete control with KVM virtualization, rDNS support, and instant provisioning',
+      gradient: 'from-teal-500 to-cyan-600',
+    },
+  ];
+
   return (
     <>
       <Helmet>
@@ -155,155 +195,201 @@ const VPSPlans = () => {
         <link rel="canonical" href="https://creepercastle.cloud/plans/vps" />
       </Helmet>
       
-      <div className="flex flex-col min-h-screen bg-navy text-white relative">
-        {/* Enhanced background */}
+      <div className="flex flex-col min-h-screen bg-gradient-to-b from-black via-navy-dark to-navy text-white relative overflow-hidden">
+        {/* Epic animated background */}
         <div className="fixed inset-0 z-0 pointer-events-none">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" 
-            style={{ backgroundImage: 'url("/lovable-uploads/aecdd243-6cbd-4e56-82a8-b494c26108cc.png")' }}
-          ></div>
+          {/* Animated gradient orbs */}
+          <motion.div
+            className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.3, 0.5, 0.3],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl"
+            animate={{
+              scale: [1.2, 1, 1.2],
+              opacity: [0.5, 0.3, 0.5],
+            }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute top-1/2 left-1/2 w-96 h-96 bg-creeper/10 rounded-full blur-3xl"
+            animate={{
+              scale: [1, 1.3, 1],
+              x: ["-50%", "-40%", "-50%"],
+              y: ["-50%", "-60%", "-50%"],
+            }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          />
           
-          <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/90 via-navy/80 to-navy-light/70"></div>
-          
-          {/* Animated particles */}
-          {Array.from({ length: 8 }).map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute bg-creeper/20 rounded-full"
-              initial={{
-                width: Math.random() * 6 + 2,
-                height: Math.random() * 6 + 2,
-                x: Math.random() * 100 + "%",
-                y: Math.random() * 100 + "%",
-                opacity: Math.random() * 0.5,
-              }}
-              animate={{
-                y: ["-10%", "110%"],
-                opacity: [0, 0.6, 0],
-              }}
-              transition={{
-                duration: Math.random() * 15 + 20,
-                repeat: Infinity,
-                ease: "linear",
-                delay: Math.random() * 10,
-              }}
-            />
-          ))}
+          {/* Grid overlay */}
+          <div className="absolute inset-0 bg-grid opacity-5" />
         </div>
         
         <Navbar />
         
-        <main className="flex-grow pt-24 relative z-10">
-          <section className="py-12">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <motion.h1 
-                  className="text-4xl md:text-5xl font-bold mb-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
+        <main className="flex-grow relative z-10">
+          {/* Epic Hero Section */}
+          <section className="pt-32 pb-20 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-600/10 to-cyan-500/5 animate-pulse-slow" />
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="container mx-auto px-4 relative z-10"
+            >
+              <div className="text-center max-w-5xl mx-auto">
+                <motion.div
+                  initial={{ scale: 0.9 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className="inline-block mb-6"
                 >
-                  VPS <span className="text-creeper">Hosting Plans</span>
-                </motion.h1>
-                <motion.p 
-                  className="text-xl text-gray-300 max-w-3xl mx-auto mb-12"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                >
-                  Experience premium VPS hosting powered by the latest <span className="text-creeper font-bold">AMD EPYC 4244P</span> processors with blazing-fast NVMe storage and enterprise-grade DDoS protection
-                </motion.p>
-
-                {/* Features Section */}
-                <motion.div 
-                  className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                >
-                  <motion.div 
-                    className="bg-navy-light/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 text-center hover:border-creeper/50 transition-all duration-300"
-                    whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(124, 252, 0, 0.3)" }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <div className="bg-creeper/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Server className="h-8 w-8 text-creeper" />
-                    </div>
-                    <h3 className="text-xl font-bold text-creeper mb-3">Elite Gaming Performance</h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      Powered by the cutting-edge <span className="text-creeper font-bold">AMD EPYC 4244P</span> - an absolute powerhouse for gaming! 
-                      With ultra-low latency, blazing-fast NVMe storage, and industry-leading single-core performance, run game servers, 
-                      hosting platforms, or any gaming application with zero lag and maximum uptime. This is premium hosting at its finest!
-                    </p>
-                  </motion.div>
-
-                  <motion.div 
-                    className="bg-navy-light/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 text-center hover:border-creeper/50 transition-all duration-300"
-                    whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(124, 252, 0, 0.3)" }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <div className="bg-creeper/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl">🛡️</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-creeper mb-3">💪 Ultimate Military-Grade Protection</h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      Protected by OVH's world-class DDoS shield with an <span className="text-creeper font-bold">INSANE 17 Tbps</span> smart mitigation capacity! 
-                      Your servers stay online even during the most sophisticated attacks, ensuring 99.9% uptime. 
-                      <span className="text-creeper font-semibold"> This is the same protection trusted by Fortune 500 companies - unmatched in the industry!</span>
-                    </p>
-                  </motion.div>
-
-                  <motion.div 
-                    className="bg-navy-light/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 text-center hover:border-creeper/50 transition-all duration-300"
-                    whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(124, 252, 0, 0.3)" }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <div className="bg-creeper/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl">💎</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-creeper mb-3">AMD EPYC 4244P Beast</h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      The game-changer! <span className="text-creeper font-bold">AMD EPYC 4244P</span> with 6 cores, 
-                      <span className="text-creeper font-semibold"> 3.8GHz base</span> and mind-blowing <span className="text-creeper font-semibold">5.1GHz turbo boost</span>! 
-                      This premium processor delivers exceptional performance with ECC RAM for unmatched reliability. 
-                      Perfect for demanding workloads, gaming, and high-traffic applications. You simply can't beat this value!
-                    </p>
-                  </motion.div>
+                  <Badge className="bg-gradient-to-r from-cyan-500 via-blue-600 to-cyan-500 text-white px-6 py-2 text-lg border-none shadow-lg shadow-cyan-500/50">
+                    <Crown className="w-4 h-4 mr-2 inline" />
+                    Enterprise-Grade VPS Hosting
+                  </Badge>
                 </motion.div>
+                
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                  <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-600 bg-clip-text text-transparent">
+                    AMD EPYC 4244P
+                  </span>
+                  <br />
+                  <span className="text-white">VPS Hosting</span>
+                </h1>
+                
+                <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+                  Unleash the power of next-generation server processors. Experience
+                  <span className="text-cyan-400 font-semibold"> extreme performance</span>, 
+                  <span className="text-blue-400 font-semibold"> 17 Tbps DDoS protection</span>, and 
+                  <span className="text-creeper font-semibold"> enterprise reliability</span> that keeps you ahead.
+                </p>
+
+                <div className="flex flex-wrap justify-center gap-4 mb-12">
+                  <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm border border-cyan-500/40 rounded-lg px-6 py-4">
+                    <div className="text-3xl font-bold text-cyan-400">5.1 GHz</div>
+                    <div className="text-sm text-gray-300">Turbo Boost</div>
+                  </div>
+                  <div className="bg-gradient-to-r from-blue-500/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/40 rounded-lg px-6 py-4">
+                    <div className="text-3xl font-bold text-blue-400">17 Tbps</div>
+                    <div className="text-sm text-gray-300">DDoS Protection</div>
+                  </div>
+                  <div className="bg-gradient-to-r from-cyan-500/20 to-creeper/20 backdrop-blur-sm border border-cyan-500/40 rounded-lg px-6 py-4">
+                    <div className="text-3xl font-bold text-creeper">NVMe</div>
+                    <div className="text-sm text-gray-300">SSD Storage</div>
+                  </div>
+                </div>
+
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-6 text-lg font-bold shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-600/60 transition-all duration-300 hover:scale-105"
+                  asChild
+                >
+                  <a href="#plans">
+                    <Rocket className="w-5 h-5 mr-2" />
+                    Explore Epic Plans
+                  </a>
+                </Button>
               </div>
-              
+            </motion.div>
+          </section>
+
+          {/* Features Grid */}
+          <section className="py-20 relative">
+            <div className="container mx-auto px-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+                  Why <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">EPYC VPS</span> Dominates
+                </h2>
+                <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                  Enterprise-grade infrastructure engineered for maximum performance and reliability
+                </p>
+              </motion.div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {features.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <Card className="bg-gradient-to-br from-navy-dark/80 to-black/80 border-cyan-500/30 hover:border-cyan-500/60 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 h-full backdrop-blur-sm group">
+                      <CardHeader>
+                        <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                          {feature.icon}
+                        </div>
+                        <CardTitle className="text-xl text-white">{feature.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Pricing Plans */}
+          <section id="plans" className="py-20 relative">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent" />
+            
+            <div className="container mx-auto px-4 relative z-10">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+                  Choose Your <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">Power Tier</span>
+                </h2>
+                <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                  Premium AMD EPYC VPS plans engineered for maximum performance
+                </p>
+              </motion.div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 {vpsPlans.map((plan, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    whileHover={{ 
-                      y: -8, 
-                      scale: 1.02,
-                      transition: { duration: 0.3 }
-                    }}
-                    transition={{ duration: 0.6, delay: 0.1 * index, type: "spring", stiffness: 100 }}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="h-full"
                   >
                     <Card 
-                      className={`bg-gradient-to-br from-navy-light/80 to-navy-dark/60 backdrop-blur-md ${
+                      className={`relative overflow-hidden bg-gradient-to-br from-navy-dark/90 to-black/80 backdrop-blur-md ${
                         plan.highlighted 
-                          ? 'border-2 border-creeper relative shadow-[0_0_30px_rgba(124,252,0,0.3)] ring-2 ring-creeper/20' 
-                          : 'border border-gray-700/50 hover:border-creeper/50'
-                      } transition-all duration-500 h-full group overflow-hidden`}
+                          ? 'border-2 border-cyan-500 shadow-[0_0_40px_rgba(6,182,212,0.3)] scale-105 lg:scale-110' 
+                          : 'border border-cyan-500/20 hover:border-cyan-500/50'
+                      } transition-all duration-500 h-full flex flex-col group`}
                     >
-                      {/* Animated gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-creeper/5 via-transparent to-creeper/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                      {/* Epic animated background effects */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-blue-600/5 to-creeper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       
-                      {/* Animated corner accent */}
                       <motion.div 
-                        className="absolute top-0 right-0 w-32 h-32 bg-creeper/10 blur-3xl rounded-full"
+                        className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
                         animate={{
-                          scale: [1, 1.2, 1],
-                          opacity: [0.3, 0.5, 0.3],
+                          opacity: [0.3, 0.8, 0.3],
                         }}
                         transition={{
-                          duration: 4,
+                          duration: 3,
                           repeat: Infinity,
                           ease: "easeInOut"
                         }}
@@ -311,12 +397,12 @@ const VPSPlans = () => {
                       
                       {plan.highlighted && (
                         <motion.div 
-                          className="absolute top-0 right-0 bg-gradient-to-br from-creeper to-creeper/80 text-navy-dark font-bold text-sm px-6 py-2 rounded-bl-xl shadow-lg z-10"
+                          className="absolute top-0 right-0 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 text-sm font-bold rounded-bl-xl shadow-lg z-10"
                           animate={{
                             boxShadow: [
-                              "0 0 15px rgba(124,252,0,0.5)",
-                              "0 0 25px rgba(124,252,0,0.8)",
-                              "0 0 15px rgba(124,252,0,0.5)"
+                              "0 0 20px rgba(6,182,212,0.5)",
+                              "0 0 30px rgba(6,182,212,0.8)",
+                              "0 0 20px rgba(6,182,212,0.5)"
                             ]
                           }}
                           transition={{
@@ -325,156 +411,99 @@ const VPSPlans = () => {
                             ease: "easeInOut"
                           }}
                         >
-                          ⭐ MOST POPULAR
+                          <Sparkles className="w-4 h-4 inline mr-1" />
+                          MOST POPULAR
                         </motion.div>
                       )}
+                      
                       <CardHeader className="text-center relative z-10">
                         <motion.div 
                           className="mx-auto mb-4 relative"
-                          whileHover={{ rotate: [0, -5, 5, -5, 0], scale: 1.1 }}
-                          transition={{ duration: 0.5 }}
+                          whileHover={{ 
+                            scale: 1.1,
+                            rotate: [0, -10, 10, 0],
+                            transition: { duration: 0.6 }
+                          }}
                         >
-                          <div className="absolute inset-0 bg-creeper/20 blur-2xl rounded-full scale-150" />
+                          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-blue-600/30 blur-2xl rounded-full" />
                           <img 
                             src={plan.logo} 
                             alt={`${plan.name} logo`}
-                            className="h-20 w-auto mx-auto relative z-10 drop-shadow-[0_0_15px_rgba(124,252,0,0.5)]"
+                            className="h-20 w-auto mx-auto relative z-10 drop-shadow-[0_0_20px_rgba(6,182,212,0.6)]"
                           />
                         </motion.div>
-                        <CardTitle className="text-2xl font-bold bg-gradient-to-r from-white via-creeper to-white bg-clip-text text-transparent">
-                          {plan.name}
+                        
+                        <CardTitle className="text-2xl font-bold mb-4">
+                          <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                            {plan.name}
+                          </span>
                         </CardTitle>
-                        <div className="flex items-baseline justify-center mt-3 relative">
+                        
+                        <div className="flex items-baseline justify-center">
                           <motion.span 
-                            className="text-4xl font-black text-creeper drop-shadow-[0_0_10px_rgba(124,252,0,0.5)]"
-                            animate={{
-                              textShadow: [
-                                "0 0 10px rgba(124,252,0,0.5)",
-                                "0 0 20px rgba(124,252,0,0.8)",
-                                "0 0 10px rgba(124,252,0,0.5)"
-                              ]
-                            }}
-                            transition={{
-                              duration: 2,
-                              repeat: Infinity,
-                              ease: "easeInOut"
-                            }}
+                            className="text-5xl font-black text-white"
+                            whileHover={{ scale: 1.1 }}
                           >
                             {plan.price}
                           </motion.span>
                           <span className="text-lg text-gray-400 ml-2 font-medium">/month</span>
                         </div>
                       </CardHeader>
-                      <CardContent className="flex-1 relative z-10">
-                        <div className="space-y-4">
-                          <div className="border-t border-creeper/20 pt-4 relative">
-                            <div className="absolute inset-0 bg-gradient-to-b from-creeper/5 to-transparent rounded-lg pointer-events-none" />
-                            <h4 className="font-bold mb-4 text-creeper text-lg flex items-center gap-2 relative">
-                              <span className="inline-block w-1 h-6 bg-creeper rounded-full animate-pulse" />
-                              Premium Specifications
-                            </h4>
-                            <ul className="space-y-3 text-sm relative">
-                              <motion.li 
-                                className="flex items-center gap-3 bg-navy-dark/30 p-2 rounded-lg border border-creeper/10 hover:border-creeper/30 transition-all group"
-                                whileHover={{ x: 5, backgroundColor: "rgba(124,252,0,0.05)" }}
-                              >
-                                <span className="text-creeper opacity-70 group-hover:opacity-100 transition-opacity">▸</span>
-                                <span className="text-gray-200 group-hover:text-white transition-colors">{plan.specs.cpu}</span>
-                              </motion.li>
-                              <motion.li 
-                                className="flex items-center gap-3 bg-navy-dark/30 p-2 rounded-lg border border-creeper/10 hover:border-creeper/30 transition-all group"
-                                whileHover={{ x: 5, backgroundColor: "rgba(124,252,0,0.05)" }}
-                              >
-                                <span className="text-creeper opacity-70 group-hover:opacity-100 transition-opacity">▸</span>
-                                <span className="text-gray-200 group-hover:text-white transition-colors">{plan.specs.cores}</span>
-                              </motion.li>
-                              <motion.li 
-                                className="flex items-center gap-3 bg-navy-dark/30 p-2 rounded-lg border border-creeper/10 hover:border-creeper/30 transition-all group"
-                                whileHover={{ x: 5, backgroundColor: "rgba(124,252,0,0.05)" }}
-                              >
-                                <span className="text-creeper opacity-70 group-hover:opacity-100 transition-opacity">▸</span>
-                                <span className="text-gray-200 group-hover:text-white transition-colors">{plan.specs.baseFreq}</span>
-                              </motion.li>
-                              <motion.li 
-                                className="flex items-center gap-3 bg-navy-dark/30 p-2 rounded-lg border border-creeper/10 hover:border-creeper/30 transition-all group"
-                                whileHover={{ x: 5, backgroundColor: "rgba(124,252,0,0.05)" }}
-                              >
-                                <span className="text-creeper opacity-70 group-hover:opacity-100 transition-opacity">▸</span>
-                                <span className="text-gray-200 group-hover:text-white transition-colors">{plan.specs.turboFreq}</span>
-                              </motion.li>
-                              <motion.li 
-                                className="flex items-center gap-3 bg-navy-dark/30 p-2 rounded-lg border border-creeper/10 hover:border-creeper/30 transition-all group"
-                                whileHover={{ x: 5, backgroundColor: "rgba(124,252,0,0.05)" }}
-                              >
-                                <span className="text-creeper opacity-70 group-hover:opacity-100 transition-opacity">▸</span>
-                                <span className="text-gray-200 group-hover:text-white transition-colors">{plan.specs.ram}</span>
-                              </motion.li>
-                              <motion.li 
-                                className="flex items-center gap-3 bg-navy-dark/30 p-2 rounded-lg border border-creeper/10 hover:border-creeper/30 transition-all group"
-                                whileHover={{ x: 5, backgroundColor: "rgba(124,252,0,0.05)" }}
-                              >
-                                <span className="text-creeper opacity-70 group-hover:opacity-100 transition-opacity">▸</span>
-                                <span className="text-gray-200 group-hover:text-white transition-colors">{plan.specs.storage}</span>
-                              </motion.li>
-                              <motion.li 
-                                className="flex items-center gap-3 bg-navy-dark/30 p-2 rounded-lg border border-creeper/10 hover:border-creeper/30 transition-all group"
-                                whileHover={{ x: 5, backgroundColor: "rgba(124,252,0,0.05)" }}
-                              >
-                                <span className="text-creeper opacity-70 group-hover:opacity-100 transition-opacity">▸</span>
-                                <span className="text-gray-200 group-hover:text-white transition-colors">{plan.specs.network}</span>
-                              </motion.li>
-                              <motion.li 
-                                className="flex items-center gap-3 bg-navy-dark/30 p-2 rounded-lg border border-creeper/10 hover:border-creeper/30 transition-all group"
-                                whileHover={{ x: 5, backgroundColor: "rgba(124,252,0,0.05)" }}
-                              >
-                                <span className="text-creeper opacity-70 group-hover:opacity-100 transition-opacity">▸</span>
-                                <span className="text-gray-200 group-hover:text-white transition-colors">{plan.specs.location}</span>
-                              </motion.li>
-                              <motion.li 
-                                className="flex items-center gap-3 bg-navy-dark/30 p-2 rounded-lg border border-creeper/10 hover:border-creeper/30 transition-all group"
-                                whileHover={{ x: 5, backgroundColor: "rgba(124,252,0,0.05)" }}
-                              >
-                                <span className="text-creeper opacity-70 group-hover:opacity-100 transition-opacity">▸</span>
-                                <span className="text-gray-200 group-hover:text-white transition-colors">{plan.specs.ddos}</span>
-                              </motion.li>
-                              <motion.li 
-                                className="flex items-center gap-3 bg-navy-dark/30 p-2 rounded-lg border border-creeper/10 hover:border-creeper/30 transition-all group"
-                                whileHover={{ x: 5, backgroundColor: "rgba(124,252,0,0.05)" }}
-                              >
-                                <span className="text-creeper opacity-70 group-hover:opacity-100 transition-opacity">▸</span>
-                                <span className="text-gray-200 group-hover:text-white transition-colors font-bold">{plan.specs.mitigation}</span>
-                              </motion.li>
-                              <motion.li 
-                                className="flex items-center gap-3 bg-navy-dark/30 p-2 rounded-lg border border-creeper/10 hover:border-creeper/30 transition-all group"
-                                whileHover={{ x: 5, backgroundColor: "rgba(124,252,0,0.05)" }}
-                              >
-                                <span className="text-creeper opacity-70 group-hover:opacity-100 transition-opacity">▸</span>
-                                <span className="text-gray-200 group-hover:text-white transition-colors">{plan.specs.rdns}</span>
-                              </motion.li>
-                            </ul>
-                          </div>
-                          
+                      
+                      <CardContent className="flex-grow space-y-3 text-sm relative z-10 pb-4">
+                        {Object.entries(plan.specs).map(([key, value], idx) => (
                           <motion.div 
-                            className="mt-6 relative"
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
+                            key={key} 
+                            className="flex items-start gap-3 group/item"
+                            initial={{ opacity: 0, x: -10 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.05 }}
+                            whileHover={{ x: 5 }}
                           >
-                            <div className="absolute inset-0 bg-gradient-to-r from-creeper/20 via-creeper/40 to-creeper/20 blur-xl rounded-lg animate-pulse" />
-                            <Button 
-                              className="w-full minecraft-btn relative z-10 font-bold text-base py-6 shadow-[0_0_20px_rgba(124,252,0,0.4)] hover:shadow-[0_0_30px_rgba(124,252,0,0.6)] transition-all duration-300" 
-                              asChild
-                            >
-                              <a 
-                                href={plan.isCustom ? plan.buyLink : plan.buyLink} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                              >
-                                {plan.isCustom ? "🎯 Get Custom Quote" : "🚀 Buy Now"}
-                              </a>
-                            </Button>
+                            <div className="flex-shrink-0 mt-0.5">
+                              <div className="w-5 h-5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
+                                <Check className="w-3 h-3 text-white" />
+                              </div>
+                            </div>
+                            <span className="text-gray-300 group-hover/item:text-white transition-colors duration-300 leading-relaxed">
+                              {value}
+                            </span>
                           </motion.div>
-                        </div>
+                        ))}
                       </CardContent>
+                      
+                      <div className="p-6 pt-0 relative z-10">
+                        <motion.div
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <Button 
+                            className={`w-full font-bold py-6 text-base shadow-xl transition-all duration-300 ${
+                              plan.highlighted
+                                ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-cyan-500/50 hover:shadow-cyan-600/60'
+                                : 'bg-gradient-to-r from-creeper/90 to-creeper hover:from-creeper hover:to-creeper/90 text-navy-dark shadow-creeper/50'
+                            }`}
+                            asChild
+                          >
+                            <a href={plan.buyLink} target="_blank" rel="noopener noreferrer">
+                              <span className="flex items-center justify-center gap-2">
+                                {plan.isCustom ? (
+                                  <>
+                                    <Sparkles className="w-4 h-4" />
+                                    Contact Us
+                                  </>
+                                ) : (
+                                  <>
+                                    <Rocket className="w-4 h-4" />
+                                    Get Started
+                                  </>
+                                )}
+                              </span>
+                            </a>
+                          </Button>
+                        </motion.div>
+                      </div>
                     </Card>
                   </motion.div>
                 ))}
