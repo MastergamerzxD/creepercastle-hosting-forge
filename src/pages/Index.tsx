@@ -16,7 +16,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import MinecraftConsole from "@/components/MinecraftConsole";
 import PlanCalculatorSidebar from "@/components/PlanCalculatorSidebar";
 import { Button } from "@/components/ui/button";
-import { Server, Shield, Settings, Calculator } from "lucide-react";
+import { Server, Shield, Settings, Calculator, Gamepad2, Zap } from "lucide-react";
 import StructuredData from "@/components/StructuredData";
 
 // Import framer-motion for animations
@@ -372,124 +372,216 @@ const Index = () => {
               </div>
             </section>
             
-            {/* Services Cards Section */}
-            <section className="py-20 bg-navy">
-              <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {/* Other Hosting Card */}
-                  <div className="bg-navy-light rounded-xl p-6 border border-gray-800 hover:border-creeper/50 transition-all hover:transform hover:-translate-y-2">
-                    <div className="text-center mb-6">
-                      <div className="w-16 h-16 bg-creeper/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <Settings className="h-8 w-8 text-creeper" />
-                      </div>
-                      <h3 className="text-xl font-bold mb-2">Other Hosting</h3>
-                      <p className="text-gray-400 text-sm">VPS Hosting & Discord Bot Hosting</p>
-                    </div>
-                    
-                    <div className="space-y-3 mb-6">
-                       <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">VPS Hosting:</span>
-                        <span className="text-creeper">From ₹399</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Discord Hosting:</span>
-                        <span className="text-creeper">From ₹22</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Features:</span>
-                        <span className="text-creeper">Full Control</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Support:</span>
-                        <span className="text-creeper">24/7 Expert</span>
-                      </div>
-                    </div>
-                    
-                     <div className="text-center">
-                      <div className="text-2xl font-bold text-creeper mb-2">Starting ₹22/mo</div>
-                      <Button className="w-full minecraft-btn" asChild>
-                        <Link to="/plans/other">View Plans</Link>
-                      </Button>
-                    </div>
-                  </div>
+            {/* Premium Hosting Services Section */}
+            <section className="py-24 bg-gradient-to-b from-navy via-navy-dark to-black relative overflow-hidden">
+              {/* Animated background effects */}
+              <div className="absolute inset-0 bg-grid opacity-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-creeper/5 via-transparent to-purple-500/5"></div>
+              
+              <div className="container mx-auto px-4 relative z-10">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  className="text-center mb-16"
+                >
+                  <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                    Choose Your <span className="bg-gradient-to-r from-creeper via-amber-400 to-purple-500 bg-clip-text text-transparent">Perfect Hosting</span>
+                  </h2>
+                  <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Premium hosting solutions designed for performance, reliability, and excellence
+                  </p>
+                </motion.div>
 
-                  {/* Minecraft Card */}
-                  <div className="bg-navy-light rounded-xl p-6 border-2 border-creeper relative hover:transform hover:-translate-y-2 transition-all">
-                    <div className="absolute top-0 right-0 bg-creeper text-navy-dark font-medium text-sm px-3 py-1 rounded-bl-lg">
-                      Most Popular
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {/* Minecraft Hosting Card */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    className="group"
+                  >
+                    <div className="relative h-full bg-gradient-to-br from-creeper/10 to-creeper/5 backdrop-blur-sm border-2 border-creeper/40 rounded-2xl p-6 hover:border-creeper transition-all duration-300 hover:shadow-2xl hover:shadow-creeper/30 hover:-translate-y-2">
+                      <div className="absolute top-4 right-4">
+                        <span className="bg-creeper text-navy-dark text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>
+                      </div>
+                      
+                      <div className="mb-6">
+                        <div className="w-16 h-16 bg-gradient-to-br from-creeper to-creeper-dark rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-creeper/50">
+                          <Gamepad2 className="h-8 w-8 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-2">Minecraft</h3>
+                        <p className="text-gray-400 text-sm">Ultimate gaming experience</p>
+                      </div>
+
+                      <div className="space-y-3 mb-6">
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-creeper rounded-full"></div>
+                          <span className="text-gray-300">From <strong className="text-white">2GB RAM</strong></span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-creeper rounded-full"></div>
+                          <span className="text-gray-300"><strong className="text-white">30GB</strong> NVMe Storage</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-creeper rounded-full"></div>
+                          <span className="text-gray-300">Mumbai Location</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-creeper rounded-full"></div>
+                          <span className="text-gray-300">DDoS Protected</span>
+                        </div>
+                      </div>
+
+                      <div className="border-t border-creeper/30 pt-4 mt-auto">
+                        <div className="text-3xl font-bold text-creeper mb-4">₹99<span className="text-lg text-gray-400">/mo</span></div>
+                        <Button className="w-full bg-creeper hover:bg-creeper-dark text-navy-dark font-bold py-2.5 transition-all duration-300 hover:scale-105 shadow-lg shadow-creeper/30" asChild>
+                          <Link to="/plans/minecraft">Get Started</Link>
+                        </Button>
+                      </div>
                     </div>
-                    
-                    <div className="text-center mb-6">
-                      <div className="w-16 h-16 bg-creeper/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <Server className="h-8 w-8 text-creeper" />
+                  </motion.div>
+
+                  {/* Ryzen 9 Hosting Card */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="group"
+                  >
+                    <div className="relative h-full bg-gradient-to-br from-amber-500/10 to-orange-600/5 backdrop-blur-sm border-2 border-amber-500/40 rounded-2xl p-6 hover:border-amber-400 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/30 hover:-translate-y-2">
+                      <div className="absolute top-4 right-4">
+                        <span className="bg-gradient-to-r from-amber-500 to-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full">PREMIUM</span>
                       </div>
-                      <h3 className="text-xl font-bold mb-2">Minecraft Hosting</h3>
-                      <p className="text-gray-400 text-sm">Optimized servers for the best Minecraft experience</p>
+                      
+                      <div className="mb-6">
+                        <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-amber-500/50">
+                          <Zap className="h-8 w-8 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-2">Ryzen 9</h3>
+                        <p className="text-gray-400 text-sm">Extreme performance power</p>
+                      </div>
+
+                      <div className="space-y-3 mb-6">
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                          <span className="text-gray-300"><strong className="text-amber-300">Ryzen 9 5900X</strong></span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                          <span className="text-gray-300">From <strong className="text-white">3GB RAM</strong></span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                          <span className="text-gray-300"><strong className="text-white">4.8GHz</strong> Boost</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                          <span className="text-gray-300">Advanced Shield</span>
+                        </div>
+                      </div>
+
+                      <div className="border-t border-amber-500/30 pt-4 mt-auto">
+                        <div className="text-3xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent mb-4">₹299<span className="text-lg text-gray-400">/mo</span></div>
+                        <Button className="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-bold py-2.5 transition-all duration-300 hover:scale-105 shadow-lg shadow-amber-500/30" asChild>
+                          <Link to="/plans/ryzen9">Unleash Power</Link>
+                        </Button>
+                      </div>
                     </div>
-                    
-                    <div className="space-y-3 mb-6">
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Starting RAM:</span>
-                        <span className="text-creeper">2GB</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Starting CPU:</span>
-                        <span className="text-creeper">1 vCore</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Storage:</span>
-                        <span className="text-creeper">30GB NVMe</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Location:</span>
-                        <span className="text-creeper">Mumbai, India</span>
-                      </div>
-                    </div>
-                    
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-creeper mb-2">₹99/mo</div>
-                      <Button className="w-full minecraft-btn" asChild>
-                        <Link to="/plans/minecraft">View Plans</Link>
-                      </Button>
-                    </div>
-                  </div>
+                  </motion.div>
 
                   {/* CreeperShield Card */}
-                  <div className="bg-navy-light rounded-xl p-6 border border-gray-800 hover:border-creeper/50 transition-all hover:transform hover:-translate-y-2">
-                    <div className="text-center mb-6">
-                      <div className="w-16 h-16 bg-creeper/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <Shield className="h-8 w-8 text-creeper" />
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="group"
+                  >
+                    <div className="relative h-full bg-gradient-to-br from-purple-500/10 to-purple-600/5 backdrop-blur-sm border-2 border-purple-500/40 rounded-2xl p-6 hover:border-purple-400 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 hover:-translate-y-2">
+                      <div className="mb-6">
+                        <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/50">
+                          <Shield className="h-8 w-8 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-2">CreeperShield</h3>
+                        <p className="text-gray-400 text-sm">Ultimate DDoS protection</p>
                       </div>
-                      <h3 className="text-xl font-bold mb-2">CreeperShield</h3>
-                      <p className="text-gray-400 text-sm">Advanced DDoS protection for your servers</p>
+
+                      <div className="space-y-3 mb-6">
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300"><strong className="text-purple-300">50 Tbps</strong> Protection</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300"><strong className="text-white">&lt;1.1ms</strong> Response</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300">Layer 3 & 4 Defense</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300">99.9% Uptime</span>
+                        </div>
+                      </div>
+
+                      <div className="border-t border-purple-500/30 pt-4 mt-auto">
+                        <div className="text-3xl font-bold text-purple-400 mb-4">₹99<span className="text-lg text-gray-400">/mo</span></div>
+                        <Button className="w-full bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white font-bold py-2.5 transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/30" asChild>
+                          <Link to="/plans/creepershield">Protect Now</Link>
+                        </Button>
+                      </div>
                     </div>
-                    
-                    <div className="space-y-3 mb-6">
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Bandwidth:</span>
-                        <span className="text-creeper">1 Tbps+</span>
+                  </motion.div>
+
+                  {/* Other Hosting Card */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    className="group"
+                  >
+                    <div className="relative h-full bg-gradient-to-br from-blue-500/10 to-cyan-600/5 backdrop-blur-sm border-2 border-blue-500/40 rounded-2xl p-6 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2">
+                      <div className="mb-6">
+                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/50">
+                          <Server className="h-8 w-8 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-2">Other Hosting</h3>
+                        <p className="text-gray-400 text-sm">VPS & Discord bots</p>
                       </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Response Time:</span>
-                        <span className="text-creeper">&lt;1.1ms</span>
+
+                      <div className="space-y-3 mb-6">
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                          <span className="text-gray-300">VPS: <strong className="text-white">From ₹399</strong></span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                          <span className="text-gray-300">Discord: <strong className="text-white">From ₹22</strong></span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                          <span className="text-gray-300">Full Root Access</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                          <span className="text-gray-300">24/7 Support</span>
+                        </div>
                       </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Protection:</span>
-                        <span className="text-creeper">Layer 3 & 4</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Uptime:</span>
-                        <span className="text-creeper">99.9%</span>
+
+                      <div className="border-t border-blue-500/30 pt-4 mt-auto">
+                        <div className="text-3xl font-bold text-blue-400 mb-4">₹22<span className="text-lg text-gray-400">/mo</span></div>
+                        <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-bold py-2.5 transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/30" asChild>
+                          <Link to="/plans/other">Explore More</Link>
+                        </Button>
                       </div>
                     </div>
-                    
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-creeper mb-2">₹99/mo</div>
-                      <Button className="w-full minecraft-btn" asChild>
-                        <Link to="/plans/creepershield">View Plans</Link>
-                      </Button>
-                    </div>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </section>
