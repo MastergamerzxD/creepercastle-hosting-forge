@@ -318,10 +318,10 @@ const MinecraftPlans = () => {
   return (
     <>
       <Helmet>
-        <title>Best Minecraft Server Hosting India 2025 | #1 Minecraft Hosting | Mumbai & Delhi | CreeperCastle</title>
+        <title>Best Minecraft Server Hosting India 2025 | #1 Minecraft Host | Mumbai & Delhi | ₹99 | CreeperCastle</title>
         <meta 
           name="description" 
-          content="🎮 India's best Minecraft server hosting starting at ₹99/month. Ultra-fast NVMe SSD, instant setup, 50 Tbps DDoS protection, 24/7 expert support. Perfect for Java, Bedrock, SMP, Modded servers. Low ping Mumbai & Delhi locations. Trusted by 10,000+ players."
+          content="🎮 India's #1 Minecraft server hosting from ₹99/month! Instant setup, NVMe SSD, 50 Tbps DDoS protection, 24/7 support. Perfect for Java, Bedrock, SMP, Modded servers. Low ping Mumbai & Delhi locations. Trusted by 10,000+ players. Free plugins, subdomain, SFTP access."
         />
         <meta
           name="keywords"
@@ -334,9 +334,11 @@ const MinecraftPlans = () => {
         <meta property="og:title" content="Best Minecraft Server Hosting India 2024 | Low Latency & DDoS Protection" />
         <meta property="og:description" content="Premium Minecraft hosting starting at ₹99/month. NVMe SSD, instant setup, DDoS protection, 24/7 support. Low ping servers in Mumbai & Delhi." />
         <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png" />
-        <meta property="og:image:alt" content="CreeperCastle Minecraft Server Hosting Plans" />
+        <meta property="og:image:alt" content="CreeperCastle Minecraft Server Hosting Plans - Best India 2025" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="CreeperCastle" />
+        <meta property="og:locale" content="en_IN" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />

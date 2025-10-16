@@ -85,7 +85,7 @@ const Locations = () => {
         <meta property="og:url" content="https://creepercastle.cloud/locations" />
         <meta property="og:title" content="Server Locations - Mumbai & Delhi NCR | Low Latency Gaming" />
         <meta property="og:description" content="Premium Minecraft servers in Mumbai & Delhi NCR with ultra-low latency and enterprise hardware for the best Indian gaming experience." />
-        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta property="og:image" content="https://creepercastle.cloud/og-images/india-locations.jpg" />
         <meta property="og:image:alt" content="CreeperCastle Server Locations Map" />
         <meta property="og:site_name" content="CreeperCastle.cloud" />
         <meta property="og:locale" content="en_IN" />

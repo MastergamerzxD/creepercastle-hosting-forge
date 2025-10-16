@@ -58,22 +58,37 @@ const DiscordBotPlans = () => {
   return (
     <>
       <Helmet>
-        <title>Best Discord Bot Hosting India 2025 | 24/7 Uptime | Starting ₹22/mo</title>
+        <title>Best Discord Bot Hosting India 2025 | 24/7 Uptime | Node.js Python | ₹22 | CreeperCastle</title>
         <meta 
           name="description" 
-          content="🤖 #1 Discord bot hosting India! 24/7 online bots from ₹22/mo. Node.js, Python, Java support. SSH, SFTP, MySQL. Instant setup. 99.9% uptime guaranteed."
+          content="🤖 #1 Discord bot hosting India! 24/7 online bots from ₹22/mo. Node.js, Python, Java, discord.js, discord.py support. SSH/SFTP, MySQL, instant setup. 99.9% uptime guaranteed."
         />
         <meta
           name="keywords"
-          content="discord bot hosting india, best discord bot hosting, cheap discord hosting, 24/7 discord bot online, node.js bot hosting india, python discord bot hosting, java discord bot hosting, discord.js hosting, discord.py hosting, music bot hosting india, discord bot server india, ssh discord hosting, sftp bot hosting, mysql discord bot, always online bot hosting, reliable discord hosting india"
+          content="best discord bot hosting india 2025, cheap discord bot hosting, 24/7 discord bot online india, node.js bot hosting, python discord bot hosting india, discord.js hosting, discord.py hosting, java discord bot hosting, music bot hosting india, discord bot server india, ssh discord hosting, sftp discord bot, mysql discord bot india, always online bot hosting, reliable discord hosting mumbai, premium discord bot hosting, affordable bot hosting india, creepercastle discord hosting"
         />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/plans/discord-bot" />
-        <meta property="og:title" content="Discord Bot Hosting Plans | 24/7 Reliable Hosting | CreeperCastle" />
-        <meta property="og:description" content="Professional Discord bot hosting starting from ₹22/month with Node.js & Python support and 24/7 uptime." />
-        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta property="og:title" content="Discord Bot Hosting India | 24/7 Uptime | Node.js, Python | CreeperCastle" />
+        <meta property="og:description" content="🤖 Professional Discord bot hosting from ₹22/month. 24/7 uptime, Node.js, Python, Java support. SSH, SFTP, MySQL included. Instant setup!" />
+        <meta property="og:image" content="https://creepercastle.cloud/og-images/discord-bot-hosting.jpg" />
+        <meta property="og:image:alt" content="Discord Bot Hosting by CreeperCastle" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="CreeperCastle" />
+        <meta property="og:locale" content="en_IN" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Discord Bot Hosting India 🤖 24/7 Uptime" />
+        <meta name="twitter:description" content="Professional Discord bot hosting from ₹22/mo. Node.js, Python, Java. 24/7 uptime guaranteed." />
+        <meta name="twitter:image" content="https://creepercastle.cloud/og-images/discord-bot-hosting.jpg" />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="author" content="CreeperCastle.cloud" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://creepercastle.cloud/plans/discord-bot" />

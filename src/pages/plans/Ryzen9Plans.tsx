@@ -8,6 +8,55 @@ import { Check, Zap, Shield, Database, HardDrive, Cpu, Clock, TrendingUp, Award,
 import { motion } from 'framer-motion';
 
 const Ryzen9Plans = () => {
+  // Comprehensive structured data for Ryzen 9 hosting
+  const ryzen9StructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "AMD Ryzen 9 5900X Minecraft Hosting",
+    "description": "Ultra-performance Minecraft hosting powered by AMD Ryzen 9 5900X processors with 5.1GHz turbo boost, delivering zero-lag gaming experience with Mumbai datacenter location",
+    "brand": {
+      "@type": "Brand",
+      "name": "CreeperCastle"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "299",
+      "highPrice": "1762",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "87"
+    }
+  };
+
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://creepercastle.cloud/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Plans",
+        "item": "https://creepercastle.cloud/plans"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Ryzen 9 Hosting",
+        "item": "https://creepercastle.cloud/plans/ryzen9"
+      }
+    ]
+  };
+
   const plans = [
     {
       name: 'Amberheart',
@@ -125,24 +174,43 @@ const Ryzen9Plans = () => {
   return (
     <>
       <Helmet>
-        <title>AMD Ryzen 9 5900X Minecraft Hosting India 2025 | Premium Performance ⚡ CreeperCastle</title>
-        <meta name="description" content="Experience ultimate Minecraft server performance with AMD Ryzen 9 5900X hosting in India. 4.8GHz boost, NVMe SSD, Advanced DDoS protection. Starting ₹299/mo. Mumbai datacenter with ultra-low latency." />
-        <meta name="keywords" content="Ryzen 9 minecraft hosting, AMD Ryzen 9 5900X server hosting India, premium minecraft hosting, high performance minecraft server, Mumbai minecraft hosting, best minecraft hosting India 2025, low latency minecraft, NVMe minecraft hosting, Ryzen gaming server" />
+        <title>AMD Ryzen 9 5900X Minecraft Hosting India 2025 | 5.1GHz Turbo | ₹299 | CreeperCastle</title>
+        <meta name="description" content="⚡ Ultimate Minecraft hosting with AMD Ryzen 9 5900X - 5.1GHz turbo boost, 12 cores, NVMe SSD, advanced OVH DDoS protection. Zero lag Mumbai servers from ₹299/mo. #1 premium Minecraft hosting India 2025." />
+        <meta name="keywords" content="amd ryzen 9 minecraft hosting india, ryzen 9 5900X server hosting, 5.1ghz minecraft hosting, premium minecraft server india, high performance minecraft hosting, mumbai ryzen hosting, best minecraft host 2025 india, zero lag minecraft server, nvme minecraft hosting india, enterprise minecraft hosting, ryzen 9 gaming server, 12 core minecraft hosting, fastest minecraft server india, creepercastle ryzen plans, professional minecraft hosting" />
         
-        {/* Open Graph */}
-        <meta property="og:title" content="AMD Ryzen 9 5900X Minecraft Hosting India | Premium Performance - CreeperCastle" />
-        <meta property="og:description" content="Ultimate Minecraft server performance with AMD Ryzen 9 5900X. 4.8GHz boost, NVMe SSD, Advanced DDoS protection. Starting ₹299/mo in Mumbai." />
+        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/plans/ryzen9" />
-        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" />
+        <meta property="og:title" content="AMD Ryzen 9 5900X Minecraft Hosting | 5.1GHz Turbo | #1 India Performance" />
+        <meta property="og:description" content="🚀 Ultimate Minecraft performance - AMD Ryzen 9 5900X, 5.1GHz turbo, 12 cores. Zero lag Mumbai servers. Advanced OVH DDoS protection. Starting ₹299/mo. Enterprise-grade hosting." />
+        <meta property="og:image" content="https://creepercastle.cloud/og-images/ryzen9-hosting.jpg" />
+        <meta property="og:image:alt" content="AMD Ryzen 9 5900X Minecraft Hosting by CreeperCastle" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="CreeperCastle" />
+        <meta property="og:locale" content="en_IN" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AMD Ryzen 9 5900X Minecraft Hosting India | CreeperCastle" />
-        <meta name="twitter:description" content="Ultimate Minecraft performance with Ryzen 9 5900X. 4.8GHz, NVMe, DDoS protection. ₹299/mo" />
-        <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" />
+        <meta name="twitter:title" content="AMD Ryzen 9 5900X Minecraft Hosting ⚡ 5.1GHz Turbo" />
+        <meta name="twitter:description" content="Ultimate Minecraft performance with Ryzen 9 5900X. 5.1GHz turbo, 12 cores, NVMe, OVH DDoS. Starting ₹299/mo in Mumbai." />
+        <meta name="twitter:image" content="https://creepercastle.cloud/og-images/ryzen9-hosting.jpg" />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="author" content="CreeperCastle.cloud" />
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Mumbai" />
         
         <link rel="canonical" href="https://creepercastle.cloud/plans/ryzen9" />
+        
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(ryzen9StructuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbData)}
+        </script>
         
         {/* Structured Data */}
         <script type="application/ld+json">

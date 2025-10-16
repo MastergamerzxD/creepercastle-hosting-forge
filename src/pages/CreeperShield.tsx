@@ -181,34 +181,38 @@ const CreeperShieldAnycasted = () => {
   return (
     <>
       <Helmet>
-        <title>Best Minecraft DDoS Protection India | 50 Tbps CreeperShield ₹99</title>
+        <title>Best Minecraft DDoS Protection India 2025 | 50 Tbps CreeperShield | ₹99 | Anti-Bot</title>
         <meta 
           name="description" 
-          content="🛡️ #1 Minecraft DDoS protection 50 Tbps capacity ₹99/mo. Anycasted network, bot filtering, IP firewall, Mumbai. Stop attacks instantly. Trusted by 1000+ servers."
+          content="🛡️ #1 Minecraft DDoS protection India! 50 Tbps mitigation capacity from ₹99/mo. Anycasted network, bot filtering, IP firewall, Mumbai. Stop attacks instantly. Trusted by 1000+ servers. Enterprise-grade security."
         />
         <meta
           name="keywords"
-          content="minecraft ddos protection india, best ddos protection minecraft, 50 tbps ddos shield, creepershield minecraft, minecraft server security india, ddos mitigation india, bot attack protection minecraft, ip firewall minecraft india, minecraft proxy protection, anycasted ddos protection, tcp ddos protection minecraft, udp ddos shield, minecraft network security, anti ddos minecraft india, ddos protected minecraft hosting, server protection india, minecraft attack prevention, cheap ddos protection india"
+          content="best minecraft ddos protection india 2025, 50 tbps ddos shield, creepershield minecraft, minecraft server security india, ddos mitigation india, bot attack protection minecraft, ip firewall minecraft, minecraft proxy protection, anycasted ddos protection, tcp udp ddos protection, minecraft network security, anti ddos minecraft india, ddos protected minecraft hosting, server protection mumbai, minecraft attack prevention, cheap ddos protection india, ovh ddos shield, enterprise ddos protection, minecraft firewall india, tcp protection minecraft"
         />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/plans/creepershield" />
-        <meta property="og:title" content="CreeperShield - 50 Tbps DDoS Protection" />
-        <meta property="og:description" content="Enterprise-grade DDoS protection with 50 Tbps capacity. Advanced security for Minecraft servers in Mumbai." />
-        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" />
-        <meta property="og:image:alt" content="CreeperShield DDoS Protection" />
+        <meta property="og:title" content="CreeperShield | 50 Tbps Minecraft DDoS Protection | #1 Anti-DDoS India" />
+        <meta property="og:description" content="🛡️ Ultimate Minecraft server protection - 50 Tbps capacity, anycasted network, bot filtering, IP firewall. Mumbai datacenter. From ₹99/mo. Stop all attacks!" />
+        <meta property="og:image" content="https://creepercastle.cloud/og-images/creepershield-ddos.jpg" />
+        <meta property="og:image:alt" content="CreeperShield DDoS Protection by CreeperCastle" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="CreeperCastle" />
+        <meta property="og:locale" content="en_IN" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="CreeperShield - 50 Tbps Protection 🛡️" />
-        <meta name="twitter:description" content="Ultimate DDoS protection with 50 Tbps capacity for Minecraft servers." />
-        <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" />
+        <meta name="twitter:title" content="CreeperShield 🛡️ 50 Tbps Minecraft DDoS Protection" />
+        <meta name="twitter:description" content="Ultimate DDoS protection with 50 Tbps capacity. Anycasted network, bot filtering, IP firewall. Mumbai. ₹99/mo." />
+        <meta name="twitter:image" content="https://creepercastle.cloud/og-images/creepershield-ddos.jpg" />
         
         {/* Additional SEO tags */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="author" content="CreeperCastle.cloud" />
-        <meta name="geo.region" content="IN" />
+        <meta name="geo.region" content="IN-MH" />
         <meta name="geo.placename" content="Mumbai" />
         
         {/* Canonical URL */}

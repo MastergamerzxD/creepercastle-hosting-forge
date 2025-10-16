@@ -174,22 +174,39 @@ const VPSPlans = () => {
   return (
     <>
       <Helmet>
-        <title>Best VPS Hosting India 2025 | AMD EPYC 4244P 5.1GHz | Mumbai ₹399</title>
+        <title>Best VPS Hosting India 2025 | AMD EPYC 4244P 5.1GHz | NVMe | ₹399 | CreeperCastle</title>
         <meta 
           name="description" 
-          content="⚡ Premium VPS India: AMD EPYC 4244P 5.1GHz, NVMe SSD, 17Tbps DDoS protection, Mumbai datacenter. Root access, KVM, ECC RAM. Starting ₹399/mo. Instant setup!"
+          content="💻 #1 VPS India 2025! AMD EPYC 4244P 5.1GHz, NVMe SSD, 17 Tbps OVH DDoS, ECC RAM, Mumbai datacenter. KVM, root access, instant setup from ₹399/mo. Enterprise-grade VPS hosting with 99.9% uptime."
         />
         <meta
           name="keywords"
-          content="best vps hosting india 2025, amd epyc 4244p vps, cheap vps india, kvm vps hosting mumbai, nvme vps india, dedicated vps india, root access vps, linux vps india, windows vps india, gaming vps india, ddos protected vps, ecc ram vps, 5.1ghz vps india, premium vps mumbai, virtual private server india, vps with rdns india"
+          content="best vps hosting india 2025, amd epyc 4244p vps, cheap vps india mumbai, kvm vps hosting india, nvme vps india, vps with ddos protection, linux vps india, windows vps india, game server vps, high performance vps india, root access vps mumbai, 5.1ghz vps hosting, ecc ram vps, rdns vps india, managed vps india, unmanaged vps india, vps hosting mumbai, enterprise vps india, creepercastle vps, fastest vps india 2025"
         />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/plans/vps" />
-        <meta property="og:title" content="VPS Hosting India - AMD EPYC 4244P | Starting ₹399/month | CreeperCastle" />
-        <meta property="og:description" content="Premium VPS hosting with AMD EPYC 4244P processors, up to 5.1GHz turbo boost, NVMe storage, and 17 Tbps DDoS protection. Plans from ₹399 to ₹2999/month." />
-        <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
+        <meta property="og:title" content="AMD EPYC VPS Hosting India | 5.1GHz Turbo | 17 Tbps DDoS | #1 Performance" />
+        <meta property="og:description" content="💻 Ultimate VPS performance: AMD EPYC 4244P 5.1GHz, NVMe SSD, 17 Tbps OVH DDoS protection. Mumbai datacenter. ECC RAM, KVM virtualization. From ₹399/mo." />
+        <meta property="og:image" content="https://creepercastle.cloud/og-images/vps-hosting.jpg" />
+        <meta property="og:image:alt" content="AMD EPYC VPS Hosting by CreeperCastle" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="CreeperCastle" />
+        <meta property="og:locale" content="en_IN" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AMD EPYC VPS Hosting India 💻 5.1GHz Turbo" />
+        <meta name="twitter:description" content="Enterprise VPS with AMD EPYC 4244P 5.1GHz, NVMe, 17 Tbps DDoS. Mumbai datacenter from ₹399/mo." />
+        <meta name="twitter:image" content="https://creepercastle.cloud/og-images/vps-hosting.jpg" />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="author" content="CreeperCastle.cloud" />
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Mumbai" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://creepercastle.cloud/plans/vps" />
