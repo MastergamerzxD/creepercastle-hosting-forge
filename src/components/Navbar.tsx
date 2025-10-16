@@ -59,12 +59,6 @@ const Navbar = () => {
                   Discord Bot
                 </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
-                <Link to="/creeperpanel" className="w-full flex items-center gap-3">
-                  <Server size={16} className="text-orange-400" />
-                  CreeperPanel
-                </Link>
-              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
@@ -111,6 +105,24 @@ const Navbar = () => {
                 <Link to="/partners" className="w-full flex items-center gap-3">
                   <Server size={16} className="text-creeper" />
                   Partners
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
+                <Link to="/creeperpanel" className="w-full flex items-center gap-3">
+                  <Server size={16} className="text-orange-400" />
+                  CreeperPanel
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
+                <Link to="/datacenter" className="w-full flex items-center gap-3">
+                  <Building2 size={16} className="text-cyan-400" />
+                  Infrastructure
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
+                <Link to="/locations" className="w-full flex items-center gap-3">
+                  <MapPin size={16} className="text-pink-400" />
+                  Locations
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -173,10 +185,6 @@ const Navbar = () => {
                 <Bot size={14} className="text-purple-400" />
                 Discord Bot Hosting
               </Link>
-              <Link to="/creeperpanel" className="text-white hover:text-creeper transition-all duration-300 py-2 pl-4 block hover:bg-creeper/10 rounded-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                <Server size={14} className="text-orange-400" />
-                CreeperPanel
-              </Link>
             </div>
             
             <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-all duration-300 py-2 bg-purple-500/15 px-3 rounded-lg border border-purple-500/40 hover:border-purple-500/60" onClick={() => setIsOpen(false)}>🛡️ Shield</Link>
@@ -193,6 +201,18 @@ const Navbar = () => {
               <Link to="/partners" className="text-white hover:text-creeper transition-all duration-300 py-2 pl-4 block hover:bg-creeper/10 rounded-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
                 <Server size={14} className="text-creeper" />
                 Partners
+              </Link>
+              <Link to="/creeperpanel" className="text-white hover:text-creeper transition-all duration-300 py-2 pl-4 block hover:bg-creeper/10 rounded-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
+                <Server size={14} className="text-orange-400" />
+                CreeperPanel
+              </Link>
+              <Link to="/datacenter" className="text-white hover:text-creeper transition-all duration-300 py-2 pl-4 block hover:bg-creeper/10 rounded-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
+                <Building2 size={14} className="text-cyan-400" />
+                Infrastructure
+              </Link>
+              <Link to="/locations" className="text-white hover:text-creeper transition-all duration-300 py-2 pl-4 block hover:bg-creeper/10 rounded-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
+                <MapPin size={14} className="text-pink-400" />
+                Locations
               </Link>
             </div>
             
