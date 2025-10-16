@@ -59,12 +59,6 @@ const Navbar = () => {
                   Discord Bot
                 </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
-                <Link to="/creeperpanel" className="w-full flex items-center gap-3">
-                  <Server size={16} className="text-orange-400" />
-                  CreeperPanel
-                </Link>
-              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
@@ -172,10 +166,6 @@ const Navbar = () => {
               <Link to="/plans/discord-bot" className="text-white hover:text-creeper transition-all duration-300 py-2 pl-4 block hover:bg-creeper/10 rounded-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
                 <Bot size={14} className="text-purple-400" />
                 Discord Bot Hosting
-              </Link>
-              <Link to="/creeperpanel" className="text-white hover:text-creeper transition-all duration-300 py-2 pl-4 block hover:bg-creeper/10 rounded-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                <Server size={14} className="text-orange-400" />
-                CreeperPanel
               </Link>
             </div>
             
