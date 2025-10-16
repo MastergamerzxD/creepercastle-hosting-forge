@@ -100,39 +100,40 @@ const Datacenter = () => {
       </Helmet>
       
       <div className="flex flex-col min-h-screen bg-navy text-white relative">
-        {/* Enhanced minecraft-themed background */}
+        {/* Enhanced background with underwater Minecraft scene */}
         <div className="fixed inset-0 z-0 pointer-events-none">
+          {/* Background image overlay with underwater Minecraft scene */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" 
-            style={{ backgroundImage: 'url("/creeper-pattern.png")' }}
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" 
+            style={{ backgroundImage: 'url("/lovable-uploads/aecdd243-6cbd-4e56-82a8-b494c26108cc.png")' }}
           ></div>
           
-          <div className="absolute inset-0 bg-gradient-to-br from-navy-dark/95 via-navy/90 to-navy-light/80"></div>
+          {/* Gradient overlay for better text visibility */}
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/90 via-navy/80 to-navy-light/70"></div>
           
-          {/* Animated server rack particles */}
-          {Array.from({ length: 8 }).map((_, i) => (
+          {/* Animated particles */}
+          {Array.from({ length: 10 }).map((_, i) => (
             <motion.div
               key={i}
-              className="absolute"
+              className="absolute bg-creeper/20 rounded-full"
               initial={{
+                width: Math.random() * 6 + 2,
+                height: Math.random() * 6 + 2,
                 x: Math.random() * 100 + "%",
                 y: Math.random() * 100 + "%",
-                opacity: 0.1,
+                opacity: Math.random() * 0.5,
               }}
               animate={{
-                y: ["-5%", "105%"],
-                opacity: [0.1, 0.3, 0.1],
-                rotate: [0, 360],
+                y: ["-10%", "110%"],
+                opacity: [0, 0.6, 0],
               }}
               transition={{
-                duration: Math.random() * 20 + 25,
+                duration: Math.random() * 15 + 20,
                 repeat: Infinity,
                 ease: "linear",
-                delay: Math.random() * 15,
+                delay: Math.random() * 10,
               }}
-            >
-              <Server className="text-creeper w-4 h-4" />
-            </motion.div>
+            />
           ))}
         </div>
         

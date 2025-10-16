@@ -171,11 +171,49 @@ const Ryzen9Plans = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-b from-navy via-navy-dark to-black">
+      <div className="flex flex-col min-h-screen bg-navy text-white relative">
+        {/* Enhanced background with underwater Minecraft scene */}
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          {/* Background image overlay with underwater Minecraft scene */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" 
+            style={{ backgroundImage: 'url("/lovable-uploads/aecdd243-6cbd-4e56-82a8-b494c26108cc.png")' }}
+          ></div>
+          
+          {/* Gradient overlay for better text visibility */}
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/90 via-navy/80 to-navy-light/70"></div>
+          
+          {/* Animated particles */}
+          {Array.from({ length: 10 }).map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute bg-creeper/20 rounded-full"
+              initial={{
+                width: Math.random() * 6 + 2,
+                height: Math.random() * 6 + 2,
+                x: Math.random() * 100 + "%",
+                y: Math.random() * 100 + "%",
+                opacity: Math.random() * 0.5,
+              }}
+              animate={{
+                y: ["-10%", "110%"],
+                opacity: [0, 0.6, 0],
+              }}
+              transition={{
+                duration: Math.random() * 15 + 20,
+                repeat: Infinity,
+                ease: "linear",
+                delay: Math.random() * 10,
+              }}
+            />
+          ))}
+        </div>
+        
         <Navbar />
 
-        {/* Hero Section */}
-        <section className="pt-32 pb-20 relative overflow-hidden">
+        <main className="flex-grow pt-16 relative z-10">
+          {/* Hero Section */}
+          <section className="pt-32 pb-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 via-orange-600/10 to-amber-500/5 animate-pulse-slow" />
           <div className="absolute inset-0 bg-grid opacity-20" />
           
@@ -427,6 +465,8 @@ const Ryzen9Plans = () => {
             </motion.div>
           </div>
         </section>
+
+        </main>
 
         <Footer />
       </div>

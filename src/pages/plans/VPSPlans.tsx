@@ -195,38 +195,42 @@ const VPSPlans = () => {
         <link rel="canonical" href="https://creepercastle.cloud/plans/vps" />
       </Helmet>
       
-      <div className="flex flex-col min-h-screen bg-gradient-to-b from-black via-navy-dark to-navy text-white relative overflow-hidden">
-        {/* Epic animated background */}
+      <div className="flex flex-col min-h-screen bg-navy text-white relative overflow-hidden">
+        {/* Enhanced background with underwater Minecraft scene */}
         <div className="fixed inset-0 z-0 pointer-events-none">
-          {/* Animated gradient orbs */}
-          <motion.div
-            className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.5, 0.3],
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl"
-            animate={{
-              scale: [1.2, 1, 1.2],
-              opacity: [0.5, 0.3, 0.5],
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute top-1/2 left-1/2 w-96 h-96 bg-creeper/10 rounded-full blur-3xl"
-            animate={{
-              scale: [1, 1.3, 1],
-              x: ["-50%", "-40%", "-50%"],
-              y: ["-50%", "-60%", "-50%"],
-            }}
-            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          />
+          {/* Background image overlay with underwater Minecraft scene */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" 
+            style={{ backgroundImage: 'url("/lovable-uploads/aecdd243-6cbd-4e56-82a8-b494c26108cc.png")' }}
+          ></div>
           
-          {/* Grid overlay */}
-          <div className="absolute inset-0 bg-grid opacity-5" />
+          {/* Gradient overlay for better text visibility */}
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/90 via-navy/80 to-navy-light/70"></div>
+          
+          {/* Animated particles */}
+          {Array.from({ length: 10 }).map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute bg-creeper/20 rounded-full"
+              initial={{
+                width: Math.random() * 6 + 2,
+                height: Math.random() * 6 + 2,
+                x: Math.random() * 100 + "%",
+                y: Math.random() * 100 + "%",
+                opacity: Math.random() * 0.5,
+              }}
+              animate={{
+                y: ["-10%", "110%"],
+                opacity: [0, 0.6, 0],
+              }}
+              transition={{
+                duration: Math.random() * 15 + 20,
+                repeat: Infinity,
+                ease: "linear",
+                delay: Math.random() * 10,
+              }}
+            />
+          ))}
         </div>
         
         <Navbar />

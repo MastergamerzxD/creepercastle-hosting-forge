@@ -115,12 +115,49 @@ const Partners = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="flex flex-col min-h-screen bg-navy text-white relative">
+        {/* Enhanced background with underwater Minecraft scene */}
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          {/* Background image overlay with underwater Minecraft scene */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" 
+            style={{ backgroundImage: 'url("/lovable-uploads/aecdd243-6cbd-4e56-82a8-b494c26108cc.png")' }}
+          ></div>
+          
+          {/* Gradient overlay for better text visibility */}
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/90 via-navy/80 to-navy-light/70"></div>
+          
+          {/* Animated particles */}
+          {Array.from({ length: 10 }).map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute bg-creeper/20 rounded-full"
+              initial={{
+                width: Math.random() * 6 + 2,
+                height: Math.random() * 6 + 2,
+                x: Math.random() * 100 + "%",
+                y: Math.random() * 100 + "%",
+                opacity: Math.random() * 0.5,
+              }}
+              animate={{
+                y: ["-10%", "110%"],
+                opacity: [0, 0.6, 0],
+              }}
+              transition={{
+                duration: Math.random() * 15 + 20,
+                repeat: Infinity,
+                ease: "linear",
+                delay: Math.random() * 10,
+              }}
+            />
+          ))}
+        </div>
+        
         <Navbar />
         
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+        <section className="relative pt-32 pb-20 px-4 overflow-hidden z-10">
+          <div className="absolute inset-0 bg-gradient-to-b from-creeper/5 via-transparent to-transparent" />
           <div className="absolute inset-0 bg-grid-animate opacity-20" />
           
           <div className="container mx-auto text-center relative z-10">
