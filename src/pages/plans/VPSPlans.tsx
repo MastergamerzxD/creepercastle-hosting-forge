@@ -34,7 +34,7 @@ const vpsPlans = [
     logo: "/lovable-uploads/92e056f5-c85f-4f06-9432-7c5ca32fe8b2.png",
     specs: {
       cpu: "AMD EPYC 4244P 💫",
-      cores: "4V Cores 🚀",
+      cores: "3V Cores 🚀",
       baseFreq: "Base frequency @3.8ghz 🚀",
       turboFreq: "Turbo frequency @5.1 ghz 🚀",
       ram: "8 GB DDR4 ECC RAM 🪄",
@@ -74,7 +74,7 @@ const vpsPlans = [
     logo: "/lovable-uploads/102f77a4-d71f-456c-b542-1f98a55eb506.png",
     specs: {
       cpu: "AMD EPYC 4244P 💫",
-      cores: "8V Cores 🚀",
+      cores: "7V Cores 🚀",
       baseFreq: "Base frequency @3.8ghz 🚀",
       turboFreq: "Turbo frequency @5.1 ghz 🚀",
       ram: "32 GB DDR4 ECC RAM 🪄",
@@ -94,7 +94,7 @@ const vpsPlans = [
     logo: "/lovable-uploads/c78b0c32-1019-4b21-a48b-1581857db978.png",
     specs: {
       cpu: "AMD EPYC 4244P 💫",
-      cores: "12V Cores 🚀",
+      cores: "8V Cores 🚀",
       baseFreq: "Base frequency @3.8ghz 🚀",
       turboFreq: "Turbo frequency @5.1 ghz 🚀",
       ram: "64 GB DDR4 ECC RAM 🪄",
