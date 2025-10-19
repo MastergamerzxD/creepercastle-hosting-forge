@@ -397,7 +397,7 @@ const VPSPlans = () => {
                     <Card 
                       className={`relative overflow-hidden bg-gradient-to-br from-navy-dark/90 to-black/80 backdrop-blur-md ${
                         plan.highlighted 
-                          ? 'border-2 border-cyan-500 shadow-[0_0_40px_rgba(6,182,212,0.3)] scale-105 lg:scale-110' 
+                          ? 'border-2 border-cyan-500 shadow-[0_0_40px_rgba(6,182,212,0.5)]' 
                           : 'border border-cyan-500/20 hover:border-cyan-500/50'
                       } transition-all duration-500 h-full flex flex-col group`}
                     >
