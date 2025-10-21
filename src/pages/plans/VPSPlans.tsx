@@ -13,15 +13,13 @@ const vpsPlans = [
     price: "₹399",
     logo: "/lovable-uploads/2e0d644d-6f7e-43e0-93e8-2efabb828007.png",
     specs: {
-      cpu: "AMD EPYC 4244P 💫",
+      cpu: "Intel Platinum 8168 💎",
       cores: "2V Cores 🚀",
-      baseFreq: "Base frequency @3.8ghz 🚀",
-      turboFreq: "Turbo frequency @5.1 ghz 🚀",
       ram: "4 GB DDR4 ECC RAM 🪄",
       storage: "20 GB NVMe Storage🪄",
       network: "Upto 1Gbps network speed🛜",
-      location: "India, Mumbai🚩",
-      ddos: "OVH-DDOS Protect Shield🛡️",
+      location: "India, Delhi🚩",
+      ddos: "CreeperCastle DDoS Protection🛡️",
       mitigation: "17 Tbps Smart MITIGATION🛡️",
       rdns: "RDNS Facility Available✅"
     },
@@ -33,15 +31,13 @@ const vpsPlans = [
     price: "₹689",
     logo: "/lovable-uploads/92e056f5-c85f-4f06-9432-7c5ca32fe8b2.png",
     specs: {
-      cpu: "AMD EPYC 4244P 💫",
+      cpu: "Intel Platinum 8168 💎",
       cores: "3V Cores 🚀",
-      baseFreq: "Base frequency @3.8ghz 🚀",
-      turboFreq: "Turbo frequency @5.1 ghz 🚀",
       ram: "8 GB DDR4 ECC RAM 🪄",
       storage: "40 GB NVMe Storage🪄",
       network: "Upto 1Gbps network speed🛜",
-      location: "India, Mumbai🚩",
-      ddos: "OVH-DDOS Protect Shield🛡️",
+      location: "India, Delhi🚩",
+      ddos: "CreeperCastle DDoS Protection🛡️",
       mitigation: "17 Tbps Smart MITIGATION🛡️",
       rdns: "RDNS Facility Available✅"
     },
@@ -53,15 +49,13 @@ const vpsPlans = [
     price: "₹1,299",
     logo: "/lovable-uploads/592d5824-5311-47bb-beb0-5aae9ff5c280.png",
     specs: {
-      cpu: "AMD EPYC 4244P 💫",
+      cpu: "Intel Platinum 8168 💎",
       cores: "6V Cores 🚀",
-      baseFreq: "Base frequency @3.8ghz 🚀",
-      turboFreq: "Turbo frequency @5.1 ghz 🚀",
       ram: "16 GB DDR4 ECC RAM 🪄",
       storage: "60 GB NVMe Storage🪄",
       network: "Upto 1Gbps network speed🛜",
-      location: "India, Mumbai🚩",
-      ddos: "OVH-DDOS Protect Shield🛡️",
+      location: "India, Delhi🚩",
+      ddos: "CreeperCastle DDoS Protection🛡️",
       mitigation: "17 Tbps Smart MITIGATION🛡️",
       rdns: "RDNS Facility Available✅"
     },
@@ -73,15 +67,13 @@ const vpsPlans = [
     price: "₹1,999",
     logo: "/lovable-uploads/102f77a4-d71f-456c-b542-1f98a55eb506.png",
     specs: {
-      cpu: "AMD EPYC 4244P 💫",
+      cpu: "Intel Platinum 8168 💎",
       cores: "7V Cores 🚀",
-      baseFreq: "Base frequency @3.8ghz 🚀",
-      turboFreq: "Turbo frequency @5.1 ghz 🚀",
       ram: "32 GB DDR4 ECC RAM 🪄",
       storage: "100 GB NVMe Storage🪄",
       network: "Upto 1Gbps network speed🛜",
-      location: "India, Mumbai🚩",
-      ddos: "OVH-DDOS Protect Shield🛡️",
+      location: "India, Delhi🚩",
+      ddos: "CreeperCastle DDoS Protection🛡️",
       mitigation: "17 Tbps Smart MITIGATION🛡️",
       rdns: "RDNS Facility Available✅"
     },
@@ -93,15 +85,13 @@ const vpsPlans = [
     price: "₹2,999",
     logo: "/lovable-uploads/c78b0c32-1019-4b21-a48b-1581857db978.png",
     specs: {
-      cpu: "AMD EPYC 4244P 💫",
+      cpu: "Intel Platinum 8168 💎",
       cores: "8V Cores 🚀",
-      baseFreq: "Base frequency @3.8ghz 🚀",
-      turboFreq: "Turbo frequency @5.1 ghz 🚀",
       ram: "64 GB DDR4 ECC RAM 🪄",
       storage: "200 GB NVMe Storage🪄",
       network: "Upto 1Gbps network speed🛜",
-      location: "India, Mumbai🚩",
-      ddos: "OVH-DDOS Protect Shield🛡️",
+      location: "India, Delhi🚩",
+      ddos: "CreeperCastle DDoS Protection🛡️",
       mitigation: "17 Tbps Smart MITIGATION🛡️",
       rdns: "RDNS Facility Available✅"
     },
@@ -113,10 +103,8 @@ const vpsPlans = [
     price: "Custom",
     logo: "/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png",
     specs: {
-      cpu: "AMD EPYC 4244P (Custom) 💫",
+      cpu: "Intel Platinum 8168 (Custom) 💎",
       cores: "Custom Cores 🚀",
-      baseFreq: "Optimized Performance 🚀",
-      turboFreq: "Maximum Efficiency 🚀",
       ram: "Custom RAM Configuration 🪄",
       storage: "Flexible Storage Options 🪄",
       network: "Dedicated Bandwidth 🛜",
@@ -135,32 +123,32 @@ const VPSPlans = () => {
   const features = [
     {
       icon: <Cpu className="w-6 h-6" />,
-      title: 'AMD EPYC 4244P',
-      description: 'Next-gen server processor with 6 cores, 3.8GHz base and blazing 5.1GHz turbo boost for unmatched performance',
+      title: 'Intel Platinum 8168',
+      description: 'Legendary enterprise processor powering our own optimized infrastructure - the ultimate choice for demanding Minecraft servers and high-performance workloads',
       gradient: 'from-cyan-500 to-blue-600',
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: 'Lightning Fast NVMe',
-      description: 'Enterprise-grade NVMe SSD storage delivering 7000MB/s speeds for instant application response',
+      icon: <Server className="w-6 h-6" />,
+      title: 'Own Infrastructure',
+      description: 'Built on our proprietary hardware infrastructure, meticulously optimized and Minecraft-ready for zero-compromise performance',
       gradient: 'from-blue-500 to-cyan-600',
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: '17 Tbps DDoS Shield',
-      description: 'OVH enterprise protection with massive 17 Tbps mitigation capacity keeps you online 24/7',
+      description: 'CreeperCastle enterprise DDoS protection with massive 17 Tbps mitigation capacity and premium network keeps you online 24/7',
       gradient: 'from-cyan-600 to-teal-600',
     },
     {
-      icon: <HardDrive className="w-6 h-6" />,
-      title: 'ECC RAM Technology',
-      description: 'Error-correcting memory ensures maximum stability and data integrity for mission-critical workloads',
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Lightning Fast NVMe',
+      description: 'Enterprise-grade NVMe SSD storage delivering 7000MB/s speeds for instant application response',
       gradient: 'from-blue-600 to-indigo-600',
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: 'Mumbai Datacenter',
-      description: 'Strategic India location with 1Gbps network, perfect latency for South Asian audiences',
+      title: 'Delhi Datacenter',
+      description: 'Strategic India location with premium 1Gbps network, perfect latency for South Asian audiences',
       gradient: 'from-cyan-500 to-blue-500',
     },
     {
@@ -174,23 +162,23 @@ const VPSPlans = () => {
   return (
     <>
       <Helmet>
-        <title>Best VPS Hosting India 2025 | AMD EPYC 4244P 5.1GHz | NVMe | ₹399 | CreeperCastle</title>
+        <title>Best VPS Hosting India 2025 | Intel Platinum 8168 | Own Infra | ₹399 | CreeperCastle</title>
         <meta 
           name="description" 
-          content="💻 #1 VPS India 2025! AMD EPYC 4244P 5.1GHz, NVMe SSD, 17 Tbps OVH DDoS, ECC RAM, Mumbai datacenter. KVM, root access, instant setup from ₹399/mo. Enterprise-grade VPS hosting with 99.9% uptime."
+          content="💻 #1 VPS India 2025! Intel Platinum 8168 on our own optimized infrastructure, Minecraft-ready, NVMe SSD, 17 Tbps DDoS, ECC RAM, Delhi datacenter. KVM, root access from ₹399/mo."
         />
         <meta
           name="keywords"
-          content="best vps hosting india 2025, amd epyc 4244p vps, cheap vps india mumbai, kvm vps hosting india, nvme vps india, vps with ddos protection, linux vps india, windows vps india, game server vps, high performance vps india, root access vps mumbai, 5.1ghz vps hosting, ecc ram vps, rdns vps india, managed vps india, unmanaged vps india, vps hosting mumbai, enterprise vps india, creepercastle vps, fastest vps india 2025"
+          content="best vps hosting india 2025, intel platinum 8168 vps, cheap vps india delhi, kvm vps india, nvme vps india, minecraft vps hosting india, vps with ddos protection, linux vps india, windows vps india, game server vps, high performance vps india, root access vps delhi, ecc ram vps, rdns vps india, managed vps india, unmanaged vps india, vps hosting delhi, enterprise vps india, creepercastle vps, fastest vps india 2025, own infrastructure vps"
         />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/plans/vps" />
-        <meta property="og:title" content="AMD EPYC VPS Hosting India | 5.1GHz Turbo | 17 Tbps DDoS | #1 Performance" />
-        <meta property="og:description" content="💻 Ultimate VPS performance: AMD EPYC 4244P 5.1GHz, NVMe SSD, 17 Tbps OVH DDoS protection. Mumbai datacenter. ECC RAM, KVM virtualization. From ₹399/mo." />
+        <meta property="og:title" content="Intel Platinum 8168 VPS Hosting India | Own Infrastructure | 17 Tbps DDoS" />
+        <meta property="og:description" content="💻 Ultimate VPS: Intel Platinum 8168 on our own optimized infrastructure, Minecraft-ready, NVMe SSD, 17 Tbps DDoS protection. Delhi datacenter. From ₹399/mo." />
         <meta property="og:image" content="https://creepercastle.cloud/og-images/vps-hosting.jpg" />
-        <meta property="og:image:alt" content="AMD EPYC VPS Hosting by CreeperCastle" />
+        <meta property="og:image:alt" content="Intel Platinum 8168 VPS Hosting by CreeperCastle" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="CreeperCastle" />
@@ -198,15 +186,15 @@ const VPSPlans = () => {
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AMD EPYC VPS Hosting India 💻 5.1GHz Turbo" />
-        <meta name="twitter:description" content="Enterprise VPS with AMD EPYC 4244P 5.1GHz, NVMe, 17 Tbps DDoS. Mumbai datacenter from ₹399/mo." />
+        <meta name="twitter:title" content="Intel Platinum 8168 VPS India 💻 Own Infrastructure" />
+        <meta name="twitter:description" content="Enterprise VPS with Intel Platinum 8168, own optimized infrastructure, Minecraft-ready, NVMe, 17 Tbps DDoS. Delhi from ₹399/mo." />
         <meta name="twitter:image" content="https://creepercastle.cloud/og-images/vps-hosting.jpg" />
         
         {/* Additional SEO */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="author" content="CreeperCastle.cloud" />
-        <meta name="geo.region" content="IN-MH" />
-        <meta name="geo.placename" content="Mumbai" />
+        <meta name="geo.region" content="IN-DL" />
+        <meta name="geo.placename" content="Delhi" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://creepercastle.cloud/plans/vps" />
@@ -278,31 +266,31 @@ const VPSPlans = () => {
                 
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-600 bg-clip-text text-transparent">
-                    AMD EPYC 4244P
+                    Intel Platinum 8168
                   </span>
                   <br />
                   <span className="text-white">VPS Hosting</span>
                 </h1>
                 
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-                  Unleash the power of next-generation server processors. Experience
-                  <span className="text-cyan-400 font-semibold"> extreme performance</span>, 
+                  Experience the legendary Intel Platinum 8168 on our own optimized infrastructure. 
+                  <span className="text-cyan-400 font-semibold"> Minecraft-ready performance</span>, 
                   <span className="text-blue-400 font-semibold"> 17 Tbps DDoS protection</span>, and 
-                  <span className="text-creeper font-semibold"> enterprise reliability</span> that keeps you ahead.
+                  <span className="text-creeper font-semibold"> enterprise reliability</span> built for excellence.
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
                   <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm border border-cyan-500/40 rounded-lg px-6 py-4">
-                    <div className="text-3xl font-bold text-cyan-400">5.1 GHz</div>
-                    <div className="text-sm text-gray-300">Turbo Boost</div>
+                    <div className="text-3xl font-bold text-cyan-400">Platinum</div>
+                    <div className="text-sm text-gray-300">Intel 8168</div>
                   </div>
                   <div className="bg-gradient-to-r from-blue-500/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/40 rounded-lg px-6 py-4">
                     <div className="text-3xl font-bold text-blue-400">17 Tbps</div>
                     <div className="text-sm text-gray-300">DDoS Protection</div>
                   </div>
                   <div className="bg-gradient-to-r from-cyan-500/20 to-creeper/20 backdrop-blur-sm border border-cyan-500/40 rounded-lg px-6 py-4">
-                    <div className="text-3xl font-bold text-creeper">NVMe</div>
-                    <div className="text-sm text-gray-300">SSD Storage</div>
+                    <div className="text-3xl font-bold text-creeper">Own Infra</div>
+                    <div className="text-sm text-gray-300">Optimized</div>
                   </div>
                 </div>
 
@@ -331,10 +319,10 @@ const VPSPlans = () => {
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-                  Why <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">EPYC VPS</span> Dominates
+                  Why <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">Intel Platinum VPS</span> Dominates
                 </h2>
                 <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                  Enterprise-grade infrastructure engineered for maximum performance and reliability
+                  Own infrastructure with Intel Platinum 8168 - optimized, Minecraft-ready, and enterprise-grade
                 </p>
               </motion.div>
 
@@ -380,7 +368,7 @@ const VPSPlans = () => {
                   Choose Your <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">Power Tier</span>
                 </h2>
                 <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                  Premium AMD EPYC VPS plans engineered for maximum performance
+                  Intel Platinum 8168 VPS plans on our own optimized infrastructure
                 </p>
               </motion.div>
 
