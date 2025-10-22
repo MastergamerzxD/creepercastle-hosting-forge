@@ -199,8 +199,10 @@ const Ryzen9Plans = () => {
         {/* Additional SEO */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="author" content="CreeperCastle.cloud" />
-        <meta name="geo.region" content="IN-MH" />
-        <meta name="geo.placename" content="Mumbai" />
+        <meta name="geo.placename" content="Mumbai;Delhi" />
+        <meta name="geo.position" content="19.0760;72.8777" />
+        <meta name="ICBM" content="19.0760, 72.8777" />
+        <meta name="revisit-after" content="2 days" />
         
         <link rel="canonical" href="https://creepercastle.cloud/plans/ryzen9" />
         

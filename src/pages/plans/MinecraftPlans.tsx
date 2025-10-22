@@ -331,8 +331,8 @@ const MinecraftPlans = () => {
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/plans/minecraft" />
-        <meta property="og:title" content="Best Minecraft Server Hosting India 2024 | Low Latency & DDoS Protection" />
-        <meta property="og:description" content="Premium Minecraft hosting starting at ₹99/month. NVMe SSD, instant setup, DDoS protection, 24/7 support. Low ping servers in Mumbai & Delhi." />
+        <meta property="og:title" content="Best Minecraft Server Hosting India 2025 | #1 Minecraft Host | Mumbai & Delhi | CreeperCastle" />
+        <meta property="og:description" content="🎮 India's #1 Minecraft server hosting! Instant setup from ₹99/mo. Ultra-low 3ms ping Mumbai/Delhi. 50 Tbps DDoS, NVMe SSD, 24/7 support. Perfect for Java, Bedrock, SMP, Modded servers." />
         <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png" />
         <meta property="og:image:alt" content="CreeperCastle Minecraft Server Hosting Plans - Best India 2025" />
         <meta property="og:image:width" content="1200" />
@@ -342,16 +342,19 @@ const MinecraftPlans = () => {
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Best Minecraft Server Hosting India 2024 🎮" />
-        <meta name="twitter:description" content="Premium Minecraft hosting starting at ₹99/month. NVMe SSD, instant setup, DDoS protection, 24/7 support. Low ping servers in Mumbai & Delhi." />
+        <meta name="twitter:title" content="Best Minecraft Server Hosting India 2025 🎮 | ₹99" />
+        <meta name="twitter:description" content="🏆 Premium Minecraft hosting from ₹99/month. NVMe SSD, instant setup, 50 Tbps DDoS, 24/7 support. 3ms ping Mumbai & Delhi. Java, Bedrock, SMP, Modded. 10,000+ servers!" />
         <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/1a97b5fc-a24e-43f7-9a8a-2b87db8ad1b6.png" />
         
         {/* Additional SEO tags */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="author" content="CreeperCastle.cloud" />
-        <meta name="publisher" content="CreeperCastle.cloud" />
-        <meta name="application-name" content="CreeperCastle" />
-        <meta name="theme-color" content="#50C878" />
+        <meta name="geo.region" content="IN-MH;IN-DL" />
+        <meta name="geo.placename" content="Mumbai;Delhi" />
+        <meta name="geo.position" content="19.0760;72.8777" />
+        <meta name="ICBM" content="19.0760, 72.8777" />
+        <meta name="revisit-after" content="2 days" />
+        <meta name="distribution" content="global" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://creepercastle.cloud/plans/minecraft" />

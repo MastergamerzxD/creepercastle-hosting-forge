@@ -3,7 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://creepercastle.cloud/</loc>
-    <lastmod>2025-07-26</lastmod>
+    <lastmod>2025-10-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,7 +15,7 @@
   
   <url>
     <loc>https://creepercastle.cloud/plans/minecraft</loc>
-    <lastmod>2025-07-26</lastmod>
+    <lastmod>2025-10-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.98</priority>
     <image:image>
@@ -27,49 +27,61 @@
   
   <url>
     <loc>https://creepercastle.cloud/plans/vps</loc>
-    <lastmod>2025-07-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.96</priority>
     <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
-      <image:title>VPS Hosting India - High Performance Virtual Private Servers</image:title>
-      <image:caption>Custom VPS Hosting Solutions with NVMe Storage in Mumbai and Delhi</image:caption>
+      <image:loc>https://creepercastle.cloud/og-images/vps-hosting.jpg</image:loc>
+      <image:title>Intel Platinum 8168 VPS Hosting India - Own Infrastructure</image:title>
+      <image:caption>Enterprise VPS Hosting with Intel Platinum 8168, 17 Tbps DDoS, NVMe SSD - Delhi Datacenter</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://creepercastle.cloud/plans/ryzen9</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.94</priority>
+    <image:image>
+      <image:loc>https://creepercastle.cloud/og-images/ryzen9-hosting.jpg</image:loc>
+      <image:title>AMD Ryzen 9 5900X Minecraft Hosting - 5.1GHz Turbo</image:title>
+      <image:caption>Ultimate Minecraft Performance with Ryzen 9 5900X - Zero Lag Mumbai Servers</image:caption>
     </image:image>
   </url>
   
   <url>
     <loc>https://creepercastle.cloud/plans/discord-bot</loc>
-    <lastmod>2025-07-26</lastmod>
+    <lastmod>2025-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
+      <image:loc>https://creepercastle.cloud/og-images/discord-bot-hosting.jpg</image:loc>
       <image:title>Discord Bot Hosting India - 24/7 Reliable Bot Hosting</image:title>
-      <image:caption>Premium Discord Bot Hosting with Instant Setup Starting ₹22/month</image:caption>
+      <image:caption>Premium Discord Bot Hosting with Node.js, Python Support - Starting ₹22/month</image:caption>
     </image:image>
   </url>
   
   <url>
     <loc>https://creepercastle.cloud/plans/creepershield</loc>
-    <lastmod>2025-07-26</lastmod>
+    <lastmod>2025-10-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
-      <image:title>CreeperShield DDoS Protection - 50 Tbps Protection</image:title>
-      <image:caption>Advanced DDoS Protection for Minecraft Servers - 50 Tbps Capacity</image:caption>
+      <image:loc>https://creepercastle.cloud/og-images/creepershield-ddos.jpg</image:loc>
+      <image:title>CreeperShield DDoS Protection - 50 Tbps Protection India</image:title>
+      <image:caption>Advanced DDoS Protection for Minecraft Servers - 50 Tbps Mitigation Capacity</image:caption>
     </image:image>
   </url>
   
   <url>
     <loc>https://creepercastle.cloud/creeperpanel</loc>
-    <lastmod>2025-07-26</lastmod>
+    <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
-      <image:title>CreeperPanel - Advanced Minecraft Server Management Panel</image:title>
-      <image:caption>Enhanced Pterodactyl-based game server management with advanced security features</image:caption>
+      <image:loc>https://creepercastle.cloud/og-images/creeperpanel-dashboard.jpg</image:loc>
+      <image:title>CreeperPanel - Advanced Pterodactyl Minecraft Server Management</image:title>
+      <image:caption>Professional Pterodactyl-based game server management panel with advanced features</image:caption>
     </image:image>
   </url>
   

@@ -19,6 +19,7 @@ import PlanCalculatorSidebar from "@/components/PlanCalculatorSidebar";
 import { Button } from "@/components/ui/button";
 import { Server, Shield, Settings, Calculator, Gamepad2, Zap } from "lucide-react";
 import StructuredData from "@/components/StructuredData";
+import OrganizationSchema from "@/components/OrganizationSchema";
 
 // Import framer-motion for animations
 import { motion, AnimatePresence } from "framer-motion";
@@ -169,16 +170,17 @@ const Index = () => {
   return (
     <>
       <VPSPlansPopup />
+      <OrganizationSchema />
       <Helmet>
-        <title>Best Minecraft Server Hosting India 2025 | #1 Mumbai & Delhi | 50 Tbps DDoS | ₹99</title>
-        <meta name="description" content="🏆 #1 Minecraft Hosting India! ₹99/mo | 3ms ping Mumbai/Delhi | 50 Tbps DDoS | NVMe SSD | 24/7 support | 10,000+ servers | Instant setup | Java, Bedrock, Modded, SMP. Trusted by top creators! Best value & performance guaranteed." />
-        <meta name="keywords" content="best minecraft server hosting india 2025, minecraft hosting india, cheap minecraft server india, minecraft server india, minecraft hosting mumbai, minecraft hosting delhi, indian minecraft hosting, low ping minecraft server india, 3ms ping minecraft, minecraft server rental india, minecraft bedrock hosting india, minecraft java hosting india, minecraft smp hosting india, ddos protected minecraft hosting, minecraft server provider india, modded minecraft hosting india, premium minecraft hosting, affordable minecraft hosting, minecraft network hosting, minecraft pvp hosting india, skyblock server hosting india, prison server hosting india, faction server hosting india, minecraft plugins hosting, instant minecraft server setup, 24/7 minecraft support india, creepercastle minecraft hosting, trusted minecraft hosting india, best minecraft host 2025 india, enterprise minecraft hosting, minecraft vps india" />
+        <title>Best Minecraft Server Hosting India 2025 | #1 Mumbai & Delhi | 50 Tbps DDoS | ₹99 | CreeperCastle</title>
+        <meta name="description" content="🏆 India's #1 Minecraft hosting 2025! Instant setup from ₹99/mo | Ultra-low 3ms ping Mumbai/Delhi | 50 Tbps DDoS protection | NVMe SSD | 24/7 expert support | 10,000+ active servers | Java, Bedrock, Modded, SMP | Trusted by top Indian YouTubers | Enterprise infrastructure | Free subdomain, plugins, SFTP | 99.9% uptime guaranteed | Best value & performance" />
+        <meta name="keywords" content="best minecraft server hosting india 2025, minecraft hosting india, cheap minecraft server india ₹99, minecraft server india, minecraft hosting mumbai, minecraft hosting delhi, indian minecraft hosting, low ping minecraft server 3ms india, minecraft server rental india, minecraft bedrock hosting india, minecraft java hosting india, minecraft smp hosting india, ddos protected minecraft hosting 50tbps, minecraft server provider india, modded minecraft hosting india, premium minecraft hosting, affordable minecraft hosting, minecraft network hosting, minecraft pvp hosting india, skyblock server hosting india, prison server hosting india, faction server hosting india, minecraft plugins hosting, instant minecraft server setup, 24/7 minecraft support india, creepercastle minecraft hosting, trusted minecraft hosting india, best minecraft host 2025 india, enterprise minecraft hosting, minecraft vps india, minecraft dedicated server india, minecraft creator hosting, minecraft youtuber hosting india, top minecraft hosting 2025, fastest minecraft server india, reliable minecraft hosting, professional minecraft hosting india" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/" />
         <meta property="og:title" content="Best Minecraft Server Hosting India 2025 | #1 Low Ping Provider | CreeperCastle" />
-        <meta property="og:description" content="🎮 India's #1 Minecraft hosting with 99.9% uptime. Ultra-fast NVMe SSD, 50 Tbps DDoS protection, instant setup. Low ping Mumbai & Delhi servers from ₹99/mo. Trusted by 10,000+ players." />
+        <meta property="og:description" content="🏆 India's #1 Minecraft hosting 2025! Instant setup from ₹99/mo. 3ms Mumbai/Delhi ping, 50 Tbps DDoS, NVMe SSD, 24/7 support. 10,000+ servers. Java, Bedrock, Modded, SMP. Trusted by top YouTubers!" />
         <meta property="og:image:alt" content="CreeperCastle - India's Best Minecraft Server Hosting Provider" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -192,8 +194,8 @@ const Index = () => {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://creepercastle.cloud/" />
-        <meta name="twitter:title" content="Best Minecraft Server Hosting India 2025 🎮 | Low Ping | CreeperCastle" />
-        <meta name="twitter:description" content="India's #1 Minecraft hosting. Ultra-fast, 50 Tbps DDoS protected, low ping Mumbai & Delhi servers from ₹99/mo. Trusted by 10,000+ players." />
+        <meta name="twitter:title" content="Best Minecraft Hosting India 2025 🎮 | #1 Provider | ₹99" />
+        <meta name="twitter:description" content="🏆 India's #1 Minecraft hosting! ₹99/mo | 3ms ping | 50 Tbps DDoS | NVMe | 24/7 support | 10,000+ servers | Instant setup | Trusted by top YouTubers!" />
         <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
         <meta name="twitter:site" content="@CreeperCastle" />
         <meta name="twitter:creator" content="@CreeperCastle" />
@@ -211,13 +213,32 @@ const Index = () => {
         <meta name="msapplication-TileImage" content="/lovable-uploads/570fb7e4-e36a-4bb5-a9ef-be9e7ae57b15.png" />
         <meta name="author" content="CreeperCastle.cloud" />
         <meta name="publisher" content="CreeperCastle.cloud" />
-        <meta name="geo.region" content="IN" />
-        <meta name="geo.placename" content="Mumbai, Delhi" />
-        <meta name="geo.position" content="19.0760;72.8777" />
+        <meta name="geo.region" content="IN-MH;IN-DL" />
+        <meta name="geo.placename" content="Mumbai;Delhi" />
+        <meta name="geo.position" content="19.0760;72.8777;28.7041;77.1025" />
         <meta name="ICBM" content="19.0760, 72.8777" />
+        <meta name="language" content="English, Hindi" />
+        <meta name="revisit-after" content="1 days" />
+        <meta name="distribution" content="global" />
+        <meta name="rating" content="general" />
+        <meta name="copyright" content="CreeperCastle.cloud" />
+        <meta name="format-detection" content="telephone=no" />
         
-        {/* Canonical URL */}
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://billing.creepercastle.in" />
+        <link rel="dns-prefetch" href="https://discord.gg" />
+        <link rel="dns-prefetch" href="https://shield.creepercastle.com" />
+        
+        {/* Canonical and Alternate URLs */}
         <link rel="canonical" href="https://creepercastle.cloud/" />
+        <link rel="alternate" hrefLang="en-IN" href="https://creepercastle.cloud/" />
+        <link rel="alternate" hrefLang="en" href="https://creepercastle.cloud/" />
+        <link rel="alternate" hrefLang="x-default" href="https://creepercastle.cloud/" />
+        <link rel="alternate" hrefLang="en-IN" href="https://creepercastle.cloud/" />
+        <link rel="alternate" hrefLang="en" href="https://creepercastle.cloud/" />
+        <link rel="alternate" hrefLang="x-default" href="https://creepercastle.cloud/" />
         
         {/* Favicon */}
         <link rel="icon" href="/lovable-uploads/570fb7e4-e36a-4bb5-a9ef-be9e7ae57b15.png" type="image/png" />

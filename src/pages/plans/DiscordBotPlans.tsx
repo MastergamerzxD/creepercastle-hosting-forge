@@ -86,9 +86,10 @@ const DiscordBotPlans = () => {
         <meta name="twitter:description" content="Professional Discord bot hosting from ₹22/mo. Node.js, Python, Java. 24/7 uptime guaranteed." />
         <meta name="twitter:image" content="https://creepercastle.cloud/og-images/discord-bot-hosting.jpg" />
         
-        {/* Additional SEO */}
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="author" content="CreeperCastle.cloud" />
+        <meta name="geo.region" content="IN" />
+        <meta name="geo.placename" content="India" />
+        <meta name="revisit-after" content="3 days" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://creepercastle.cloud/plans/discord-bot" />
