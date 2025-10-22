@@ -9,8 +9,8 @@ import { motion } from "framer-motion";
 
 const vpsPlans = [
   {
-    name: "Creeper Small",
-    price: "₹399",
+    name: "Creeper Mini",
+    price: "₹199",
     logo: "/lovable-uploads/2e0d644d-6f7e-43e0-93e8-2efabb828007.png",
     specs: {
       cpu: "Intel Platinum 8168 💎",
@@ -28,11 +28,11 @@ const vpsPlans = [
   },
   {
     name: "CreeperCastle Knight",
-    price: "₹689",
+    price: "₹399",
     logo: "/lovable-uploads/92e056f5-c85f-4f06-9432-7c5ca32fe8b2.png",
     specs: {
       cpu: "Intel Platinum 8168 💎",
-      cores: "3V Cores 🚀",
+      cores: "4V Cores 🚀",
       ram: "8 GB DDR4 ECC RAM 🪄",
       storage: "40 GB NVMe Storage🪄",
       network: "Upto 1Gbps network speed🛜",
@@ -46,7 +46,7 @@ const vpsPlans = [
   },
   {
     name: "CreeperCastle Titan",
-    price: "₹1,299",
+    price: "₹699",
     logo: "/lovable-uploads/592d5824-5311-47bb-beb0-5aae9ff5c280.png",
     specs: {
       cpu: "Intel Platinum 8168 💎",
@@ -64,11 +64,11 @@ const vpsPlans = [
   },
   {
     name: "CreeperCastle Guardian",
-    price: "₹1,999",
+    price: "₹1,199",
     logo: "/lovable-uploads/102f77a4-d71f-456c-b542-1f98a55eb506.png",
     specs: {
       cpu: "Intel Platinum 8168 💎",
-      cores: "7V Cores 🚀",
+      cores: "10V Cores 🚀",
       ram: "32 GB DDR4 ECC RAM 🪄",
       storage: "100 GB NVMe Storage🪄",
       network: "Upto 1Gbps network speed🛜",
@@ -82,11 +82,11 @@ const vpsPlans = [
   },
   {
     name: "CreeperCastle Overlord",
-    price: "₹2,999",
+    price: "₹2,099",
     logo: "/lovable-uploads/c78b0c32-1019-4b21-a48b-1581857db978.png",
     specs: {
       cpu: "Intel Platinum 8168 💎",
-      cores: "8V Cores 🚀",
+      cores: "20V Cores 🚀",
       ram: "64 GB DDR4 ECC RAM 🪄",
       storage: "200 GB NVMe Storage🪄",
       network: "Upto 1Gbps network speed🛜",
@@ -123,8 +123,8 @@ const VPSPlans = () => {
   const features = [
     {
       icon: <Cpu className="w-6 h-6" />,
-      title: 'Intel Platinum 8168',
-      description: 'Legendary enterprise processor powering our own optimized infrastructure - the ultimate choice for demanding Minecraft servers and high-performance workloads',
+      title: 'Intel Platinum 8168 Powerhouse',
+      description: 'The legendary Intel Platinum 8168 - a data center beast with 24 cores, 48 threads, and massive 33MB cache. Engineered for extreme multi-threaded performance, this processor demolishes Minecraft server loads with unmatched single-thread speeds and parallel processing power. The gold standard for game hosting.',
       gradient: 'from-cyan-500 to-blue-600',
     },
     {
@@ -162,10 +162,10 @@ const VPSPlans = () => {
   return (
     <>
       <Helmet>
-        <title>Best VPS Hosting India 2025 | Intel Platinum 8168 | Own Infra | ₹399 | CreeperCastle</title>
+        <title>Best VPS Hosting India 2025 | Intel Platinum 8168 | Own Infra | ₹199 | CreeperCastle</title>
         <meta 
           name="description" 
-          content="💻 #1 VPS India 2025! Intel Platinum 8168 on our own optimized infrastructure, Minecraft-ready, NVMe SSD, 17 Tbps DDoS, ECC RAM, Delhi datacenter. KVM, root access from ₹399/mo."
+          content="💻 #1 VPS India 2025! Intel Platinum 8168 24-core powerhouse on our own optimized infrastructure, Minecraft-ready, NVMe SSD, 17 Tbps DDoS, ECC RAM, Delhi datacenter. KVM, root access from ₹199/mo."
         />
         <meta
           name="keywords"
@@ -175,8 +175,8 @@ const VPSPlans = () => {
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/plans/vps" />
-        <meta property="og:title" content="Intel Platinum 8168 VPS Hosting India | Own Infrastructure | 17 Tbps DDoS" />
-        <meta property="og:description" content="💻 Ultimate VPS: Intel Platinum 8168 on our own optimized infrastructure, Minecraft-ready, NVMe SSD, 17 Tbps DDoS protection. Delhi datacenter. From ₹399/mo." />
+        <meta property="og:title" content="Intel Platinum 8168 VPS Hosting India | 24-Core Beast | Own Infrastructure | 17 Tbps DDoS" />
+        <meta property="og:description" content="💻 Ultimate VPS: Intel Platinum 8168 24-core powerhouse on our own optimized infrastructure, Minecraft-ready, NVMe SSD, 17 Tbps DDoS protection. Delhi datacenter. From ₹199/mo." />
         <meta property="og:image" content="https://creepercastle.cloud/og-images/vps-hosting.jpg" />
         <meta property="og:image:alt" content="Intel Platinum 8168 VPS Hosting by CreeperCastle" />
         <meta property="og:image:width" content="1200" />
@@ -186,8 +186,8 @@ const VPSPlans = () => {
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Intel Platinum 8168 VPS India 💻 Own Infrastructure" />
-        <meta name="twitter:description" content="Enterprise VPS with Intel Platinum 8168, own optimized infrastructure, Minecraft-ready, NVMe, 17 Tbps DDoS. Delhi from ₹399/mo." />
+        <meta name="twitter:title" content="Intel Platinum 8168 VPS India 💻 24-Core Powerhouse" />
+        <meta name="twitter:description" content="Enterprise VPS with Intel Platinum 8168 24-core beast, own optimized infrastructure, Minecraft-ready, NVMe, 17 Tbps DDoS. Delhi from ₹199/mo." />
         <meta name="twitter:image" content="https://creepercastle.cloud/og-images/vps-hosting.jpg" />
         
         {/* Additional SEO */}
@@ -273,10 +273,11 @@ const VPSPlans = () => {
                 </h1>
                 
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-                  Experience the legendary Intel Platinum 8168 on our own optimized infrastructure. 
-                  <span className="text-cyan-400 font-semibold"> Minecraft-ready performance</span>, 
-                  <span className="text-blue-400 font-semibold"> 17 Tbps DDoS protection</span>, and 
-                  <span className="text-creeper font-semibold"> enterprise reliability</span> built for excellence.
+                  Unleash the raw power of Intel Platinum 8168 - 24 cores of pure performance on our own hyper-optimized infrastructure. 
+                  <span className="text-cyan-400 font-semibold"> Minecraft-optimized architecture</span> with 
+                  <span className="text-blue-400 font-semibold"> massive 33MB cache</span> and 
+                  <span className="text-creeper font-semibold"> enterprise-grade reliability</span>. Protected by our 
+                  <span className="text-cyan-400 font-semibold"> 17 Tbps DDoS shield</span> - the ultimate hosting solution.
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -319,10 +320,10 @@ const VPSPlans = () => {
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-                  Why <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">Intel Platinum VPS</span> Dominates
+                  Why <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">Intel Platinum 8168</span> Crushes Everything
                 </h2>
                 <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                  Own infrastructure with Intel Platinum 8168 - optimized, Minecraft-ready, and enterprise-grade
+                  24-core data center beast on our own infrastructure - purpose-built for Minecraft, optimized for domination, engineered for victory
                 </p>
               </motion.div>
 
