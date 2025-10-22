@@ -30,7 +30,7 @@ const VPSPlansPopup = () => {
 
   return (
     <div className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/85 backdrop-blur-lg animate-fade-in p-2 sm:p-4">
-      <div className="relative w-full max-w-[95vw] sm:max-w-2xl md:max-w-3xl lg:max-w-4xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto animate-scale-in">
+      <div className="relative w-full max-w-[95vw] sm:max-w-2xl md:max-w-3xl lg:max-w-4xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto scrollbar-hide animate-scale-in">
         {/* Close Button - Mobile Optimized */}
         <button
           onClick={() => setIsOpen(false)}
@@ -41,7 +41,7 @@ const VPSPlansPopup = () => {
         </button>
 
         {/* Main Popup Container */}
-        <div className="relative bg-gradient-to-br from-navy-dark via-gray-900 to-black rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border-2 border-cyan-500/50">
+        <div className="relative bg-gradient-to-br from-navy-dark via-gray-900 to-black rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border-2 border-cyan-500/50 scrollbar-hide">
           {/* Animated Background Elements */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute -top-20 -left-20 w-64 h-64 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-full blur-3xl animate-pulse"></div>
