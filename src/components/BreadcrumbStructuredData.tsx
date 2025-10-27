@@ -27,6 +27,7 @@ const BreadcrumbStructuredData = () => {
       if (segment === 'minecraft') name = 'Minecraft Hosting';
       if (segment === 'creepershield') name = 'CreeperShield Protection';
       if (segment === 'vps') name = 'VPS Hosting';
+      if (segment === 'performance') name = 'Performance Hosting';
       if (segment === 'creeperpanel') name = 'CreeperPanel';
       if (segment === 'plans') name = 'Hosting Plans';
       if (segment === 'locations') name = 'Server Locations';

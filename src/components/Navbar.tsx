@@ -32,10 +32,10 @@ const Navbar = () => {
             </span>
             <span className="absolute inset-0 bg-gradient-to-r from-creeper/0 via-creeper/10 to-creeper/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
           </Link>
-          <Link to="/plans/ryzen9" className="text-white hover:text-amber-400 transition-all duration-300 whitespace-nowrap text-base bg-gradient-to-r from-amber-500/15 to-orange-600/15 px-3 py-2 rounded-lg border border-amber-500/40 hover:border-amber-400/60 hover:bg-gradient-to-r hover:from-amber-500/25 hover:to-orange-600/25 relative overflow-hidden group">
+          <Link to="/plans/performance" className="text-white hover:text-amber-400 transition-all duration-300 whitespace-nowrap text-base bg-gradient-to-r from-amber-500/15 to-orange-600/15 px-3 py-2 rounded-lg border border-amber-500/40 hover:border-amber-400/60 hover:bg-gradient-to-r hover:from-amber-500/25 hover:to-orange-600/25 relative overflow-hidden group">
             <span className="flex items-center gap-2 relative z-10">
               <Zap size={16} className="text-amber-400" />
-              Minecraft Ryzen
+              Minecraft Performance
             </span>
             <span className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-400/10 to-amber-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
           </Link>
@@ -170,7 +170,7 @@ const Navbar = () => {
             
             <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-all duration-300 py-2 bg-creeper/15 px-3 rounded-lg border border-creeper/40 hover:border-creeper/60" onClick={() => setIsOpen(false)}>🎮 Minecraft Classic</Link>
             
-            <Link to="/plans/ryzen9" className="text-white hover:text-amber-400 transition-all duration-300 py-2 bg-gradient-to-r from-amber-500/15 to-orange-600/15 px-3 rounded-lg border border-amber-500/40 hover:border-amber-400/60" onClick={() => setIsOpen(false)}>⚡ Minecraft Ryzen</Link>
+            <Link to="/plans/performance" className="text-white hover:text-amber-400 transition-all duration-300 py-2 bg-gradient-to-r from-amber-500/15 to-orange-600/15 px-3 rounded-lg border border-amber-500/40 hover:border-amber-400/60" onClick={() => setIsOpen(false)}>⚡ Minecraft Performance</Link>
             
             <div className="text-white py-2">
               <span className="text-gray-300 font-medium flex items-center gap-2 mb-2">

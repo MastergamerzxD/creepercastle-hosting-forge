@@ -510,7 +510,7 @@ const Index = () => {
                       <div className="border-t border-amber-500/30 pt-4 mt-auto">
                         <div className="text-3xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent mb-4">₹299<span className="text-lg text-gray-400">/mo</span></div>
                         <Button className="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-bold py-2.5 transition-all duration-300 hover:scale-105 shadow-lg shadow-amber-500/30" asChild>
-                          <Link to="/plans/ryzen9">Unleash Power</Link>
+                          <Link to="/plans/performance">Unleash Power</Link>
                         </Button>
                       </div>
                     </div>
