@@ -467,7 +467,7 @@ const Index = () => {
                     </div>
                   </motion.div>
 
-                  {/* Ryzen 9 Hosting Card */}
+                  {/* Performance Hosting Card */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -484,14 +484,14 @@ const Index = () => {
                         <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-amber-500/50">
                           <Zap className="h-8 w-8 text-white" />
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-2">Ryzen 9</h3>
-                        <p className="text-gray-400 text-sm">Extreme performance power</p>
+                        <h3 className="text-2xl font-bold text-white mb-2">Performance</h3>
+                        <p className="text-gray-400 text-sm">Pure high-performance nodes</p>
                       </div>
 
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center gap-2 text-sm">
                           <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
-                          <span className="text-gray-300"><strong className="text-amber-300">Ryzen 9 5900X</strong></span>
+                          <span className="text-gray-300"><strong className="text-amber-300">Infinite CPU Power</strong></span>
                         </div>
                         <div className="flex items-center gap-2 text-sm">
                           <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
@@ -499,11 +499,11 @@ const Index = () => {
                         </div>
                         <div className="flex items-center gap-2 text-sm">
                           <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
-                          <span className="text-gray-300"><strong className="text-white">4.8GHz</strong> Boost</span>
+                          <span className="text-gray-300"><strong className="text-white">Zero Lag</strong> Guaranteed</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm">
                           <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
-                          <span className="text-gray-300">Advanced Shield</span>
+                          <span className="text-gray-300">Unhittable DDoS</span>
                         </div>
                       </div>
 

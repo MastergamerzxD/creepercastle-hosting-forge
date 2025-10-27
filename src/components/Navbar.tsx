@@ -22,72 +22,73 @@ const Navbar = () => {
 
   return (
     <nav className="py-4 border-b border-creeper/30 bg-navy-dark/95 backdrop-blur-xl fixed top-0 w-full z-[9999] shadow-2xl shadow-creeper/10">
-      <div className="container mx-auto px-4 flex justify-between items-center min-h-[4rem] gap-4">
-        {/* Left Section - Hosting Options */}
-        <div className="hidden lg:flex items-center space-x-1.5 flex-shrink-0">
-          <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base bg-creeper/15 px-3 py-2 rounded-lg border border-creeper/40 hover:border-creeper/60 hover:bg-creeper/25 relative overflow-hidden group">
-            <span className="flex items-center gap-2 relative z-10">
-              <Gamepad2 size={16} />
-              Minecraft Classic
-            </span>
-            <span className="absolute inset-0 bg-gradient-to-r from-creeper/0 via-creeper/10 to-creeper/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
-          </Link>
-          <Link to="/plans/performance" className="text-white hover:text-amber-400 transition-all duration-300 whitespace-nowrap text-base bg-gradient-to-r from-amber-500/15 to-orange-600/15 px-3 py-2 rounded-lg border border-amber-500/40 hover:border-amber-400/60 hover:bg-gradient-to-r hover:from-amber-500/25 hover:to-orange-600/25 relative overflow-hidden group">
-            <span className="flex items-center gap-2 relative z-10">
-              <Zap size={16} className="text-amber-400" />
-              Minecraft Performance
-            </span>
-            <span className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-400/10 to-amber-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center min-h-[4rem] gap-4">
+          {/* Left Section - Hosting Options */}
+          <div className="hidden lg:flex items-center space-x-1.5 flex-shrink-0 flex-1 justify-start">
+            <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base bg-creeper/15 px-3 py-2 rounded-lg border border-creeper/40 hover:border-creeper/60 hover:bg-creeper/25 relative overflow-hidden group">
+              <span className="flex items-center gap-2 relative z-10">
+                <Gamepad2 size={16} />
+                Minecraft Classic
+              </span>
+              <span className="absolute inset-0 bg-gradient-to-r from-creeper/0 via-creeper/10 to-creeper/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
+            </Link>
+            <Link to="/plans/performance" className="text-white hover:text-amber-400 transition-all duration-300 whitespace-nowrap text-base bg-gradient-to-r from-amber-500/15 to-orange-600/15 px-3 py-2 rounded-lg border border-amber-500/40 hover:border-amber-400/60 hover:bg-gradient-to-r hover:from-amber-500/25 hover:to-orange-600/25 relative overflow-hidden group">
+              <span className="flex items-center gap-2 relative z-10">
+                <Zap size={16} className="text-amber-400" />
+                Minecraft Performance
+              </span>
+              <span className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-400/10 to-amber-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
+            </Link>
+            
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base flex items-center gap-2 bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/5 focus:outline-none group">
+                <Server size={16} />
+                Others
+                <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-navy-dark/95 backdrop-blur-xl border border-creeper/30 z-[10000] rounded-xl shadow-2xl shadow-creeper/20 min-w-[200px]">
+                <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
+                  <Link to="/plans/vps" className="w-full flex items-center gap-3">
+                    <Monitor size={16} className="text-creeper" />
+                    VPS Hosting
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
+                  <Link to="/plans/discord-bot" className="w-full flex items-center gap-3">
+                    <Bot size={16} className="text-purple-400" />
+                    Discord Bot
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base bg-purple-500/15 px-3 py-2 rounded-lg border border-purple-500/40 hover:border-purple-500/60 hover:bg-purple-500/25 relative overflow-hidden group">
+              <span className="flex items-center gap-2 relative z-10">
+                <Shield size={16} />
+                Shield
+              </span>
+              <span className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
+            </Link>
+          </div>
+
+          {/* Center - Logo */}
+          <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" 
+                alt="CreeperCastle.cloud" 
+                className="h-10 w-10"
+              />
+              <span className="font-bold text-xl ml-2 whitespace-nowrap">
+                <span className="text-white">Creeper</span>
+                <span className="text-creeper">Castle</span>
+              </span>
+            </div>
           </Link>
           
-          <DropdownMenu>
-            <DropdownMenuTrigger className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base flex items-center gap-2 bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/5 focus:outline-none group">
-              <Server size={16} />
-              Others
-              <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-navy-dark/95 backdrop-blur-xl border border-creeper/30 z-[10000] rounded-xl shadow-2xl shadow-creeper/20 min-w-[200px]">
-              <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
-                <Link to="/plans/vps" className="w-full flex items-center gap-3">
-                  <Monitor size={16} className="text-creeper" />
-                  VPS Hosting
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
-                <Link to="/plans/discord-bot" className="w-full flex items-center gap-3">
-                  <Bot size={16} className="text-purple-400" />
-                  Discord Bot
-                </Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base bg-purple-500/15 px-3 py-2 rounded-lg border border-purple-500/40 hover:border-purple-500/60 hover:bg-purple-500/25 relative overflow-hidden group">
-            <span className="flex items-center gap-2 relative z-10">
-              <Shield size={16} />
-              Shield
-            </span>
-            <span className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
-          </Link>
-        </div>
-
-        {/* Center - Logo */}
-        <Link to="/" className="flex items-center space-x-2 flex-shrink-0 lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
-          <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" 
-              alt="CreeperCastle.cloud" 
-              className="h-10 w-10"
-            />
-            <span className="font-bold text-xl ml-2 whitespace-nowrap">
-              <span className="text-white">Creeper</span>
-              <span className="text-creeper">Castle</span>
-            </span>
-          </div>
-        </Link>
-        
-        {/* Right Section - Company Info */}
-        <div className="hidden lg:flex items-center space-x-1.5 flex-shrink-0">
+          {/* Right Section - Company Info */}
+          <div className="hidden lg:flex items-center space-x-1.5 flex-shrink-0 flex-1 justify-end">
           <DropdownMenu>
             <DropdownMenuTrigger className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base flex items-center gap-2 bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/5 focus:outline-none group">
               <Building2 size={16} />
@@ -161,6 +162,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+    </div>
       
       {/* Mobile Navigation */}
       {isOpen && (
