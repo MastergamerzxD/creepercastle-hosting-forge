@@ -70,7 +70,7 @@ const PerformancePlans = () => {
       databases: '2 Databases',
       backups: '2 Backups',
       location: 'Mumbai, India',
-      ddos: 'Basic Protection',
+      ddos: 'Unhittable DDoS Protection',
       link: 'https://billing.creepercastle.in/products/ryzen-9-minecraft-hosting/amberheart',
       popular: false,
       color: 'from-amber-500/20 to-orange-600/20',
@@ -88,7 +88,7 @@ const PerformancePlans = () => {
       databases: '4 Databases',
       backups: '4 Backups',
       location: 'Mumbai, India',
-      ddos: 'Advanced OVH Shield',
+      ddos: 'Unhittable DDoS Protection',
       link: 'https://billing.creepercastle.in/products/ryzen-9-minecraft-hosting/obsidian-crest',
       popular: true,
       color: 'from-amber-400/30 to-orange-500/30',
@@ -106,7 +106,7 @@ const PerformancePlans = () => {
       databases: '8 Databases',
       backups: '8 Backups',
       location: 'Mumbai, India',
-      ddos: 'Advanced OVH Shield',
+      ddos: 'Unhittable DDoS Protection',
       link: 'https://billing.creepercastle.in/products/ryzen-9-minecraft-hosting/dragonforge',
       popular: false,
       color: 'from-amber-600/20 to-orange-700/20',
@@ -124,7 +124,7 @@ const PerformancePlans = () => {
       databases: '16 Databases',
       backups: '16 Backups',
       location: 'Mumbai, India',
-      ddos: 'Advanced OVH Shield',
+      ddos: 'Unhittable DDoS Protection',
       link: 'https://billing.creepercastle.in/products/ryzen-9-minecraft-hosting/witherfall',
       popular: false,
       color: 'from-amber-700/20 to-orange-800/20',
@@ -153,9 +153,9 @@ const PerformancePlans = () => {
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Advanced DDoS Protection',
-      description: 'Enterprise-grade OVH protection shields your server from malicious attacks 24/7',
-      gradient: 'from-amber-600 to-orange-700',
+      title: 'Unhittable DDoS Protection',
+      description: 'Military-grade multi-layer protection with 50+ Tbps capacity. Your server stays online even under the most massive attacks - completely unhittable',
+      gradient: 'from-purple-600 to-pink-600',
     },
     {
       icon: <Clock className="w-6 h-6" />,
@@ -302,15 +302,26 @@ const PerformancePlans = () => {
                     <div className="text-3xl font-bold text-orange-400">100%</div>
                     <div className="text-sm text-gray-300">Optimized Nodes</div>
                   </div>
+                  <div className="bg-gradient-to-r from-purple-500/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/40 rounded-lg px-6 py-4">
+                    <div className="text-3xl font-bold text-purple-400">50+ Tbps</div>
+                    <div className="text-sm text-gray-300">Unhittable DDoS</div>
+                  </div>
                   <div className="bg-gradient-to-r from-amber-500/20 to-orange-600/20 backdrop-blur-sm border border-amber-500/40 rounded-lg px-6 py-4">
                     <div className="text-3xl font-bold text-amber-300">Zero</div>
                     <div className="text-sm text-gray-300">Lag Guaranteed</div>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-amber-500/10 to-orange-600/10 border border-amber-500/30 rounded-lg p-6 mb-8 max-w-2xl mx-auto">
+                <div className="bg-gradient-to-r from-amber-500/10 to-orange-600/10 border border-amber-500/30 rounded-lg p-6 mb-4 max-w-2xl mx-auto">
                   <p className="text-lg text-gray-200 leading-relaxed">
                     <span className="text-amber-400 font-semibold">Trust us with your server.</span> Our enterprise-grade infrastructure is meticulously tuned and optimized. You focus on your community - we handle the performance magic behind the scenes.
+                  </p>
+                </div>
+
+                <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-lg p-6 mb-8 max-w-2xl mx-auto">
+                  <p className="text-lg text-gray-200 leading-relaxed">
+                    <Shield className="w-5 h-5 inline mr-2 text-purple-400" />
+                    Protected by <span className="text-purple-400 font-semibold">Unhittable DDoS Protection</span> with 50+ Tbps capacity. Your server stays online even under massive attacks - completely unhittable, guaranteed.
                   </p>
                 </div>
 
@@ -369,6 +380,136 @@ const PerformancePlans = () => {
                   </motion.div>
                 ))}
               </div>
+            </div>
+          </section>
+
+          {/* Unhittable DDoS Protection Section */}
+          <section className="py-20 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-purple-500/10" />
+            <div className="absolute inset-0">
+              <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
+              <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+            </div>
+            
+            <div className="container mx-auto px-4 relative z-10">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-12"
+              >
+                <Badge className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 text-lg border-none shadow-lg shadow-purple-500/50 mb-6">
+                  <Shield className="w-4 h-4 mr-2 inline" />
+                  Industry-Leading Protection
+                </Badge>
+                
+                <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+                  <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">Unhittable</span> DDoS Protection
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
+                  Your server is protected by the most powerful DDoS mitigation infrastructure in India. 
+                  We don't just block attacks - <span className="text-purple-400 font-semibold">we make them impossible</span>.
+                </p>
+              </motion.div>
+
+              <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-2 border-purple-500/40 hover:border-purple-400/60 transition-all duration-300 h-full backdrop-blur-sm">
+                    <CardHeader>
+                      <div className="text-4xl font-bold text-purple-400 mb-2">50+ Tbps</div>
+                      <CardTitle className="text-xl text-white">Mitigation Capacity</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">
+                        Massive 50+ Terabit protection capacity crushes even the largest volumetric attacks before they reach your server
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                >
+                  <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-2 border-purple-500/40 hover:border-purple-400/60 transition-all duration-300 h-full backdrop-blur-sm">
+                    <CardHeader>
+                      <div className="text-4xl font-bold text-pink-400 mb-2">Multi-Layer</div>
+                      <CardTitle className="text-xl text-white">Defense System</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">
+                        Advanced L3/L4/L7 protection with intelligent filtering, rate limiting, and behavioral analysis stops all attack types
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-2 border-purple-500/40 hover:border-purple-400/60 transition-all duration-300 h-full backdrop-blur-sm">
+                    <CardHeader>
+                      <div className="text-4xl font-bold text-purple-300 mb-2">24/7</div>
+                      <CardTitle className="text-xl text-white">Always-On Protection</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">
+                        Real-time monitoring and instant mitigation activate automatically - your server stays online no matter what
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/40 rounded-2xl p-8 max-w-4xl mx-auto backdrop-blur-sm"
+              >
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">Why Our Protection is Truly Unhittable</h3>
+                <div className="grid md:grid-cols-2 gap-6 text-gray-200">
+                  <div className="flex items-start gap-3">
+                    <Check className="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <strong className="text-white">Enterprise OVH Infrastructure:</strong> Battle-tested protection handling millions of attacks daily
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Check className="w-6 h-6 text-pink-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <strong className="text-white">Instant Auto-Mitigation:</strong> Attacks neutralized in milliseconds with zero manual intervention
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Check className="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <strong className="text-white">Global Scrubbing Centers:</strong> Distributed protection across multiple continents for maximum resilience
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Check className="w-6 h-6 text-pink-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <strong className="text-white">Zero Performance Impact:</strong> Protection works invisibly - your players never notice a thing
+                    </div>
+                  </div>
+                </div>
+                <p className="text-center text-purple-300 font-semibold mt-6 text-lg">
+                  Sleep peacefully knowing your server is completely unhittable. We've got your back 24/7/365.
+                </p>
+              </motion.div>
             </div>
           </section>
 
