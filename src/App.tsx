@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import BreadcrumbStructuredData from "@/components/BreadcrumbStructuredData";
 import Index from "./pages/Index";
@@ -41,6 +41,7 @@ const App = () => (
             <Route path="/locations" element={<Locations />} />
             <Route path="/plans/minecraft" element={<MinecraftPlans />} />
             <Route path="/plans/performance" element={<PerformancePlans />} />
+            <Route path="/plans/ryzen9" element={<Navigate to="/plans/performance" replace />} />
             <Route path="/plans/vps" element={<VPSPlans />} />
             <Route path="/plans/discord-bot" element={<DiscordBotPlans />} />
             <Route path="/datacenter" element={<Datacenter />} />

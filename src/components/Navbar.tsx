@@ -22,9 +22,9 @@ const Navbar = () => {
 
   return (
     <nav className="py-4 border-b border-creeper/30 bg-navy-dark/95 backdrop-blur-xl fixed top-0 w-full z-[9999] shadow-2xl shadow-creeper/10">
-      <div className="container mx-auto px-4 flex justify-between items-center min-h-[4rem]">
+      <div className="container mx-auto px-4 flex justify-between items-center min-h-[4rem] gap-4">
         {/* Left Section - Hosting Options */}
-        <div className="hidden lg:flex items-center space-x-1.5">
+        <div className="hidden lg:flex items-center space-x-1.5 flex-shrink-0">
           <Link to="/plans/minecraft" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base bg-creeper/15 px-3 py-2 rounded-lg border border-creeper/40 hover:border-creeper/60 hover:bg-creeper/25 relative overflow-hidden group">
             <span className="flex items-center gap-2 relative z-10">
               <Gamepad2 size={16} />
@@ -72,7 +72,7 @@ const Navbar = () => {
         </div>
 
         {/* Center - Logo */}
-        <Link to="/" className="flex items-center space-x-2 flex-shrink-0 absolute left-1/2 transform -translate-x-1/2">
+        <Link to="/" className="flex items-center space-x-2 flex-shrink-0 lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
           <div className="flex items-center">
             <img 
               src="/lovable-uploads/394abece-307b-48f2-8c38-4d2123607648.png" 
@@ -87,7 +87,7 @@ const Navbar = () => {
         </Link>
         
         {/* Right Section - Company Info */}
-        <div className="hidden lg:flex items-center space-x-1.5">
+        <div className="hidden lg:flex items-center space-x-1.5 flex-shrink-0">
           <DropdownMenu>
             <DropdownMenuTrigger className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base flex items-center gap-2 bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/5 focus:outline-none group">
               <Building2 size={16} />
