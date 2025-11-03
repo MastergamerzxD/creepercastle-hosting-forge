@@ -135,8 +135,8 @@ const PerformancePlans = () => {
   const features = [
     {
       icon: <Cpu className="w-6 h-6" />,
-      title: 'Enterprise-Grade Hardware',
-      description: 'Dedicated high-performance nodes specially optimized for Minecraft, delivering unmatched speed and reliability',
+      title: 'AMD EPYC 4344P Processor',
+      description: 'Powered by the legendary AMD EPYC 4344P with 5.3 GHz turbo frequency - enterprise-class performance that dominates every other hosting solution',
       gradient: 'from-amber-500 to-orange-600',
     },
     {
@@ -337,6 +337,130 @@ const PerformancePlans = () => {
                 </Button>
               </div>
             </motion.div>
+          </section>
+
+          {/* Processor Showcase Section */}
+          <section className="py-20 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-orange-500/20 to-amber-500/10" />
+            <div className="absolute inset-0">
+              <div className="absolute top-10 left-20 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl animate-pulse" />
+              <div className="absolute bottom-10 right-20 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
+            </div>
+            
+            <div className="container mx-auto px-4 relative z-10">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="max-w-5xl mx-auto"
+              >
+                <div className="text-center mb-12">
+                  <Badge className="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-6 py-2 text-lg border-none shadow-lg shadow-amber-500/50 mb-6">
+                    <Cpu className="w-4 h-4 mr-2 inline" />
+                    Powered by Excellence
+                  </Badge>
+                  
+                  <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                    <span className="text-white">Unleashing the Power of</span>
+                    <br />
+                    <span className="bg-gradient-to-r from-amber-400 via-orange-500 to-amber-600 bg-clip-text text-transparent">
+                      AMD EPYC 4344P
+                    </span>
+                  </h2>
+                  
+                  <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
+                    Experience the pinnacle of server processing with the <span className="text-amber-400 font-semibold">AMD EPYC 4344P</span> - 
+                    a legendary enterprise-grade processor that sets the gold standard for Minecraft hosting performance.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="bg-gradient-to-br from-amber-500/20 to-orange-600/20 backdrop-blur-sm border-2 border-amber-500/50 rounded-xl p-6 hover:border-amber-400/80 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/30"
+                  >
+                    <div className="text-center">
+                      <div className="text-5xl font-bold text-amber-400 mb-2">5.3 GHz</div>
+                      <div className="text-sm text-gray-300 font-semibold">Turbo Frequency</div>
+                      <p className="text-xs text-gray-400 mt-2">Lightning-fast clock speeds that crush any workload</p>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    className="bg-gradient-to-br from-orange-500/20 to-red-600/20 backdrop-blur-sm border-2 border-orange-500/50 rounded-xl p-6 hover:border-orange-400/80 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/30"
+                  >
+                    <div className="text-center">
+                      <div className="text-5xl font-bold text-orange-400 mb-2">8C/16T</div>
+                      <div className="text-sm text-gray-300 font-semibold">Cores & Threads</div>
+                      <p className="text-xs text-gray-400 mt-2">Multithreading excellence for infinite concurrent tasks</p>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="bg-gradient-to-br from-yellow-500/20 to-amber-600/20 backdrop-blur-sm border-2 border-yellow-500/50 rounded-xl p-6 hover:border-yellow-400/80 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/30"
+                  >
+                    <div className="text-center">
+                      <div className="text-5xl font-bold text-yellow-400 mb-2">EPYC</div>
+                      <div className="text-sm text-gray-300 font-semibold">Enterprise Class</div>
+                      <p className="text-xs text-gray-400 mt-2">Professional-grade reliability for mission-critical servers</p>
+                    </div>
+                  </motion.div>
+                </div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="bg-gradient-to-r from-amber-500/20 to-orange-500/20 border-2 border-amber-500/40 rounded-2xl p-8 backdrop-blur-sm"
+                >
+                  <h3 className="text-2xl font-bold text-white mb-6 text-center">Why the EPYC 4344P is Extraordinary</h3>
+                  <div className="grid md:grid-cols-2 gap-6 text-gray-200">
+                    <div className="flex items-start gap-3">
+                      <Zap className="w-6 h-6 text-amber-400 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong className="text-white">Blazing 5.3 GHz Turbo:</strong> Peak performance that accelerates through complex calculations and heavy plugin loads effortlessly
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Award className="w-6 h-6 text-orange-400 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong className="text-white">Enterprise Architecture:</strong> Built on AMD's legendary EPYC platform - the same processors powering Fortune 500 datacenters
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <TrendingUp className="w-6 h-6 text-amber-400 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong className="text-white">Exceptional IPC:</strong> Superior instructions per clock delivering unmatched single-threaded performance for Minecraft
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Sparkles className="w-6 h-6 text-orange-400 flex-shrink-0 mt-1" />
+                      <div>
+                        <strong className="text-white">Zero Bottlenecks:</strong> Advanced Zen 4 architecture ensures your server never waits, never lags, never compromises
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-6 p-4 bg-gradient-to-r from-amber-400/10 to-orange-400/10 border border-amber-400/30 rounded-lg">
+                    <p className="text-center text-amber-300 font-semibold text-lg">
+                      🏆 This isn't just a processor - it's the foundation of unstoppable performance. Your players deserve nothing less than EPYC excellence.
+                    </p>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </div>
           </section>
 
           {/* Features Grid */}
