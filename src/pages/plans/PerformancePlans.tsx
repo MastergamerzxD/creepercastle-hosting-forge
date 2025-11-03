@@ -375,7 +375,7 @@ const PerformancePlans = () => {
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="grid md:grid-cols-2 gap-6 mb-8 max-w-3xl mx-auto">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -395,20 +395,6 @@ const PerformancePlans = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="bg-gradient-to-br from-orange-500/20 to-red-600/20 backdrop-blur-sm border-2 border-orange-500/50 rounded-xl p-6 hover:border-orange-400/80 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/30"
-                  >
-                    <div className="text-center">
-                      <div className="text-5xl font-bold text-orange-400 mb-2">8C/16T</div>
-                      <div className="text-sm text-gray-300 font-semibold">Cores & Threads</div>
-                      <p className="text-xs text-gray-400 mt-2">Multithreading excellence for infinite concurrent tasks</p>
-                    </div>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
                     className="bg-gradient-to-br from-yellow-500/20 to-amber-600/20 backdrop-blur-sm border-2 border-yellow-500/50 rounded-xl p-6 hover:border-yellow-400/80 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/30"
                   >
                     <div className="text-center">
