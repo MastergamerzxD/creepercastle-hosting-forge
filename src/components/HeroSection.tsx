@@ -108,7 +108,7 @@ const HeroSection = () => {
             >
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button className="minecraft-btn rounded-md text-lg py-6 px-8 relative overflow-hidden group pixel-animate" asChild>
-                  <a href="https://billing.creepercastle.in/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://billing.creepercastle.in" target="_blank" rel="noopener noreferrer">
                     <span className="relative z-10">Store</span>
                     <span className="absolute inset-0 bg-creeper-light opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
                   </a>
