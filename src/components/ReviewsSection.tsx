@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, ExternalLink } from "lucide-react";
+import { Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -34,8 +34,6 @@ const testimonials = [
     plan: "Stone Plan"
   }
 ];
-
-const trustpilotLogo = "https://images.squarespace-cdn.com/content/v1/5e6e06d0eb7da54d51ce0ddb/65cb95c2-67fa-43ba-b37c-c92a9d94a0cb/Trustpilot_brandmark_gr-wht_RVB.png";
 
 const ReviewsSection = () => {
   const containerVariants = {
@@ -152,57 +150,6 @@ const ReviewsSection = () => {
           ))}
         </motion.div>
         
-        {/* Trustpilot Integration */}
-        <motion.div 
-          className="bg-navy-light border border-gray-800 rounded-xl p-8 max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-          whileHover={{ boxShadow: "0 0 30px rgba(80, 200, 120, 0.1)" }}
-        >
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center">
-              <img 
-                src={trustpilotLogo} 
-                alt="Trustpilot" 
-                className="h-8 mr-3" 
-                onError={(e) => {
-                  e.currentTarget.src = "https://seeklogo.com/images/T/trustpilot-logo-3C08171527-seeklogo.com.png";
-                }}
-              />
-              <div>
-                <h3 className="font-bold text-lg">Trustpilot Reviews</h3>
-                <p className="text-gray-400 text-sm">Independent & verified reviews</p>
-              </div>
-            </div>
-            <div className="flex">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <motion.div
-                  key={star}
-                  whileHover={{ y: -2 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <Star className="h-5 w-5 fill-[#00b67a] text-[#00b67a]" />
-                </motion.div>
-              ))}
-            </div>
-          </div>
-          
-          <p className="text-gray-300 mb-6">
-            "We're proud of our excellent rating on Trustpilot. Our customers consistently rate us highly for our reliability, performance, and customer support."
-          </p>
-          
-          <motion.div whileHover={{ scale: 1.03 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
-            <Button className="w-full bg-[#00b67a] hover:bg-[#00a26e] text-white rounded-md flex items-center justify-center gap-2 relative overflow-hidden group" asChild>
-              <a href="https://nz.trustpilot.com/review/creepercastle.cloud" target="_blank" rel="noopener noreferrer">
-                <span className="relative z-10">Read our Trustpilot reviews</span>
-                <ExternalLink className="h-4 w-4 relative z-10" />
-                <span className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-white transition-opacity duration-300"></span>
-              </a>
-            </Button>
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );
