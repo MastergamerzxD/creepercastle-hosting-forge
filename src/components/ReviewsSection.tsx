@@ -65,30 +65,6 @@ const ReviewsSection = () => {
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Join thousands of satisfied server owners who trust CreeperCastle.cloud with their Minecraft communities.
           </p>
-          
-          <motion.div 
-            className="flex items-center justify-center mt-6"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-          >
-            <div className="flex">
-              {[1, 2, 3, 4, 5].map((star, index) => (
-                <motion.div
-                  key={star}
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: 0.1 * index }}
-                >
-                  <Star className="h-6 w-6 fill-creeper text-creeper" />
-                </motion.div>
-              ))}
-            </div>
-            <span className="ml-2 font-medium">4.9 out of 5</span>
-            <span className="text-gray-400 ml-2">(100+ reviews, including Discord reviews)</span>
-          </motion.div>
         </motion.div>
         
         <motion.div 
