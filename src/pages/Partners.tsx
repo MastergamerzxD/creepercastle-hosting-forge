@@ -27,7 +27,6 @@ import betterdarkImg from "@/assets/partners/betterdark.png";
 import robbietonImg from "@/assets/partners/robbieton.png";
 import pubixdImg from "@/assets/partners/pubixd.png";
 import mrlapisImg from "@/assets/partners/mrlapis.png";
-import triggeredboyImg from "@/assets/partners/triggeredboy.png";
 
 const partners = [
   { name: "FireMc", image: firemcImg, category: "Content Creator" },
@@ -52,7 +51,6 @@ const partners = [
   { name: "Robbie Ton", image: robbietonImg, category: "Content Creator" },
   { name: "PubiXD", image: pubixdImg, category: "Gaming Creator" },
   { name: "MrLapis", image: mrlapisImg, category: "Minecraft YouTuber" },
-  { name: "Triggered Boy", image: triggeredboyImg, category: "Gaming Influencer" },
 ];
 
 const Partners = () => {
