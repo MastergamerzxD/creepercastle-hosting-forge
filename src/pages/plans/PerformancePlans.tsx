@@ -174,7 +174,7 @@ const PerformancePlans = () => {
   return (
     <>
       <Helmet>
-        <title>High-Performance Minecraft Hosting India 2025 | Pure Speed | ₹299 | CreeperCastle</title>
+        <title>High-Performance Minecraft Hosting India | CreeperCastle</title>
         <meta name="description" content="⚡ Ultimate Minecraft hosting with enterprise-grade hardware - Pure performance nodes specially optimized for zero lag. Advanced OVH DDoS protection. Mumbai servers from ₹299/mo. #1 premium Minecraft hosting India 2025." />
         <meta name="keywords" content="high performance minecraft hosting india, best minecraft server hosting, premium minecraft hosting, zero lag minecraft server india, mumbai minecraft hosting, dedicated minecraft nodes, enterprise minecraft hosting, fastest minecraft server india, optimized minecraft hosting, professional minecraft server india, creepercastle performance plans" />
         

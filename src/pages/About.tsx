@@ -92,12 +92,12 @@ const About = () => {
         
         <Navbar />
         <Helmet>
-          <title>About CreeperCastle | Meet the Founders | India's #1 Minecraft Hosting Company 2025</title>
+          <title>About CreeperCastle | Minecraft Hosting India</title>
           <meta 
             name="description" 
-            content="Meet Ahaan Gupta (CEO) and Yaswanth (Co-Founder), the passionate minds behind India's premier Minecraft hosting company. Learn about CreeperCastle's journey from a small passion project to serving 10,000+ players with enterprise-grade infrastructure, 24/7 support, and unmatched reliability." 
+            content="Learn about CreeperCastle, India's Minecraft hosting company run by passionate founders delivering fast, secure and reliable servers for 10,000+ players."
           />
-          <meta name="keywords" content="CreeperCastle founders, Ahaan Gupta CEO, Yaswanth co-founder, about creepercastle, minecraft hosting company India, gaming entrepreneurs India, server hosting company story, creepercastle team, Indian gaming startup, minecraft hosting founders, creepercastle history, gaming company India, server hosting leadership" />
+          <meta name="keywords" content="about creepercastle, minecraft hosting india company, creepercastle founders, indian minecraft hosting, creepercastle story" />
           
           {/* Open Graph */}
           <meta property="og:title" content="About CreeperCastle - Meet the Founders of India's #1 Minecraft Host" />
