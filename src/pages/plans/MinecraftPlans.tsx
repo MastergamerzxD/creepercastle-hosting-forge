@@ -318,7 +318,7 @@ const MinecraftPlans = () => {
   return (
     <>
       <Helmet>
-        <title>Best Minecraft Server Hosting India 2025 | #1 Minecraft Host | Mumbai & Delhi | ₹99 | CreeperCastle</title>
+        <title>Minecraft Server Hosting India Plans | CreeperCastle</title>
         <meta 
           name="description" 
           content="🎮 India's #1 Minecraft server hosting from ₹99/month! Instant setup, NVMe SSD, 50 Tbps DDoS protection, 24/7 support. Perfect for Java, Bedrock, SMP, Modded servers. Low ping Mumbai & Delhi locations. Trusted by 10,000+ players. Free plugins, subdomain, SFTP access."
@@ -477,7 +477,7 @@ const MinecraftPlans = () => {
                       Enterprise-Grade Processors
                     </h3>
                     <p className="text-gray-400">
-                      Powered by cutting-edge <span className="text-creeper font-semibold">Intel Xeon 2386G</span> or <span className="text-creeper font-semibold">AMD EPYC 4004 P</span> processors, delivering unmatched performance with exceptional single-thread speeds and multi-core processing power for lag-free gaming experiences.
+                      Powered by latest-generation enterprise Intel and AMD processors, delivering exceptional single-thread and multi-core performance for smooth, lag-free Minecraft gameplay.
                     </p>
                   </motion.div>
                   

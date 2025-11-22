@@ -162,7 +162,7 @@ const VPSPlans = () => {
   return (
     <>
       <Helmet>
-        <title>Best VPS Hosting India 2025 | Intel Platinum 8168 | Own Infra | ₹199 | CreeperCastle</title>
+        <title>Best VPS Hosting India 2025 | CreeperCastle</title>
         <meta 
           name="description" 
           content="💻 #1 VPS India 2025! Intel Platinum 8168 24-core powerhouse on our own optimized infrastructure, Minecraft-ready, NVMe SSD, 17 Tbps DDoS, ECC RAM, Delhi datacenter. KVM, root access from ₹199/mo."
