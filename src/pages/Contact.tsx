@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, MessageCircle, Clock, MapPin, Phone } from "lucide-react";
+import { Mail, Phone, MapPin, MessageSquare, Ticket } from "lucide-react";
 import { motion } from "framer-motion";
 
 const ContactPage = () => {
@@ -21,6 +21,7 @@ const ContactPage = () => {
         {
           "@type": "ContactPoint",
           "contactType": "customer support",
+          "telephone": "+91-9318345643",
           "email": "support@creepercastle.in",
           "availableLanguage": ["English", "Hindi"],
           "areaServed": "IN",
@@ -67,18 +68,18 @@ const ContactPage = () => {
         <title>Contact Support 24/7 | CreeperCastle Minecraft Hosting Help India</title>
         <meta 
           name="description" 
-          content="💬 Get instant 24/7 support! Discord, email, ticket system. Average 5-min response time. Expert help for Minecraft servers, billing, technical issues. We're here for you!"
+          content="💬 Get instant 24/7 support! Phone, WhatsApp, email, ticket system. Call +91 9318345643. Expert help for Minecraft servers, billing, technical issues. We're here for you!"
         />
         <meta
           name="keywords"
-          content="creepercastle support, minecraft hosting support india, 24/7 minecraft support, contact minecraft host india, discord support minecraft, email support hosting, minecraft technical support india, server support india, billing support, instant minecraft help, live chat minecraft hosting, ticket system minecraft, fast response support india"
+          content="creepercastle support, minecraft hosting support india, 24/7 minecraft support, contact minecraft host india, phone support minecraft, whatsapp support minecraft, email support hosting, minecraft technical support india, server support india, billing support, instant minecraft help, ticket system minecraft, fast response support india, call support india"
         />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/contact" />
         <meta property="og:title" content="Contact CreeperCastle - 24/7 Expert Minecraft Hosting Support" />
-        <meta property="og:description" content="Get 24/7 expert support for your Minecraft server hosting needs. Contact our team via Discord, email, or live chat." />
+        <meta property="og:description" content="Get 24/7 expert support for your Minecraft server hosting needs. Contact our team via phone, WhatsApp, email, or ticket system." />
         <meta property="og:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
         <meta property="og:image:alt" content="Contact CreeperCastle Support Team" />
         <meta property="og:site_name" content="CreeperCastle.cloud" />
@@ -87,7 +88,7 @@ const ContactPage = () => {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact CreeperCastle - 24/7 Minecraft Support 🎮" />
-        <meta name="twitter:description" content="Need help with your Minecraft server? Our expert team is available 24/7 via Discord, email, and live chat." />
+        <meta name="twitter:description" content="Need help with your Minecraft server? Our expert team is available 24/7 via phone, WhatsApp, email, and ticket system." />
         <meta name="twitter:image" content="https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png" />
         
         {/* Additional SEO tags */}
@@ -174,35 +175,86 @@ const ContactPage = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  Need help with your Minecraft server? Our expert support team is available 24/7 via Discord, email, and live chat with response times under 5 minutes.
+                  Need help with your Minecraft server? Our expert support team is available 24/7 via phone, WhatsApp, email, and ticket system with fast response times.
                 </motion.p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {/* Discord Support */}
+                {/* Phone Support */}
                 <Card className="bg-navy-light border-gray-800 hover:border-creeper transition-colors">
                   <CardHeader className="text-center">
                     <div className="mx-auto mb-4 p-3 bg-creeper/20 rounded-full w-fit">
-                      <MessageCircle className="h-8 w-8 text-creeper" />
+                      <Phone className="h-8 w-8 text-creeper" />
                     </div>
-                    <CardTitle className="text-xl">Discord Support</CardTitle>
+                    <CardTitle className="text-xl">Phone Support</CardTitle>
                     <CardDescription className="text-gray-400">
-                      Join our community for instant support
+                      Call us directly for instant help
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="text-center">
-                    <p className="text-gray-300 mb-4">
-                      Get instant help from our community and support team on Discord.
+                    <p className="text-gray-300 mb-2">
+                      Speak directly with our support team.
                     </p>
+                    <p className="text-creeper font-semibold mb-4">+91 9318345643</p>
                     <Button className="minecraft-btn w-full" asChild>
-                      <a href="https://discord.gg/RuQ9neH56S" target="_blank" rel="noopener noreferrer">
-                        Join Discord
+                      <a href="tel:+919318345643">
+                        Call Now
                       </a>
                     </Button>
                   </CardContent>
                 </Card>
 
-                {/* Email Support */}
+                {/* WhatsApp Support */}
+                <Card className="bg-navy-light border-gray-800 hover:border-creeper transition-colors">
+                  <CardHeader className="text-center">
+                    <div className="mx-auto mb-4 p-3 bg-creeper/20 rounded-full w-fit">
+                      <MessageSquare className="h-8 w-8 text-creeper" />
+                    </div>
+                    <CardTitle className="text-xl">WhatsApp Support</CardTitle>
+                    <CardDescription className="text-gray-400">
+                      Message us on WhatsApp
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-gray-300 mb-2">
+                      Quick responses via WhatsApp messaging.
+                    </p>
+                    <p className="text-creeper font-semibold mb-4">+91 9318345643</p>
+                    <Button className="minecraft-btn w-full" asChild>
+                      <a href="https://wa.me/9318345643" target="_blank" rel="noopener noreferrer">
+                        Message Now
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Ticket System */}
+                <Card className="bg-navy-light border-gray-800 hover:border-creeper transition-colors">
+                  <CardHeader className="text-center">
+                    <div className="mx-auto mb-4 p-3 bg-creeper/20 rounded-full w-fit">
+                      <Ticket className="h-8 w-8 text-creeper" />
+                    </div>
+                    <CardTitle className="text-xl">Client Area Tickets</CardTitle>
+                    <CardDescription className="text-gray-400">
+                      Track your support requests
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-gray-300 mb-2">
+                      Create and manage support tickets.
+                    </p>
+                    <p className="text-amber-400 text-sm mb-4">Registration required</p>
+                    <Button className="minecraft-btn w-full" asChild>
+                      <a href="https://billing.creepercastle.in/tickets" target="_blank" rel="noopener noreferrer">
+                        Open Now
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Email Support - Separate Row */}
+              <div className="mt-8 max-w-2xl mx-auto">
                 <Card className="bg-navy-light border-gray-800 hover:border-creeper transition-colors">
                   <CardHeader className="text-center">
                     <div className="mx-auto mb-4 p-3 bg-creeper/20 rounded-full w-fit">
@@ -214,43 +266,15 @@ const ContactPage = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="text-center">
-                    <p className="text-gray-300 mb-4">
+                    <p className="text-gray-300 mb-2">
                       For detailed technical issues or business inquiries.
                     </p>
+                    <p className="text-creeper font-semibold mb-4">support@creepercastle.in</p>
                     <Button className="minecraft-btn w-full" asChild>
                       <a href="mailto:support@creepercastle.in">
                         Send Email
                       </a>
                     </Button>
-                  </CardContent>
-                </Card>
-
-                {/* Response Times */}
-                <Card className="bg-navy-light border-gray-800 hover:border-creeper transition-colors">
-                  <CardHeader className="text-center">
-                    <div className="mx-auto mb-4 p-3 bg-creeper/20 rounded-full w-fit">
-                      <Clock className="h-8 w-8 text-creeper" />
-                    </div>
-                    <CardTitle className="text-xl">Response Times</CardTitle>
-                    <CardDescription className="text-gray-400">
-                      Fast and reliable support
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-gray-400">Discord:</span>
-                        <span className="text-creeper">&lt; 5 minutes</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-400">Email:</span>
-                        <span className="text-creeper">&lt; 2 hours</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-400">Availability:</span>
-                        <span className="text-creeper">24/7</span>
-                      </div>
-                    </div>
                   </CardContent>
                 </Card>
               </div>
@@ -288,7 +312,7 @@ const ContactPage = () => {
                         </div>
                         <div>
                           <h3 className="font-semibold mb-2">Best Support Channel</h3>
-                          <p className="text-gray-400 text-sm">Discord for fastest response times</p>
+                          <p className="text-gray-400 text-sm">Phone & WhatsApp for fastest response times</p>
                         </div>
                       </div>
                     </div>
