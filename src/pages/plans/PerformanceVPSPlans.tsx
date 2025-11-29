@@ -22,7 +22,7 @@ const performanceVPSPlans = [
       ddos: "Unhittable DDoS Protection 🛡️",
       network: "Up to 1Gbps Network Speed 🛜"
     },
-    buyLink: "https://billing.creepercastle.in/products/performance-vps/the-creeper",
+    buyLink: "https://billing.creepercastle.in/products/ryzen-7-vps-hosting/the-creeper",
     highlighted: false
   },
   {
@@ -39,7 +39,7 @@ const performanceVPSPlans = [
       ddos: "Unhittable DDoS Protection 🛡️",
       network: "Up to 1Gbps Network Speed 🛜"
     },
-    buyLink: "https://billing.creepercastle.in/products/performance-vps/the-warden",
+    buyLink: "https://billing.creepercastle.in/products/ryzen-7-vps-hosting/the-warden",
     highlighted: true
   },
   {
@@ -56,7 +56,7 @@ const performanceVPSPlans = [
       ddos: "Unhittable DDoS Protection 🛡️",
       network: "Up to 1Gbps Network Speed 🛜"
     },
-    buyLink: "https://billing.creepercastle.in/products/performance-vps/wither-hulk",
+    buyLink: "https://billing.creepercastle.in/products/ryzen-7-vps-hosting/wither-hulk",
     highlighted: false
   },
   {
@@ -73,7 +73,7 @@ const performanceVPSPlans = [
       ddos: "Unhittable DDoS Protection 🛡️",
       network: "Up to 1Gbps Network Speed 🛜"
     },
-    buyLink: "https://billing.creepercastle.in/products/performance-vps/ender-destroyer",
+    buyLink: "https://billing.creepercastle.in/products/ryzen-7-vps-hosting/ender-destroyer",
     highlighted: false
   },
   {
@@ -90,7 +90,7 @@ const performanceVPSPlans = [
       ddos: "Unhittable DDoS Protection 🛡️",
       network: "Up to 1Gbps Network Speed 🛜"
     },
-    buyLink: "https://billing.creepercastle.in/products/performance-vps/king-of-the-castle",
+    buyLink: "https://billing.creepercastle.in/products/ryzen-7-vps-hosting/king-of-the-castle",
     highlighted: false,
     isKing: true
   }
