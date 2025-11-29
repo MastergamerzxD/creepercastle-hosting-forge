@@ -516,7 +516,7 @@ const Index = () => {
                     </div>
                   </motion.div>
 
-                  {/* CreeperShield Card */}
+                  {/* Budget VPS Card */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -524,44 +524,44 @@ const Index = () => {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="group"
                   >
-                    <div className="relative h-full bg-gradient-to-br from-purple-500/10 to-purple-600/5 backdrop-blur-sm border-2 border-purple-500/40 rounded-2xl p-6 hover:border-purple-400 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 hover:-translate-y-2">
+                    <div className="relative h-full bg-gradient-to-br from-blue-500/10 to-cyan-600/5 backdrop-blur-sm border-2 border-blue-500/40 rounded-2xl p-6 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2">
                       <div className="mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/50">
-                          <Shield className="h-8 w-8 text-white" />
+                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/50">
+                          <Server className="h-8 w-8 text-white" />
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-2">CreeperShield</h3>
-                        <p className="text-gray-400 text-sm">Ultimate DDoS protection</p>
+                        <h3 className="text-2xl font-bold text-white mb-2">Budget VPS</h3>
+                        <p className="text-gray-400 text-sm">Affordable virtual servers</p>
                       </div>
 
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center gap-2 text-sm">
-                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300"><strong className="text-purple-300">50 Tbps</strong> Protection</span>
+                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                          <span className="text-gray-300"><strong className="text-white">Intel Platinum 8168</strong></span>
                         </div>
                         <div className="flex items-center gap-2 text-sm">
-                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300"><strong className="text-white">&lt;1.1ms</strong> Response</span>
+                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                          <span className="text-gray-300">From <strong className="text-white">4GB RAM</strong></span>
                         </div>
                         <div className="flex items-center gap-2 text-sm">
-                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300">Layer 3 & 4 Defense</span>
+                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                          <span className="text-gray-300">NVMe SSD Storage</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm">
-                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300">99.9% Uptime</span>
+                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                          <span className="text-gray-300">17 Tbps DDoS Shield</span>
                         </div>
                       </div>
 
-                      <div className="border-t border-purple-500/30 pt-4 mt-auto">
-                        <div className="text-3xl font-bold text-purple-400 mb-4">₹99<span className="text-lg text-gray-400">/mo</span></div>
-                        <Button className="w-full bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white font-bold py-2.5 transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/30" asChild>
-                          <Link to="/plans/creepershield">Protect Now</Link>
+                      <div className="border-t border-blue-500/30 pt-4 mt-auto">
+                        <div className="text-3xl font-bold text-blue-400 mb-4">₹199<span className="text-lg text-gray-400">/mo</span></div>
+                        <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-bold py-2.5 transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/30" asChild>
+                          <Link to="/plans/vps">View Plans</Link>
                         </Button>
                       </div>
                     </div>
                   </motion.div>
 
-                  {/* Other Hosting Card */}
+                  {/* Performance VPS Card */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -569,38 +569,87 @@ const Index = () => {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className="group"
                   >
-                    <div className="relative h-full bg-gradient-to-br from-blue-500/10 to-cyan-600/5 backdrop-blur-sm border-2 border-blue-500/40 rounded-2xl p-6 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2">
+                    <div className="relative h-full bg-gradient-to-br from-orange-500/10 to-red-600/5 backdrop-blur-sm border-2 border-orange-500/40 rounded-2xl p-6 hover:border-orange-400 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/30 hover:-translate-y-2">
+                      <div className="absolute top-4 right-4">
+                        <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">ULTIMATE</span>
+                      </div>
+                      
                       <div className="mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/50">
-                          <Server className="h-8 w-8 text-white" />
+                        <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-orange-500/50">
+                          <Zap className="h-8 w-8 text-white" />
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-2">Other Hosting</h3>
-                        <p className="text-gray-400 text-sm">VPS & Discord bots</p>
+                        <h3 className="text-2xl font-bold text-white mb-2">Performance VPS</h3>
+                        <p className="text-gray-400 text-sm">Ryzen 7 5700G Beast</p>
                       </div>
 
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center gap-2 text-sm">
-                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                          <span className="text-gray-300">VPS: <strong className="text-white">From ₹399</strong></span>
+                          <div className="w-1.5 h-1.5 bg-orange-400 rounded-full"></div>
+                          <span className="text-gray-300"><strong className="text-orange-300">5.3 GHz Turbo</strong> Speed</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm">
-                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                          <span className="text-gray-300">Discord: <strong className="text-white">From ₹22</strong></span>
+                          <div className="w-1.5 h-1.5 bg-orange-400 rounded-full"></div>
+                          <span className="text-gray-300"><strong className="text-white">DDR5 RAM</strong></span>
                         </div>
                         <div className="flex items-center gap-2 text-sm">
-                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                          <span className="text-gray-300">Full Root Access</span>
+                          <div className="w-1.5 h-1.5 bg-orange-400 rounded-full"></div>
+                          <span className="text-gray-300">NVMe Gen 4 SSD</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm">
-                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                          <span className="text-gray-300">24/7 Support</span>
+                          <div className="w-1.5 h-1.5 bg-orange-400 rounded-full"></div>
+                          <span className="text-gray-300">50+ Tbps Unhittable</span>
                         </div>
                       </div>
 
-                      <div className="border-t border-blue-500/30 pt-4 mt-auto">
-                        <div className="text-3xl font-bold text-blue-400 mb-4">₹22<span className="text-lg text-gray-400">/mo</span></div>
-                        <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-bold py-2.5 transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/30" asChild>
-                          <Link to="/plans/other">Explore More</Link>
+                      <div className="border-t border-orange-500/30 pt-4 mt-auto">
+                        <div className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-4">₹399<span className="text-lg text-gray-400">/mo</span></div>
+                        <Button className="w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-2.5 transition-all duration-300 hover:scale-105 shadow-lg shadow-orange-500/30" asChild>
+                          <Link to="/plans/performance-vps">Unleash Power</Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Discord Bot Hosting Card */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    className="group"
+                  >
+                    <div className="relative h-full bg-gradient-to-br from-purple-500/10 to-indigo-600/5 backdrop-blur-sm border-2 border-purple-500/40 rounded-2xl p-6 hover:border-purple-400 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 hover:-translate-y-2">
+                      <div className="mb-6">
+                        <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/50">
+                          <Gamepad2 className="h-8 w-8 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-2">Discord Bots</h3>
+                        <p className="text-gray-400 text-sm">24/7 bot hosting</p>
+                      </div>
+
+                      <div className="space-y-3 mb-6">
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300"><strong className="text-white">Always Online</strong></span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300">From <strong className="text-white">512MB RAM</strong></span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300">Instant Setup</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300">Low Latency</span>
+                        </div>
+                      </div>
+
+                      <div className="border-t border-purple-500/30 pt-4 mt-auto">
+                        <div className="text-3xl font-bold text-purple-400 mb-4">₹22<span className="text-lg text-gray-400">/mo</span></div>
+                        <Button className="w-full bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white font-bold py-2.5 transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/30" asChild>
+                          <Link to="/plans/discord-bot">Get Started</Link>
                         </Button>
                       </div>
                     </div>
