@@ -13,6 +13,7 @@ import Locations from "./pages/Locations";
 import MinecraftPlans from "./pages/plans/MinecraftPlans";
 import PerformancePlans from "./pages/plans/PerformancePlans";
 import VPSPlans from "./pages/plans/VPSPlans";
+import PerformanceVPSPlans from "./pages/plans/PerformanceVPSPlans";
 import DiscordBotPlans from "./pages/plans/DiscordBotPlans";
 import Datacenter from "./pages/Datacenter";
 import CreeperShield from "./pages/CreeperShield";
@@ -43,6 +44,7 @@ const App = () => (
             <Route path="/plans/performance" element={<PerformancePlans />} />
             <Route path="/plans/ryzen9" element={<Navigate to="/plans/performance" replace />} />
             <Route path="/plans/vps" element={<VPSPlans />} />
+            <Route path="/plans/performance-vps" element={<PerformanceVPSPlans />} />
             <Route path="/plans/discord-bot" element={<DiscordBotPlans />} />
             <Route path="/datacenter" element={<Datacenter />} />
             
