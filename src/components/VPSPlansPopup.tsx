@@ -2,20 +2,24 @@ import { useState, useEffect } from 'react';
 import { X, Sparkles, Server, Cpu, Zap, Shield, Crown, ArrowRight, Phone, MessageSquare, Ticket } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from '@/hooks/use-toast';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const VPSPlansPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
-    // Show popup after a short delay when component mounts
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 1500);
+    // Show popup after a short delay when component mounts, but only for non-mobile users
+    if (!isMobile) {
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+      }, 1500);
 
-    return () => clearTimeout(timer);
-  }, []);
+      return () => clearTimeout(timer);
+    }
+  }, [isMobile]);
 
   const handleNavigation = (path: string) => {
     setIsOpen(false);
