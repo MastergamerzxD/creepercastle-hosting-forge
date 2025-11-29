@@ -392,14 +392,12 @@ const PerformanceVPSPlans = () => {
                       )}
                       
                       <CardHeader className="text-center pb-4">
-                        <div className="w-24 h-24 mx-auto mb-4 relative">
-                          <img
-                            src={plan.logo}
-                            alt={plan.name}
-                            className="w-full h-full object-contain drop-shadow-2xl"
-                          />
-                        </div>
-                        <CardTitle className={`text-3xl mb-3 ${plan.isKing ? 'text-amber-400' : 'text-white'}`}>{plan.name}</CardTitle>
+                        {plan.isKing && (
+                          <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                            <Crown className="w-20 h-20 text-amber-400 drop-shadow-2xl" />
+                          </div>
+                        )}
+                        <CardTitle className={`text-3xl mb-3 ${plan.isKing ? 'text-amber-400 mt-2' : 'text-white mt-6'}`}>{plan.name}</CardTitle>
                         <div className="flex items-baseline justify-center gap-2">
                           <span className={`text-5xl font-bold ${plan.isKing ? 'bg-gradient-to-r from-amber-400 to-orange-600 bg-clip-text text-transparent' : 'text-amber-400'}`}>
                             {plan.price}
