@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Star, ThumbsUp, MessageSquare, Youtube, Users, Gamepad2, Shield, TrendingUp } from "lucide-react";
+import { ExternalLink, Star, ThumbsUp, MessageSquare, Youtube, Users, Gamepad2, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Links = () => {
@@ -56,14 +56,6 @@ const Links = () => {
       color: "bg-creeper/20 text-creeper border-creeper/30"
     },
     {
-      name: "CreeperShield Dashboard",
-      url: "https://shield.creepercastle.com",
-      description: "Access your DDoS protection control panel and manage your proxies",
-      icon: <Shield className="h-6 w-6" />,
-      type: "dashboard",
-      color: "bg-purple-500/20 text-purple-400 border-purple-500/30"
-    },
-    {
       name: "Status Page",
       url: "https://status.creepercastle.in/",
       description: "Check real-time status of all our services and infrastructure",
@@ -89,7 +81,6 @@ const Links = () => {
         "https://www.youtube.com/channel/UCFHCS5QydQQhpazC2h9BHdA",
         "https://discord.gg/RuQ9neH56S",
         "https://control.creepercastle.in",
-        "https://shield.creepercastle.com",
         "https://status.creepercastle.in/"
       ],
       "aggregateRating": {
@@ -131,7 +122,7 @@ const Links = () => {
         />
         <meta
           name="keywords"
-          content="creepercastle official links, creepercastle reviews, trustpilot creepercastle, google reviews minecraft hosting india, creepercastle discord server, creepercastle youtube channel, minecraft hosting support india, creepercastle control panel, creepershield dashboard, status page creepercastle, customer testimonials india, minecraft hosting feedback, best minecraft host reviews india"
+          content="creepercastle official links, creepercastle reviews, trustpilot creepercastle, google reviews minecraft hosting india, creepercastle discord server, creepercastle youtube channel, minecraft hosting support india, creepercastle control panel, status page creepercastle, customer testimonials india, minecraft hosting feedback, best minecraft host reviews india"
         />
         
         {/* Open Graph / Facebook */}

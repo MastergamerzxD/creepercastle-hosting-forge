@@ -100,8 +100,8 @@ const PricingPage = () => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
                   Simple, affordable pricing for Minecraft hosting with no hidden fees.
-                  All plans include our CreeperShield DDoS protection, 24/7 support, and instant setup.
-                </motion.p>
+                  All plans include our Unhittable 50+ Tbps DDoS protection, 24/7 support, and instant setup.
+                 </motion.p>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -179,27 +179,27 @@ const PricingPage = () => {
                       <TableCell className="border-t border-gray-800 text-center">Unlimited</TableCell>
                       <TableCell className="border-t border-gray-800 text-center">Unlimited</TableCell>
                     </TableRow>
-                    <TableRow>
-                      <TableCell className="border-t border-gray-800 font-medium">
-                        <div className="flex items-center">
-                          <span>DDoS Protection</span>
-                          <TooltipProvider>
-                            <Tooltip>
-                              <TooltipTrigger>
-                                <HelpCircle className="h-4 w-4 ml-1 text-gray-400" />
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p className="w-64">CreeperShield protects your server from DDoS attacks, keeping it online even during attacks.</p>
-                              </TooltipContent>
-                            </Tooltip>
-                          </TooltipProvider>
-                        </div>
-                      </TableCell>
-                      <TableCell className="border-t border-gray-800 text-center">Basic</TableCell>
-                      <TableCell className="border-t border-gray-800 text-center">Standard</TableCell>
-                      <TableCell className="border-t border-gray-800 text-center">Advanced</TableCell>
-                      <TableCell className="border-t border-gray-800 text-center">CreeperShield</TableCell>
-                    </TableRow>
+                     <TableRow>
+                       <TableCell className="border-t border-gray-800 font-medium">
+                         <div className="flex items-center">
+                           <span>DDoS Protection</span>
+                           <TooltipProvider>
+                             <Tooltip>
+                               <TooltipTrigger>
+                                 <HelpCircle className="h-4 w-4 ml-1 text-gray-400" />
+                               </TooltipTrigger>
+                               <TooltipContent>
+                                 <p className="w-64">Our Unhittable 50+ Tbps DDoS shield protects your server from attacks, keeping it online even during the toughest floods.</p>
+                               </TooltipContent>
+                             </Tooltip>
+                           </TooltipProvider>
+                         </div>
+                       </TableCell>
+                       <TableCell className="border-t border-gray-800 text-center">Basic</TableCell>
+                       <TableCell className="border-t border-gray-800 text-center">Standard</TableCell>
+                       <TableCell className="border-t border-gray-800 text-center">Advanced</TableCell>
+                       <TableCell className="border-t border-gray-800 text-center">Unhittable Shield</TableCell>
+                     </TableRow>
                     <TableRow>
                       <TableCell className="border-t border-gray-800 font-medium">Plugins/Mods</TableCell>
                       <TableCell className="border-t border-gray-800 text-center">Unlimited</TableCell>
