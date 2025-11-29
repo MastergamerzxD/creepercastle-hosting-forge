@@ -16,7 +16,6 @@ import VPSPlans from "./pages/plans/VPSPlans";
 import PerformanceVPSPlans from "./pages/plans/PerformanceVPSPlans";
 import DiscordBotPlans from "./pages/plans/DiscordBotPlans";
 import Datacenter from "./pages/Datacenter";
-import CreeperShield from "./pages/CreeperShield";
 import OtherHosting from "./pages/OtherHosting";
 import CreeperPanel from "./pages/CreeperPanel";
 import About from "./pages/About";
@@ -47,8 +46,6 @@ const App = () => (
             <Route path="/plans/performance-vps" element={<PerformanceVPSPlans />} />
             <Route path="/plans/discord-bot" element={<DiscordBotPlans />} />
             <Route path="/datacenter" element={<Datacenter />} />
-            
-            <Route path="/plans/creepershield" element={<CreeperShield />} />
             <Route path="/plans/other" element={<OtherHosting />} />
             <Route path="/creeperpanel" element={<CreeperPanel />} />
             <Route path="/about" element={<About />} />
