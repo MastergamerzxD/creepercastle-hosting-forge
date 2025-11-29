@@ -42,26 +42,40 @@ const Navbar = () => {
             </Link>
             
             <DropdownMenu>
-              <DropdownMenuTrigger className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base flex items-center gap-2 bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/5 focus:outline-none group">
-                <Server size={16} />
-                Others
+              <DropdownMenuTrigger className="text-white hover:text-cyan-400 transition-all duration-300 whitespace-nowrap text-base flex items-center gap-2 bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/5 focus:outline-none group">
+                <Monitor size={16} />
+                VPS
                 <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-navy-dark/95 backdrop-blur-xl border border-creeper/30 z-[10000] rounded-xl shadow-2xl shadow-creeper/20 min-w-[200px]">
-                <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
-                  <Link to="/plans/vps" className="w-full flex items-center gap-3">
-                    <Monitor size={16} className="text-creeper" />
-                    VPS Hosting
+              <DropdownMenuContent className="bg-navy-dark/95 backdrop-blur-xl border border-cyan-500/30 z-[10000] rounded-xl shadow-2xl shadow-cyan-500/20 min-w-[280px] p-2">
+                <DropdownMenuItem className="text-white hover:text-cyan-400 hover:bg-cyan-500/10 focus:text-cyan-400 focus:bg-cyan-500/10 rounded-lg m-1 px-3 py-3 transition-all duration-200 flex-col items-start">
+                  <Link to="/plans/vps" className="w-full">
+                    <div className="flex items-center gap-3 mb-1">
+                      <Server size={16} className="text-cyan-400" />
+                      <span className="font-semibold">Budget VPS Hosting</span>
+                    </div>
+                    <p className="text-xs text-gray-400 ml-7">Intel Platinum 8168 - Reliable & Affordable</p>
                   </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="text-white hover:text-creeper hover:bg-creeper/10 focus:text-creeper focus:bg-creeper/10 rounded-lg m-1 px-3 py-2 transition-all duration-200">
-                  <Link to="/plans/discord-bot" className="w-full flex items-center gap-3">
-                    <Bot size={16} className="text-purple-400" />
-                    Discord Bot
+                <DropdownMenuItem className="text-white hover:text-amber-400 hover:bg-amber-500/10 focus:text-amber-400 focus:bg-amber-500/10 rounded-lg m-1 px-3 py-3 transition-all duration-200 flex-col items-start">
+                  <Link to="/plans/performance-vps" className="w-full">
+                    <div className="flex items-center gap-3 mb-1">
+                      <Zap size={16} className="text-amber-400" />
+                      <span className="font-semibold">Performance VPS Hosting</span>
+                    </div>
+                    <p className="text-xs text-gray-400 ml-7">Powered by Ryzen 7 5700G - Ultimate Power</p>
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+
+            <Link to="/plans/discord-bot" className="text-white hover:text-purple-400 transition-all duration-300 whitespace-nowrap text-base bg-purple-500/15 px-3 py-2 rounded-lg border border-purple-500/40 hover:border-purple-500/60 hover:bg-purple-500/25 relative overflow-hidden group">
+              <span className="flex items-center gap-2 relative z-10">
+                <Bot size={16} />
+                Discord Bot
+              </span>
+              <span className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
+            </Link>
 
             <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base bg-purple-500/15 px-3 py-2 rounded-lg border border-purple-500/40 hover:border-purple-500/60 hover:bg-purple-500/25 relative overflow-hidden group">
               <span className="flex items-center gap-2 relative z-10">
@@ -176,18 +190,20 @@ const Navbar = () => {
             
             <div className="text-white py-2">
               <span className="text-gray-300 font-medium flex items-center gap-2 mb-2">
-                <Server size={16} />
-                Others:
+                <Monitor size={16} />
+                VPS Hosting:
               </span>
-              <Link to="/plans/vps" className="text-white hover:text-creeper transition-all duration-300 py-2 pl-4 block hover:bg-creeper/10 rounded-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                <Monitor size={14} />
-                VPS Hosting
+              <Link to="/plans/vps" className="text-white hover:text-cyan-400 transition-all duration-300 py-2 pl-4 block hover:bg-cyan-500/10 rounded-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
+                <Server size={14} className="text-cyan-400" />
+                Budget VPS
               </Link>
-              <Link to="/plans/discord-bot" className="text-white hover:text-creeper transition-all duration-300 py-2 pl-4 block hover:bg-creeper/10 rounded-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                <Bot size={14} className="text-purple-400" />
-                Discord Bot Hosting
+              <Link to="/plans/performance-vps" className="text-white hover:text-amber-400 transition-all duration-300 py-2 pl-4 block hover:bg-amber-500/10 rounded-lg flex items-center gap-2" onClick={() => setIsOpen(false)}>
+                <Zap size={14} className="text-amber-400" />
+                Performance VPS
               </Link>
             </div>
+
+            <Link to="/plans/discord-bot" className="text-white hover:text-purple-400 transition-all duration-300 py-2 bg-purple-500/15 px-3 rounded-lg border border-purple-500/40 hover:border-purple-500/60" onClick={() => setIsOpen(false)}>🤖 Discord Bot</Link>
             
             <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-all duration-300 py-2 bg-purple-500/15 px-3 rounded-lg border border-purple-500/40 hover:border-purple-500/60" onClick={() => setIsOpen(false)}>🛡️ Shield</Link>
             
