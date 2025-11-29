@@ -43,16 +43,16 @@ const Plans = () => {
         "position": 2,
         "item": {
           "@type": "Service",
-          "name": "CreeperShield DDoS Protection",
-          "description": "Advanced multi-layer DDoS protection specifically designed for gaming servers with up to 3 Tbps mitigation capacity.",
-          "url": "https://creepercastle.cloud/plans/creepershield",
+          "name": "Performance VPS Hosting",
+          "description": "Premium Ryzen 7 5700G Performance VPS with DDR5 RAM, NVMe Gen 4 SSD, and Unhittable 50+ Tbps DDoS shield for extreme Minecraft and game servers.",
+          "url": "https://creepercastle.cloud/plans/performance-vps",
           "provider": {
             "@type": "Organization",
             "name": "CreeperCastle.cloud"
           },
           "offers": {
             "@type": "Offer",
-            "price": "84",
+            "price": "399",
             "priceCurrency": "INR",
             "availability": "https://schema.org/InStock"
           }
@@ -103,10 +103,10 @@ const Plans = () => {
   return (
     <>
       <Helmet>
-        <title>Hosting Plans & Pricing | Minecraft VPS & DDoS Protection | CreeperCastle.cloud</title>
+        <title>Hosting Plans & Pricing | Minecraft & VPS Hosting | CreeperCastle.cloud</title>
         <meta 
           name="description" 
-          content="Compare all CreeperCastle hosting plans: Minecraft servers from ₹99/mo, VPS hosting from ₹3,300/mo, and DDoS protection from ₹99/mo. Choose the perfect plan for your needs."
+          content="Compare all CreeperCastle hosting plans: Minecraft servers from ₹99/mo and VPS hosting from ₹3,300/mo with advanced DDoS protection included. Choose the perfect plan for your needs."
         />
         <meta
           name="keywords"
@@ -244,18 +244,17 @@ const Plans = () => {
                 
                 <motion.div 
                   className="flex flex-col items-center text-center p-8 bg-navy-light rounded-xl border border-gray-800 hover:border-creeper cursor-pointer transition-all hover:-translate-y-2"
-                  onClick={() => navigate("/plans/creepershield")}
+                  onClick={() => navigate("/plans/performance-vps")}
                   whileHover={{ scale: 1.02 }}
                 >
                   <Shield className="h-20 w-20 text-creeper mb-6" />
-                  <h2 className="text-2xl font-bold mb-4">CreeperShield</h2>
+                  <h2 className="text-2xl font-bold mb-4">Performance VPS Hosting</h2>
                   <p className="text-gray-400 mb-8">
-                    Advanced DDoS protection specifically designed for Minecraft servers. 
-                    Keep your server online even during the most intense attacks.
+                    AMD Ryzen 7 5700G Performance VPS with DDR5 RAM, NVMe Gen 4 SSD and Unhittable 50+ Tbps DDoS shield. Designed for massive Minecraft networks and demanding workloads.
                   </p>
                   <div className="mt-auto">
-                    <Button className="minecraft-btn" onClick={() => navigate("/plans/creepershield")}>
-                      View CreeperShield Plans
+                    <Button className="minecraft-btn" onClick={() => navigate("/plans/performance-vps")}>
+                      View Performance VPS Plans
                     </Button>
                   </div>
                 </motion.div>

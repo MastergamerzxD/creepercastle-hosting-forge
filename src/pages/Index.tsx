@@ -157,7 +157,7 @@ const Index = () => {
         "name": "Do you offer DDoS protection?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes! All our plans include basic DDoS protection, and we offer advanced protection through our CreeperShield service."
+          "text": "Yes! All our plans include advanced DDoS protection, with our Unhittable 50+ Tbps shield integrated directly into our premium Minecraft and VPS infrastructure."
         }
       }
     ]
@@ -173,7 +173,7 @@ const Index = () => {
       <OrganizationSchema />
       <Helmet>
         <title>Best Minecraft Hosting India 2025 | CreeperCastle</title>
-        <meta name="description" content="🏆 India's #1 Minecraft hosting 2025! Instant setup from ₹99/mo | Ultra-low 3ms ping Mumbai/Delhi | 50 Tbps DDoS protection | NVMe SSD | 24/7 expert support | 10,000+ active servers | Java, Bedrock, Modded, SMP | Trusted by top Indian YouTubers | Enterprise infrastructure | Free subdomain, plugins, SFTP | 99.9% uptime guaranteed | Best value & performance" />
+        <meta name="description" content="India's #1 Minecraft hosting 2025. Instant setup from ₹99/mo with 3–15 ms ping (Mumbai/Delhi), NVMe SSD, 50+ Tbps DDoS protection and 24/7 expert support." />
         <meta name="keywords" content="best minecraft server hosting india 2025, minecraft hosting india, cheap minecraft server india ₹99, minecraft server india, minecraft hosting mumbai, minecraft hosting delhi, indian minecraft hosting, low ping minecraft server 3ms india, minecraft server rental india, minecraft bedrock hosting india, minecraft java hosting india, minecraft smp hosting india, ddos protected minecraft hosting 50tbps, minecraft server provider india, modded minecraft hosting india, premium minecraft hosting, affordable minecraft hosting, minecraft network hosting, minecraft pvp hosting india, skyblock server hosting india, prison server hosting india, faction server hosting india, minecraft plugins hosting, instant minecraft server setup, 24/7 minecraft support india, creepercastle minecraft hosting, trusted minecraft hosting india, best minecraft host 2025 india, enterprise minecraft hosting, minecraft vps india, minecraft dedicated server india, minecraft creator hosting, minecraft youtuber hosting india, top minecraft hosting 2025, fastest minecraft server india, reliable minecraft hosting, professional minecraft hosting india" />
         
         {/* Open Graph / Facebook */}
@@ -229,7 +229,7 @@ const Index = () => {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://billing.creepercastle.in" />
         <link rel="dns-prefetch" href="https://discord.gg" />
-        <link rel="dns-prefetch" href="https://shield.creepercastle.com" />
+        
         
         {/* Canonical and Alternate URLs */}
         <link rel="canonical" href="https://creepercastle.cloud/" />
