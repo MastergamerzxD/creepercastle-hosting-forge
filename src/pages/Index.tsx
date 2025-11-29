@@ -609,51 +609,6 @@ const Index = () => {
                       </div>
                     </div>
                   </motion.div>
-
-                  {/* Discord Bot Hosting Card */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
-                    className="group"
-                  >
-                    <div className="relative h-full bg-gradient-to-br from-purple-500/10 to-indigo-600/5 backdrop-blur-sm border-2 border-purple-500/40 rounded-2xl p-6 hover:border-purple-400 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 hover:-translate-y-2">
-                      <div className="mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/50">
-                          <Gamepad2 className="h-8 w-8 text-white" />
-                        </div>
-                        <h3 className="text-2xl font-bold text-white mb-2">Discord Bots</h3>
-                        <p className="text-gray-400 text-sm">24/7 bot hosting</p>
-                      </div>
-
-                      <div className="space-y-3 mb-6">
-                        <div className="flex items-center gap-2 text-sm">
-                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300"><strong className="text-white">Always Online</strong></span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm">
-                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300">From <strong className="text-white">512MB RAM</strong></span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm">
-                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300">Instant Setup</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm">
-                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300">Low Latency</span>
-                        </div>
-                      </div>
-
-                      <div className="border-t border-purple-500/30 pt-4 mt-auto">
-                        <div className="text-3xl font-bold text-purple-400 mb-4">₹22<span className="text-lg text-gray-400">/mo</span></div>
-                        <Button className="w-full bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white font-bold py-2.5 transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/30" asChild>
-                          <Link to="/plans/discord-bot">Get Started</Link>
-                        </Button>
-                      </div>
-                    </div>
-                  </motion.div>
                 </div>
               </div>
             </section>
