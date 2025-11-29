@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Menu, X, Store, ChevronDown, Server, MapPin, Building2, Gamepad2, Bot, Monitor, Shield, Zap } from "lucide-react";
+import { Menu, X, Store, ChevronDown, Server, MapPin, Building2, Gamepad2, Bot, Monitor, Zap } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -42,10 +42,13 @@ const Navbar = () => {
             </Link>
             
             <DropdownMenu>
-              <DropdownMenuTrigger className="text-white hover:text-cyan-400 transition-all duration-300 whitespace-nowrap text-base flex items-center gap-2 bg-transparent border-none px-3 py-2 rounded-lg hover:bg-white/5 focus:outline-none group">
-                <Monitor size={16} />
-                VPS
-                <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+              <DropdownMenuTrigger className="text-white hover:text-cyan-400 transition-all duration-300 whitespace-nowrap text-base flex items-center gap-2 bg-gradient-to-r from-cyan-500/15 to-blue-600/15 px-3 py-2 rounded-lg border border-cyan-500/40 hover:border-cyan-400/60 hover:bg-gradient-to-r hover:from-cyan-500/25 hover:to-blue-600/25 focus:outline-none group relative overflow-hidden">
+                <span className="flex items-center gap-2 relative z-10">
+                  <Monitor size={16} className="text-cyan-400" />
+                  VPS
+                  <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+                </span>
+                <span className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-400/10 to-cyan-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-navy-dark/95 backdrop-blur-xl border border-cyan-500/30 z-[10000] rounded-xl shadow-2xl shadow-cyan-500/20 min-w-[280px] p-2">
                 <DropdownMenuItem className="text-white hover:text-cyan-400 hover:bg-cyan-500/10 focus:text-cyan-400 focus:bg-cyan-500/10 rounded-lg m-1 px-3 py-3 transition-all duration-200 flex-col items-start">
@@ -73,14 +76,6 @@ const Navbar = () => {
               <span className="flex items-center gap-2 relative z-10">
                 <Bot size={16} />
                 Discord Bot
-              </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
-            </Link>
-
-            <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-all duration-300 whitespace-nowrap text-base bg-purple-500/15 px-3 py-2 rounded-lg border border-purple-500/40 hover:border-purple-500/60 hover:bg-purple-500/25 relative overflow-hidden group">
-              <span className="flex items-center gap-2 relative z-10">
-                <Shield size={16} />
-                Shield
               </span>
               <span className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
             </Link>
@@ -204,8 +199,6 @@ const Navbar = () => {
             </div>
 
             <Link to="/plans/discord-bot" className="text-white hover:text-purple-400 transition-all duration-300 py-2 bg-purple-500/15 px-3 rounded-lg border border-purple-500/40 hover:border-purple-500/60" onClick={() => setIsOpen(false)}>🤖 Discord Bot</Link>
-            
-            <Link to="/plans/creepershield" className="text-white hover:text-creeper transition-all duration-300 py-2 bg-purple-500/15 px-3 rounded-lg border border-purple-500/40 hover:border-purple-500/60" onClick={() => setIsOpen(false)}>🛡️ Shield</Link>
             
             <div className="text-white py-2">
               <span className="text-gray-300 font-medium flex items-center gap-2 mb-2">
