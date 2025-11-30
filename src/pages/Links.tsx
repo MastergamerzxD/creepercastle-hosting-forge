@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Star, ThumbsUp, MessageSquare, Youtube, Users, Gamepad2, TrendingUp } from "lucide-react";
+import { ExternalLink, Star, ThumbsUp, MessageSquare, Youtube, Users, Gamepad2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Links = () => {
@@ -54,14 +54,6 @@ const Links = () => {
       icon: <Gamepad2 className="h-6 w-6" />,
       type: "dashboard",
       color: "bg-creeper/20 text-creeper border-creeper/30"
-    },
-    {
-      name: "Status Page",
-      url: "https://status.creepercastle.in/",
-      description: "Check real-time status of all our services and infrastructure",
-      icon: <TrendingUp className="h-6 w-6" />,
-      type: "dashboard",
-      color: "bg-blue-500/20 text-blue-400 border-blue-500/30"
     }
   ];
 
@@ -80,8 +72,7 @@ const Links = () => {
         "https://share.google/z9njZNHT1uT4u8UYO",
         "https://www.youtube.com/channel/UCFHCS5QydQQhpazC2h9BHdA",
         "https://discord.gg/RuQ9neH56S",
-        "https://control.creepercastle.in",
-        "https://status.creepercastle.in/"
+        "https://control.creepercastle.in"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
