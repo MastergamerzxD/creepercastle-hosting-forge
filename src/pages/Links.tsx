@@ -230,13 +230,14 @@ const Links = () => {
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div className="flex justify-center max-w-4xl mx-auto">
                   {dashboardLinks.map((link, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                      className="w-full md:w-1/2"
                     >
                       <Card className="bg-navy-light/50 border-2 backdrop-blur-sm h-full group hover:border-opacity-100 transition-all duration-300 hover:scale-105 shadow-lg" style={{ borderColor: link.color.split(' ')[2].replace('border-', '') }}>
                         <CardHeader className="text-center">
