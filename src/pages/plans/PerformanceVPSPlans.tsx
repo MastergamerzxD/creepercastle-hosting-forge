@@ -15,7 +15,7 @@ const performanceVPSPlans = [
     specs: {
       cpu: "AMD Ryzen 7 5700G 🔥",
       cores: "1V Core 🚀",
-      ram: "4 GB DDR5 RAM 💎",
+      ram: "4 GB DDR4 RAM 💎",
       storage: "30 GB NVMe SSD 🪄",
       bandwidth: "1 TB Bandwidth 🌐",
       location: "India, Delhi 🚩",
@@ -32,7 +32,7 @@ const performanceVPSPlans = [
     specs: {
       cpu: "AMD Ryzen 7 5700G 🔥",
       cores: "2V Cores 🚀",
-      ram: "8 GB DDR5 RAM 💎",
+      ram: "8 GB DDR4 RAM 💎",
       storage: "60 GB NVMe SSD 🪄",
       bandwidth: "2 TB Bandwidth 🌐",
       location: "India, Delhi 🚩",
@@ -49,7 +49,7 @@ const performanceVPSPlans = [
     specs: {
       cpu: "AMD Ryzen 7 5700G 🔥",
       cores: "4V Cores 🚀",
-      ram: "16 GB DDR5 RAM 💎",
+      ram: "16 GB DDR4 RAM 💎",
       storage: "120 GB NVMe Gen 4 SSD 🪄",
       bandwidth: "4 TB Bandwidth 🌐",
       location: "India, Delhi 🚩",
@@ -66,7 +66,7 @@ const performanceVPSPlans = [
     specs: {
       cpu: "AMD Ryzen 7 5700G 🔥",
       cores: "6V Cores 🚀",
-      ram: "32 GB DDR5 RAM 💎",
+      ram: "32 GB DDR4 RAM 💎",
       storage: "240 GB NVMe SSD 🪄",
       bandwidth: "Unmetered Bandwidth ♾️",
       location: "India, Delhi 🚩",
@@ -83,7 +83,7 @@ const performanceVPSPlans = [
     specs: {
       cpu: "AMD Ryzen 7 5700G 🔥",
       cores: "8V Cores 🚀",
-      ram: "64 GB DDR5 RAM 💎",
+      ram: "64 GB DDR4 RAM 💎",
       storage: "400 GB NVMe SSD 🪄",
       bandwidth: "Unmetered Bandwidth ♾️",
       location: "India, Delhi 🚩",
@@ -112,8 +112,8 @@ const PerformanceVPSPlans = () => {
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: 'DDR5 RAM Technology',
-      description: 'Next-generation DDR5 memory technology delivering unprecedented bandwidth and lower latency. Lightning-fast data access ensures your server handles massive world generation, complex redstone contraptions, and heavy mod packs without breaking a sweat.',
+      title: 'DDR4 RAM Technology',
+      description: 'High-performance DDR4 memory technology delivering exceptional bandwidth and lower latency. Lightning-fast data access ensures your server handles massive world generation, complex redstone contraptions, and heavy mod packs without breaking a sweat.',
       gradient: 'from-purple-500 to-pink-600',
     },
     {
@@ -131,7 +131,7 @@ const PerformanceVPSPlans = () => {
     {
       icon: <Server className="w-6 h-6" />,
       title: '400+ Player Capability',
-      description: 'Engineered to handle massive player loads with ease. The Ryzen 7 5700G combined with DDR5 RAM and NVMe storage creates a performance trifecta that crushes even the most demanding Minecraft servers with 400+ concurrent players.',
+      description: 'Engineered to handle massive player loads with ease. The Ryzen 7 5700G combined with DDR4 RAM and NVMe storage creates a performance trifecta that crushes even the most demanding Minecraft servers with 400+ concurrent players.',
       gradient: 'from-green-500 to-emerald-600',
     },
   ];
@@ -142,18 +142,18 @@ const PerformanceVPSPlans = () => {
         <title>Premium Ryzen 7 5700G VPS Hosting India 2025 | Ultimate Performance | CreeperCastle</title>
         <meta 
           name="description" 
-          content="🔥 India's Most Powerful VPS 2025! AMD Ryzen 7 5700G with 5.3 GHz turbo, DDR5 RAM, NVMe Gen 4 SSD, handles 400+ players. Unhittable 50+ Tbps DDoS protection, Delhi datacenter. Premium performance from ₹399/mo."
+          content="🔥 India's Most Powerful VPS 2025! AMD Ryzen 7 5700G with 5.3 GHz turbo, DDR4 RAM, NVMe Gen 4 SSD, handles 400+ players. Unhittable 50+ Tbps DDoS protection, Delhi datacenter. Premium performance from ₹399/mo."
         />
         <meta
           name="keywords"
-          content="ryzen 7 5700g vps india, best performance vps india 2025, premium vps hosting india, ddr5 ram vps india, nvme gen 4 vps, minecraft vps 400 players, high performance gaming vps, ryzen vps delhi, zen 3 architecture vps, fastest vps india, premium game server hosting, enterprise vps india, 5.3 ghz vps hosting, ddos protected vps india, unmetered bandwidth vps, creepercastle premium vps, ultimate performance vps india, ryzen gaming server india"
+          content="ryzen 7 5700g vps india, best performance vps india 2025, premium vps hosting india, ddr4 ram vps india, nvme gen 4 vps, minecraft vps 400 players, high performance gaming vps, ryzen vps delhi, zen 3 architecture vps, fastest vps india, premium game server hosting, enterprise vps india, 5.3 ghz vps hosting, ddos protected vps india, unmetered bandwidth vps, creepercastle premium vps, ultimate performance vps india, ryzen gaming server india"
         />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creepercastle.cloud/plans/performance-vps" />
-        <meta property="og:title" content="AMD Ryzen 7 5700G Premium VPS India | 5.3 GHz Turbo | DDR5 | 400+ Players | Unhittable DDoS" />
-        <meta property="og:description" content="🔥 Ultimate Performance VPS: Ryzen 7 5700G with 5.3 GHz turbo, DDR5 RAM, NVMe Gen 4, handles 400+ Minecraft players. 50+ Tbps DDoS protection. Delhi datacenter. From ₹399/mo." />
+        <meta property="og:title" content="AMD Ryzen 7 5700G Premium VPS India | 5.3 GHz Turbo | DDR4 | 400+ Players | Unhittable DDoS" />
+        <meta property="og:description" content="🔥 Ultimate Performance VPS: Ryzen 7 5700G with 5.3 GHz turbo, DDR4 RAM, NVMe Gen 4, handles 400+ Minecraft players. 50+ Tbps DDoS protection. Delhi datacenter. From ₹399/mo." />
         <meta property="og:image" content="https://creepercastle.cloud/og-images/ryzen9-hosting.jpg" />
         <meta property="og:image:alt" content="AMD Ryzen 7 5700G Premium VPS Hosting by CreeperCastle" />
         <meta property="og:image:width" content="1200" />
@@ -164,7 +164,7 @@ const PerformanceVPSPlans = () => {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ryzen 7 5700G Premium VPS India 🔥 5.3 GHz Beast" />
-        <meta name="twitter:description" content="Ultimate Performance: Ryzen 7 5700G 5.3 GHz turbo, DDR5, NVMe Gen 4, 400+ players capable. 50+ Tbps Unhittable DDoS. Delhi from ₹399/mo." />
+        <meta name="twitter:description" content="Ultimate Performance: Ryzen 7 5700G 5.3 GHz turbo, DDR4, NVMe Gen 4, 400+ players capable. 50+ Tbps Unhittable DDoS. Delhi from ₹399/mo." />
         <meta name="twitter:image" content="https://creepercastle.cloud/og-images/ryzen9-hosting.jpg" />
         
         {/* Additional SEO */}
@@ -254,7 +254,7 @@ const PerformanceVPSPlans = () => {
                   Unleash the <span className="text-amber-400 font-bold">monstrous power of Ryzen 7 5700G</span> - 8 cores of pure dominance with 
                   <span className="text-orange-400 font-bold"> blazing 5.3 GHz turbo boost</span>. Built on revolutionary 
                   <span className="text-amber-400 font-bold"> Zen 3 architecture</span> with 
-                  <span className="text-orange-400 font-bold"> next-gen DDR5 RAM</span> and 
+                  <span className="text-orange-400 font-bold"> high-performance DDR4 RAM</span> and
                   <span className="text-amber-400 font-bold"> NVMe Gen 4 SSD</span>. 
                   <span className="text-green-400 font-bold block mt-4"> Handles 400+ Minecraft players effortlessly</span>. 
                   Protected by our <span className="text-cyan-400 font-bold">Unhittable 50+ Tbps DDoS shield</span> - India's most premium hosting solution.
@@ -266,8 +266,8 @@ const PerformanceVPSPlans = () => {
                     <div className="text-base text-gray-200 font-medium">Turbo Boost</div>
                   </div>
                   <div className="bg-gradient-to-r from-orange-500/30 to-red-600/30 backdrop-blur-sm border-2 border-orange-500/60 rounded-xl px-8 py-5 shadow-2xl shadow-orange-500/30">
-                    <div className="text-4xl font-bold text-orange-400">DDR5</div>
-                    <div className="text-base text-gray-200 font-medium">Next-Gen RAM</div>
+                    <div className="text-4xl font-bold text-orange-400">DDR4</div>
+                    <div className="text-base text-gray-200 font-medium">High-Speed RAM</div>
                   </div>
                   <div className="bg-gradient-to-r from-green-500/30 to-emerald-600/30 backdrop-blur-sm border-2 border-green-500/60 rounded-xl px-8 py-5 shadow-2xl shadow-green-500/30">
                     <div className="text-4xl font-bold text-green-400">400+</div>
