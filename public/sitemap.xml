@@ -1,171 +1,170 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://creepercastle.cloud/</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
-      <image:title>CreeperCastle - Best Minecraft Server Hosting in India</image:title>
-      <image:caption>Premium Minecraft Server Hosting in India with CreeperShield DDoS Protection</image:caption>
+      <image:title>CreeperCastle - Best Minecraft Server Hosting in India 2025</image:title>
+      <image:caption>Premium Minecraft Server Hosting in India with 50 Tbps DDoS Protection, NVMe SSD, 3ms Ping</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://creepercastle.cloud/plans</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.98</priority>
+    <image:image>
+      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
+      <image:title>Hosting Plans - Minecraft, VPS, Performance</image:title>
+      <image:caption>Choose from Minecraft Classic, Performance, Budget VPS and Performance VPS hosting plans</image:caption>
     </image:image>
   </url>
   
   <url>
     <loc>https://creepercastle.cloud/plans/minecraft</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.98</priority>
+    <priority>0.97</priority>
     <image:image>
       <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
-      <image:title>Minecraft Server Hosting Plans India - Starting ₹99/month</image:title>
-      <image:caption>Premium Minecraft Server Hosting Plans with Instant Setup, NVMe Storage, DDoS Protection</image:caption>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://creepercastle.cloud/plans/vps</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.96</priority>
-    <image:image>
-      <image:loc>https://creepercastle.cloud/og-images/vps-hosting.jpg</image:loc>
-      <image:title>Intel Platinum 8168 VPS Hosting India - Own Infrastructure</image:title>
-      <image:caption>Enterprise VPS Hosting with Intel Platinum 8168, 17 Tbps DDoS, NVMe SSD - Delhi Datacenter</image:caption>
+      <image:title>Minecraft Classic Hosting Plans India - Starting ₹99/month</image:title>
+      <image:caption>Enterprise-Grade Minecraft Server Hosting with Instant Setup, NVMe Storage, DDoS Protection</image:caption>
     </image:image>
   </url>
   
   <url>
     <loc>https://creepercastle.cloud/plans/performance</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.94</priority>
+    <priority>0.96</priority>
     <image:image>
       <image:loc>https://creepercastle.cloud/og-images/ryzen9-hosting.jpg</image:loc>
-      <image:title>High-Performance Minecraft Hosting - Pure Speed India</image:title>
-      <image:caption>Ultimate Minecraft Performance with Dedicated Performance Nodes - Zero Lag Mumbai Servers</image:caption>
+      <image:title>Minecraft Performance Hosting - AMD EPYC 4344P 5.3 GHz</image:title>
+      <image:caption>Ultimate Minecraft Performance with AMD EPYC Processors - Zero Lag Mumbai Servers</image:caption>
     </image:image>
   </url>
   
   <url>
-    <loc>https://creepercastle.cloud/plans/discord-bot</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-    <image:image>
-      <image:loc>https://creepercastle.cloud/og-images/discord-bot-hosting.jpg</image:loc>
-      <image:title>Discord Bot Hosting India - 24/7 Reliable Bot Hosting</image:title>
-      <image:caption>Premium Discord Bot Hosting with Node.js, Python Support - Starting ₹22/month</image:caption>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://creepercastle.cloud/plans/creepershield</loc>
-    <lastmod>2025-10-22</lastmod>
+    <loc>https://creepercastle.cloud/plans/vps</loc>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://creepercastle.cloud/og-images/creepershield-ddos.jpg</image:loc>
-      <image:title>CreeperShield DDoS Protection - 50 Tbps Protection India</image:title>
-      <image:caption>Advanced DDoS Protection for Minecraft Servers - 50 Tbps Mitigation Capacity</image:caption>
+      <image:loc>https://creepercastle.cloud/og-images/vps-hosting.jpg</image:loc>
+      <image:title>Budget VPS Hosting India - Intel Platinum 8168</image:title>
+      <image:caption>Enterprise VPS Hosting with Intel Platinum 8168, 17 Tbps DDoS, NVMe SSD - Delhi Datacenter</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://creepercastle.cloud/plans/performance-vps</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.94</priority>
+    <image:image>
+      <image:loc>https://creepercastle.cloud/og-images/vps-hosting.jpg</image:loc>
+      <image:title>Performance VPS Hosting India - Ryzen 7 5700G 5.3 GHz</image:title>
+      <image:caption>Premium VPS Hosting with Ryzen 7 5700G, DDR5 RAM, NVMe Gen 4 - Handle 400+ Players</image:caption>
     </image:image>
   </url>
   
   <url>
     <loc>https://creepercastle.cloud/creeperpanel</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.88</priority>
     <image:image>
       <image:loc>https://creepercastle.cloud/og-images/creeperpanel-dashboard.jpg</image:loc>
-      <image:title>CreeperPanel - Advanced Pterodactyl Minecraft Server Management</image:title>
+      <image:title>CreeperPanel - Advanced Minecraft Server Management Panel</image:title>
       <image:caption>Professional Pterodactyl-based game server management panel with advanced features</image:caption>
     </image:image>
   </url>
   
   <url>
     <loc>https://creepercastle.cloud/locations</loc>
-    <lastmod>2025-07-26</lastmod>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
     <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
+      <image:loc>https://creepercastle.cloud/og-images/india-locations.jpg</image:loc>
       <image:title>Server Locations India - Mumbai and Delhi NCR Data Centers</image:title>
-      <image:caption>Strategic server locations across India for ultra-low latency Minecraft gaming</image:caption>
+      <image:caption>Strategic server locations across India for ultra-low latency Minecraft gaming - 3ms ping</image:caption>
     </image:image>
   </url>
   
   <url>
     <loc>https://creepercastle.cloud/datacenter</loc>
-    <lastmod>2025-07-26</lastmod>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.78</priority>
+    <priority>0.82</priority>
     <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
-      <image:title>CreeperCastle Data Centers - Enterprise Infrastructure</image:title>
-      <image:caption>Tier-3 Data Centers with 99.9% Uptime SLA in India</image:caption>
+      <image:loc>https://creepercastle.cloud/og-images/datacenter-infrastructure.jpg</image:loc>
+      <image:title>CreeperCastle Data Centers - Enterprise Infrastructure India</image:title>
+      <image:caption>Tier-3 Data Centers with 99.9% Uptime SLA in Mumbai and Delhi</image:caption>
     </image:image>
   </url>
   
   <url>
     <loc>https://creepercastle.cloud/discord</loc>
-    <lastmod>2025-07-26</lastmod>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.82</priority>
+    <priority>0.80</priority>
     <image:image>
       <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
-      <image:title>Join CreeperCastle Discord - 3000+ Minecraft Community India</image:title>
-      <image:caption>Connect with India's largest Minecraft server hosting community on Discord</image:caption>
+      <image:title>Join CreeperCastle Discord - India's Largest Minecraft Community</image:title>
+      <image:caption>Connect with 3000+ members in India's largest Minecraft server hosting community</image:caption>
     </image:image>
   </url>
   
   <url>
     <loc>https://creepercastle.cloud/contact</loc>
-    <lastmod>2025-07-26</lastmod>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.78</priority>
     <image:image>
       <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
       <image:title>Contact CreeperCastle - 24/7 Expert Support India</image:title>
-      <image:caption>Get in Touch with India's Leading Minecraft Hosting Support Team</image:caption>
+      <image:caption>Get in Touch with India's Leading Minecraft Hosting Support Team - Phone, WhatsApp, Tickets</image:caption>
     </image:image>
   </url>
   
   <url>
     <loc>https://creepercastle.cloud/about</loc>
-    <lastmod>2025-07-26</lastmod>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.72</priority>
+    <priority>0.75</priority>
     <image:image>
       <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
       <image:title>About CreeperCastle - India's #1 Minecraft Hosting Provider</image:title>
-      <image:caption>Learn about India's most trusted Minecraft server hosting company</image:caption>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://creepercastle.cloud/links</loc>
-    <lastmod>2025-07-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-    <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
-      <image:title>CreeperCastle Official Links - Reviews, Social Media, Dashboards</image:title>
-      <image:caption>All official CreeperCastle links including reviews, social media and dashboards</image:caption>
+      <image:caption>Learn about India's most trusted Minecraft server hosting company since 2020</image:caption>
     </image:image>
   </url>
   
   <url>
     <loc>https://creepercastle.cloud/partners</loc>
-    <lastmod>2025-07-26</lastmod>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.82</priority>
     <image:image>
-      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
+      <image:loc>https://creepercastle.cloud/og-images/partners-creators.jpg</image:loc>
       <image:title>CreeperCastle Partners - Trusted by Top Minecraft Creators India</image:title>
       <image:caption>Meet our partners including FireMc, PSD1, SenpaiSpider and top Indian Minecraft content creators</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://creepercastle.cloud/links</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://creepercastle.cloud/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png</image:loc>
+      <image:title>CreeperCastle Official Links - Dashboards and Resources</image:title>
+      <image:caption>All official CreeperCastle links including game panel and resources</image:caption>
     </image:image>
   </url>
 </urlset>
