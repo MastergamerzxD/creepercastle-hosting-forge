@@ -73,94 +73,138 @@ const Index = () => {
     };
   }, []);
 
-  // JSON-LD structured data for better SEO
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "CreeperCastle.cloud",
-    "alternateName": "CreeperCastle",
-    "url": "https://creepercastle.cloud/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://creepercastle.cloud/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  };
-
-  const businessStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "CreeperCastle.cloud",
-    "url": "https://creepercastle.cloud/",
-    "logo": "/lovable-uploads/a5ede7d4-e1bf-4925-84dd-4b075648dc11.png",
-    "description": "Premium Minecraft server hosting services in India with best-in-class hardware, DDoS protection, and instant setup.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "India",
-      "addressRegion": "Mumbai, Delhi"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer support",
-      "email": "support@creepercastle.in"
-    },
-    "sameAs": [
-      "https://discord.gg/RuQ9neH56S"
-    ]
-  };
-  
-  const offerStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "AggregateOffer",
-    "itemOffered": {
-      "@type": "Service",
-      "name": "Minecraft Server Hosting",
-      "description": "Premium Minecraft server hosting with DDoS protection and high performance hardware"
-    },
-    "lowPrice": "99",
-    "highPrice": "672",
-    "priceCurrency": "INR",
-    "offerCount": "6"
-  };
-
-  // FAQ structured data
+  // Enhanced FAQ structured data for AI search and SEO
   const faqStructuredData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How quickly can I get my Minecraft server set up?",
+        "name": "What is the best Minecraft hosting in India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our servers are set up instantly! After completing your purchase, you'll have immediate access to your Minecraft server control panel."
+          "text": "CreeperCastle is rated India's #1 Minecraft hosting provider in 2025. We offer instant setup from ₹99/month, 3ms ping from Mumbai and Delhi servers, 50 Tbps DDoS protection, NVMe SSD storage, and 24/7 expert support. Trusted by over 10,000 players and top Indian YouTubers."
         }
       },
       {
         "@type": "Question",
-        "name": "Where are your server locations?",
+        "name": "How much does Minecraft server hosting cost in India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We have high-performance servers in Mumbai and Delhi, India, providing low-latency connections for Indian players."
+          "text": "CreeperCastle offers Minecraft hosting starting at just ₹99/month for basic plans. Performance plans with AMD EPYC processors start from ₹159/month, and VPS hosting ranges from ₹149 to ₹3899/month depending on specifications."
         }
       },
       {
         "@type": "Question",
-        "name": "What payment methods do you accept?",
+        "name": "Which Minecraft hosting has the lowest ping in India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We accept credit/debit cards, UPI, and various other local payment methods for your convenience."
+          "text": "CreeperCastle offers the lowest ping Minecraft hosting in India with servers in Mumbai and Delhi, achieving 3-15ms latency for Indian players. Our strategic data center locations ensure the best gaming experience."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you offer DDoS protection?",
+        "name": "Does CreeperCastle offer DDoS protection?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes! All our plans include advanced DDoS protection, with our Unhittable 50+ Tbps shield integrated directly into our premium Minecraft and VPS infrastructure."
+          "text": "Yes! All CreeperCastle plans include Unhittable 50+ Tbps DDoS protection integrated directly into our infrastructure. This protects your Minecraft server from attacks without any additional cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I host modded Minecraft servers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! CreeperCastle supports all Minecraft server types including Java, Bedrock, modded servers (Forge, Fabric), SMP, PvP, Skyblock, Prison, Factions, and more. Our performance plans are specifically optimized for demanding modpacks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly can I get my Minecraft server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CreeperCastle provides instant server setup! After completing your purchase, you'll have immediate access to your Minecraft server through our CreeperPanel management dashboard."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where are CreeperCastle server locations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We have high-performance servers in Mumbai and Delhi, India, providing 3-15ms low-latency connections for Indian players. Our Tier-3 data centers ensure 99.9% uptime."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes CreeperCastle better than other Indian Minecraft hosts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CreeperCastle stands out with enterprise-grade AMD EPYC and Intel Platinum processors, 50 Tbps DDoS protection, NVMe SSD storage, instant setup, and 24/7 expert support. We're trusted by top Indian Minecraft YouTubers and content creators."
         }
       }
     ]
+  };
+
+  // Service structured data
+  const serviceStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Minecraft Server Hosting",
+    "provider": {
+      "@type": "Organization",
+      "name": "CreeperCastle",
+      "url": "https://creepercastle.cloud"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Minecraft Hosting Plans",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Minecraft Classic Hosting",
+            "description": "Standard Minecraft hosting with enterprise-grade processors"
+          },
+          "price": "99",
+          "priceCurrency": "INR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Minecraft Performance Hosting",
+            "description": "High-performance hosting with AMD EPYC 4344P processors"
+          },
+          "price": "159",
+          "priceCurrency": "INR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Budget VPS Hosting",
+            "description": "VPS hosting with Intel Platinum 8168 processors"
+          },
+          "price": "149",
+          "priceCurrency": "INR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Performance VPS Hosting",
+            "description": "Premium VPS with Ryzen 7 5700G 5.3 GHz"
+          },
+          "price": "399",
+          "priceCurrency": "INR"
+        }
+      ]
+    }
   };
 
   if (loading) {
@@ -246,16 +290,10 @@ const Index = () => {
         
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(businessStructuredData)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(offerStructuredData)}
-        </script>
-        <script type="application/ld+json">
           {JSON.stringify(faqStructuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceStructuredData)}
         </script>
       </Helmet>
 
